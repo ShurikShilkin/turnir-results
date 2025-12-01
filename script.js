@@ -60,7 +60,7 @@ const day2Players = [
     { number: 27, name: "Максим Spy", participation: 3100, start: 2100, rebuy: 2000, exit: 0, result: -1000 }
 ];
 
-// Данные игроков для Дня 3
+// Данные игроков для День 3
 const day3Players = [
     { number: 1, name: "Всеволод Кузнецов", participation: 3100, start: 2100, rebuy: 0, exit: 13770, result: 14770 },
     { number: 2, name: "Михаил Наб", participation: 3100, start: 2100, rebuy: 0, exit: 8250, result: 9250 },
@@ -175,32 +175,49 @@ const bountyPlayers = [
     { name: "Саша Бел", bounty: 75 }
 ];
 
-// Данные блайндов
-const blindsData = [
-    { number: 1, startTime: "17-00", endTime: "17-25", sb: 5, bb: 10, ante: 10 },
-    { number: 2, startTime: "17-25", endTime: "17-50", sb: 10, bb: 20, ante: 20 },
-    { number: 3, startTime: "18-00", endTime: "18-15", sb: 15, bb: 30, ante: 30 },
-    { number: 4, startTime: "18-15", endTime: "18-30", sb: 20, bb: 40, ante: 40 },
-    { number: 5, startTime: "18-30", endTime: "18-50", sb: 35, bb: 70, ante: 70 },
-    { number: 6, startTime: "19-00", endTime: "19-15", sb: 50, bb: 100, ante: 100 },
-    { number: 7, startTime: "19-15", endTime: "19-30", sb: 75, bb: 150, ante: 150 },
-    { number: 8, startTime: "19-30", endTime: "19-50", sb: 100, bb: 200, ante: 200 },
-    { number: 9, startTime: "20-00", endTime: "20-15", sb: 150, bb: 300, ante: 300 },
-    { number: 10, startTime: "20-15", endTime: "20-30", sb: 200, bb: 400, ante: 400 },
-    { number: 11, startTime: "20-30", endTime: "20-50", sb: 300, bb: 600, ante: 600 },
-    { number: 12, startTime: "21-00", endTime: "21-15", sb: 400, bb: 800, ante: 800 },
-    { number: 13, startTime: "21-15", endTime: "21-30", sb: 500, bb: 1000, ante: 1000 },
-    { number: 14, startTime: "21-30", endTime: "21-50", sb: 700, bb: 1400, ante: 1400 },
-    { number: 15, startTime: "22-00", endTime: "22-15", sb: 1000, bb: 2000, ante: 2000 },
-    { number: 16, startTime: "22-15", endTime: "22-30", sb: 1500, bb: 3000, ante: 3000 },
-    { number: 17, startTime: "22-30", endTime: "22-50", sb: 2000, bb: 4000, ante: 4000 },
-    { number: 18, startTime: "23-00", endTime: "23-15", sb: 2500, bb: 5000, ante: 5000 },
-    { number: 19, startTime: "23-15", endTime: "23-30", sb: 3000, bb: 6000, ante: 6000 },
-    { number: 20, startTime: "23-30", endTime: "23-45", sb: 4000, bb: 8000, ante: 8000 },
-    { number: 21, startTime: "23-45", endTime: "0-00", sb: 5000, bb: 10000, ante: 10000 },
-    { number: 22, startTime: "0-00", endTime: "0-10", sb: 6000, bb: 12000, ante: 12000 },
-    { number: 23, startTime: "0-10", endTime: "0-20", sb: 7500, bb: 15000, ante: 15000 },
-    { number: 24, startTime: "0-20", endTime: "0-30", sb: 9000, bb: 18000, ante: 18000 }
+// Данные результатов финала
+const finalResults = [
+    { number: 1, name: "Александр Будда", prize: "🥇 1 место", position: "🥇" },
+    { number: 2, name: "Богдан Анц", prize: "🥈 2 место", position: "🥈" },
+    { number: 3, name: "Иван Антипов", prize: "🥉 3 место", position: "🥉" },
+    { number: 4, name: "Владимир Vladecbeer", prize: "4️⃣ 4 место", position: "4️⃣" },
+    { number: 5, name: "Саша Коч", prize: "Призовые", position: "5" },
+    { number: 6, name: "Асхат Суханбердин", prize: "Призовые", position: "6" },
+    { number: 7, name: "Вася Е", prize: "Призовые", position: "7" },
+    { number: 8, name: "Саша Бел", prize: "Призовые", position: "8" },
+    { number: 9, name: "Макар Аве", prize: "Призовые", position: "9" },
+    { number: 10, name: "Полина Матыцына", prize: "Призовые", position: "10" },
+    { number: 11, name: "Саша Тяжелов", prize: "Призовые", position: "11" },
+    { number: 12, name: "Egrinderolls", prize: "Призовые", position: "12" },
+    { number: 13, name: "Михаил Наб", prize: "Призовые", position: "13" },
+    { number: 14, name: "Свидетель", prize: "Призовые", position: "14" },
+    { number: 15, name: "Дмитрий Ник", prize: "Призовые", position: "15" },
+    { number: 16, name: "Сергей Ман", prize: "Призовые", position: "16" },
+    { number: 17, name: "Шурик Шилкин", prize: "Призовые", position: "17" },
+    { number: 18, name: "Jane", prize: "Призовые", position: "18" },
+    { number: 19, name: "Серж", prize: "Призовые", position: "19" },
+    { number: 20, name: "Вова Гриненко", prize: "", position: "20" },
+    { number: 21, name: "Евгений Ц", prize: "", position: "21" },
+    { number: 22, name: "Всеволод Кузнецов", prize: "", position: "22" },
+    { number: 23, name: "Анна К", prize: "", position: "23" },
+    { number: 24, name: "Инна М", prize: "", position: "24" },
+    { number: 25, name: "Михаил Козадой", prize: "", position: "25" },
+    { number: 26, name: "Вова Баж", prize: "", position: "26" },
+    { number: 27, name: "Славяна", prize: "", position: "27" },
+    { number: 28, name: "Федор К", prize: "", position: "28" },
+    { number: 29, name: "Даша Хромова", prize: "", position: "29" },
+    { number: 30, name: "Марина Ермакова", prize: "", position: "30" },
+    { number: 31, name: "Никита Зейн", prize: "", position: "31" },
+    { number: 32, name: "Николай Роз", prize: "", position: "32" },
+    { number: 33, name: "Макс Ник", prize: "", position: "33" },
+    { number: 34, name: "Светлана Иванова", prize: "", position: "34" },
+    { number: 35, name: "Даня КДД", prize: "", position: "35" },
+    { number: 36, name: "Даша Гри", prize: "", position: "36" },
+    { number: 37, name: "Роман Егоров", prize: "", position: "37" },
+    { number: 38, name: "Оксана Б", prize: "", position: "38" },
+    { number: 39, name: "Jane2007", prize: "", position: "39" },
+    { number: 40, name: "Максим Spy", prize: "", position: "40" },
+    { number: 41, name: "Том", prize: "", position: "41" }
 ];
 
 // Функция переключения вкладок
@@ -215,6 +232,12 @@ function showTab(tabName) {
     
     // Показываем выбранную вкладку
     document.getElementById(tabName).classList.add('active');
+    
+    // Активируем соответствующую кнопку
+    const targetButton = document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`);
+    if (targetButton) {
+        targetButton.classList.add('active');
+    }
     
     // Обновляем интерфейс в зависимости от типа вкладки
     if (tabName === 'final2025' || tabName === 'satellite2025') {
@@ -240,15 +263,6 @@ function showMainInterface(tabName) {
     document.getElementById('mainStats').style.display = 'grid';
     document.getElementById('specialStats').style.display = 'none';
     
-    // Активируем соответствующую кнопку в основных вкладках
-    const tabButtons = document.querySelectorAll('#mainTabs .tab-button');
-    tabButtons.forEach(button => button.classList.remove('active'));
-    
-    const targetButton = document.querySelector(`#mainTabs .tab-button[onclick="showTab('${tabName}')"]`);
-    if (targetButton) {
-        targetButton.classList.add('active');
-    }
-    
     // Обновляем заголовок фазы турнира
     const phaseElement = document.getElementById('currentPhase');
     if (tabName === 'day1') {
@@ -258,11 +272,11 @@ function showMainInterface(tabName) {
     } else if (tabName === 'day3') {
         phaseElement.textContent = 'День 3 - 27.11.2025';
     } else if (tabName === 'final') {
-        phaseElement.textContent = 'Финал - 29.11.2025';
+        phaseElement.textContent = 'Финал завершен - 29.11.2025';
     } else if (tabName === 'bounties') {
         phaseElement.textContent = 'Охота за головами';
-    } else if (tabName === 'blinds') {
-        phaseElement.textContent = 'Структура блайндов';
+    } else if (tabName === 'results') {
+        phaseElement.textContent = 'Результаты финала';
     }
 }
 
@@ -368,7 +382,7 @@ function calculateAverageStack() {
                    (player.bounty || 0);
         }, 0);
         return Math.round(totalSum / positiveResults.length);
-    } else if (activeTab === 'bounties' || activeTab === 'final2025' || activeTab === 'satellite2025' || activeTab === 'blinds') {
+    } else if (activeTab === 'bounties' || activeTab === 'final2025' || activeTab === 'satellite2025' || activeTab === 'results') {
         return 0;
     } else {
         return 0;
@@ -625,7 +639,7 @@ function fillDay2Table() {
     });
 }
 
-// Заполнение таблицы Дня 3
+// Заполнение таблицы День 3
 function fillDay3Table() {
     const tableBody = document.getElementById('day3Table');
     tableBody.innerHTML = '';
@@ -692,6 +706,49 @@ function fillFinalTable() {
     });
 }
 
+// Заполнение таблицы Результатов финала
+function fillResultsTable() {
+    const tableBody = document.getElementById('resultsTable');
+    tableBody.innerHTML = '';
+    
+    finalResults.forEach((player) => {
+        const row = document.createElement('tr');
+        
+        // Определяем класс для строки на основе позиции
+        let rowClass = 'regular-player';
+        let positionClass = '';
+        
+        if (player.number <= 4) {
+            if (player.number === 1) {
+                rowClass = 'top-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 2) {
+                rowClass = 'second-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 3) {
+                rowClass = 'third-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 4) {
+                rowClass = 'prize-player';
+                positionClass = 'medal-icon';
+            }
+        } else if (player.number <= 19) {
+            rowClass = 'prize-player';
+        }
+        
+        row.className = rowClass;
+        
+        row.innerHTML = `
+            <td class="number-column">${player.number}</td>
+            <td class="player-name">${player.name}</td>
+            <td class="${player.prize ? 'prize-money' : ''}">${player.prize}</td>
+            <td class="${positionClass}">${player.position}</td>
+        `;
+        
+        tableBody.appendChild(row);
+    });
+}
+
 // Заполнение таблицы Охоты за головами
 function fillBountiesTable() {
     const tableBody = document.getElementById('bountiesTable');
@@ -706,27 +763,6 @@ function fillBountiesTable() {
         row.innerHTML = `
             <td class="player-name">${player.name}</td>
             <td class="chips-positive">${formatNumber(player.bounty)}</td>
-        `;
-        
-        tableBody.appendChild(row);
-    });
-}
-
-// Функция для заполнения таблицы блайндов
-function fillBlindsTable() {
-    const tableBody = document.getElementById('blindsTable');
-    tableBody.innerHTML = '';
-    
-    blindsData.forEach((level) => {
-        const row = document.createElement('tr');
-        
-        row.innerHTML = `
-            <td class="number-column">${level.number}</td>
-            <td>${level.startTime}</td>
-            <td>${level.endTime}</td>
-            <td class="chips-positive">${formatNumber(level.sb)}</td>
-            <td class="chips-positive">${formatNumber(level.bb)}</td>
-            <td class="chips-positive">${formatNumber(level.ante)}</td>
         `;
         
         tableBody.appendChild(row);
@@ -877,6 +913,65 @@ function fillFinalTableWithSearch(foundPlayers, searchTerm) {
     });
 }
 
+function fillResultsTableWithSearch(foundPlayers, searchTerm) {
+    const tableBody = document.getElementById('resultsTable');
+    tableBody.innerHTML = '';
+    
+    const filteredResults = finalResults.filter(player => 
+        foundPlayers.some(found => found.name === player.name)
+    );
+    
+    if (filteredResults.length === 0) {
+        tableBody.innerHTML = `
+            <tr>
+                <td colspan="4" style="text-align: center; padding: 40px; color: #666;">
+                    Игроки не найдены
+                </td>
+            </tr>
+        `;
+        return;
+    }
+    
+    filteredResults.forEach((player) => {
+        const row = document.createElement('tr');
+        
+        // Определяем класс для строки на основе позиции
+        let rowClass = 'regular-player';
+        let positionClass = '';
+        
+        if (player.number <= 4) {
+            if (player.number === 1) {
+                rowClass = 'top-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 2) {
+                rowClass = 'second-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 3) {
+                rowClass = 'third-player';
+                positionClass = 'medal-icon';
+            } else if (player.number === 4) {
+                rowClass = 'prize-player';
+                positionClass = 'medal-icon';
+            }
+        } else if (player.number <= 19) {
+            rowClass = 'prize-player';
+        }
+        
+        row.className = rowClass + ' search-highlight';
+        
+        const highlightedName = highlightText(player.name, searchTerm);
+        
+        row.innerHTML = `
+            <td class="number-column">${player.number}</td>
+            <td class="player-name">${highlightedName}</td>
+            <td class="${player.prize ? 'prize-money' : ''}">${player.prize}</td>
+            <td class="${positionClass}">${player.position}</td>
+        `;
+        
+        tableBody.appendChild(row);
+    });
+}
+
 function fillBountiesTableWithSearch(foundPlayers, searchTerm) {
     const tableBody = document.getElementById('bountiesTable');
     tableBody.innerHTML = '';
@@ -925,21 +1020,23 @@ function setupAutocomplete() {
     const searchInput = document.getElementById('searchInput');
     const autocompleteResults = document.getElementById('autocompleteResults');
     
-    const allPlayers = [...day1Players, ...day2Players, ...day3Players, ...bountyPlayers.map(p => ({ name: p.name }))];
+    const allPlayers = [...day1Players, ...day2Players, ...day3Players, ...bountyPlayers.map(p => ({ name: p.name })), ...finalResults];
     const playerNames = [...new Set(allPlayers.map(p => p.name))];
     
     const final2025Players = [
         "Александр Гиг", "Мария Павлова", "Даша Yellow", "Михаил Козадой", 
         "Вадим Константинов", "Руф", "Влад Пив", "Артур Король", 
-        "Шурик Шилкин", "Даня Гол", "Никита Yellow", "Богдан Анц", "Семён Ануфриев"
+        "Шурик Шилкин", "Даня Гол", "Никита Yellow", "Богдан Анц", 
+        "Семён Ануфриев", "Александр Будда", "Иван Антипов"
     ];
     
     const satellitePlayers = [
-        "Жан Балацкий", "Иван Чемодан", "Иван Антипов", "Олег Сми", 
+        "Жан Балацкий", "Иван Чемодан", "Олег Сми", 
         "Egrinderolls", "Саша Тяжелов", "Асхат Суханбердин", 
         "Саша Коч", "Ксюша Петрушина", "Дмитрий Ник", "Андрей Ф", 
         "Ладали", "Даша Гри", "Искандер", "Вова Гриненко", 
-        "Даня КДД", "Надя Жб", "Константин Сидорин", "Славяна", "Андрей Джип"
+        "Даня КДД", "Надя Жб", "Константин Сидорин", "Славяна", 
+        "Андрей Джип", "Владимир Vladecbeer"
     ];
     
     playerNames.push(...final2025Players, ...satellitePlayers, ...Object.keys(playerBonuses));
@@ -1035,10 +1132,10 @@ function searchPlayers() {
             fillDay3Table();
         } else if (activeTab === 'final') {
             fillFinalTable();
+        } else if (activeTab === 'results') {
+            fillResultsTable();
         } else if (activeTab === 'bounties') {
             fillBountiesTable();
-        } else if (activeTab === 'blinds') {
-            fillBlindsTable();
         }
         document.getElementById('searchResults').style.display = 'none';
         return;
@@ -1067,13 +1164,17 @@ function searchPlayers() {
             player.name.toLowerCase().includes(searchTerm)
         );
         fillFinalTableWithSearch(foundPlayers, searchTerm);
+    } else if (activeTab === 'results') {
+        foundPlayers = finalResults.filter(player => 
+            player.name.toLowerCase().includes(searchTerm)
+        );
+        fillResultsTableWithSearch(foundPlayers, searchTerm);
     } else if (activeTab === 'bounties') {
         foundPlayers = bountyPlayers.filter(player => 
             player.name.toLowerCase().includes(searchTerm)
         );
         fillBountiesTableWithSearch(foundPlayers, searchTerm);
     }
-    // Для блайндов поиск не применяется
     
     const resultsCount = document.getElementById('resultsCount');
     const searchResults = document.getElementById('searchResults');
@@ -1088,10 +1189,10 @@ function searchPlayers() {
 }
 
 // Функция для обновления дат в статистике
-function updateDates(nextGame, finalDate) {
+function updateDates() {
     const dateItems = document.querySelectorAll('.date-value');
-    if (dateItems[0]) dateItems[0].innerHTML = nextGame;
-    if (dateItems[1]) dateItems[1].textContent = finalDate;
+    if (dateItems[0]) dateItems[0].innerHTML = '4.12.2025';
+    if (dateItems[1]) dateItems[1].textContent = '6.12.2025';
 }
 
 // Обновление статистики при переключении вкладок
@@ -1109,21 +1210,21 @@ function updateStats() {
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
     } else if (activeTab === 'day2') {
         totalPlayers = day2Players.length;
         averageStack = calculateAverageStack();
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
     } else if (activeTab === 'day3') {
         totalPlayers = day3Players.length;
         averageStack = calculateAverageStack();
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
     } else if (activeTab === 'final') {
         const finalPlayers = getAllFinalPlayers();
         totalPlayers = finalPlayers.length;
@@ -1131,23 +1232,23 @@ function updateStats() {
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
+    } else if (activeTab === 'results') {
+        totalPlayers = finalResults.length;
+        averageStack = 0;
+        animateCounter(totalPlayersElement, totalPlayers);
+        animateCounter(averageStackElement, averageStack);
+        
+        updateDates();
     } else if (activeTab === 'bounties') {
         totalPlayers = bountyPlayers.length;
         averageStack = 0;
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
-    } else if (activeTab === 'blinds') {
-        totalPlayers = blindsData.length;
-        averageStack = 0;
-        animateCounter(totalPlayersElement, totalPlayers);
-        animateCounter(averageStackElement, averageStack);
-        
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
     } else if (activeTab === 'final2025') {
-        totalPlayers = 13;
+        totalPlayers = 15;
         animateCounter(specialTotalPlayersElement, totalPlayers);
     } else if (activeTab === 'satellite2025') {
         totalPlayers = 20;
@@ -1158,7 +1259,7 @@ function updateStats() {
         animateCounter(totalPlayersElement, totalPlayers);
         animateCounter(averageStackElement, averageStack);
         
-        updateDates('29.11.2025', '29.11.2025');
+        updateDates();
     }
 }
 
@@ -1190,15 +1291,18 @@ document.addEventListener('DOMContentLoaded', function() {
     fillDay2Table();
     fillDay3Table();
     fillFinalTable();
+    fillResultsTable();
     fillBountiesTable();
-    fillBlindsTable();
     setupAutocomplete();
     
     // Отладочная информация
     debugFinalPlayers();
     
-    // Показываем вкладку Финал при загрузке
-    showTab('final');
+    // Показываем вкладку Результаты финала при загрузке
+    showTab('results');
+    
+    // Обновляем даты
+    updateDates();
     
     document.getElementById('searchInput').addEventListener('input', searchPlayers);
     

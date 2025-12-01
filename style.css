@@ -557,21 +557,80 @@ header h1 {
     transform: translateX(-2px);
 }
 
-/* Стили для таблицы блайндов */
-#blinds .tournament-table th,
-#blinds .tournament-table td {
+/* Стили для таблицы результатов */
+#results .tournament-table th,
+#results .tournament-table td {
     text-align: center;
     padding: 12px 8px;
 }
 
-#blinds .tournament-table th {
+#results .tournament-table th {
     background: #2c3e50;
     color: white;
     font-weight: bold;
 }
 
-#blinds .tournament-table tr:hover {
+#results .tournament-table tr:hover {
     background: #f5f5f5;
+}
+
+/* Стили для призовых мест в таблице результатов */
+.top-player {
+    background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+    font-weight: bold;
+    color: #000;
+}
+
+.top-player:hover {
+    background: linear-gradient(135deg, #FFA500, #FF8C00) !important;
+}
+
+.second-player {
+    background: linear-gradient(135deg, #C0C0C0, #A9A9A9) !important;
+    font-weight: bold;
+    color: #000;
+}
+
+.second-player:hover {
+    background: linear-gradient(135deg, #A9A9A9, #8B8B8B) !important;
+}
+
+.third-player {
+    background: linear-gradient(135deg, #CD7F32, #A0522D) !important;
+    font-weight: bold;
+    color: #000;
+}
+
+.third-player:hover {
+    background: linear-gradient(135deg, #A0522D, #8B4513) !important;
+}
+
+.prize-player {
+    background: #e3f2fd !important;
+    font-weight: bold;
+}
+
+.prize-player:hover {
+    background: #bbdefb !important;
+}
+
+.regular-player {
+    background: #f9f9f9 !important;
+}
+
+.regular-player:hover {
+    background: #f0f0f0 !important;
+}
+
+/* Стили для медалей в таблице результатов */
+.medal-icon {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.prize-money {
+    font-weight: bold;
+    color: #2E7D32;
 }
 
 /* Адаптивность для мобильных */
@@ -739,18 +798,16 @@ header h1 {
         display: none;
     }
     
+    /* Результаты: по умолчанию №, Имя, Призовые */
+    #results .tournament-table th:nth-child(4),
+    #results .tournament-table td:nth-child(4) {
+        display: none;
+    }
+    
     /* Охота за головами: по умолчанию Имя, Бонус */
     #bounties .tournament-table th,
     #bounties .tournament-table td {
         display: table-cell !important;
-    }
-    
-    /* Блайнды: по умолчанию №, Время начала, МБ, ББ */
-    #blinds .tournament-table th:nth-child(3),
-    #blinds .tournament-table th:nth-child(6),
-    #blinds .tournament-table td:nth-child(3),
-    #blinds .tournament-table td:nth-child(6) {
-        display: none;
     }
     
     /* Уменьшаем отступы для длинных имен */
@@ -835,15 +892,5 @@ header h1 {
     
     #specialStats {
         max-width: 160px;
-    }
-    
-    /* Блайнды для очень маленьких экранов */
-    #blinds .tournament-table {
-        font-size: 0.75em;
-    }
-    
-    #blinds .tournament-table th,
-    #blinds .tournament-table td {
-        padding: 8px 4px;
     }
 }

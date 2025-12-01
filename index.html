@@ -15,7 +15,7 @@
                 <button class="special-tab right" onclick="showTab('satellite2025')">САТЕЛЛИТ 2025</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Финал - 29.11.2025</div>
+                <div class="tournament-phase" id="currentPhase">Результаты финала</div>
             </div>
         </header>
 
@@ -24,15 +24,15 @@
             <button class="tab-button" onclick="showTab('day1')">День 1 - 13.11.2025</button>
             <button class="tab-button" onclick="showTab('day2')">День 2 - 20.11.2025</button>
             <button class="tab-button" onclick="showTab('day3')">День 3 - 27.11.2025</button>
-            <button class="tab-button active" onclick="showTab('final')">Финал - 29.11.2025</button>
+            <button class="tab-button" onclick="showTab('final')">Финал - 29.11.2025</button>
+            <button class="tab-button active" onclick="showTab('results')">Результаты финала</button>
             <button class="tab-button" onclick="showTab('bounties')">Охота за головами</button>
-            <button class="tab-button" onclick="showTab('blinds')">Блайнды</button>
         </div>
 
         <!-- Специальная вкладка для ФИНАЛ ФИНАЛИСТОВ и САТЕЛЛИТ -->
         <div class="tabs" id="specialTabs" style="display: none;">
             <button class="tab-button active" id="specialTabButton">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-            <button class="tab-button back-button" onclick="showTab('final')">← Назад к турниру</button>
+            <button class="tab-button back-button" onclick="showTab('results')">← Назад к турниру</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -45,11 +45,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">29.11.2025</div>
+                        <div class="date-value">4.12.2025</div>
                     </div>
                     <div class="date-item">
-                        <div class="date-label">Финал</div>
-                        <div class="date-value">29.11.2025</div>
+                        <div class="date-label">Следующий финал</div>
+                        <div class="date-value">6.12.2025</div>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
         </div>
 
         <!-- Вкладка Финал -->
-        <div id="final" class="tab-content active">
+        <div id="final" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -166,6 +166,23 @@
             </table>
         </div>
 
+        <!-- Вкладка Результаты финала -->
+        <div id="results" class="tab-content active">
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Призовые</th>
+                        <th>Место</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTable">
+                    <!-- Результаты финала появятся здесь -->
+                </tbody>
+            </table>
+        </div>
+
         <!-- Вкладка Охота за головами -->
         <div id="bounties" class="tab-content">
             <table class="tournament-table">
@@ -177,25 +194,6 @@
                 </thead>
                 <tbody id="bountiesTable">
                     <!-- Головы появятся здесь -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка Блайнды -->
-        <div id="blinds" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Время начала</th>
-                        <th>Время конца</th>
-                        <th>МБ</th>
-                        <th>ББ</th>
-                        <th>Анте</th>
-                    </tr>
-                </thead>
-                <tbody id="blindsTable">
-                    <!-- Данные блайндов появятся здесь -->
                 </tbody>
             </table>
         </div>
@@ -219,6 +217,8 @@
                     <div class="player-item">11. Никита Yellow</div>
                     <div class="player-item">12. Богдан Анц</div>
                     <div class="player-item">13. Семён Ануфриев</div>
+                    <div class="player-item">14. Александр Будда</div>
+                    <div class="player-item">15. Иван Антипов</div>
                 </div>
             </div>
         </div>
@@ -236,10 +236,6 @@
                     <div class="medal-item">
                         <span class="player-name">Иван Чемодан</span>
                         <span class="medals">межсезонье</span>
-                    </div>
-                    <div class="medal-item">
-                        <span class="player-name">Иван Антипов</span>
-                        <span class="medals">🥈🥉4️⃣</span>
                     </div>
                     <div class="medal-item">
                         <span class="player-name">Олег Сми</span>
@@ -308,6 +304,10 @@
                     <div class="medal-item">
                         <span class="player-name">Андрей Джип</span>
                         <span class="medals">🥉</span>
+                    </div>
+                    <div class="medal-item">
+                        <span class="player-name">Владимир Vladecbeer</span>
+                        <span class="medals">4️⃣</span>
                     </div>
                 </div>
             </div>

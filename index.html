@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Турнир Тощего Джека J-2</title>
+    <title>Межсезонье Декабрь 2025</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,28 +11,29 @@
         <header>
             <div class="header-top">
                 <button class="special-tab left" onclick="showTab('final2025')">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-                <h1>Турнир Тощего Джека J-2</h1>
+                <h1>Межсезонье Декабрь 2025</h1>
                 <button class="special-tab right" onclick="showTab('satellite2025')">САТЕЛЛИТ 2025</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Результаты финала</div>
+                <div class="tournament-phase" id="currentPhase">День 1 - 4.12.2025</div>
             </div>
         </header>
 
         <!-- Основные вкладки -->
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('day1')">День 1 - 13.11.2025</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 20.11.2025</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 27.11.2025</button>
-            <button class="tab-button" onclick="showTab('final')">Финал - 29.11.2025</button>
-            <button class="tab-button active" onclick="showTab('results')">Результаты финала</button>
+            <button class="tab-button active" onclick="showTab('day1')">День 1 - 4.12.2025</button>
+            <button class="tab-button" onclick="showTab('day2')">День 2 - 11.12.2025</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 18.12.2025</button>
+            <button class="tab-button" onclick="showTab('day4')">День 4 - 25.12.2025</button>
+            <button class="tab-button" onclick="showTab('summary')">Итог Межсезонья</button>
             <button class="tab-button" onclick="showTab('bounties')">Охота за головами</button>
+            <button class="tab-button" onclick="showTab('rating')">Рейтинг</button>
         </div>
 
         <!-- Специальная вкладка для ФИНАЛ ФИНАЛИСТОВ и САТЕЛЛИТ -->
         <div class="tabs" id="specialTabs" style="display: none;">
             <button class="tab-button active" id="specialTabButton">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-            <button class="tab-button back-button" onclick="showTab('results')">← Назад к турниру</button>
+            <button class="tab-button back-button" onclick="showTab('day1')">← Назад к турниру</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -45,7 +46,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">4.12.2025</div>
+                        <div class="date-value">6.12.2025</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -83,17 +84,16 @@
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
         <!-- Вкладка День 1 -->
-        <div id="day1" class="tab-content">
+        <div id="day1" class="tab-content active">
             <table class="tournament-table">
                 <thead>
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
+                        <th>Вход</th>
                         <th>Добор</th>
                         <th>Выход</th>
-                        <th>Итог</th>
+                        <th>Выигрыш</th>
                     </tr>
                 </thead>
                 <tbody id="playersTable">
@@ -109,11 +109,10 @@
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
+                        <th>Вход</th>
                         <th>Добор</th>
                         <th>Выход</th>
-                        <th>Итог</th>
+                        <th>Выигрыш</th>
                     </tr>
                 </thead>
                 <tbody id="day2Table">
@@ -129,11 +128,10 @@
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
+                        <th>Вход</th>
                         <th>Добор</th>
                         <th>Выход</th>
-                        <th>Итог</th>
+                        <th>Выигрыш</th>
                     </tr>
                 </thead>
                 <tbody id="day3Table">
@@ -142,43 +140,41 @@
             </table>
         </div>
 
-        <!-- Вкладка Финал -->
-        <div id="final" class="tab-content">
+        <!-- Вкладка День 4 -->
+        <div id="day4" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Изменение</th>
-                        <th>День 1</th>
-                        <th>День 2</th>
-                        <th>День 3</th>
-                        <th>Отборочные дни</th>
-                        <th>Участие в финале</th>
-                        <th>Оголодавшие</th>
-                        <th>Охота за головами</th>
-                        <th>ИТОГ</th>
+                        <th>Вход</th>
+                        <th>Добор</th>
+                        <th>Выход</th>
+                        <th>Выигрыш</th>
                     </tr>
                 </thead>
-                <tbody id="finalTable">
-                    <!-- Игроки для финала появятся здесь -->
+                <tbody id="day4Table">
+                    <!-- Игроки дня 4 появятся здесь -->
                 </tbody>
             </table>
         </div>
 
-        <!-- Вкладка Результаты финала -->
-        <div id="results" class="tab-content active">
+        <!-- Вкладка Итог Межсезонья -->
+        <div id="summary" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Призовые</th>
-                        <th>Место</th>
+                        <th>День 1</th>
+                        <th>День 2</th>
+                        <th>День 3</th>
+                        <th>День 4</th>
+                        <th>ИТОГ</th>
                     </tr>
                 </thead>
-                <tbody id="resultsTable">
-                    <!-- Результаты финала появятся здесь -->
+                <tbody id="summaryTable">
+                    <!-- Итоги появятся здесь -->
                 </tbody>
             </table>
         </div>
@@ -194,6 +190,22 @@
                 </thead>
                 <tbody id="bountiesTable">
                     <!-- Головы появятся здесь -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Вкладка Рейтинг -->
+        <div id="rating" class="tab-content">
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Рейтинг</th>
+                    </tr>
+                </thead>
+                <tbody id="ratingTable">
+                    <!-- Рейтинг появятся здесь -->
                 </tbody>
             </table>
         </div>

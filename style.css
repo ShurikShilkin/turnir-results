@@ -405,6 +405,21 @@ header h1 {
     font-weight: bold;
 }
 
+/* Стили для рейтинга */
+.top-rating {
+    background: #fff3cd !important;
+    border-left: 4px solid #ffc107;
+}
+
+.top-rating:hover {
+    background: #ffeaa7 !important;
+}
+
+.rating-number {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
 /* Стили для стрелок изменений */
 .position-change {
     display: inline-flex;
@@ -557,82 +572,6 @@ header h1 {
     transform: translateX(-2px);
 }
 
-/* Стили для таблицы результатов */
-#results .tournament-table th,
-#results .tournament-table td {
-    text-align: center;
-    padding: 12px 8px;
-}
-
-#results .tournament-table th {
-    background: #2c3e50;
-    color: white;
-    font-weight: bold;
-}
-
-#results .tournament-table tr:hover {
-    background: #f5f5f5;
-}
-
-/* Стили для призовых мест в таблице результатов */
-.top-player {
-    background: linear-gradient(135deg, #FFD700, #FFA500) !important;
-    font-weight: bold;
-    color: #000;
-}
-
-.top-player:hover {
-    background: linear-gradient(135deg, #FFA500, #FF8C00) !important;
-}
-
-.second-player {
-    background: linear-gradient(135deg, #C0C0C0, #A9A9A9) !important;
-    font-weight: bold;
-    color: #000;
-}
-
-.second-player:hover {
-    background: linear-gradient(135deg, #A9A9A9, #8B8B8B) !important;
-}
-
-.third-player {
-    background: linear-gradient(135deg, #CD7F32, #A0522D) !important;
-    font-weight: bold;
-    color: #000;
-}
-
-.third-player:hover {
-    background: linear-gradient(135deg, #A0522D, #8B4513) !important;
-}
-
-.prize-player {
-    background: #e3f2fd !important;
-    font-weight: bold;
-}
-
-.prize-player:hover {
-    background: #bbdefb !important;
-}
-
-.regular-player {
-    background: #f9f9f9 !important;
-}
-
-.regular-player:hover {
-    background: #f0f0f0 !important;
-}
-
-/* Стили для медалей в таблице результатов */
-.medal-icon {
-    font-size: 1.2em;
-    margin-right: 5px;
-}
-
-.prize-money {
-    font-weight: bold;
-    color: #2E7D32;
-}
-
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
     .header-top {
@@ -760,48 +699,42 @@ header h1 {
         gap: 10px;
     }
     
-    /* День 1, 2, 3: по умолчанию №, Имя, Итог */
+    /* День 1, 2, 3, 4: по умолчанию №, Имя, Выигрыш */
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
-    #day1 .tournament-table th:nth-child(6),
     #day1 .tournament-table td:nth-child(4),
     #day1 .tournament-table td:nth-child(5),
-    #day1 .tournament-table td:nth-child(6),
     #day2 .tournament-table th:nth-child(4),
     #day2 .tournament-table th:nth-child(5),
-    #day2 .tournament-table th:nth-child(6),
     #day2 .tournament-table td:nth-child(4),
     #day2 .tournament-table td:nth-child(5),
-    #day2 .tournament-table td:nth-child(6),
     #day3 .tournament-table th:nth-child(4),
     #day3 .tournament-table th:nth-child(5),
-    #day3 .tournament-table th:nth-child(6),
     #day3 .tournament-table td:nth-child(4),
     #day3 .tournament-table td:nth-child(5),
-    #day3 .tournament-table td:nth-child(6) {
+    #day4 .tournament-table th:nth-child(4),
+    #day4 .tournament-table th:nth-child(5),
+    #day4 .tournament-table td:nth-child(4),
+    #day4 .tournament-table td:nth-child(5) {
         display: none;
     }
     
-    /* Финал: по умолчанию №, Имя, Изменение, Отборочные дни, ИТОГ */
-    #final .tournament-table th:nth-child(4),
-    #final .tournament-table th:nth-child(5),
-    #final .tournament-table th:nth-child(6),
-    #final .tournament-table th:nth-child(8),
-    #final .tournament-table th:nth-child(9),
-    #final .tournament-table th:nth-child(10),
-    #final .tournament-table td:nth-child(4),
-    #final .tournament-table td:nth-child(5),
-    #final .tournament-table td:nth-child(6),
-    #final .tournament-table td:nth-child(8),
-    #final .tournament-table td:nth-child(9),
-    #final .tournament-table td:nth-child(10) {
+    /* Итоги: по умолчанию №, Имя, ИТОГ */
+    #summary .tournament-table th:nth-child(3),
+    #summary .tournament-table th:nth-child(4),
+    #summary .tournament-table th:nth-child(5),
+    #summary .tournament-table th:nth-child(6),
+    #summary .tournament-table td:nth-child(3),
+    #summary .tournament-table td:nth-child(4),
+    #summary .tournament-table td:nth-child(5),
+    #summary .tournament-table td:nth-child(6) {
         display: none;
     }
     
-    /* Результаты: по умолчанию №, Имя, Призовые */
-    #results .tournament-table th:nth-child(4),
-    #results .tournament-table td:nth-child(4) {
-        display: none;
+    /* Рейтинг: по умолчанию №, Имя, Рейтинг */
+    #rating .tournament-table th,
+    #rating .tournament-table td {
+        display: table-cell !important;
     }
     
     /* Охота за головами: по умолчанию Имя, Бонус */
@@ -817,12 +750,6 @@ header h1 {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-    
-    .position-change {
-        min-width: 50px;
-        font-size: 0.7em;
-        padding: 3px 6px;
     }
     
     /* Когда таблица развернута - показываем ВСЕ колонки */
@@ -849,12 +776,6 @@ header h1 {
     
     .search-box {
         max-width: 100%;
-    }
-    
-    .position-change {
-        min-width: 40px;
-        font-size: 0.65em;
-        padding: 2px 4px;
     }
     
     .special-tab {

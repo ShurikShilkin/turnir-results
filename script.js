@@ -164,8 +164,8 @@ function showSpecialInterface(tabName) {
         specialTabButton.textContent = 'ФИНАЛ ФИНАЛИСТОВ 2025';
         phaseElement.textContent = 'ФИНАЛ ФИНАЛИСТОВ 2025 - 20.12.2025';
     } else if (tabName === 'satellite2025') {
-        specialTabButton.textContent = 'САТЕЛЛИТ 2025';
-        phaseElement.textContent = 'САТЕЛЛИТ 2025 - 6.12.2025';
+        specialTabButton.textContent = 'Результаты сателлита 2025';
+        phaseElement.textContent = 'Результаты сателлита 2025 - 6.12.2025';
     }
     
     // Показываем кнопку "Назад к турниру"
@@ -761,16 +761,14 @@ function setupAutocomplete() {
         "Александр Гиг", "Мария Павлова", "Даша Yellow", "Михаил Козадой", 
         "Вадим Константинов", "Руф", "Влад Пив", "Артур Король", 
         "Шурик Шилкин", "Даня Гол", "Никита Yellow", "Богдан Анц", 
-        "Семён Ануфриев", "Александр Будда", "Иван Антипов"
+        "Семён Ануфриев", "Александр Будда", "Иван Антипов",
+        "Искандер", "Иван Чемодан", "Дмитрий Ник", "Асхат Суханбердин",
+        "Саша Тяжелов", "Владимир Vladecbeer"
     ];
     
     const satellitePlayers = [
-        "Жан Балацкий", "Иван Чемодан", "Олег Сми", 
-        "Egrinderolls", "Саша Тяжелов", "Асхат Суханбердин", 
-        "Саша Коч", "Ксюша Петрушина", "Дмитрий Ник", "Андрей Ф", 
-        "Ладали", "Даша Гри", "Искандер", "Вова Гриненко", 
-        "Даня КДД", "Надя Жб", "Константин Сидорин", "Славяна", 
-        "Андрей Джип", "Владимир Vladecbeer"
+        "Ксюша Петрушина", "Вова Гриненко", "Славяна", "Надя Жб",
+        "Даня КДД", "Олег Сми", "Ладали", "Egrinderolls"
     ];
     
     playerNames.push(...final2025Players, ...satellitePlayers);
@@ -932,8 +930,8 @@ function searchPlayers() {
 // Функция для обновления дат в статистике
 function updateDates() {
     const dateItems = document.querySelectorAll('.date-value');
-    if (dateItems[0]) dateItems[0].innerHTML = '6.12.2025';
-    if (dateItems[1]) dateItems[1].textContent = '6.12.2025';
+    if (dateItems[0]) dateItems[0].innerHTML = '11.12.2025';
+    if (dateItems[1]) dateItems[1].textContent = '20.12.2025';
 }
 
 // Обновление статистики при переключении вкладок
@@ -996,10 +994,10 @@ function updateStats() {
         
         updateDates();
     } else if (activeTab === 'final2025') {
-        totalPlayers = 15;
+        totalPlayers = 21;
         animateCounter(specialTotalPlayersElement, totalPlayers);
     } else if (activeTab === 'satellite2025') {
-        totalPlayers = 20;
+        totalPlayers = 14;
         animateCounter(specialTotalPlayersElement, totalPlayers);
     } else {
         totalPlayers = 0;

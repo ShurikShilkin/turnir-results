@@ -506,16 +506,16 @@ header h1 {
     transform: translateX(5px);
 }
 
-/* Стили для медалей САТЕЛЛИТА */
-.medals-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
+/* Стили для результатов сателлита */
+.satellite-results {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.medal-item {
+.satellite-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -523,24 +523,46 @@ header h1 {
     padding: 15px 20px;
     border-radius: 10px;
     transition: all 0.3s ease;
-    border-left: 4px solid #FFD700;
+    text-align: left;
 }
 
-.medal-item:hover {
+.satellite-item:hover {
     background: rgba(255,255,255,0.25);
     transform: translateX(5px);
 }
 
-.medal-item .player-name {
+.satellite-item.champion {
+    border-left: 6px solid #FFD700;
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
+}
+
+.satellite-item.qualifier {
+    border-left: 6px solid #4CAF50;
+    background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.05));
+}
+
+.satellite-item.regular {
+    border-left: 6px solid #2196F3;
+}
+
+.satellite-item .player-name {
     font-size: 1.1em;
     font-weight: bold;
     color: white;
+    flex: 1;
 }
 
-.medal-item .medals {
-    font-size: 1.5em;
-    display: flex;
-    gap: 5px;
+.satellite-item .result-info {
+    font-size: 1em;
+    color: #FFD700;
+    font-weight: bold;
+    text-align: right;
+    margin-left: 20px;
+}
+
+.satellite-item.regular .result-info {
+    color: rgba(255,255,255,0.8);
+    font-weight: normal;
 }
 
 /* Стили для специальной статистики */
@@ -648,14 +670,24 @@ header h1 {
     }
     
     .players-list,
-    .medals-container {
+    .satellite-results {
         grid-template-columns: 1fr;
     }
     
-    .medal-item {
+    .satellite-item {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+        padding: 12px 15px;
+    }
+    
+    .satellite-item .player-name {
+        text-align: center;
+    }
+    
+    .satellite-item .result-info {
+        text-align: center;
+        margin-left: 0;
     }
     
     /* Адаптивность для специальных вкладок */
@@ -789,20 +821,20 @@ header h1 {
     }
     
     /* Дополнительные правки для очень маленьких экранов */
-    #satellite2025 .medal-item .player-name {
+    #satellite2025 .satellite-item .player-name {
         font-size: 1em;
         line-height: 1.3;
     }
     
-    #satellite2025 .medal-item .medals {
-        font-size: 1.3em;
+    #satellite2025 .satellite-item .result-info {
+        font-size: 0.9em;
     }
     
-    #satellite2025 .medals-container {
+    #satellite2025 .satellite-results {
         gap: 8px;
     }
     
-    #satellite2025 .medal-item {
+    #satellite2025 .satellite-item {
         padding: 12px 8px;
     }
     

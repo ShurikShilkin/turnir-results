@@ -15,14 +15,14 @@
                 <button class="special-tab right" onclick="showTab('satellite2025')">Результаты сателлита 2025</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">День 1 - 4.12.2025</div>
+                <div class="tournament-phase" id="currentPhase">День 2 - 11.12.2025</div>
             </div>
         </header>
 
         <!-- Основные вкладки -->
         <div class="tabs" id="mainTabs">
-            <button class="tab-button active" onclick="showTab('day1')">День 1 - 4.12.2025</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 11.12.2025</button>
+            <button class="tab-button" onclick="showTab('day1')">День 1 - 4.12.2025</button>
+            <button class="tab-button active" onclick="showTab('day2')">День 2 - 11.12.2025</button>
             <button class="tab-button" onclick="showTab('day3')">День 3 - 18.12.2025</button>
             <button class="tab-button" onclick="showTab('day4')">День 4 - 25.12.2025</button>
             <button class="tab-button" onclick="showTab('summary')">Итог Межсезонья</button>
@@ -33,7 +33,7 @@
         <!-- Специальная вкладка для ФИНАЛ ФИНАЛИСТОВ и САТЕЛЛИТ -->
         <div class="tabs" id="specialTabs" style="display: none;">
             <button class="tab-button active" id="specialTabButton">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-            <button class="tab-button back-button" onclick="showTab('day1')">← Назад к турниру</button>
+            <button class="tab-button back-button" onclick="showTab('day2')">← Назад к турниру</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -46,7 +46,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">11.12.2025</div>
+                        <div class="date-value">18.12.2025</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -84,7 +84,7 @@
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
         <!-- Вкладка День 1 -->
-        <div id="day1" class="tab-content active">
+        <div id="day1" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -103,7 +103,7 @@
         </div>
 
         <!-- Вкладка День 2 -->
-        <div id="day2" class="tab-content">
+        <div id="day2" class="tab-content active">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -166,6 +166,7 @@
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
+                        <th>▲▼</th>
                         <th>День 1</th>
                         <th>День 2</th>
                         <th>День 3</th>
@@ -201,7 +202,10 @@
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>Рейтинг</th>
+                        <th>▲▼</th>
+                        <th>Пред. рейтинг</th>
+                        <th>+/-</th>
+                        <th>Итоговый рейтинг</th>
                     </tr>
                 </thead>
                 <tbody id="ratingTable">
@@ -253,23 +257,23 @@
                     </div>
                     <div class="satellite-item qualifier">
                         <span class="player-name">Иван Чемодан</span>
-                        <span class="result-info">🥈 Проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
+                        <span class="result-info">🥈 Проход в ФИНАЛ ФИНАЛИСТОВ</span>
                     </div>
                     <div class="satellite-item qualifier">
                         <span class="player-name">Дмитрий Ник</span>
-                        <span class="result-info">🥉 Проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
+                        <span class="result-info">🥉 Проход в ФИНАЛ ФИНАЛИСТОВ</span>
                     </div>
                     <div class="satellite-item qualifier">
                         <span class="player-name">Асхат Суханбердин</span>
-                        <span class="result-info">4️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
+                        <span class="result-info">4️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
                     </div>
                     <div class="satellite-item qualifier">
                         <span class="player-name">Саша Тяжелов</span>
-                        <span class="result-info">5️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
+                        <span class="result-info">5️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
                     </div>
                     <div class="satellite-item qualifier">
                         <span class="player-name">Владимир Vladecbeer</span>
-                        <span class="result-info">6️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
+                        <span class="result-info">6️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
                     </div>
                     <div class="satellite-item regular">
                         <span class="player-name">Ксюша Петрушина</span>

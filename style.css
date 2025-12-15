@@ -415,6 +415,21 @@ header h1 {
     background: #ffeaa7 !important;
 }
 
+.rating-positive {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.rating-negative {
+    color: #C62828;
+    font-weight: bold;
+}
+
+.rating-neutral {
+    color: #666;
+    font-weight: bold;
+}
+
 .rating-number {
     font-weight: bold;
     color: #2c3e50;
@@ -751,22 +766,28 @@ header h1 {
         display: none;
     }
     
-    /* Итоги: по умолчанию №, Имя, ИТОГ */
+    /* Итоги: по умолчанию №, Имя, ИТОГ, ▲▼ */
     #summary .tournament-table th:nth-child(3),
     #summary .tournament-table th:nth-child(4),
     #summary .tournament-table th:nth-child(5),
     #summary .tournament-table th:nth-child(6),
+    #summary .tournament-table th:nth-child(7),
     #summary .tournament-table td:nth-child(3),
     #summary .tournament-table td:nth-child(4),
     #summary .tournament-table td:nth-child(5),
-    #summary .tournament-table td:nth-child(6) {
+    #summary .tournament-table td:nth-child(6),
+    #summary .tournament-table td:nth-child(7) {
         display: none;
     }
     
-    /* Рейтинг: по умолчанию №, Имя, Рейтинг */
-    #rating .tournament-table th,
-    #rating .tournament-table td {
-        display: table-cell !important;
+    /* Рейтинг: по умолчанию №, Имя, Итоговый рейтинг, ▲▼ */
+    #rating .tournament-table th:nth-child(4),
+    #rating .tournament-table th:nth-child(5),
+    #rating .tournament-table th:nth-child(6),
+    #rating .tournament-table td:nth-child(4),
+    #rating .tournament-table td:nth-child(5),
+    #rating .tournament-table td:nth-child(6) {
+        display: none;
     }
     
     /* Охота за головами: по умолчанию Имя, Бонус */

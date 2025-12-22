@@ -200,6 +200,7 @@ header h1 {
     font-size: 1em;
     background: rgba(255,255,255,0.95);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #333;
 }
 
 #searchInput:focus {
@@ -335,6 +336,7 @@ header h1 {
     border-bottom: 1px solid #eee;
     text-align: center;
     border-right: 1px solid #f0f0f0;
+    color: #333;
 }
 
 .tournament-table td:last-child {
@@ -354,6 +356,7 @@ header h1 {
     font-weight: bold;
     text-align: left !important;
     padding-left: 15px !important;
+    color: #2c3e50;
 }
 
 .number-column {
@@ -377,6 +380,7 @@ header h1 {
     background: #e3f2fd;
     border-radius: 8px;
     padding: 5px 8px;
+    color: #1976D2;
 }
 
 .final-total {
@@ -445,6 +449,7 @@ header h1 {
     border-radius: 12px;
     font-size: 0.8em;
     min-width: 60px;
+    color: white;
 }
 
 .position-up {
@@ -567,57 +572,6 @@ header h1 {
 .player-item.finalist .player-result {
     color: rgba(255,255,255,0.9);
     font-weight: normal;
-}
-
-/* Адаптивность для новой таблицы */
-@media (max-width: 768px) {
-    .players-list-final {
-        gap: 6px;
-    }
-    
-    .player-item {
-        padding: 12px 15px;
-        font-size: 1em;
-    }
-    
-    .player-position {
-        width: 25px;
-        font-size: 1.1em;
-    }
-    
-    .player-name {
-        padding: 0 10px;
-    }
-    
-    .player-result {
-        font-size: 0.9em;
-        min-width: 120px;
-    }
-}
-
-@media (max-width: 480px) {
-    .players-list-final {
-        gap: 4px;
-    }
-    
-    .player-item {
-        padding: 10px 12px;
-        font-size: 0.9em;
-    }
-    
-    .player-position {
-        width: 20px;
-        font-size: 1em;
-    }
-    
-    .player-name {
-        padding: 0 8px;
-    }
-    
-    .player-result {
-        font-size: 0.8em;
-        min-width: 100px;
-    }
 }
 
 /* Стили для результатов сателлита */
@@ -783,7 +737,7 @@ header h1 {
         font-size: 2em;
     }
     
-    .players-list,
+    .players-list-final,
     .satellite-results {
         grid-template-columns: 1fr;
     }
@@ -802,6 +756,30 @@ header h1 {
     .satellite-item .result-info {
         text-align: center;
         margin-left: 0;
+    }
+    
+    /* Адаптивность для новой таблицы ФИНАЛА ФИНАЛИСТОВ */
+    .players-list-final {
+        gap: 6px;
+    }
+    
+    .player-item {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    
+    .player-position {
+        width: 25px;
+        font-size: 1.1em;
+    }
+    
+    .player-name {
+        padding: 0 10px;
+    }
+    
+    .player-result {
+        font-size: 0.9em;
+        min-width: 120px;
     }
     
     /* Адаптивность для специальных вкладок */
@@ -965,5 +943,29 @@ header h1 {
     
     #specialStats {
         max-width: 160px;
+    }
+    
+    /* Дополнительные правки для ФИНАЛА ФИНАЛИСТОВ на маленьких экранах */
+    .players-list-final {
+        gap: 4px;
+    }
+    
+    .player-item {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+    
+    .player-position {
+        width: 20px;
+        font-size: 1em;
+    }
+    
+    .player-name {
+        padding: 0 8px;
+    }
+    
+    .player-result {
+        font-size: 0.8em;
+        min-width: 100px;
     }
 }

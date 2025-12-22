@@ -1269,8 +1269,8 @@ function searchPlayers() {
 // Функция для обновления дат в статистике
 function updateDates() {
     const dateItems = document.querySelectorAll('.date-value');
-    if (dateItems[0]) dateItems[0].innerHTML = '20.12.2025';
-    if (dateItems[1]) dateItems[1].textContent = '20.12.2025';
+    if (dateItems[0]) dateItems[0].innerHTML = '25.12.2025'; // Изменено на 25.12.2025
+    if (dateItems[1]) dateItems[1].textContent = '-'; // Следующий финал убран
 }
 
 // Обновление статистики при переключении вкладок

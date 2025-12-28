@@ -399,6 +399,22 @@ header h1 {
     color: white;
 }
 
+.final-total.chipleader {
+    background: #FFD700;
+    color: #333 !important;
+    font-weight: bold;
+    position: relative;
+}
+
+.final-total.chipleader::after {
+    content: "👑";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
 .exit-time {
     color: #666;
     font-style: italic;
@@ -857,10 +873,12 @@ header h1 {
         display: none;
     }
     
-    /* Рейтинг: по умолчанию №, Имя, Итоговый рейтинг, ▲▼ */
+    /* Рейтинг: по умолчанию №, Имя, Итоговый рейтинг */
+    #rating .tournament-table th:nth-child(3),
     #rating .tournament-table th:nth-child(4),
     #rating .tournament-table th:nth-child(5),
     #rating .tournament-table th:nth-child(6),
+    #rating .tournament-table td:nth-child(3),
     #rating .tournament-table td:nth-child(4),
     #rating .tournament-table td:nth-child(5),
     #rating .tournament-table td:nth-child(6) {

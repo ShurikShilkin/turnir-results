@@ -84,100 +84,249 @@ const day3Players = [
     { number: 29, name: "Семён Ануфриев", entry: 1100, rebuy: 8000, exit: 0, win: -9100 }
 ];
 
-// Пустые данные для дня 4 (будут заполняться позже)
-const day4Players = [];
-
-// Данные для охоты за головами (обновленные)
-const bountyPlayers = [
-    { name: "Свидетель", bounty: 800 },
-    { name: "Robert Юниксфактёр", bounty: 800 },
-    { name: "Лев Р", bounty: 800 },
-    { name: "Михаил Наб", bounty: 800 },
-    { name: "Шурик Шилкин", bounty: 800 },
-    { name: "Михаил Козадой", bounty: 600 },
-    { name: "Семён Ануфриев", bounty: 600 },
-    { name: "Полина Матыцына", bounty: 600 },
-    { name: "Саша Коч", bounty: 600 },
-    { name: "Богдан А", bounty: 600 },
-    { name: "Асхат Суханбердин", bounty: 400 },
-    { name: "Серж", bounty: 400 },
-    { name: "Роман Егоров", bounty: 400 },
-    { name: "Максим Spy", bounty: 400 },
-    { name: "Даша Yellow", bounty: 200 },
-    { name: "Jane 007", bounty: 200 },
-    { name: "Никита Yellow", bounty: 200 },
-    { name: "Egrinderolls", bounty: 200 },
-    { name: "Инна М", bounty: 200 },
-    { name: "Оксана Б", bounty: 200 }
+// Данные игроков для День 4
+const day4Players = [
+    { number: 1, name: "Михаил Наб", entry: 1100, rebuy: 0, exit: 13635, win: 12535 },
+    { number: 2, name: "Никита Зейн", entry: 1100, rebuy: 1000, exit: 11880, win: 9780 },
+    { number: 3, name: "Богдан А", entry: 1100, rebuy: 1000, exit: 9890, win: 7790 },
+    { number: 4, name: "Jane 007", entry: 1100, rebuy: 0, exit: 8350, win: 7250 },
+    { number: 5, name: "Максим Spy", entry: 1100, rebuy: 2000, exit: 7750, win: 4650 },
+    { number: 6, name: "Egrinderolls", entry: 1100, rebuy: 0, exit: 5240, win: 4140 },
+    { number: 7, name: "Robert Юниксфактёр", entry: 1100, rebuy: 1000, exit: 5350, win: 3250 },
+    { number: 8, name: "Михаил Т", entry: 1100, rebuy: 1000, exit: 3170, win: 1070 },
+    { number: 9, name: "Оксана Б", entry: 1100, rebuy: 2000, exit: 3505, win: 405 },
+    { number: 10, name: "Анна К", entry: 1100, rebuy: 2000, exit: 3160, win: 60 },
+    { number: 11, name: "Роман Лод", entry: 1100, rebuy: 4000, exit: 4930, win: -170 },
+    { number: 12, name: "Кристина А", entry: 1100, rebuy: 2000, exit: 2340, win: -760 },
+    { number: 13, name: "Шурик Шилкин", entry: 1100, rebuy: 1000, exit: 0, win: -2100 },
+    { number: 14, name: "Роман Егоров", entry: 1100, rebuy: 1000, exit: 0, win: -2100 },
+    { number: 15, name: "Влад Владшток", entry: 1100, rebuy: 2000, exit: 0, win: -3100 },
+    { number: 16, name: "Асхат Суханбердин", entry: 1100, rebuy: 2000, exit: 0, win: -3100 },
+    { number: 17, name: "Даша Хромова", entry: 1100, rebuy: 4000, exit: 2000, win: -3100 },
+    { number: 18, name: "Соня Кур", entry: 1100, rebuy: 4000, exit: 0, win: -5100 },
+    { number: 19, name: "Семён Ануфриев", entry: 1100, rebuy: 5000, exit: 0, win: -6100 },
+    { number: 20, name: "Лев Р", entry: 1100, rebuy: 8000, exit: 0, win: -9100 },
+    { number: 21, name: "Том", entry: 1100, rebuy: 9000, exit: 0, win: -10100 }
 ];
 
-// РЕЙТИНГ ПОСЛЕ ДНЯ 2 (итоговый рейтинг на конец дня 2)
-const ratingAfterDay2 = [
-    { name: "Robert Юниксфактёр", rating: 195 },
-    { name: "Лев Р", rating: 144 },
-    { name: "Семён Ануфриев", rating: 114 },
-    { name: "Михаил Наб", rating: 101 },
-    { name: "Шурик Шилкин", rating: 101 },
-    { name: "Богдан А", rating: 97 },
-    { name: "Саша Коч", rating: 95 },
-    { name: "Асхат Суханбердин", rating: 86 },
-    { name: "Роман Егоров", rating: 70 },
-    { name: "Серж", rating: 72 },
-    { name: "Egrinderolls", rating: 64 },
-    { name: "Михаил Козадой", rating: 59 },
-    { name: "Оксана Б", rating: 57 },
-    { name: "Даша Yellow", rating: 53 },
-    { name: "Федор К", rating: 53 },
-    { name: "Jane 007", rating: 60 },
-    { name: "Максим Spy", rating: 48 },
-    { name: "Никита Зейн", rating: 48 },
-    { name: "Полина Матыцына", rating: 38 },
-    { name: "Инна М", rating: 40 },
-    { name: "Дима Жур", rating: 29 },
-    { name: "Влад Владшток", rating: 30 },
-    { name: "Всеволод Кузнецов", rating: 23 },
-    { name: "Эмиль", rating: 23 },
-    { name: "Свидетель", rating: 34 },
-    { name: "Руфат Макиато", rating: 21 },
-    { name: "Даша Гри", rating: 17 },
-    { name: "Александр Исаев", rating: 17 },
-    { name: "Сергей Ман", rating: 13 },
-    { name: "Даня КДД", rating: 15 },
-    { name: "Вова Гриненко", rating: 14 }
+// Данные для охоты за головами (очищены)
+const bountyPlayers = [];
+
+// РЕЙТИНГ ПОСЛЕ ДНЯ 3 (итоговый рейтинг на конец дня 3)
+const ratingAfterDay3 = getCurrentRatingAfterDay3();
+
+// НОВЫЕ БАЛЛЫ ЗА ДЕНЬ 4
+const day4RatingChanges = [
+    { name: "Михаил Наб", change: 137 },
+    { name: "Никита Зейн", change: 74 },
+    { name: "Богдан А", change: 60 },
+    { name: "Jane 007", change: 69 },
+    { name: "Максим Spy", change: 40 },
+    { name: "Egrinderolls", change: 56 },
+    { name: "Robert Юниксфактёр", change: 40 },
+    { name: "Михаил Т", change: 37 },
+    { name: "Оксана Б", change: 30 },
+    { name: "Анна К", change: 28 },
+    { name: "Роман Лод", change: 22 },
+    { name: "Кристина А", change: 26 },
+    { name: "Шурик Шилкин", change: 29 },
+    { name: "Роман Егоров", change: 28 },
+    { name: "Влад Владшток", change: 23 },
+    { name: "Асхат Суханбердин", change: 22 },
+    { name: "Даша Хромова", change: 18 },
+    { name: "Соня Кур", change: 17 },
+    { name: "Семён Ануфриев", change: 15 },
+    { name: "Лев Р", change: 13 },
+    { name: "Том", change: 12 }
 ];
 
-// НОВЫЕ БАЛЛЫ ЗА ДЕНЬ 3 (только для тех, кто играл в день 3)
-const day3RatingChanges = [
-    { name: "Свидетель", change: 162 },
-    { name: "Михаил Наб", change: 74 },
-    { name: "Никита Yellow", change: 71 },
-    { name: "Полина Матыцына", change: 81 },
-    { name: "Михаил Козадой", change: 72 },
-    { name: "Петя Федоров", change: 50 },
-    { name: "Искандер", change: 35 },
-    { name: "Роман Егоров", change: 30 },
-    { name: "Серж", change: 31 },
-    { name: "Максим Spy", change: 51 },
-    { name: "Кристина А", change: 31 },
-    { name: "Иван Антипов", change: 47 },
-    { name: "Даша Yellow", change: 45 },
-    { name: "Шурик Шилкин", change: 43 },
-    { name: "Лев Р", change: 42 },
-    { name: "Артём 007", change: 40 },
-    { name: "Гавриил Морозов", change: 30 },
-    { name: "Соня Кур", change: 29 },
-    { name: "Влад Владшток", change: 24 },
-    { name: "Вика Ч", change: 23 },
-    { name: "Михаил Таб", change: 20 },
-    { name: "Саша Коч", change: 20 },
-    { name: "Инна М", change: 18 },
-    { name: "Асхат Суханбердин", change: 17 },
-    { name: "Jane 007", change: 16 },
-    { name: "Евгений Ц", change: 16 },
-    { name: "Богдан А", change: 15 },
-    { name: "Дмитрий Ник", change: 15 },
-    { name: "Семён Ануфриев", change: 13 }
-];
+// Функция для получения рейтинга после дня 3
+function getCurrentRatingAfterDay3() {
+    const ratingAfterDay2 = [
+        { name: "Robert Юниксфактёр", rating: 195 },
+        { name: "Лев Р", rating: 144 },
+        { name: "Семён Ануфриев", rating: 114 },
+        { name: "Михаил Наб", rating: 101 },
+        { name: "Шурик Шилкин", rating: 101 },
+        { name: "Богдан А", rating: 97 },
+        { name: "Саша Коч", rating: 95 },
+        { name: "Асхат Суханбердин", rating: 86 },
+        { name: "Роман Егоров", rating: 70 },
+        { name: "Серж", rating: 72 },
+        { name: "Egrinderolls", rating: 64 },
+        { name: "Михаил Козадой", rating: 59 },
+        { name: "Оксана Б", rating: 57 },
+        { name: "Даша Yellow", rating: 53 },
+        { name: "Федор К", rating: 53 },
+        { name: "Jane 007", rating: 60 },
+        { name: "Максим Spy", rating: 48 },
+        { name: "Никита Зейн", rating: 48 },
+        { name: "Полина Матыцына", rating: 38 },
+        { name: "Инна М", rating: 40 },
+        { name: "Дима Жур", rating: 29 },
+        { name: "Влад Владшток", rating: 30 },
+        { name: "Всеволод Кузнецов", rating: 23 },
+        { name: "Эмиль", rating: 23 },
+        { name: "Свидетель", rating: 34 },
+        { name: "Руфат Макиато", rating: 21 },
+        { name: "Даша Гри", rating: 17 },
+        { name: "Александр Исаев", rating: 17 },
+        { name: "Сергей Ман", rating: 13 },
+        { name: "Даня КДД", rating: 15 },
+        { name: "Вова Гриненко", rating: 14 }
+    ];
+    
+    const day3RatingChanges = [
+        { name: "Свидетель", change: 162 },
+        { name: "Михаил Наб", change: 74 },
+        { name: "Никита Yellow", change: 71 },
+        { name: "Полина Матыцына", change: 81 },
+        { name: "Михаил Козадой", change: 72 },
+        { name: "Петя Федоров", change: 50 },
+        { name: "Искандер", change: 35 },
+        { name: "Роман Егоров", change: 30 },
+        { name: "Серж", change: 31 },
+        { name: "Максим Spy", change: 51 },
+        { name: "Кристина А", change: 31 },
+        { name: "Иван Антипов", change: 47 },
+        { name: "Даша Yellow", change: 45 },
+        { name: "Шурик Шилкин", change: 43 },
+        { name: "Лев Р", change: 42 },
+        { name: "Артём 007", change: 40 },
+        { name: "Гавриил Морозов", change: 30 },
+        { name: "Соня Кур", change: 29 },
+        { name: "Влад Владшток", change: 24 },
+        { name: "Вика Ч", change: 23 },
+        { name: "Михаил Таб", change: 20 },
+        { name: "Саша Коч", change: 20 },
+        { name: "Инна М", change: 18 },
+        { name: "Асхат Суханбердин", change: 17 },
+        { name: "Jane 007", change: 16 },
+        { name: "Евгений Ц", change: 16 },
+        { name: "Богдан А", change: 15 },
+        { name: "Дмитрий Ник", change: 15 },
+        { name: "Семён Ануфриев", change: 13 }
+    ];
+    
+    const currentRating = [];
+    
+    // 1. Берём всех игроков из рейтинга после дня 2
+    ratingAfterDay2.forEach(player => {
+        // Ищем, играл ли этот игрок в день 3
+        const day3Change = day3RatingChanges.find(p => p.name === player.name);
+        
+        if (day3Change) {
+            // Игрок играл в день 3 - добавляем баллы
+            currentRating.push({
+                name: player.name,
+                rating: player.rating + day3Change.change
+            });
+        } else {
+            // Игрок НЕ играл в день 3 - оставляем старый рейтинг
+            currentRating.push({
+                name: player.name,
+                rating: player.rating
+            });
+        }
+    });
+    
+    // 2. Добавляем новых игроков, которых не было в рейтинге дня 2
+    day3RatingChanges.forEach(player => {
+        const existsInRating = currentRating.some(p => p.name === player.name);
+        if (!existsInRating) {
+            // Это новый игрок (впервые в рейтинге)
+            currentRating.push({
+                name: player.name,
+                rating: player.change
+            });
+        }
+    });
+    
+    return currentRating;
+}
+
+// Получение текущего рейтинга (все игроки из рейтинга дня 3 + новые игроки дня 4)
+function getCurrentRating() {
+    const currentRating = [];
+    
+    // 1. Берём всех игроков из рейтинга после дня 3
+    ratingAfterDay3.forEach(player => {
+        // Ищем, играл ли этот игрок в день 4
+        const day4Change = day4RatingChanges.find(p => p.name === player.name);
+        
+        if (day4Change) {
+            // Игрок играл в день 4 - добавляем баллы
+            currentRating.push({
+                name: player.name,
+                previousRating: player.rating,
+                change: day4Change.change,
+                totalRating: player.rating + day4Change.change,
+                newPlayer: false
+            });
+        } else {
+            // Игрок НЕ играл в день 4 - оставляем старый рейтинг
+            currentRating.push({
+                name: player.name,
+                previousRating: player.rating,
+                change: 0,
+                totalRating: player.rating,
+                newPlayer: false
+            });
+        }
+    });
+    
+    // 2. Добавляем новых игроков, которых не было в рейтинге дня 3
+    day4RatingChanges.forEach(player => {
+        const existsInRating = currentRating.some(p => p.name === player.name);
+        if (!existsInRating) {
+            // Это новый игрок (впервые в рейтинге)
+            currentRating.push({
+                name: player.name,
+                previousRating: 0,
+                change: player.change,
+                totalRating: player.change,
+                newPlayer: true
+            });
+        }
+    });
+    
+    return currentRating;
+}
+
+// Расчет изменений позиций для рейтинга
+function calculateRatingPositionChanges() {
+    const changes = new Map();
+    
+    // Сортируем рейтинг дня 3
+    const day3Sorted = [...ratingAfterDay3].sort((a, b) => b.rating - a.rating);
+    const previousPositions = new Map();
+    day3Sorted.forEach((player, index) => {
+        previousPositions.set(player.name, index + 1);
+    });
+    
+    // Получаем текущий рейтинг
+    const currentRating = getCurrentRating();
+    const currentSorted = [...currentRating].sort((a, b) => b.totalRating - a.totalRating);
+    
+    currentSorted.forEach((player, newPosition) => {
+        const oldPosition = previousPositions.get(player.name);
+        
+        if (oldPosition) {
+            const change = oldPosition - (newPosition + 1);
+            changes.set(player.name, {
+                change: Math.abs(change),
+                type: change > 0 ? 'up' : change < 0 ? 'down' : 'same'
+            });
+        } else {
+            changes.set(player.name, {
+                change: null,
+                type: 'new'
+            });
+        }
+    });
+    
+    return changes;
+}
 
 // Функция переключения вкладок
 function showTab(tabName) {
@@ -403,19 +552,55 @@ function getAllPlayersSummary() {
         }
     });
     
+    // Добавляем/обновляем игроков из дня 4
+    day4Players.forEach(player => {
+        if (allPlayersMap.has(player.name)) {
+            const existingPlayer = allPlayersMap.get(player.name);
+            existingPlayer.day4 = player.win;
+            existingPlayer.total += player.win;
+        } else {
+            allPlayersMap.set(player.name, {
+                name: player.name,
+                day1: 0,
+                day2: 0,
+                day3: 0,
+                day4: player.win,
+                total: player.win
+            });
+        }
+    });
+    
     return Array.from(allPlayersMap.values());
+}
+
+// Найти чиплидера (игрока с максимальным итогом)
+function findChipLeader() {
+    const allPlayers = getAllPlayersSummary();
+    if (allPlayers.length === 0) return null;
+    
+    let maxTotal = -Infinity;
+    let chipLeader = null;
+    
+    allPlayers.forEach(player => {
+        if (player.total > maxTotal) {
+            maxTotal = player.total;
+            chipLeader = player.name;
+        }
+    });
+    
+    return chipLeader;
 }
 
 // Расчет изменений позиций для сводной таблицы
 function calculateSummaryPositionChanges() {
     const changes = new Map();
     
-    // Получаем позиции после дня 2
-    const day2Summary = getAllDay2Summary();
-    day2Summary.sort((a, b) => b.total - a.total);
+    // Получаем позиции после дня 3
+    const day3Summary = getAllDay3Summary();
+    day3Summary.sort((a, b) => b.total - a.total);
     
     const previousPositions = new Map();
-    day2Summary.forEach((player, index) => {
+    day3Summary.forEach((player, index) => {
         previousPositions.set(player.name, index + 1);
     });
     
@@ -443,9 +628,9 @@ function calculateSummaryPositionChanges() {
     return changes;
 }
 
-// Получение только данных после дня 2 для сравнения
-function getAllDay2Summary() {
-    const day2Summary = [];
+// Получение только данных после дня 3 для сравнения
+function getAllDay3Summary() {
+    const day3Summary = [];
     
     const allPlayersMap = new Map();
     
@@ -475,90 +660,23 @@ function getAllDay2Summary() {
         }
     });
     
+    day3Players.forEach(player => {
+        if (allPlayersMap.has(player.name)) {
+            const existingPlayer = allPlayersMap.get(player.name);
+            existingPlayer.day3 = player.win;
+            existingPlayer.total += player.win;
+        } else {
+            allPlayersMap.set(player.name, {
+                name: player.name,
+                day1: 0,
+                day2: 0,
+                day3: player.win,
+                total: player.win
+            });
+        }
+    });
+    
     return Array.from(allPlayersMap.values());
-}
-
-// Получение текущего рейтинга (все игроки из рейтинга дня 2 + новые игроки дня 3)
-function getCurrentRating() {
-    const currentRating = [];
-    
-    // 1. Берём всех игроков из рейтинга после дня 2
-    ratingAfterDay2.forEach(player => {
-        // Ищем, играл ли этот игрок в день 3
-        const day3Change = day3RatingChanges.find(p => p.name === player.name);
-        
-        if (day3Change) {
-            // Игрок играл в день 3 - добавляем баллы
-            currentRating.push({
-                name: player.name,
-                previousRating: player.rating,
-                change: day3Change.change,
-                totalRating: player.rating + day3Change.change,
-                newPlayer: false
-            });
-        } else {
-            // Игрок НЕ играл в день 3 - оставляем старый рейтинг
-            currentRating.push({
-                name: player.name,
-                previousRating: player.rating,
-                change: 0,
-                totalRating: player.rating,
-                newPlayer: false
-            });
-        }
-    });
-    
-    // 2. Добавляем новых игроков, которых не было в рейтинге дня 2
-    day3RatingChanges.forEach(player => {
-        const existsInRating = currentRating.some(p => p.name === player.name);
-        if (!existsInRating) {
-            // Это новый игрок (впервые в рейтинге)
-            currentRating.push({
-                name: player.name,
-                previousRating: 0,
-                change: player.change,
-                totalRating: player.change,
-                newPlayer: true
-            });
-        }
-    });
-    
-    return currentRating;
-}
-
-// Расчет изменений позиций для рейтинга
-function calculateRatingPositionChanges() {
-    const changes = new Map();
-    
-    // Сортируем рейтинг дня 2
-    const day2Sorted = [...ratingAfterDay2].sort((a, b) => b.rating - a.rating);
-    const previousPositions = new Map();
-    day2Sorted.forEach((player, index) => {
-        previousPositions.set(player.name, index + 1);
-    });
-    
-    // Получаем текущий рейтинг
-    const currentRating = getCurrentRating();
-    const currentSorted = [...currentRating].sort((a, b) => b.totalRating - a.totalRating);
-    
-    currentSorted.forEach((player, newPosition) => {
-        const oldPosition = previousPositions.get(player.name);
-        
-        if (oldPosition) {
-            const change = oldPosition - (newPosition + 1);
-            changes.set(player.name, {
-                change: Math.abs(change),
-                type: change > 0 ? 'up' : change < 0 ? 'down' : 'same'
-            });
-        } else {
-            changes.set(player.name, {
-                change: null,
-                type: 'new'
-            });
-        }
-    });
-    
-    return changes;
 }
 
 // Форматирование чисел с разделителями
@@ -684,17 +802,6 @@ function fillDay4Table() {
     const tableBody = document.getElementById('day4Table');
     tableBody.innerHTML = '';
     
-    if (day4Players.length === 0) {
-        tableBody.innerHTML = `
-            <tr>
-                <td colspan="6" style="text-align: center; padding: 40px; color: #666;">
-                    Данные появятся после завершения дня
-                </td>
-            </tr>
-        `;
-        return;
-    }
-    
     day4Players.forEach((player) => {
         const row = document.createElement('tr');
         
@@ -722,6 +829,7 @@ function fillSummaryTable() {
     
     const allPlayers = getAllPlayersSummary();
     const positionChanges = calculateSummaryPositionChanges();
+    const chipLeader = findChipLeader();
     
     // Сортируем по убыванию общего итога
     allPlayers.sort((a, b) => b.total - a.total);
@@ -733,6 +841,10 @@ function fillSummaryTable() {
         const changeData = positionChanges.get(player.name);
         const changeHTML = createPositionChangeHTML(changeData);
         
+        // Добавляем класс чиплидера
+        const finalTotalClass = player.name === chipLeader ? 
+            `${totalClass} chipleader` : totalClass;
+        
         row.innerHTML = `
             <td class="number-column">${index + 1}</td>
             <td class="player-name">${player.name}</td>
@@ -741,7 +853,7 @@ function fillSummaryTable() {
             <td class="result-column">${player.day2 !== 0 ? formatNumber(player.day2) : '-'}</td>
             <td class="result-column">${player.day3 !== 0 ? formatNumber(player.day3) : '-'}</td>
             <td class="result-column">${player.day4 !== 0 ? formatNumber(player.day4) : '-'}</td>
-            <td class="${totalClass}">${formatNumber(player.total)}</td>
+            <td class="final-total ${finalTotalClass}">${formatNumber(player.total)}</td>
         `;
         
         tableBody.appendChild(row);
@@ -752,6 +864,17 @@ function fillSummaryTable() {
 function fillBountiesTable() {
     const tableBody = document.getElementById('bountiesTable');
     tableBody.innerHTML = '';
+    
+    if (bountyPlayers.length === 0) {
+        tableBody.innerHTML = `
+            <tr>
+                <td colspan="2" style="text-align: center; padding: 40px; color: #666;">
+                    Нет данных
+                </td>
+            </tr>
+        `;
+        return;
+    }
     
     // Сортируем по убыванию бонуса
     const sortedBounties = [...bountyPlayers].sort((a, b) => b.bounty - a.bounty);
@@ -966,6 +1089,7 @@ function fillSummaryTableWithSearch(foundPlayers, searchTerm) {
         return;
     }
     
+    const chipLeader = findChipLeader();
     filteredPlayers.sort((a, b) => b.total - a.total);
     const positionChanges = calculateSummaryPositionChanges();
     
@@ -978,6 +1102,10 @@ function fillSummaryTableWithSearch(foundPlayers, searchTerm) {
         const changeData = positionChanges.get(player.name);
         const changeHTML = createPositionChangeHTML(changeData);
         
+        // Добавляем класс чиплидера
+        const finalTotalClass = player.name === chipLeader ? 
+            `${totalClass} chipleader` : totalClass;
+        
         row.innerHTML = `
             <td class="number-column">${index + 1}</td>
             <td class="player-name">${highlightedName}</td>
@@ -986,7 +1114,7 @@ function fillSummaryTableWithSearch(foundPlayers, searchTerm) {
             <td class="result-column">${player.day2 !== 0 ? formatNumber(player.day2) : '-'}</td>
             <td class="result-column">${player.day3 !== 0 ? formatNumber(player.day3) : '-'}</td>
             <td class="result-column">${player.day4 !== 0 ? formatNumber(player.day4) : '-'}</td>
-            <td class="${totalClass}">${formatNumber(player.total)}</td>
+            <td class="final-total ${finalTotalClass}">${formatNumber(player.total)}</td>
         `;
         
         tableBody.appendChild(row);
@@ -1092,16 +1220,15 @@ function setupAutocomplete() {
     const searchInput = document.getElementById('searchInput');
     const autocompleteResults = document.getElementById('autocompleteResults');
     
-    const allPlayers = [...day1Players, ...day2Players, ...day3Players, ...day4Players, ...bountyPlayers.map(p => ({ name: p.name })), ...ratingAfterDay2];
+    const allPlayers = [...day1Players, ...day2Players, ...day3Players, ...day4Players, ...bountyPlayers.map(p => ({ name: p.name })), ...ratingAfterDay3];
     const playerNames = [...new Set(allPlayers.map(p => p.name))];
     
     const final2025Players = [
-        "Александр Гиг", "Мария Павлова", "Даша Yellow", "Михаил Козадой", 
-        "Вадим Константинов", "Руф", "Влад Пив", "Артур Король", 
-        "Шурик Шилкин", "Даня Гол", "Никита Yellow", "Богдан Анц", 
-        "Семён Ануфриев", "Александр Будда", "Иван Антипов",
-        "Искандер", "Иван Чемодан", "Дмитрий Ник", "Асхат Суханбердин",
-        "Саша Тяжелов", "Владимир Vladecbeer"
+        "Никита Yellow", "grooveman", "Семён Ануфриев", "Даша Yellow", 
+        "Иван Антипов", "Богдан А", "Владибир", "Артур Король", 
+        "Мария Павлова", "Михаил Козадой", "Даня Гол", "Влад Пив", 
+        "Иван Чемодан", "Вадим Константинов", "Искандер", "Саша Тяжелов",
+        "Шурик Шилкин", "Руф", "Александр Гиг"
     ];
     
     const satellitePlayers = [
@@ -1269,8 +1396,8 @@ function searchPlayers() {
 // Функция для обновления дат в статистике
 function updateDates() {
     const dateItems = document.querySelectorAll('.date-value');
-    if (dateItems[0]) dateItems[0].innerHTML = '25.12.2025'; // Изменено на 25.12.2025
-    if (dateItems[1]) dateItems[1].textContent = '-'; // Следующий финал убран
+    if (dateItems[0]) dateItems[0].innerHTML = '-';
+    if (dateItems[1]) dateItems[1].textContent = '-';
 }
 
 // Обновление статистики при переключении вкладок
@@ -1334,7 +1461,7 @@ function updateStats() {
         
         updateDates();
     } else if (activeTab === 'final2025') {
-        totalPlayers = 21;
+        totalPlayers = 19;
         animateCounter(specialTotalPlayersElement, totalPlayers);
     } else if (activeTab === 'satellite2025') {
         totalPlayers = 14;
@@ -1362,8 +1489,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fillRatingTable();
     setupAutocomplete();
     
-    // Показываем вкладку ФИНАЛ ФИНАЛИСТОВ при загрузке
-    showTab('final2025');
+    // Показываем вкладку Итог Межсезонья при загрузке
+    showTab('summary');
     
     // Обновляем даты
     updateDates();

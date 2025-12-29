@@ -877,11 +877,9 @@ header h1 {
     #rating .tournament-table th:nth-child(3),
     #rating .tournament-table th:nth-child(4),
     #rating .tournament-table th:nth-child(5),
-    #rating .tournament-table th:nth-child(6),
     #rating .tournament-table td:nth-child(3),
     #rating .tournament-table td:nth-child(4),
-    #rating .tournament-table td:nth-child(5),
-    #rating .tournament-table td:nth-child(6) {
+    #rating .tournament-table td:nth-child(5) {
         display: none;
     }
     
@@ -900,6 +898,18 @@ header h1 {
         white-space: nowrap;
     }
     
+    /* Для рейтинга даем больше места имени и итоговому рейтингу */
+    #rating .player-name {
+        max-width: 150px;
+        padding-right: 10px;
+    }
+    
+    #rating .rating-number {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    
     /* Когда таблица развернута - показываем ВСЕ колонки */
     .tournament-table.expanded th,
     .tournament-table.expanded td {
@@ -916,6 +926,15 @@ header h1 {
     .player-name {
         max-width: 100px;
         padding-left: 5px !important;
+    }
+    
+    /* Для рейтинга на очень маленьких экранах */
+    #rating .player-name {
+        max-width: 80px;
+    }
+    
+    #rating .rating-number {
+        font-size: 1em;
     }
     
     .number-column {

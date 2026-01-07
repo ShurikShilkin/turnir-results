@@ -3,37 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Межсезонье Декабрь 2025</title>
+    <title>Турнир Миссис Дейзи Дак Q-2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="special-tab left" onclick="showTab('final2025')">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-                <h1>Межсезонье Декабрь 2025</h1>
-                <button class="special-tab right" onclick="showTab('satellite2025')">Результаты сателлита 2025</button>
+                <div class="empty-left"></div>
+                <h1>Турнир Миссис Дейзи Дак Q-2</h1>
+                <div class="empty-right"></div>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Итог Межсезонья</div>
+                <div class="tournament-phase" id="currentPhase">Старт турнира</div>
             </div>
         </header>
 
         <!-- Основные вкладки -->
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('day1')">День 1 - 4.12.2025</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 11.12.2025</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 18.12.2025</button>
-            <button class="tab-button" onclick="showTab('day4')">День 4 - 25.12.2025</button>
-            <button class="tab-button active" onclick="showTab('summary')">Итог Межсезонья</button>
+            <button class="tab-button active" onclick="showTab('day1')">День 1 - 8.01.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">День 2 - 15.01.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 22.01.2026</button>
+            <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 24.01.2026</button>
             <button class="tab-button" onclick="showTab('bounties')">Охота за головами</button>
             <button class="tab-button" onclick="showTab('rating')">Рейтинг</button>
-        </div>
-
-        <!-- Специальная вкладка для ФИНАЛ ФИНАЛИСТОВ и САТЕЛЛИТ -->
-        <div class="tabs" id="specialTabs" style="display: none;">
-            <button class="tab-button active" id="specialTabButton">ФИНАЛ ФИНАЛИСТОВ 2025</button>
-            <button class="tab-button back-button" onclick="showTab('summary')">← Назад к турниру</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -46,25 +39,17 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">-</div>
+                        <div class="date-value">8.01.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">-</div>
+                        <div class="date-value">24.01.2026</div>
                     </div>
                 </div>
             </div>
             <div class="stat-item">
                 <div class="stat-number" id="averageStack">0</div>
                 <div class="stat-label">Средний стек</div>
-            </div>
-        </div>
-
-        <!-- Статистика для специальных вкладок (только участники) -->
-        <div class="stats" id="specialStats" style="display: none;">
-            <div class="stat-item">
-                <div class="stat-number" id="specialTotalPlayers">0</div>
-                <div class="stat-label">Участников</div>
             </div>
         </div>
 
@@ -84,100 +69,39 @@
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
         <!-- Вкладка День 1 -->
-        <div id="day1" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="playersTable">
-                    <!-- Игроки появятся здесь -->
-                </tbody>
-            </table>
+        <div id="day1" class="tab-content active">
+            <div class="coming-soon">
+                <div class="coming-soon-icon">⏳</div>
+                <div class="coming-soon-text">Данные дня 1 появятся после завершения турнира 8.01.2026</div>
+            </div>
         </div>
 
         <!-- Вкладка День 2 -->
         <div id="day2" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day2Table">
-                    <!-- Игроки дня 2 появятся здесь -->
-                </tbody>
-            </table>
+            <div class="coming-soon">
+                <div class="coming-soon-icon">⏳</div>
+                <div class="coming-soon-text">Данные дня 2 появятся после завершения турнира 15.01.2026</div>
+            </div>
         </div>
 
         <!-- Вкладка День 3 -->
         <div id="day3" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day3Table">
-                    <!-- Игроки дня 3 появятся здесь -->
-                </tbody>
-            </table>
+            <div class="coming-soon">
+                <div class="coming-soon-icon">⏳</div>
+                <div class="coming-soon-text">Данные дня 3 появятся после завершения турнира 22.01.2026</div>
+            </div>
         </div>
 
-        <!-- Вкладка День 4 -->
-        <div id="day4" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day4Table">
-                    <!-- Игроки дня 4 появятся здесь -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка Итог Межсезонья -->
-        <div id="summary" class="tab-content active">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>▲▼</th>
-                        <th>День 1</th>
-                        <th>День 2</th>
-                        <th>День 3</th>
-                        <th>День 4</th>
-                        <th>ИТОГ</th>
-                    </tr>
-                </thead>
-                <tbody id="summaryTable">
-                    <!-- Итоги появятся здесь -->
-                </tbody>
-            </table>
+        <!-- Вкладка ФИНАЛ -->
+        <div id="final" class="tab-content">
+            <div class="special-tab-content">
+                <h2>ФИНАЛ ТУРНИРА</h2>
+                <div class="special-date">24.01.2026</div>
+                <div class="coming-soon">
+                    <div class="coming-soon-icon">⏳</div>
+                    <div class="coming-soon-text">Финальные результаты появятся после завершения турнира</div>
+                </div>
+            </div>
         </div>
 
         <!-- Вкладка Охота за головами -->
@@ -202,187 +126,13 @@
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
-                        <th>▲▼</th>
-                        <th>Пред. рейтинг</th>
-                        <th>+/-</th>
-                        <th>Итоговый рейтинг</th>
+                        <th>Рейтинг</th>
                     </tr>
                 </thead>
                 <tbody id="ratingTable">
                     <!-- Рейтинг появятся здесь -->
                 </tbody>
             </table>
-        </div>
-
-        <!-- Вкладка ФИНАЛ ФИНАЛИСТОВ 2025 -->
-        <div id="final2025" class="tab-content">
-            <div class="special-tab-content">
-                <h2>ФИНАЛ ФИНАЛИСТОВ 2025</h2>
-                <div class="special-date">20.12.2025</div>
-                <div class="players-list-final">
-                    <div class="player-item champion">
-                        <span class="player-position">1</span>
-                        <span class="player-name">Никита Yellow</span>
-                        <span class="player-result">🥇 Чемпион 2025 года</span>
-                    </div>
-                    <div class="player-item runner-up">
-                        <span class="player-position">2</span>
-                        <span class="player-name">grooveman</span>
-                        <span class="player-result">🥈 2 место</span>
-                    </div>
-                    <div class="player-item bronze">
-                        <span class="player-position">3</span>
-                        <span class="player-name">Семён Ануфриев</span>
-                        <span class="player-result">🥉 3 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">4</span>
-                        <span class="player-name">Даша Yellow</span>
-                        <span class="player-result">4 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">5</span>
-                        <span class="player-name">Иван Антипов</span>
-                        <span class="player-result">5 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">6</span>
-                        <span class="player-name">Богдан А</span>
-                        <span class="player-result">6 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">7</span>
-                        <span class="player-name">Владибир</span>
-                        <span class="player-result">7 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">8</span>
-                        <span class="player-name">Артур Король</span>
-                        <span class="player-result">8 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">9</span>
-                        <span class="player-name">Мария Павлова</span>
-                        <span class="player-result">9 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">10</span>
-                        <span class="player-name">Михаил Козадой</span>
-                        <span class="player-result">10 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">11</span>
-                        <span class="player-name">Даня Гол</span>
-                        <span class="player-result">11 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">12</span>
-                        <span class="player-name">Влад Пив</span>
-                        <span class="player-result">12 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">13</span>
-                        <span class="player-name">Иван Чемодан</span>
-                        <span class="player-result">13 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">14</span>
-                        <span class="player-name">Вадим Константинов</span>
-                        <span class="player-result">14 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">15</span>
-                        <span class="player-name">Искандер</span>
-                        <span class="player-result">15 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">16</span>
-                        <span class="player-name">Саша Тяжелов</span>
-                        <span class="player-result">16 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">17</span>
-                        <span class="player-name">Шурик Шилкин</span>
-                        <span class="player-result">17 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">18</span>
-                        <span class="player-name">Руф</span>
-                        <span class="player-result">18 место</span>
-                    </div>
-                    <div class="player-item finalist">
-                        <span class="player-position">19</span>
-                        <span class="player-name">Александр Гиг</span>
-                        <span class="player-result">19 место</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Вкладка Результаты сателлита 2025 -->
-        <div id="satellite2025" class="tab-content">
-            <div class="special-tab-content">
-                <h2>Результаты сателлита 2025</h2>
-                <div class="special-date">6.12.2025</div>
-                <div class="satellite-results">
-                    <div class="satellite-item champion">
-                        <span class="player-name">Искандер</span>
-                        <span class="result-info">🥇 Чемпион, проход в ФИНАЛ ФИНАЛИСТОВ 2025</span>
-                    </div>
-                    <div class="satellite-item qualifier">
-                        <span class="player-name">Иван Чемодан</span>
-                        <span class="result-info">🥈 Проход в ФИНАЛ ФИНАЛИСТОВ</span>
-                    </div>
-                    <div class="satellite-item qualifier">
-                        <span class="player-name">Дмитрий Ник</span>
-                        <span class="result-info">🥉 Проход в ФИНАЛ ФИНАЛИСТОВ</span>
-                    </div>
-                    <div class="satellite-item qualifier">
-                        <span class="player-name">Асхат Суханбердин</span>
-                        <span class="result-info">4️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
-                    </div>
-                    <div class="satellite-item qualifier">
-                        <span class="player-name">Саша Тяжелов</span>
-                        <span class="result-info">5️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
-                    </div>
-                    <div class="satellite-item qualifier">
-                        <span class="player-name">Владимир Vladecbeer</span>
-                        <span class="result-info">6️⃣ Проход в ФИНАЛ ФИНАЛИСТОВ</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Ксюша Петрушина</span>
-                        <span class="result-info">7 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Вова Гриненко</span>
-                        <span class="result-info">8 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Славяна</span>
-                        <span class="result-info">9 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Надя Жб</span>
-                        <span class="result-info">10 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Даня КДД</span>
-                        <span class="result-info">11 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Олег Сми</span>
-                        <span class="result-info">12 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Ладали</span>
-                        <span class="result-info">13 место</span>
-                    </div>
-                    <div class="satellite-item regular">
-                        <span class="player-name">Egrinderolls</span>
-                        <span class="result-info">14 место</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

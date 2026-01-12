@@ -12,7 +12,7 @@
             <div class="header-top">
                 <div class="empty-left"></div>
                 <h1>Турнир Миссис Дейзи Дак Q-2</h1>
-                <div class="empty-right"></div>
+                <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
                 <div class="tournament-phase" id="currentPhase">Старт турнира</div>
@@ -26,7 +26,6 @@
             <button class="tab-button" onclick="showTab('day3')">День 3 - 22.01.2026</button>
             <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 24.01.2026</button>
             <button class="tab-button" onclick="showTab('bounties')">Охота за головами</button>
-            <button class="tab-button" onclick="showTab('rating')">Рейтинг</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -39,7 +38,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">8.01.2026</div>
+                        <div class="date-value">15.01.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -70,10 +69,22 @@
 
         <!-- Вкладка День 1 -->
         <div id="day1" class="tab-content active">
-            <div class="coming-soon">
-                <div class="coming-soon-icon">⏳</div>
-                <div class="coming-soon-text">Данные дня 1 появятся после завершения турнира 8.01.2026</div>
-            </div>
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Участие</th>
+                        <th>Старт</th>
+                        <th>Добор</th>
+                        <th>Выход</th>
+                        <th>Итог</th>
+                    </tr>
+                </thead>
+                <tbody id="day1Table">
+                    <!-- Игроки дня 1 -->
+                </tbody>
+            </table>
         </div>
 
         <!-- Вкладка День 2 -->
@@ -97,10 +108,22 @@
             <div class="special-tab-content">
                 <h2>ФИНАЛ ТУРНИРА</h2>
                 <div class="special-date">24.01.2026</div>
-                <div class="coming-soon">
-                    <div class="coming-soon-icon">⏳</div>
-                    <div class="coming-soon-text">Финальные результаты появятся после завершения турнира</div>
-                </div>
+                <table class="tournament-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Имя</th>
+                            <th>День 1</th>
+                            <th>День 2</th>
+                            <th>День 3</th>
+                            <th>ФИНАЛ</th>
+                            <th>ИТОГ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finalTable">
+                        <!-- Финалисты -->
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -121,11 +144,30 @@
 
         <!-- Вкладка Рейтинг -->
         <div id="rating" class="tab-content">
+            <div class="rating-header">
+                <h2>Рейтинг серии</h2>
+                <div class="rating-subtitle">Обновлен после дня 1 (8.01.2026)</div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="ratingSearchInput" placeholder="Поиск игрока по имени...">
+                    <button id="clearRatingSearch" class="clear-search">×</button>
+                    <div id="ratingAutocompleteResults" class="autocomplete-results"></div>
+                </div>
+                <div id="ratingSearchResults" class="search-results" style="display: none;">
+                    Найдено игроков: <span id="ratingResultsCount">0</span>
+                </div>
+            </div>
+            
             <table class="tournament-table">
                 <thead>
                     <tr>
                         <th>№</th>
                         <th>Имя</th>
+                        <th>▲▼</th>
+                        <th>Пред. рейтинг</th>
+                        <th>+/-</th>
                         <th>Рейтинг</th>
                     </tr>
                 </thead>

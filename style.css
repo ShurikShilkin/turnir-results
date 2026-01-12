@@ -666,16 +666,26 @@ header h1 {
         font-size: 1.2em;
     }
     
-    /* День 1: по умолчанию №, Имя, Итог */
+    /* День 1: по умолчанию №, Имя, Итог (а не Участие) */
+    #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
     #day1 .tournament-table th:nth-child(6),
-    #day1 .tournament-table th:nth-child(7),
+    #day1 .tournament-table td:nth-child(3),
     #day1 .tournament-table td:nth-child(4),
     #day1 .tournament-table td:nth-child(5),
-    #day1 .tournament-table td:nth-child(6),
-    #day1 .tournament-table td:nth-child(7) {
+    #day1 .tournament-table td:nth-child(6) {
         display: none;
+    }
+    
+    /* Показываем только №, Имя, Итог */
+    #day1 .tournament-table th:nth-child(1),
+    #day1 .tournament-table th:nth-child(2),
+    #day1 .tournament-table th:nth-child(7),
+    #day1 .tournament-table td:nth-child(1),
+    #day1 .tournament-table td:nth-child(2),
+    #day1 .tournament-table td:nth-child(7) {
+        display: table-cell !important;
     }
     
     /* Финальная таблица: по умолчанию №, Имя, ИТОГ */

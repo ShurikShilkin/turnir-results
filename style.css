@@ -32,7 +32,7 @@ header {
     margin-bottom: 15px;
 }
 
-.empty-left, .empty-right {
+.empty-left {
     width: 200px;
 }
 
@@ -43,6 +43,30 @@ header h1 {
     color: #FFD700;
     flex: 1;
     text-align: center;
+}
+
+.rating-tab-button {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 200px;
+}
+
+.rating-tab-button:hover {
+    background: linear-gradient(135deg, #F57C00, #E65100);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.rating-tab-button:active {
+    transform: translateY(0);
 }
 
 .tournament-info {
@@ -96,6 +120,30 @@ header h1 {
 
 .tab-content.active {
     display: block;
+}
+
+/* Заголовок рейтинга */
+.rating-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.rating-header h2 {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rating-subtitle {
+    font-size: 1.2em;
+    color: #4CAF50;
+    font-weight: bold;
 }
 
 /* Блок со статистикой */
@@ -168,7 +216,7 @@ header h1 {
     margin: 0 auto;
 }
 
-#searchInput {
+#searchInput, #ratingSearchInput {
     width: 100%;
     padding: 12px 40px 12px 15px;
     border: none;
@@ -179,7 +227,7 @@ header h1 {
     color: #333;
 }
 
-#searchInput:focus {
+#searchInput:focus, #ratingSearchInput:focus {
     outline: none;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
@@ -418,7 +466,7 @@ header h1 {
 .rating-crown::after {
     content: "👑";
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2em;
@@ -536,13 +584,21 @@ header h1 {
         gap: 15px;
     }
     
-    .empty-left, .empty-right {
+    .empty-left {
         display: none;
     }
     
     header h1 {
         font-size: 2em;
         order: -1;
+    }
+    
+    .rating-tab-button {
+        width: 150px;
+        padding: 10px 15px;
+        font-size: 1em;
+        order: 1;
+        margin-top: 10px;
     }
     
     .expand-button {
@@ -610,6 +666,30 @@ header h1 {
         font-size: 1.2em;
     }
     
+    /* День 1: по умолчанию №, Имя, Итог */
+    #day1 .tournament-table th:nth-child(4),
+    #day1 .tournament-table th:nth-child(5),
+    #day1 .tournament-table th:nth-child(6),
+    #day1 .tournament-table th:nth-child(7),
+    #day1 .tournament-table td:nth-child(4),
+    #day1 .tournament-table td:nth-child(5),
+    #day1 .tournament-table td:nth-child(6),
+    #day1 .tournament-table td:nth-child(7) {
+        display: none;
+    }
+    
+    /* Финальная таблица: по умолчанию №, Имя, ИТОГ */
+    #final .tournament-table th:nth-child(3),
+    #final .tournament-table th:nth-child(4),
+    #final .tournament-table th:nth-child(5),
+    #final .tournament-table th:nth-child(6),
+    #final .tournament-table td:nth-child(3),
+    #final .tournament-table td:nth-child(4),
+    #final .tournament-table td:nth-child(5),
+    #final .tournament-table td:nth-child(6) {
+        display: none;
+    }
+    
     /* Охота за головами: по умолчанию Имя, Бонус */
     #bounties .tournament-table th,
     #bounties .tournament-table td {
@@ -623,7 +703,7 @@ header h1 {
     #rating .tournament-table td:nth-child(3),
     #rating .tournament-table td:nth-child(4),
     #rating .tournament-table td:nth-child(5) {
-        display: table-cell !important;
+        display: none;
     }
     
     /* Уменьшаем отступы для длинных имен */
@@ -651,6 +731,20 @@ header h1 {
     .tournament-table.expanded th,
     .tournament-table.expanded td {
         display: table-cell !important;
+    }
+    
+    /* Заголовок рейтинга на мобильных */
+    .rating-header {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .rating-header h2 {
+        font-size: 2em;
+    }
+    
+    .rating-subtitle {
+        font-size: 1em;
     }
 }
 
@@ -692,5 +786,15 @@ header h1 {
     
     .coming-soon-text {
         font-size: 1em;
+    }
+    
+    .rating-tab-button {
+        width: 120px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    .rating-header h2 {
+        font-size: 1.8em;
     }
 }

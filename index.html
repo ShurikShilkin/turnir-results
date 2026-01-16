@@ -15,14 +15,14 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Старт турнира</div>
+                <div class="tournament-phase" id="currentPhase">День 2 - 15.01.2026</div>
             </div>
         </header>
 
         <!-- Основные вкладки -->
         <div class="tabs" id="mainTabs">
-            <button class="tab-button active" onclick="showTab('day1')">День 1 - 8.01.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 15.01.2026</button>
+            <button class="tab-button" onclick="showTab('day1')">День 1 - 8.01.2026</button>
+            <button class="tab-button active" onclick="showTab('day2')">День 2 - 15.01.2026</button>
             <button class="tab-button" onclick="showTab('day3')">День 3 - 22.01.2026</button>
             <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 24.01.2026</button>
             <button class="tab-button" onclick="showTab('bounties')">Охота за головами</button>
@@ -38,7 +38,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">15.01.2026</div>
+                        <div class="date-value">22.01.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -68,7 +68,7 @@
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
         <!-- Вкладка День 1 -->
-        <div id="day1" class="tab-content active">
+        <div id="day1" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -88,11 +88,23 @@
         </div>
 
         <!-- Вкладка День 2 -->
-        <div id="day2" class="tab-content">
-            <div class="coming-soon">
-                <div class="coming-soon-icon">⏳</div>
-                <div class="coming-soon-text">Данные дня 2 появятся после завершения турнира 15.01.2026</div>
-            </div>
+        <div id="day2" class="tab-content active">
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Участие</th>
+                        <th>Старт</th>
+                        <th>Добор</th>
+                        <th>Выход</th>
+                        <th>Итог</th>
+                    </tr>
+                </thead>
+                <tbody id="day2Table">
+                    <!-- Игроки дня 2 -->
+                </tbody>
+            </table>
         </div>
 
         <!-- Вкладка День 3 -->
@@ -104,28 +116,28 @@
         </div>
 
         <!-- Вкладка ФИНАЛ -->
-        <div id="final" class="tab-content">
-            <div class="special-tab-content">
-                <h2>ФИНАЛ ТУРНИРА</h2>
-                <div class="special-date">24.01.2026</div>
-                <table class="tournament-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Имя</th>
-                            <th>День 1</th>
-                            <th>День 2</th>
-                            <th>День 3</th>
-                            <th>ФИНАЛ</th>
-                            <th>ИТОГ</th>
-                        </tr>
-                    </thead>
-                    <tbody id="finalTable">
-                        <!-- Финалисты -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<div id="final" class="tab-content">
+    <div class="special-tab-content">
+        <h2>ФИНАЛ ТУРНИРА</h2>
+        <div class="special-date">24.01.2026</div>
+        <table class="tournament-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>▲▼</th>
+                    <th>День 1</th>
+                    <th>День 2</th>
+                    <th>День 3</th>
+                    <th>ИТОГ</th> <!-- Убрали ФИНАЛ -->
+                </tr>
+            </thead>
+            <tbody id="finalTable">
+                <!-- Финалисты -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
         <!-- Вкладка Охота за головами -->
         <div id="bounties" class="tab-content">
@@ -145,19 +157,7 @@
         <!-- Вкладка Рейтинг -->
         <div id="rating" class="tab-content">
             <div class="rating-header">
-                <h2>Рейтинг серии</h2>
-                <div class="rating-subtitle">Обновлен после дня 1 (8.01.2026)</div>
-            </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <input type="text" id="ratingSearchInput" placeholder="Поиск игрока по имени...">
-                    <button id="clearRatingSearch" class="clear-search">×</button>
-                    <div id="ratingAutocompleteResults" class="autocomplete-results"></div>
-                </div>
-                <div id="ratingSearchResults" class="search-results" style="display: none;">
-                    Найдено игроков: <span id="ratingResultsCount">0</span>
-                </div>
+                <h2>Рейтинг</h2>
             </div>
             
             <table class="tournament-table">

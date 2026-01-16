@@ -125,25 +125,15 @@ header h1 {
 /* Заголовок рейтинга */
 .rating-header {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
 .rating-header h2 {
     font-size: 2.5em;
     color: #FFD700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.rating-subtitle {
-    font-size: 1.2em;
-    color: #4CAF50;
-    font-weight: bold;
 }
 
 /* Блок со статистикой */
@@ -216,7 +206,7 @@ header h1 {
     margin: 0 auto;
 }
 
-#searchInput, #ratingSearchInput {
+#searchInput {
     width: 100%;
     padding: 12px 40px 12px 15px;
     border: none;
@@ -227,7 +217,7 @@ header h1 {
     color: #333;
 }
 
-#searchInput:focus, #ratingSearchInput:focus {
+#searchInput:focus {
     outline: none;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
@@ -666,7 +656,7 @@ header h1 {
         font-size: 1.2em;
     }
     
-    /* День 1: по умолчанию №, Имя, Итог (а не Участие) */
+    /* День 1: по умолчанию №, Имя, Итог */
     #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
@@ -678,17 +668,19 @@ header h1 {
         display: none;
     }
     
-    /* Показываем только №, Имя, Итог */
-    #day1 .tournament-table th:nth-child(1),
-    #day1 .tournament-table th:nth-child(2),
-    #day1 .tournament-table th:nth-child(7),
-    #day1 .tournament-table td:nth-child(1),
-    #day1 .tournament-table td:nth-child(2),
-    #day1 .tournament-table td:nth-child(7) {
-        display: table-cell !important;
+    /* День 2: по умолчанию №, Имя, Итог */
+    #day2 .tournament-table th:nth-child(3),
+    #day2 .tournament-table th:nth-child(4),
+    #day2 .tournament-table th:nth-child(5),
+    #day2 .tournament-table th:nth-child(6),
+    #day2 .tournament-table td:nth-child(3),
+    #day2 .tournament-table td:nth-child(4),
+    #day2 .tournament-table td:nth-child(5),
+    #day2 .tournament-table td:nth-child(6) {
+        display: none;
     }
     
-    /* Финальная таблица: по умолчанию №, Имя, ИТОГ */
+    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (теперь 7 колонок вместо 8) */
     #final .tournament-table th:nth-child(3),
     #final .tournament-table th:nth-child(4),
     #final .tournament-table th:nth-child(5),
@@ -746,15 +738,11 @@ header h1 {
     /* Заголовок рейтинга на мобильных */
     .rating-header {
         padding: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     .rating-header h2 {
         font-size: 2em;
-    }
-    
-    .rating-subtitle {
-        font-size: 1em;
     }
 }
 

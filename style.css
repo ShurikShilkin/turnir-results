@@ -545,28 +545,6 @@ header h1 {
     font-weight: bold;
 }
 
-.coming-soon {
-    padding: 40px;
-    text-align: center;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    margin-top: 20px;
-    border: 2px solid rgba(255,255,255,0.2);
-}
-
-.coming-soon-icon {
-    font-size: 4em;
-    margin-bottom: 20px;
-    color: #FFD700;
-}
-
-.coming-soon-text {
-    font-size: 1.5em;
-    color: rgba(255,255,255,0.9);
-    line-height: 1.5;
-}
-
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
     .header-top {
@@ -644,19 +622,7 @@ header h1 {
         font-size: 2em;
     }
     
-    .coming-soon {
-        padding: 20px;
-    }
-    
-    .coming-soon-icon {
-        font-size: 3em;
-    }
-    
-    .coming-soon-text {
-        font-size: 1.2em;
-    }
-    
-    /* День 1: по умолчанию №, Имя, Итог */
+    /* День 1, 2, 3: по умолчанию №, Имя, Итог */
     #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
@@ -668,7 +634,6 @@ header h1 {
         display: none;
     }
     
-    /* День 2: по умолчанию №, Имя, Итог */
     #day2 .tournament-table th:nth-child(3),
     #day2 .tournament-table th:nth-child(4),
     #day2 .tournament-table th:nth-child(5),
@@ -680,22 +645,43 @@ header h1 {
         display: none;
     }
     
-    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (теперь 7 колонок вместо 8) */
+    #day3 .tournament-table th:nth-child(3),
+    #day3 .tournament-table th:nth-child(4),
+    #day3 .tournament-table th:nth-child(5),
+    #day3 .tournament-table th:nth-child(6),
+    #day3 .tournament-table td:nth-child(3),
+    #day3 .tournament-table td:nth-child(4),
+    #day3 .tournament-table td:nth-child(5),
+    #day3 .tournament-table td:nth-child(6) {
+        display: none;
+    }
+    
+    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (11 колонок, показываем только 1, 2, 11) */
     #final .tournament-table th:nth-child(3),
     #final .tournament-table th:nth-child(4),
     #final .tournament-table th:nth-child(5),
     #final .tournament-table th:nth-child(6),
+    #final .tournament-table th:nth-child(7),
+    #final .tournament-table th:nth-child(8),
+    #final .tournament-table th:nth-child(9),
+    #final .tournament-table th:nth-child(10),
     #final .tournament-table td:nth-child(3),
     #final .tournament-table td:nth-child(4),
     #final .tournament-table td:nth-child(5),
-    #final .tournament-table td:nth-child(6) {
+    #final .tournament-table td:nth-child(6),
+    #final .tournament-table td:nth-child(7),
+    #final .tournament-table td:nth-child(8),
+    #final .tournament-table td:nth-child(9),
+    #final .tournament-table td:nth-child(10) {
         display: none;
     }
     
-    /* Охота за головами: по умолчанию Имя, Бонус */
-    #bounties .tournament-table th,
-    #bounties .tournament-table td {
-        display: table-cell !important;
+    /* Блайнды: по умолчанию №, Время начала, МБ, ББ, Анте */
+    #blinds .tournament-table th:nth-child(3),
+    #blinds .tournament-table th:nth-child(5),
+    #blinds .tournament-table td:nth-child(3),
+    #blinds .tournament-table td:nth-child(5) {
+        display: none;
     }
     
     /* Рейтинг: по умолчанию №, Имя, Рейтинг */
@@ -776,14 +762,6 @@ header h1 {
     
     .special-tab-content h2 {
         font-size: 1.8em;
-    }
-    
-    .coming-soon-icon {
-        font-size: 2.5em;
-    }
-    
-    .coming-soon-text {
-        font-size: 1em;
     }
     
     .rating-tab-button {

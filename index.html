@@ -15,17 +15,17 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">ФИНАЛ ТУРНИРА - 24.01.2026</div>
+                <div class="tournament-phase" id="currentPhase">РЕЗУЛЬТАТЫ ТУРНИРА</div>
             </div>
         </header>
 
         <!-- Основные вкладки -->
         <div class="tabs" id="mainTabs">
+            <button class="tab-button" onclick="showTab('results')">Результаты</button>
             <button class="tab-button" onclick="showTab('day1')">День 1 - 8.01.2026</button>
             <button class="tab-button" onclick="showTab('day2')">День 2 - 15.01.2026</button>
             <button class="tab-button" onclick="showTab('day3')">День 3 - 22.01.2026</button>
-            <button class="tab-button active" onclick="showTab('final')">ФИНАЛ - 24.01.2026</button>
-            <button class="tab-button" onclick="showTab('blinds')">Блайнды</button>
+            <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 24.01.2026</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
@@ -38,11 +38,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">24.01.2026</div>
+                        <div class="date-value">29.01.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">24.01.2026</div>
+                        <div class="date-value">21.02.2026</div>
                     </div>
                 </div>
             </div>
@@ -66,6 +66,26 @@
 
         <!-- Кнопка развертывания для мобильных -->
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
+
+        <!-- Вкладка Результаты -->
+        <div id="results" class="tab-content active">
+            <div class="special-tab-content">
+                <h2>Итоговые результаты турнира</h2>
+                <div class="special-date">Турнир Миссис Дейзи Дак Q-2</div>
+                <table class="tournament-table">
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Имя</th>
+                            <th>Медаль</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTable">
+                        <!-- Результаты турнира -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <!-- Вкладка День 1 -->
         <div id="day1" class="tab-content">
@@ -127,52 +147,29 @@
             </table>
         </div>
 
-<!-- Вкладка ФИНАЛ -->
-<div id="final" class="tab-content active">
-    <div class="special-tab-content">
-        <h2>ФИНАЛ ТУРНИРА</h2>
-        <div class="special-date">24.01.2026</div>
-        <table class="tournament-table">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Имя</th>
-                    <th>▲▼</th>
-                    <th>День 1</th>
-                    <th>День 2</th>
-                    <th>День 3</th>
-                    <th>Отборочные</th>
-                    <th>Верность</th>
-                    <th>Охота</th>
-                    <th>Финал</th>
-                    <th>ИТОГ</th>
-                </tr>
-            </thead>
-            <tbody id="finalTable">
-                <!-- Финалисты -->
-            </tbody>
-        </table>
-    </div>
-</div>
-
-        <!-- Вкладка Блайнды -->
-        <div id="blinds" class="tab-content">
+        <!-- Вкладка ФИНАЛ -->
+        <div id="final" class="tab-content">
             <div class="special-tab-content">
-                <h2>Уровни блайндов</h2>
-                <div class="special-date">Турнир 22.01.2026</div>
+                <h2>ФИНАЛ ТУРНИРА</h2>
+                <div class="special-date">24.01.2026</div>
                 <table class="tournament-table">
                     <thead>
                         <tr>
                             <th>№</th>
-                            <th>Время начала</th>
-                            <th>Время конца</th>
-                            <th>МБ</th>
-                            <th>ББ</th>
-                            <th>Анте</th>
+                            <th>Имя</th>
+                            <th>▲▼</th>
+                            <th>День 1</th>
+                            <th>День 2</th>
+                            <th>День 3</th>
+                            <th>Отборочные</th>
+                            <th>Верность</th>
+                            <th>Охота</th>
+                            <th>Финал</th>
+                            <th>ИТОГ</th>
                         </tr>
                     </thead>
-                    <tbody id="blindsTable">
-                        <!-- Блайнды -->
+                    <tbody id="finalTable">
+                        <!-- Финалисты -->
                     </tbody>
                 </table>
             </div>

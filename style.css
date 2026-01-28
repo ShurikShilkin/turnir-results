@@ -32,10 +32,6 @@ header {
     margin-bottom: 15px;
 }
 
-.empty-left {
-    width: 200px;
-}
-
 header h1 {
     font-size: 2.8em;
     margin: 0;
@@ -43,6 +39,32 @@ header h1 {
     color: #FFD700;
     flex: 1;
     text-align: center;
+}
+
+.previous-tournament-button {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 250px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.previous-tournament-button:hover {
+    background: linear-gradient(135deg, #7B1FA2, #6A1B9A);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.previous-tournament-button:active {
+    transform: translateY(0);
 }
 
 .rating-tab-button {
@@ -97,12 +119,13 @@ header h1 {
     background: none;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 5px;
     border-radius: 25px;
     font-size: 0.9em;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-width: 150px;
 }
 
 .tab-button:hover {
@@ -439,6 +462,16 @@ header h1 {
     font-weight: bold;
 }
 
+/* Стили для охоты за головами (упрощенные) */
+.hunting-table .bounty-value {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2E7D32;
+    background: #e8f5e9;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
 /* Стили для рейтинга */
 .rating-highlight {
     background: #fff9c4 !important;
@@ -589,21 +622,27 @@ header h1 {
         gap: 15px;
     }
     
-    .empty-left {
-        display: none;
-    }
-    
     header h1 {
         font-size: 2em;
-        order: -1;
+        order: 1;
+        margin: 10px 0;
+    }
+    
+    .previous-tournament-button {
+        width: 90%;
+        max-width: 300px;
+        padding: 10px 15px;
+        font-size: 0.85em;
+        order: 2;
+        margin-bottom: 10px;
     }
     
     .rating-tab-button {
-        width: 150px;
+        width: 90%;
+        max-width: 200px;
         padding: 10px 15px;
         font-size: 1em;
-        order: 1;
-        margin-top: 10px;
+        order: 3;
     }
     
     .expand-button {
@@ -659,7 +698,7 @@ header h1 {
         font-size: 2em;
     }
     
-    /* День 1, 2, 3: по умолчанию №, Имя, Итог */
+    /* День 1: по умолчанию №, Имя, Итог */
     #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
@@ -671,6 +710,7 @@ header h1 {
         display: none;
     }
     
+    /* День 2: по умолчанию №, Имя, Итог */
     #day2 .tournament-table th:nth-child(3),
     #day2 .tournament-table th:nth-child(4),
     #day2 .tournament-table th:nth-child(5),
@@ -682,6 +722,7 @@ header h1 {
         display: none;
     }
     
+    /* День 3: по умолчанию №, Имя, Итог */
     #day3 .tournament-table th:nth-child(3),
     #day3 .tournament-table th:nth-child(4),
     #day3 .tournament-table th:nth-child(5),
@@ -693,7 +734,19 @@ header h1 {
         display: none;
     }
     
-    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (11 колонок, показываем только 1, 2, 11) */
+    /* День 4: по умолчанию №, Имя, Итог */
+    #day4 .tournament-table th:nth-child(3),
+    #day4 .tournament-table th:nth-child(4),
+    #day4 .tournament-table th:nth-child(5),
+    #day4 .tournament-table th:nth-child(6),
+    #day4 .tournament-table td:nth-child(3),
+    #day4 .tournament-table td:nth-child(4),
+    #day4 .tournament-table td:nth-child(5),
+    #day4 .tournament-table td:nth-child(6) {
+        display: none;
+    }
+    
+    /* Финальная таблица: по умолчанию №, Имя, ИТОГ */
     #final .tournament-table th:nth-child(3),
     #final .tournament-table th:nth-child(4),
     #final .tournament-table th:nth-child(5),
@@ -702,6 +755,7 @@ header h1 {
     #final .tournament-table th:nth-child(8),
     #final .tournament-table th:nth-child(9),
     #final .tournament-table th:nth-child(10),
+    #final .tournament-table th:nth-child(11),
     #final .tournament-table td:nth-child(3),
     #final .tournament-table td:nth-child(4),
     #final .tournament-table td:nth-child(5),
@@ -709,13 +763,14 @@ header h1 {
     #final .tournament-table td:nth-child(7),
     #final .tournament-table td:nth-child(8),
     #final .tournament-table td:nth-child(9),
-    #final .tournament-table td:nth-child(10) {
+    #final .tournament-table td:nth-child(10),
+    #final .tournament-table td:nth-child(11) {
         display: none;
     }
     
-    /* Результаты: по умолчанию №, Имя, Место */
-    #results .tournament-table th:nth-child(4),
-    #results .tournament-table td:nth-child(4) {
+    /* Результаты предыдущего турнира: по умолчанию №, Имя, Место */
+    #previousResults .tournament-table th:nth-child(4),
+    #previousResults .tournament-table td:nth-child(4) {
         display: none;
     }
     
@@ -799,13 +854,27 @@ header h1 {
         font-size: 1.8em;
     }
     
+    .previous-tournament-button {
+        font-size: 0.8em;
+        padding: 8px 12px;
+    }
+    
     .rating-tab-button {
-        width: 120px;
         padding: 8px 12px;
         font-size: 0.9em;
     }
     
     .rating-header h2 {
         font-size: 1.8em;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    /* Охота за головами на очень маленьких экранах */
+    .hunting-table .bounty-value {
+        font-size: 1em;
+        padding: 4px 8px;
     }
 }

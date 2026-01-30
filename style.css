@@ -462,7 +462,13 @@ header h1 {
     font-weight: bold;
 }
 
-/* Стили для охоты за головами (упрощенные) */
+.comment {
+    font-style: italic;
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* Стили для охоты за головами */
 .hunting-table .bounty-value {
     font-weight: bold;
     font-size: 1.1em;
@@ -703,10 +709,14 @@ header h1 {
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
     #day1 .tournament-table th:nth-child(6),
+    #day1 .tournament-table th:nth-child(7),
+    #day1 .tournament-table th:nth-child(9),
     #day1 .tournament-table td:nth-child(3),
     #day1 .tournament-table td:nth-child(4),
     #day1 .tournament-table td:nth-child(5),
-    #day1 .tournament-table td:nth-child(6) {
+    #day1 .tournament-table td:nth-child(6),
+    #day1 .tournament-table td:nth-child(7),
+    #day1 .tournament-table td:nth-child(9) {
         display: none;
     }
     
@@ -715,10 +725,14 @@ header h1 {
     #day2 .tournament-table th:nth-child(4),
     #day2 .tournament-table th:nth-child(5),
     #day2 .tournament-table th:nth-child(6),
+    #day2 .tournament-table th:nth-child(7),
+    #day2 .tournament-table th:nth-child(9),
     #day2 .tournament-table td:nth-child(3),
     #day2 .tournament-table td:nth-child(4),
     #day2 .tournament-table td:nth-child(5),
-    #day2 .tournament-table td:nth-child(6) {
+    #day2 .tournament-table td:nth-child(6),
+    #day2 .tournament-table td:nth-child(7),
+    #day2 .tournament-table td:nth-child(9) {
         display: none;
     }
     
@@ -727,10 +741,14 @@ header h1 {
     #day3 .tournament-table th:nth-child(4),
     #day3 .tournament-table th:nth-child(5),
     #day3 .tournament-table th:nth-child(6),
+    #day3 .tournament-table th:nth-child(7),
+    #day3 .tournament-table th:nth-child(9),
     #day3 .tournament-table td:nth-child(3),
     #day3 .tournament-table td:nth-child(4),
     #day3 .tournament-table td:nth-child(5),
-    #day3 .tournament-table td:nth-child(6) {
+    #day3 .tournament-table td:nth-child(6),
+    #day3 .tournament-table td:nth-child(7),
+    #day3 .tournament-table td:nth-child(9) {
         display: none;
     }
     
@@ -739,32 +757,26 @@ header h1 {
     #day4 .tournament-table th:nth-child(4),
     #day4 .tournament-table th:nth-child(5),
     #day4 .tournament-table th:nth-child(6),
+    #day4 .tournament-table th:nth-child(7),
+    #day4 .tournament-table th:nth-child(9),
     #day4 .tournament-table td:nth-child(3),
     #day4 .tournament-table td:nth-child(4),
     #day4 .tournament-table td:nth-child(5),
-    #day4 .tournament-table td:nth-child(6) {
+    #day4 .tournament-table td:nth-child(6),
+    #day4 .tournament-table td:nth-child(7),
+    #day4 .tournament-table td:nth-child(9) {
         display: none;
     }
     
-    /* Финальная таблица: по умолчанию №, Имя, ИТОГ */
+    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (7 колонок, показываем 1, 2, 7) */
     #final .tournament-table th:nth-child(3),
     #final .tournament-table th:nth-child(4),
     #final .tournament-table th:nth-child(5),
     #final .tournament-table th:nth-child(6),
-    #final .tournament-table th:nth-child(7),
-    #final .tournament-table th:nth-child(8),
-    #final .tournament-table th:nth-child(9),
-    #final .tournament-table th:nth-child(10),
-    #final .tournament-table th:nth-child(11),
     #final .tournament-table td:nth-child(3),
     #final .tournament-table td:nth-child(4),
     #final .tournament-table td:nth-child(5),
-    #final .tournament-table td:nth-child(6),
-    #final .tournament-table td:nth-child(7),
-    #final .tournament-table td:nth-child(8),
-    #final .tournament-table td:nth-child(9),
-    #final .tournament-table td:nth-child(10),
-    #final .tournament-table td:nth-child(11) {
+    #final .tournament-table td:nth-child(6) {
         display: none;
     }
     
@@ -820,6 +832,12 @@ header h1 {
     .rating-header h2 {
         font-size: 2em;
     }
+    
+    /* Охота за головами: все 3 колонки показываем */
+    .hunting-table .bounty-value {
+        font-size: 1em;
+        padding: 4px 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -870,11 +888,5 @@ header h1 {
     
     header h1 {
         font-size: 1.8em;
-    }
-    
-    /* Охота за головами на очень маленьких экранах */
-    .hunting-table .bounty-value {
-        font-size: 1em;
-        padding: 4px 8px;
     }
 }

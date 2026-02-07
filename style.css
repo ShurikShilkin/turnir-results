@@ -816,27 +816,29 @@ header h1 {
         display: none;
     }
     
-    /* Увеличиваем ширину колонки имени в рейтинге */
-    #rating .tournament-table th:nth-child(2),
-    #rating .tournament-table td:nth-child(2) {
-        width: 60%;
-        text-align: left;
-        padding-left: 10px !important;
+    /* Уменьшаем ширину колонки позиции */
+    .number-column {
+        width: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        padding: 6px 2px !important;
+        font-size: 0.9em;
+    }
+    
+    /* Увеличиваем ширину колонки имени */
+    .player-name {
+        padding-left: 8px !important;
+        max-width: none;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     
     /* Охота за головами на мобильных: показываем все 3 колонки */
     .hunting-table .bounty-value {
         font-size: 1em;
         padding: 4px 8px;
-    }
-    
-    /* Уменьшаем отступы для длинных имен */
-    .player-name {
-        padding-left: 8px !important;
-        max-width: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
     
     /* Когда таблица развернута - показываем ВСЕ колонки */
@@ -888,8 +890,13 @@ header h1 {
         font-size: 1em;
     }
     
+    /* Еще уменьшаем ширину колонки позиции */
     .number-column {
-        width: 30px;
+        width: 30px !important;
+        min-width: 30px !important;
+        max-width: 30px !important;
+        padding: 6px 1px !important;
+        font-size: 0.85em;
     }
     
     .search-box {
@@ -921,13 +928,34 @@ header h1 {
     /* Корректируем отображение итоговых колонок */
     #day1 .tournament-table td:nth-child(8),
     #day2 .tournament-table td:nth-child(11),
-    #final .tournament-table td:nth-child(9) {
+    #final .tournament-table td:nth-child(9),
+    #rating .tournament-table td:nth-child(6) {
         font-weight: bold;
         font-size: 0.9em;
         padding: 8px 4px !important;
         display: table-cell !important;
-        width: 30%;
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
         text-align: center;
+        white-space: nowrap;
+    }
+    
+    /* Заголовки итоговых колонок */
+    #day1 .tournament-table th:nth-child(8),
+    #day2 .tournament-table th:nth-child(11),
+    #final .tournament-table th:nth-child(9),
+    #rating .tournament-table th:nth-child(6) {
+        display: table-cell !important;
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        padding: 8px 4px !important;
+        font-size: 0.85em;
+        white-space: nowrap;
     }
     
     /* Для выбывших игроков в финале */
@@ -936,16 +964,33 @@ header h1 {
         padding: 6px 4px !important;
     }
     
-    /* Убеждаемся, что итоговые заголовки видны */
-    #day1 .tournament-table th:nth-child(8),
-    #day2 .tournament-table th:nth-child(11),
-    #final .tournament-table th:nth-child(9),
-    #rating .tournament-table th:nth-child(6) {
-        display: table-cell !important;
-        width: 30%;
-        text-align: center;
-        background: #2c3e50;
-        color: white;
-        padding: 8px 4px !important;
+    /* Устанавливаем фиксированную ширину для всех колонок на маленьких экранах */
+    #day1 .tournament-table th:nth-child(1),
+    #day1 .tournament-table td:nth-child(1),
+    #day2 .tournament-table th:nth-child(1),
+    #day2 .tournament-table td:nth-child(1),
+    #final .tournament-table th:nth-child(1),
+    #final .tournament-table td:nth-child(1),
+    #rating .tournament-table th:nth-child(1),
+    #rating .tournament-table td:nth-child(1) {
+        width: 30px !important;
+        min-width: 30px !important;
+        max-width: 30px !important;
+    }
+    
+    #day1 .tournament-table th:nth-child(2),
+    #day1 .tournament-table td:nth-child(2),
+    #day2 .tournament-table th:nth-child(2),
+    #day2 .tournament-table td:nth-child(2),
+    #final .tournament-table th:nth-child(2),
+    #final .tournament-table td:nth-child(2),
+    #rating .tournament-table th:nth-child(2),
+    #rating .tournament-table td:nth-child(2) {
+        width: calc(100% - 80px) !important;
+        min-width: calc(100% - 80px) !important;
+        max-width: calc(100% - 80px) !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }

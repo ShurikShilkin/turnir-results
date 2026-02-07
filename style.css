@@ -756,7 +756,7 @@ header h1 {
         font-size: 2em;
     }
     
-    /* Вкладка День 2 на мобильных: показываем №, Имя, Итог (колонка 11) */
+    /* Вкладка День 2 на мобильных: показываем №, Имя, Итог (колонка 10), скрываем комментарий (11) */
     #day2 .tournament-table th:nth-child(3),
     #day2 .tournament-table th:nth-child(4),
     #day2 .tournament-table th:nth-child(5),
@@ -764,7 +764,7 @@ header h1 {
     #day2 .tournament-table th:nth-child(7),
     #day2 .tournament-table th:nth-child(8),
     #day2 .tournament-table th:nth-child(9),
-    #day2 .tournament-table th:nth-child(10),
+    #day2 .tournament-table th:nth-child(11),
     #day2 .tournament-table td:nth-child(3),
     #day2 .tournament-table td:nth-child(4),
     #day2 .tournament-table td:nth-child(5),
@@ -772,21 +772,23 @@ header h1 {
     #day2 .tournament-table td:nth-child(7),
     #day2 .tournament-table td:nth-child(8),
     #day2 .tournament-table td:nth-child(9),
-    #day2 .tournament-table td:nth-child(10) {
+    #day2 .tournament-table td:nth-child(11) {
         display: none;
     }
     
-    /* Вкладка День 1 на мобильных: показываем №, Имя, Итог (колонка 8) */
+    /* Вкладка День 1 на мобильных: показываем №, Имя, Итог (колонка 8), скрываем комментарий (9) */
     #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
     #day1 .tournament-table th:nth-child(6),
     #day1 .tournament-table th:nth-child(7),
+    #day1 .tournament-table th:nth-child(9),
     #day1 .tournament-table td:nth-child(3),
     #day1 .tournament-table td:nth-child(4),
     #day1 .tournament-table td:nth-child(5),
     #day1 .tournament-table td:nth-child(6),
-    #day1 .tournament-table td:nth-child(7) {
+    #day1 .tournament-table td:nth-child(7),
+    #day1 .tournament-table td:nth-child(9) {
         display: none;
     }
     
@@ -925,9 +927,9 @@ header h1 {
         font-size: 1.8em;
     }
     
-    /* Корректируем отображение итоговых колонок */
+    /* Корректируем отображение итоговых колонок - День 2 колонка 10, День 1 колонка 8 */
     #day1 .tournament-table td:nth-child(8),
-    #day2 .tournament-table td:nth-child(11),
+    #day2 .tournament-table td:nth-child(10),
     #final .tournament-table td:nth-child(9),
     #rating .tournament-table td:nth-child(6) {
         font-weight: bold;
@@ -943,7 +945,7 @@ header h1 {
     
     /* Заголовки итоговых колонок */
     #day1 .tournament-table th:nth-child(8),
-    #day2 .tournament-table th:nth-child(11),
+    #day2 .tournament-table th:nth-child(10),
     #final .tournament-table th:nth-child(9),
     #rating .tournament-table th:nth-child(6) {
         display: table-cell !important;

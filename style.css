@@ -762,7 +762,7 @@ header h1 {
         font-size: 2em;
     }
     
-    /* Фиксированная ширина для мобильных таблиц */
+    /* Фиксированная ширина для мобильных таблиц - ОБЩИЕ ПРАВИЛА */
     .tournament-table th:nth-child(1),
     .tournament-table td:nth-child(1) {
         width: 40px !important;
@@ -876,8 +876,25 @@ header h1 {
         min-width: 50px !important;
         max-width: 50px !important;
         text-align: center !important;
-        font-weight: bold;
+        font-weight: bold !important;
         padding: 8px 4px !important;
+        font-size: 0.85em !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+    }
+    
+    /* Явные стили для итоговой колонки в финале */
+    #final .final-total {
+        display: table-cell !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-weight: bold !important;
+        font-size: 0.85em !important;
+        padding: 8px 4px !important;
+        text-align: center !important;
+        width: 50px !important;
+        min-width: 50px !important;
+        max-width: 50px !important;
     }
     
     /* РЕЙТИНГ на мобильных: показываем только № (1), Имя (2), Рейтинг (6) */
@@ -1009,9 +1026,21 @@ header h1 {
         padding: 8px 2px !important;
     }
     
+    /* Дополнительные стили для финальной таблицы на маленьких экранах */
+    #final .final-total {
+        width: 45px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+        padding: 8px 2px !important;
+        font-size: 0.8em !important;
+    }
+    
     /* Для выбывших игроков в финале */
     #final .eliminated-status {
         font-size: 0.8em;
         padding: 6px 2px !important;
+        display: table-cell !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }

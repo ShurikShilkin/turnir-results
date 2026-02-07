@@ -388,6 +388,47 @@ header h1 {
     border-bottom: none;
 }
 
+/* Стили для строк с выбывшими игроками */
+.eliminated-row {
+    background: linear-gradient(90deg, #ffebee, #ffcdd2) !important;
+    border-left: 4px solid #f44336;
+}
+
+.eliminated-player {
+    background: linear-gradient(90deg, #ffebee, #ffcdd2) !important;
+    border-left: 4px solid #f44336;
+}
+
+.eliminated-status {
+    color: #d32f2f;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Стили для разницы в финальной таблице */
+.difference-column {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 12px !important;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.difference-positive {
+    color: #2E7D32;
+    background: #e8f5e9 !important;
+}
+
+.difference-negative {
+    color: #C62828;
+    background: #ffebee !important;
+}
+
+.difference-zero {
+    color: #666;
+    background: #f5f5f5 !important;
+}
+
 /* Стили для колонок */
 .player-name {
     font-weight: bold;
@@ -462,10 +503,21 @@ header h1 {
     font-weight: bold;
 }
 
+.deal-negative {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
 .comment {
     font-style: italic;
     color: #666;
     font-size: 0.85em;
+}
+
+.player-status {
+    font-style: italic;
+    color: #666;
+    font-weight: bold;
 }
 
 /* Стили для охоты за головами */
@@ -704,97 +756,21 @@ header h1 {
         font-size: 2em;
     }
     
-    /* День 1: по умолчанию №, Имя, Итог */
-    #day1 .tournament-table th:nth-child(3),
-    #day1 .tournament-table th:nth-child(4),
-    #day1 .tournament-table th:nth-child(5),
-    #day1 .tournament-table th:nth-child(6),
-    #day1 .tournament-table th:nth-child(7),
-    #day1 .tournament-table th:nth-child(9),
-    #day1 .tournament-table td:nth-child(3),
-    #day1 .tournament-table td:nth-child(4),
-    #day1 .tournament-table td:nth-child(5),
-    #day1 .tournament-table td:nth-child(6),
-    #day1 .tournament-table td:nth-child(7),
-    #day1 .tournament-table td:nth-child(9) {
-        display: none;
-    }
-    
-    /* День 2: по умолчанию №, Имя, Итог */
-    #day2 .tournament-table th:nth-child(3),
-    #day2 .tournament-table th:nth-child(4),
-    #day2 .tournament-table th:nth-child(5),
-    #day2 .tournament-table th:nth-child(6),
-    #day2 .tournament-table th:nth-child(7),
-    #day2 .tournament-table th:nth-child(9),
-    #day2 .tournament-table td:nth-child(3),
-    #day2 .tournament-table td:nth-child(4),
-    #day2 .tournament-table td:nth-child(5),
-    #day2 .tournament-table td:nth-child(6),
-    #day2 .tournament-table td:nth-child(7),
-    #day2 .tournament-table td:nth-child(9) {
-        display: none;
-    }
-    
-    /* День 3: по умолчанию №, Имя, Итог */
-    #day3 .tournament-table th:nth-child(3),
-    #day3 .tournament-table th:nth-child(4),
-    #day3 .tournament-table th:nth-child(5),
-    #day3 .tournament-table th:nth-child(6),
-    #day3 .tournament-table th:nth-child(7),
-    #day3 .tournament-table th:nth-child(9),
-    #day3 .tournament-table td:nth-child(3),
-    #day3 .tournament-table td:nth-child(4),
-    #day3 .tournament-table td:nth-child(5),
-    #day3 .tournament-table td:nth-child(6),
-    #day3 .tournament-table td:nth-child(7),
-    #day3 .tournament-table td:nth-child(9) {
-        display: none;
-    }
-    
-    /* День 4: по умолчанию №, Имя, Итог */
-    #day4 .tournament-table th:nth-child(3),
-    #day4 .tournament-table th:nth-child(4),
-    #day4 .tournament-table th:nth-child(5),
-    #day4 .tournament-table th:nth-child(6),
-    #day4 .tournament-table th:nth-child(7),
-    #day4 .tournament-table th:nth-child(9),
-    #day4 .tournament-table td:nth-child(3),
-    #day4 .tournament-table td:nth-child(4),
-    #day4 .tournament-table td:nth-child(5),
-    #day4 .tournament-table td:nth-child(6),
-    #day4 .tournament-table td:nth-child(7),
-    #day4 .tournament-table td:nth-child(9) {
-        display: none;
-    }
-    
-    /* Финальная таблица: по умолчанию №, Имя, ИТОГ (7 колонок, показываем 1, 2, 7) */
-    #final .tournament-table th:nth-child(3),
+    /* Финальная таблица на мобильных: показываем только №, Имя, ▲▼, ИТОГ */
     #final .tournament-table th:nth-child(4),
     #final .tournament-table th:nth-child(5),
     #final .tournament-table th:nth-child(6),
-    #final .tournament-table td:nth-child(3),
+    #final .tournament-table th:nth-child(7),
+    #final .tournament-table th:nth-child(8),
     #final .tournament-table td:nth-child(4),
     #final .tournament-table td:nth-child(5),
-    #final .tournament-table td:nth-child(6) {
+    #final .tournament-table td:nth-child(6),
+    #final .tournament-table td:nth-child(7),
+    #final .tournament-table td:nth-child(8) {
         display: none;
     }
     
-    /* Результаты предыдущего турнира: по умолчанию №, Имя, Место */
-    #previousResults .tournament-table th:nth-child(4),
-    #previousResults .tournament-table td:nth-child(4) {
-        display: none;
-    }
-    
-    /* Рейтинг: по умолчанию №, Имя, Рейтинг */
-    #rating .tournament-table th:nth-child(3),
-    #rating .tournament-table th:nth-child(4),
-    #rating .tournament-table th:nth-child(5),
-    #rating .tournament-table td:nth-child(3),
-    #rating .tournament-table td:nth-child(4),
-    #rating .tournament-table td:nth-child(5) {
-        display: none;
-    }
+    /* Остальные адаптивные стили остаются без изменений */
     
     /* Уменьшаем отступы для длинных имен */
     .player-name {

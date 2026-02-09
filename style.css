@@ -808,14 +808,15 @@ header h1 {
         display: none;
     }
     
-    /* Убедимся что ИТОГ (колонка 9) показывается в финале */
+    /* Убедимся что ИТОГ (колонка 9) показывается в финале - ВАЖНО добавить !important */
     #final .tournament-table th:nth-child(9),
     #final .tournament-table td:nth-child(9) {
-        display: table-cell;
+        display: table-cell !important;
         width: 60px;
         min-width: 60px;
-        text-align: center;
+        text-align: center !important;
         font-weight: bold;
+        padding: 6px 3px !important;
     }
     
     /* Рейтинг на мобильных: показываем только №, Имя, Рейтинг (колонка 6) */
@@ -901,9 +902,10 @@ header h1 {
     /* Для финальной таблицы на маленьких экранах */
     #final .tournament-table th:nth-child(9),
     #final .tournament-table td:nth-child(9) {
-        width: 50px;
-        min-width: 50px;
-        font-size: 0.8em;
+        width: 50px !important;
+        min-width: 50px !important;
+        font-size: 0.8em !important;
+        padding: 6px 2px !important;
     }
     
     /* Для рейтинга на очень маленьких экранах */

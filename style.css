@@ -405,30 +405,6 @@ header h1 {
     font-style: italic;
 }
 
-/* Стили для разницы в финальной таблице */
-.difference-column {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 8px 12px !important;
-    border-radius: 8px;
-    background: #f5f5f5;
-}
-
-.difference-positive {
-    color: #2E7D32;
-    background: #e8f5e9 !important;
-}
-
-.difference-negative {
-    color: #C62828;
-    background: #ffebee !important;
-}
-
-.difference-zero {
-    color: #666;
-    background: #f5f5f5 !important;
-}
-
 /* Стили для колонок */
 .player-name {
     font-weight: bold;
@@ -853,6 +829,52 @@ header h1 {
         padding: 8px 4px !important;
     }
     
+    /* Вкладка День 3 на мобильных: показываем №, Имя, Итог (колонка 9) */
+    #day3 .tournament-table th:nth-child(3),
+    #day3 .tournament-table th:nth-child(4),
+    #day3 .tournament-table th:nth-child(5),
+    #day3 .tournament-table th:nth-child(6),
+    #day3 .tournament-table th:nth-child(7),
+    #day3 .tournament-table th:nth-child(8),
+    #day3 .tournament-table th:nth-child(10),
+    #day3 .tournament-table td:nth-child(3),
+    #day3 .tournament-table td:nth-child(4),
+    #day3 .tournament-table td:nth-child(5),
+    #day3 .tournament-table td:nth-child(6),
+    #day3 .tournament-table td:nth-child(7),
+    #day3 .tournament-table td:nth-child(8),
+    #day3 .tournament-table td:nth-child(10) {
+        display: none;
+    }
+    
+    #day3 .tournament-table th:nth-child(1),
+    #day3 .tournament-table td:nth-child(1) {
+        width: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        padding: 8px 2px !important;
+    }
+    
+    #day3 .tournament-table th:nth-child(2),
+    #day3 .tournament-table td:nth-child(2) {
+        width: calc(100% - 130px) !important;
+        min-width: calc(100% - 130px) !important;
+        max-width: calc(100% - 130px) !important;
+        padding-left: 8px !important;
+        text-align: left !important;
+    }
+    
+    #day3 .tournament-table th:nth-child(9),
+    #day3 .tournament-table td:nth-child(9) {
+        display: table-cell !important;
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        padding: 8px 4px !important;
+    }
+    
     /* ФИНАЛЬНАЯ ТАБЛИЦА на мобильных: показываем №, Имя, ИТОГ (колонка 8) */
     #final .tournament-table th:nth-child(3),
     #final .tournament-table th:nth-child(4),
@@ -884,7 +906,6 @@ header h1 {
         text-align: left !important;
     }
     
-    /* КОЛОНКА 8: ИТОГ - ЭТО ВАЖНО! */
     #final .tournament-table th:nth-child(8),
     #final .tournament-table td:nth-child(8) {
         display: table-cell !important;
@@ -986,11 +1007,12 @@ header h1 {
         font-size: 0.75em;
     }
     
-    /* Уменьшаем ширины на маленьких экранах */
     #day1 .tournament-table th:nth-child(1),
     #day1 .tournament-table td:nth-child(1),
     #day2 .tournament-table th:nth-child(1),
     #day2 .tournament-table td:nth-child(1),
+    #day3 .tournament-table th:nth-child(1),
+    #day3 .tournament-table td:nth-child(1),
     #final .tournament-table th:nth-child(1),
     #final .tournament-table td:nth-child(1),
     #rating .tournament-table th:nth-child(1),
@@ -1004,6 +1026,8 @@ header h1 {
     #day1 .tournament-table td:nth-child(2),
     #day2 .tournament-table th:nth-child(2),
     #day2 .tournament-table td:nth-child(2),
+    #day3 .tournament-table th:nth-child(2),
+    #day3 .tournament-table td:nth-child(2),
     #final .tournament-table th:nth-child(2),
     #final .tournament-table td:nth-child(2),
     #rating .tournament-table th:nth-child(2),
@@ -1018,6 +1042,8 @@ header h1 {
     #day1 .tournament-table td:nth-child(8),
     #day2 .tournament-table th:nth-child(10),
     #day2 .tournament-table td:nth-child(10),
+    #day3 .tournament-table th:nth-child(9),
+    #day3 .tournament-table td:nth-child(9),
     #final .tournament-table th:nth-child(8),
     #final .tournament-table td:nth-child(8),
     #rating .tournament-table th:nth-child(6),

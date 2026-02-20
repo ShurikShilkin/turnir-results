@@ -1140,3 +1140,149 @@ header h1 {
         font-size: 1.8em;
     }
 }
+/* Исправление для кнопки развертывания на мобильных */
+@media (max-width: 768px) {
+    .expand-button {
+        display: block;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 30px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 15px auto;
+        width: 220px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        z-index: 100;
+        position: relative;
+    }
+    
+    .expand-button:hover {
+        background: #45a049;
+        transform: scale(1.05);
+    }
+    
+    .expand-button:active {
+        transform: scale(0.95);
+    }
+    
+    /* Убеждаемся, что таблицы могут быть развернуты */
+    .tournament-table {
+        transition: all 0.3s ease;
+    }
+    
+    /* Специальные правила для финальной таблицы на мобильных */
+    #final .tournament-table:not(.expanded) th:nth-child(3),
+    #final .tournament-table:not(.expanded) th:nth-child(4),
+    #final .tournament-table:not(.expanded) th:nth-child(5),
+    #final .tournament-table:not(.expanded) th:nth-child(6),
+    #final .tournament-table:not(.expanded) th:nth-child(7),
+    #final .tournament-table:not(.expanded) th:nth-child(8),
+    #final .tournament-table:not(.expanded) td:nth-child(3),
+    #final .tournament-table:not(.expanded) td:nth-child(4),
+    #final .tournament-table:not(.expanded) td:nth-child(5),
+    #final .tournament-table:not(.expanded) td:nth-child(6),
+    #final .tournament-table:not(.expanded) td:nth-child(7),
+    #final .tournament-table:not(.expanded) td:nth-child(8) {
+        display: none !important;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(1),
+    #final .tournament-table:not(.expanded) td:nth-child(1) {
+        width: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        padding: 8px 2px !important;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(2),
+    #final .tournament-table:not(.expanded) td:nth-child(2) {
+        width: calc(100% - 130px) !important;
+        min-width: calc(100% - 130px) !important;
+        max-width: calc(100% - 130px) !important;
+        padding-left: 8px !important;
+        text-align: left !important;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(9),
+    #final .tournament-table:not(.expanded) td:nth-child(9) {
+        display: table-cell !important;
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        padding: 8px 4px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Когда таблица развернута - показываем ВСЕ колонки */
+    #final .tournament-table.expanded th,
+    #final .tournament-table.expanded td {
+        display: table-cell !important;
+        width: auto !important;
+        min-width: auto !important;
+        max-width: auto !important;
+    }
+    
+    /* Для развернутой таблицы уменьшаем шрифт */
+    #final .tournament-table.expanded {
+        font-size: 0.7em;
+    }
+    
+    #final .tournament-table.expanded th {
+        padding: 8px 3px;
+        font-size: 0.75em;
+        white-space: nowrap;
+    }
+    
+    #final .tournament-table.expanded td {
+        padding: 6px 3px;
+        font-size: 0.7em;
+        white-space: nowrap;
+    }
+    
+    /* Исправление для колонки с изменением позиции */
+    #final .tournament-table:not(.expanded) td:nth-child(3) {
+        display: none !important;
+    }
+    
+    #final .tournament-table.expanded td:nth-child(3) {
+        display: table-cell !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .expand-button {
+        width: 200px;
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(1),
+    #final .tournament-table:not(.expanded) td:nth-child(1) {
+        width: 35px !important;
+        min-width: 35px !important;
+        max-width: 35px !important;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(2),
+    #final .tournament-table:not(.expanded) td:nth-child(2) {
+        width: calc(100% - 105px) !important;
+        min-width: calc(100% - 105px) !important;
+        max-width: calc(100% - 105px) !important;
+        padding-left: 6px !important;
+    }
+    
+    #final .tournament-table:not(.expanded) th:nth-child(9),
+    #final .tournament-table:not(.expanded) td:nth-child(9) {
+        width: 70px !important;
+        min-width: 70px !important;
+        max-width: 70px !important;
+        padding: 8px 3px !important;
+    }
+}

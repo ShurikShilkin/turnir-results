@@ -15,7 +15,7 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">ТУРНИР ДОНАЛЬДА ДАКА К-2</div>
+                <div class="tournament-phase" id="currentPhase">ФИНАЛ ТУРНИРА - 21.02.2026</div>
             </div>
         </header>
 
@@ -23,23 +23,23 @@
         <div class="tabs" id="mainTabs">
             <button class="tab-button" onclick="showTab('day1')">День 1 - 29.01.2026</button>
             <button class="tab-button" onclick="showTab('day2')">День 2 - 5.02.2026</button>
-            <button class="tab-button active" onclick="showTab('day3')">День 3 - 12.02.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 12.02.2026</button>
             <button class="tab-button" onclick="showTab('day4')">День 4 - 19.02.2026</button>
-            <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 21.02.2026</button>
-            <button class="tab-button" onclick="showTab('hunting')">Охота за головами</button>
+            <button class="tab-button active" onclick="showTab('final')">ФИНАЛ - 21.02.2026</button>
+            <button class="tab-button" onclick="showTab('blinds')">Блайнды</button>
         </div>
 
         <!-- Статистика для основных вкладок -->
         <div class="stats" id="mainStats">
             <div class="stat-item">
-                <div class="stat-number" id="totalPlayers">26</div>
+                <div class="stat-number" id="totalPlayers">50</div>
                 <div class="stat-label">Участников</div>
             </div>
             <div class="stat-item">
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">19.02.2026</div>
+                        <div class="date-value">21.02.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="stat-item">
-                <div class="stat-number" id="averageStack">4077</div>
+                <div class="stat-number" id="averageStack">0</div>
                 <div class="stat-label">Средний стек</div>
             </div>
         </div>
@@ -136,7 +136,7 @@
         </div>
 
         <!-- Вкладка День 3 -->
-        <div id="day3" class="tab-content active">
+        <div id="day3" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -169,37 +169,35 @@
                         <th>Старт</th>
                         <th>Добор</th>
                         <th>Кредит</th>
+                        <th>Сделка</th>
                         <th>Выход</th>
                         <th>Итог</th>
                         <th>Комментарий</th>
                     </tr>
                 </thead>
                 <tbody id="day4Table">
-                    <tr>
-                        <td colspan="9" style="text-align: center; padding: 40px; color: #666;">
-                            Турнир начнётся 19.02.2026
-                        </td>
-                    </tr>
+                    <!-- Данные дня 4 -->
                 </tbody>
             </table>
         </div>
 
         <!-- Вкладка ФИНАЛ -->
-        <div id="final" class="tab-content">
+        <div id="final" class="tab-content active">
             <div class="special-tab-content">
                 <h2>ФИНАЛ ТУРНИРА</h2>
                 <div class="special-date">21.02.2026</div>
-                <table class="tournament-table">
+                <table class="tournament-table final-table">
                     <thead>
                         <tr>
                             <th>№</th>
                             <th>Имя</th>
                             <th>▲▼</th>
-                            <th>День 1</th>
-                            <th>День 2</th>
-                            <th>День 3</th>
-                            <th>День 4</th>
-                            <th>ИТОГ</th>
+                            <th>Отборочные</th>
+                            <th>Посещения</th>
+                            <th>Участие</th>
+                            <th>Охота</th>
+                            <th>Постоянный</th>
+                            <th>Итог</th>
                         </tr>
                     </thead>
                     <tbody id="finalTable">
@@ -209,21 +207,24 @@
             </div>
         </div>
 
-        <!-- Вкладка Охота за головами -->
-        <div id="hunting" class="tab-content">
+        <!-- Вкладка Блайнды -->
+        <div id="blinds" class="tab-content">
             <div class="special-tab-content">
-                <h2>Охота за головами</h2>
-                <div class="special-date">Награды за устранение игроков</div>
-                <table class="tournament-table hunting-table">
+                <h2>Структура блайндов</h2>
+                <div class="special-date">Турнир Дональда Дака К-2</div>
+                <table class="tournament-table blinds-table">
                     <thead>
                         <tr>
                             <th>№</th>
-                            <th>Имя игрока</th>
-                            <th>Награда</th>
+                            <th>время начала</th>
+                            <th>время конца</th>
+                            <th>МБ</th>
+                            <th>ББ</th>
+                            <th>Анте</th>
                         </tr>
                     </thead>
-                    <tbody id="huntingTable">
-                        <!-- Список охоты за головами -->
+                    <tbody id="blindsTable">
+                        <!-- Таблица блайндов -->
                     </tbody>
                 </table>
             </div>
@@ -242,6 +243,7 @@
                         <th>Имя</th>
                         <th>▲▼</th>
                         <th>Пред. рейтинг</th>
+                        <th>Посещения</th>
                         <th>+/-</th>
                         <th>Рейтинг</th>
                     </tr>

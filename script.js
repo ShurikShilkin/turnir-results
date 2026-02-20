@@ -621,13 +621,26 @@ function toggleTableExpand() {
     const tables = document.querySelectorAll(`#${activeTabId} .tournament-table`);
     const button = document.querySelector('.expand-button');
     
-    tables.forEach(table => table.classList.toggle('expanded'));
+    if (!tables.length) return;
     
-    if (tables[0] && tables[0].classList.contains('expanded')) {
+    // Переключаем класс expanded для каждой таблицы в активной вкладке
+    tables.forEach(table => {
+        table.classList.toggle('expanded');
+    });
+    
+    // Проверяем, есть ли класс expanded хотя бы у одной таблицы
+    const isExpanded = tables[0].classList.contains('expanded');
+    
+    if (isExpanded) {
         button.textContent = 'Свернуть таблицу';
     } else {
         button.textContent = 'Развернуть таблицу';
     }
+    
+    // Принудительно обновляем отображение
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 10);
 }
 
 // Сброс развертывания таблицы

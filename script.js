@@ -1821,12 +1821,38 @@ function updateStats() {
     } else if (activeTabId === 'final') {
         const allPlayers = getAllFinalPlayers();
         totalPlayers = allPlayers.length;
+        
+        // Создаем мапы для быстрого доступа к данным
+        const entryMap = new Map();
+        finalEntry.forEach(item => entryMap.set(item.name, item.entry));
+        
+        const bountyMap = new Map();
+        finalBounty.forEach(item => bountyMap.set(item.name, item.bounty));
+        
+        const permanentMap = new Map();
+        finalPermanent.forEach(item => permanentMap.set(item.name, item.permanent));
+        
         const eliminatedOrder = ["Иван Тре", "Том", "Жахонгир", "Эльджан", "Мага Кинжал", "Айдын", "Свидетель"];
-        const activePlayers = allPlayers.filter(player => 
-            !eliminatedOrder.includes(player.name) && !player.isEliminated
-        );
-        averageStack = activePlayers.length > 0 ? 
-            Math.round(activePlayers.reduce((sum, player) => sum + player.qualifying, 0) / activePlayers.length) : 0;
+        
+        // Рассчитываем итоговую сумму для каждого активного игрока
+        let totalChipsSum = 0;
+        let activeCount = 0;
+        
+        allPlayers.forEach(player => {
+            const isEliminated = eliminatedOrder.includes(player.name) || player.isEliminated;
+            
+            if (!isEliminated) {
+                const entry = entryMap.get(player.name) || 0;
+                const bounty = bountyMap.get(player.name) || 0;
+                const permanent = permanentMap.get(player.name) || 0;
+                
+                const totalChips = player.qualifying + entry + bounty + permanent;
+                totalChipsSum += totalChips;
+                activeCount++;
+            }
+        });
+        
+        averageStack = activeCount > 0 ? Math.round(totalChipsSum / activeCount) : 0;
     } else {
         totalPlayers = 0;
         averageStack = 0;

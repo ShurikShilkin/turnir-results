@@ -491,26 +491,6 @@ header h1 {
     background: #1a237e;
 }
 
-/* Стили для таблицы блайндов (та же цветовая схема) */
-.blinds-table th {
-    background: #4a148c;
-}
-
-.blinds-table td {
-    font-family: monospace;
-    font-weight: bold;
-}
-
-.blinds-table td:nth-child(4),
-.blinds-table td:nth-child(5),
-.blinds-table td:nth-child(6) {
-    color: #2E7D32;
-    font-weight: bold;
-    background: #e8f5e9;
-    border-radius: 8px;
-    padding: 5px 8px;
-}
-
 /* Стили для рейтинга */
 .rating-highlight {
     background: #fff9c4 !important;
@@ -972,9 +952,40 @@ header h1 {
         opacity: 1 !important;
     }
     
-    /* Блайнды на мобильных: все колонки показываем */
-    .blinds-table {
-        font-size: 0.7em;
+    /* Новая вкладка Итоговые результаты на мобильных */
+    #tournamentResults .tournament-table th:nth-child(1),
+    #tournamentResults .tournament-table td:nth-child(1) {
+        width: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        padding: 8px 2px !important;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(2),
+    #tournamentResults .tournament-table td:nth-child(2) {
+        width: calc(100% - 220px) !important;
+        min-width: calc(100% - 220px) !important;
+        max-width: calc(100% - 220px) !important;
+        padding-left: 8px !important;
+        text-align: left !important;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(3),
+    #tournamentResults .tournament-table td:nth-child(3) {
+        width: 60px !important;
+        min-width: 60px !important;
+        max-width: 60px !important;
+        text-align: center !important;
+        padding: 8px 2px !important;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(4),
+    #tournamentResults .tournament-table td:nth-child(4) {
+        width: 120px !important;
+        min-width: 120px !important;
+        max-width: 120px !important;
+        text-align: left !important;
+        padding-left: 8px !important;
     }
     
     /* Рейтинг на мобильных: показываем №, Имя, Рейтинг */
@@ -1030,7 +1041,6 @@ header h1 {
         max-width: auto !important;
     }
     
-    /* Для развернутой таблицы уменьшаем шрифт */
     .tournament-table.expanded {
         font-size: 0.7em;
     }
@@ -1045,7 +1055,6 @@ header h1 {
         font-size: 0.7em;
     }
     
-    /* Заголовок рейтинга на мобильных */
     .rating-header {
         padding: 15px;
         margin-bottom: 15px;
@@ -1072,7 +1081,9 @@ header h1 {
     #final .tournament-table th:nth-child(1),
     #final .tournament-table td:nth-child(1),
     #rating .tournament-table th:nth-child(1),
-    #rating .tournament-table td:nth-child(1) {
+    #rating .tournament-table td:nth-child(1),
+    #tournamentResults .tournament-table th:nth-child(1),
+    #tournamentResults .tournament-table td:nth-child(1) {
         width: 35px !important;
         min-width: 35px !important;
         max-width: 35px !important;
@@ -1089,7 +1100,9 @@ header h1 {
     #final .tournament-table th:nth-child(2),
     #final .tournament-table td:nth-child(2),
     #rating .tournament-table th:nth-child(2),
-    #rating .tournament-table td:nth-child(2) {
+    #rating .tournament-table td:nth-child(2),
+    #tournamentResults .tournament-table th:nth-child(2),
+    #tournamentResults .tournament-table td:nth-child(2) {
         width: calc(100% - 105px) !important;
         min-width: calc(100% - 105px) !important;
         max-width: calc(100% - 105px) !important;
@@ -1112,6 +1125,20 @@ header h1 {
         min-width: 70px !important;
         max-width: 70px !important;
         padding: 8px 3px !important;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(3),
+    #tournamentResults .tournament-table td:nth-child(3) {
+        width: 45px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(4),
+    #tournamentResults .tournament-table td:nth-child(4) {
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
     }
     
     .search-box {
@@ -1169,12 +1196,10 @@ header h1 {
         transform: scale(0.95);
     }
     
-    /* Убеждаемся, что таблицы могут быть развернуты */
     .tournament-table {
         transition: all 0.3s ease;
     }
     
-    /* Специальные правила для финальной таблицы на мобильных */
     #final .tournament-table:not(.expanded) th:nth-child(3),
     #final .tournament-table:not(.expanded) th:nth-child(4),
     #final .tournament-table:not(.expanded) th:nth-child(5),
@@ -1220,7 +1245,6 @@ header h1 {
         opacity: 1 !important;
     }
     
-    /* Когда таблица развернута - показываем ВСЕ колонки */
     #final .tournament-table.expanded th,
     #final .tournament-table.expanded td {
         display: table-cell !important;
@@ -1229,7 +1253,6 @@ header h1 {
         max-width: auto !important;
     }
     
-    /* Для развернутой таблицы уменьшаем шрифт */
     #final .tournament-table.expanded {
         font-size: 0.7em;
     }
@@ -1246,7 +1269,6 @@ header h1 {
         white-space: nowrap;
     }
     
-    /* Исправление для колонки с изменением позиции */
     #final .tournament-table:not(.expanded) td:nth-child(3) {
         display: none !important;
     }

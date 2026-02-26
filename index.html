@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Турнир Дональда Дака К-2</title>
+    <title>Межсезонье Февраль-Март</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты турнира Миссис Дейзи Дак Q-2</button>
-                <h1>Турнир Дональда Дака К-2</h1>
+                <!-- Кнопка ведет на результаты ТОЛЬКО ЧТО ЗАКОНЧИВШЕГОСЯ турнира Дональда Дака -->
+                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Турнира Дональда Дака К-2</button>
+                <h1>Межсезонье Февраль-Март</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">ИТОГОВЫЕ РЕЗУЛЬТАТЫ ТУРНИРА</div>
+                <div class="tournament-phase" id="currentPhase">Межсезонье</div>
             </div>
         </header>
 
-        <!-- Основные вкладки -->
+        <!-- Основные вкладки (НОВЫЙ СЕЗОН) -->
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('day1')">День 1 - 29.01.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 5.02.2026</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 12.02.2026</button>
-            <button class="tab-button" onclick="showTab('day4')">День 4 - 19.02.2026</button>
-            <button class="tab-button" onclick="showTab('final')">ФИНАЛ - 21.02.2026</button>
-            <button class="tab-button" onclick="showTab('tournamentResults')">РЕЗУЛЬТАТЫ ТУРНИРА</button>
+            <button class="tab-button" onclick="showTab('day1')">День 1 - 26.02.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">День 2 - 5.03.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 19.03.2026</button>
+            <button class="tab-button" onclick="showTab('day4')">День 4 - 26.03.2026</button>
+            <button class="tab-button" onclick="showTab('bounty')">Охота за головами</button>
+            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
         </div>
 
-        <!-- Статистика для основных вкладок -->
+        <!-- Статистика -->
         <div class="stats" id="mainStats">
             <div class="stat-item">
-                <div class="stat-number" id="totalPlayers">52</div>
+                <div class="stat-number" id="totalPlayers">0</div>
                 <div class="stat-label">Участников</div>
             </div>
             <div class="stat-item">
@@ -53,7 +54,7 @@
             </div>
         </div>
 
-        <!-- Блок поиска с автодополнением -->
+        <!-- Блок поиска -->
         <div class="search-container">
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Поиск игрока по имени...">
@@ -68,11 +69,11 @@
         <!-- Кнопка развертывания для мобильных -->
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
-        <!-- Вкладка Результаты предыдущего турнира -->
+        <!-- Вкладка: Результаты ПРОШЛОГО турнира (Дональд Дак К-2) -->
         <div id="previousResults" class="tab-content">
             <div class="special-tab-content">
-                <h2>Турнир Миссис Дейзи Дак Q-2</h2>
-                <div class="special-date">Итоговые результаты турнира</div>
+                <h2>Турнир Дональда Дака К-2</h2>
+                <div class="special-date">Итоговые результаты</div>
                 <table class="tournament-table">
                     <thead>
                         <tr>
@@ -83,148 +84,69 @@
                         </tr>
                     </thead>
                     <tbody id="previousResultsTable">
-                        <!-- Результаты предыдущего турнира -->
+                        <!-- Данные из турнира Дональда Дака -->
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Вкладка День 1 -->
+        <!-- Вкладка День 1 (Пустая, с заглушкой) -->
         <div id="day1" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
-                        <th>Добор</th>
-                        <th>Кредит</th>
-                        <th>Выход</th>
-                        <th>Итог</th>
-                        <th>Комментарий</th>
-                    </tr>
-                </thead>
-                <tbody id="day1Table">
-                    <!-- Данные дня 1 -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка День 2 -->
-        <div id="day2" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
-                        <th>Добор</th>
-                        <th>Кредит</th>
-                        <th>Сделка</th>
-                        <th>Выход</th>
-                        <th>Робин Дак</th>
-                        <th>Итог</th>
-                        <th>Комментарий</th>
-                    </tr>
-                </thead>
-                <tbody id="day2Table">
-                    <!-- Данные дня 2 -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка День 3 -->
-        <div id="day3" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
-                        <th>Добор</th>
-                        <th>Кредит</th>
-                        <th>Сделка</th>
-                        <th>Выход</th>
-                        <th>Итог</th>
-                        <th>Комментарий</th>
-                    </tr>
-                </thead>
-                <tbody id="day3Table">
-                    <!-- Данные дня 3 -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка День 4 -->
-        <div id="day4" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Участие</th>
-                        <th>Старт</th>
-                        <th>Добор</th>
-                        <th>Кредит</th>
-                        <th>Сделка</th>
-                        <th>Выход</th>
-                        <th>Итог</th>
-                        <th>Комментарий</th>
-                    </tr>
-                </thead>
-                <tbody id="day4Table">
-                    <!-- Данные дня 4 -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Вкладка ФИНАЛ -->
-        <div id="final" class="tab-content">
-            <div class="special-tab-content">
-                <h2>ФИНАЛ ТУРНИРА</h2>
-                <div class="special-date">21.02.2026</div>
-                <table class="tournament-table final-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Имя</th>
-                            <th>▲▼</th>
-                            <th>Отборочные</th>
-                            <th>Посещения</th>
-                            <th>Участие</th>
-                            <th>Охота</th>
-                            <th>Постоянный</th>
-                            <th>Итог</th>
-                        </tr>
-                    </thead>
-                    <tbody id="finalTable">
-                        <!-- Финальная таблица -->
-                    </tbody>
-                </table>
+            <div class="empty-tab-message">
+                <h2>День 1 - 26.02.2026</h2>
+                <p>⏳ Игры ещё не проводились. Ждём результатов первого дня.</p>
             </div>
         </div>
 
-        <!-- Новая вкладка Итоговые результаты турнира -->
-        <div id="tournamentResults" class="tab-content active">
+        <!-- Вкладка День 2 (Пустая) -->
+        <div id="day2" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>День 2 - 5.03.2026</h2>
+                <p>⏳ Игры ещё не проводились. Следите за обновлениями.</p>
+            </div>
+        </div>
+
+        <!-- Вкладка День 3 (Пустая) -->
+        <div id="day3" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>День 3 - 19.03.2026</h2>
+                <p>⏳ Игры ещё не проводились.</p>
+            </div>
+        </div>
+
+        <!-- Вкладка День 4 (Пустая) -->
+        <div id="day4" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>День 4 - 26.03.2026</h2>
+                <p>⏳ Игры ещё не проводились.</p>
+            </div>
+        </div>
+
+        <!-- Вкладка Охота за головами -->
+        <div id="bounty" class="tab-content">
             <div class="special-tab-content">
-                <h2>Турнир Дональда Дака К-2</h2>
-                <div class="special-date">Итоговые результаты турнира</div>
+                <h2>Охота за головами</h2>
+                <div class="special-date">Сезон Февраль-Март</div>
                 <table class="tournament-table">
                     <thead>
                         <tr>
                             <th>№</th>
                             <th>Имя</th>
-                            <th>Место</th>
-                            <th>Статус</th>
+                            <th>Баунти</th>
                         </tr>
                     </thead>
-                    <tbody id="tournamentResultsTable">
-                        <!-- Итоговые результаты турнира будут вставлены сюда -->
+                    <tbody id="bountyTable">
+                        <!-- Данные охоты за головами -->
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- Вкладка Итоги сезона (Пустая) -->
+        <div id="tournamentResults" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>Итоги Межсезонья</h2>
+                <p>🏁 Итоговые таблицы появятся после завершения первой игры.</p>
             </div>
         </div>
 
@@ -233,7 +155,6 @@
             <div class="rating-header">
                 <h2>Рейтинг</h2>
             </div>
-            
             <table class="tournament-table">
                 <thead>
                     <tr>

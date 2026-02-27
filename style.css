@@ -478,11 +478,6 @@ header h1 {
     font-weight: bold;
 }
 
-/* Стили для финальной таблицы */
-.final-table th {
-    background: #1a237e;
-}
-
 /* Стили для рейтинга */
 .rating-highlight {
     background: #fff9c4 !important;
@@ -697,16 +692,7 @@ header h1 {
     
     .tournament-table {
         font-size: 0.8em;
-        table-layout: fixed;
         width: 100%;
-    }
-    
-    .tournament-table th,
-    .tournament-table td {
-        padding: 8px 4px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
     
     .stat-dates {
@@ -754,117 +740,107 @@ header h1 {
     .empty-tab-message p {
         font-size: 1.1em;
     }
-    
-    /* Стили для мобильных версий таблиц (День 1-4, Финал) */
+
+    /* День 1: показываем №, Имя, Выигрыш */
     #day1 .tournament-table th:nth-child(3),
     #day1 .tournament-table th:nth-child(4),
     #day1 .tournament-table th:nth-child(5),
-    #day1 .tournament-table th:nth-child(6),
-    #day1 .tournament-table th:nth-child(7),
-    #day1 .tournament-table th:nth-child(9),
     #day1 .tournament-table td:nth-child(3),
     #day1 .tournament-table td:nth-child(4),
-    #day1 .tournament-table td:nth-child(5),
-    #day1 .tournament-table td:nth-child(6),
-    #day1 .tournament-table td:nth-child(7),
-    #day1 .tournament-table td:nth-child(9) {
+    #day1 .tournament-table td:nth-child(5) {
         display: none;
     }
     
     #day1 .tournament-table th:nth-child(1),
     #day1 .tournament-table td:nth-child(1) {
-        width: 40px !important;
-        min-width: 40px !important;
-        max-width: 40px !important;
-        padding: 8px 2px !important;
+        width: 40px;
+        min-width: 40px;
     }
     
     #day1 .tournament-table th:nth-child(2),
     #day1 .tournament-table td:nth-child(2) {
-        width: calc(100% - 130px) !important;
-        min-width: calc(100% - 130px) !important;
-        max-width: calc(100% - 130px) !important;
-        padding-left: 8px !important;
-        text-align: left !important;
+        width: calc(100% - 130px);
+        text-align: left;
+        padding-left: 8px;
     }
     
-    #day1 .tournament-table th:nth-child(8),
-    #day1 .tournament-table td:nth-child(8) {
-        display: table-cell !important;
-        width: 90px !important;
-        min-width: 90px !important;
-        max-width: 90px !important;
-        text-align: center !important;
-        font-weight: bold !important;
-        padding: 8px 4px !important;
+    #day1 .tournament-table th:nth-child(6),
+    #day1 .tournament-table td:nth-child(6) {
+        display: table-cell;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Итоги: показываем №, Имя, Итог (на телефоне скрываем промежуточные дни) */
+    #tournamentResults .tournament-table th:nth-child(3),
+    #tournamentResults .tournament-table th:nth-child(4),
+    #tournamentResults .tournament-table th:nth-child(5),
+    #tournamentResults .tournament-table th:nth-child(6),
+    #tournamentResults .tournament-table td:nth-child(3),
+    #tournamentResults .tournament-table td:nth-child(4),
+    #tournamentResults .tournament-table td:nth-child(5),
+    #tournamentResults .tournament-table td:nth-child(6) {
+        display: none;
     }
     
-    /* Аналогичные стили для day2, day3, day4, final можно добавить при необходимости */
-    
-    .tournament-table.expanded {
-        table-layout: auto;
+    #tournamentResults .tournament-table th:nth-child(1),
+    #tournamentResults .tournament-table td:nth-child(1) {
+        width: 40px;
+        min-width: 40px;
     }
     
+    #tournamentResults .tournament-table th:nth-child(2),
+    #tournamentResults .tournament-table td:nth-child(2) {
+        width: calc(100% - 130px);
+        text-align: left;
+        padding-left: 8px;
+    }
+    
+    #tournamentResults .tournament-table th:nth-child(7),
+    #tournamentResults .tournament-table td:nth-child(7) {
+        display: table-cell;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Рейтинг: показываем №, Имя, Рейтинг */
+    #rating .tournament-table th:nth-child(3),
+    #rating .tournament-table th:nth-child(4),
+    #rating .tournament-table th:nth-child(5),
+    #rating .tournament-table th:nth-child(6),
+    #rating .tournament-table td:nth-child(3),
+    #rating .tournament-table td:nth-child(4),
+    #rating .tournament-table td:nth-child(5),
+    #rating .tournament-table td:nth-child(6) {
+        display: none;
+    }
+    
+    #rating .tournament-table th:nth-child(1),
+    #rating .tournament-table td:nth-child(1) {
+        width: 40px;
+        min-width: 40px;
+    }
+    
+    #rating .tournament-table th:nth-child(2),
+    #rating .tournament-table td:nth-child(2) {
+        width: calc(100% - 130px);
+        text-align: left;
+        padding-left: 8px;
+    }
+    
+    #rating .tournament-table th:nth-child(7),
+    #rating .tournament-table td:nth-child(7) {
+        display: table-cell;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    /* Развернутая таблица */
     .tournament-table.expanded th,
     .tournament-table.expanded td {
         display: table-cell !important;
-        width: auto !important;
-        min-width: auto !important;
-        max-width: auto !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .tournament-table {
-        font-size: 0.75em;
-    }
-    
-    #day1 .tournament-table th:nth-child(1),
-    #day1 .tournament-table td:nth-child(1) {
-        width: 35px !important;
-        min-width: 35px !important;
-        max-width: 35px !important;
-    }
-    
-    #day1 .tournament-table th:nth-child(2),
-    #day1 .tournament-table td:nth-child(2) {
-        width: calc(100% - 105px) !important;
-        min-width: calc(100% - 105px) !important;
-        max-width: calc(100% - 105px) !important;
-        padding-left: 6px !important;
-    }
-    
-    #day1 .tournament-table th:nth-child(8),
-    #day1 .tournament-table td:nth-child(8) {
-        width: 70px !important;
-        min-width: 70px !important;
-        max-width: 70px !important;
-        padding: 8px 3px !important;
-    }
-    
-    .search-box {
-        max-width: 100%;
-    }
-    
-    .special-tab-content h2 {
-        font-size: 1.8em;
-    }
-    
-    .previous-tournament-button {
-        font-size: 0.8em;
-        padding: 8px 12px;
-    }
-    
-    .rating-tab-button {
-        padding: 8px 12px;
-        font-size: 0.9em;
-    }
-    
-    .rating-header h2 {
-        font-size: 1.8em;
-    }
-    
-    header h1 {
-        font-size: 1.8em;
     }
 }

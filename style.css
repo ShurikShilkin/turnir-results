@@ -772,6 +772,37 @@ header h1 {
         font-weight: bold;
     }
 
+    /* День 2: показываем №, Имя, Выигрыш */
+    #day2 .tournament-table th:nth-child(3),
+    #day2 .tournament-table th:nth-child(4),
+    #day2 .tournament-table th:nth-child(5),
+    #day2 .tournament-table td:nth-child(3),
+    #day2 .tournament-table td:nth-child(4),
+    #day2 .tournament-table td:nth-child(5) {
+        display: none;
+    }
+    
+    #day2 .tournament-table th:nth-child(1),
+    #day2 .tournament-table td:nth-child(1) {
+        width: 40px;
+        min-width: 40px;
+    }
+    
+    #day2 .tournament-table th:nth-child(2),
+    #day2 .tournament-table td:nth-child(2) {
+        width: calc(100% - 130px);
+        text-align: left;
+        padding-left: 8px;
+    }
+    
+    #day2 .tournament-table th:nth-child(6),
+    #day2 .tournament-table td:nth-child(6) {
+        display: table-cell;
+        width: 90px;
+        text-align: center;
+        font-weight: bold;
+    }
+
     /* Итоги: показываем №, Имя, Итог (на телефоне скрываем промежуточные дни) */
     #tournamentResults .tournament-table th:nth-child(3),
     #tournamentResults .tournament-table th:nth-child(4),

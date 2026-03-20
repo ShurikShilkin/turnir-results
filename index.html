@@ -15,14 +15,14 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">День 2 - 5.03.2026</div>
+                <div class="tournament-phase" id="currentPhase">День 3 - 19.03.2026</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
             <button class="tab-button" onclick="showTab('day1')">День 1 - 26.02.2026</button>
-            <button class="tab-button active" onclick="showTab('day2')">День 2 - 5.03.2026</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 19.03.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">День 2 - 5.03.2026</button>
+            <button class="tab-button active" onclick="showTab('day3')">День 3 - 19.03.2026</button>
             <button class="tab-button" onclick="showTab('day4')">День 4 - 26.03.2026</button>
             <button class="tab-button" onclick="showTab('bounty')">Охота за головами</button>
             <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
@@ -37,7 +37,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">19.03.2026</div>
+                        <div class="date-value">26.03.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -101,7 +101,7 @@
         </div>
 
         <!-- День 2 -->
-        <div id="day2" class="tab-content active">
+        <div id="day2" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -117,12 +117,21 @@
             </table>
         </div>
 
-        <!-- День 3 (пусто) -->
-        <div id="day3" class="tab-content">
-            <div class="empty-tab-message">
-                <h2>День 3 - 19.03.2026</h2>
-                <p>⏳ Игры ещё не проводились. Ждём результатов.</p>
-            </div>
+        <!-- День 3 (ОБНОВЛЕН) -->
+        <div id="day3" class="tab-content active">
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Вход</th>
+                        <th>Добор</th>
+                        <th>Выход</th>
+                        <th>Выигрыш</th>
+                    </tr>
+                </thead>
+                <tbody id="day3Table"></tbody>
+            </table>
         </div>
 
         <!-- День 4 (пусто) -->

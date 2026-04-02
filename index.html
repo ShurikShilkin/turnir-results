@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Межсезонье Февраль-Март</title>
+    <title>Турнир по Непокеру в Циферблате Сезон Охоты А-2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,25 +11,25 @@
         <header>
             <div class="header-top">
                 <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Туза весны 2026</button>
-                <h1>Межсезонье Февраль-Март</h1>
+                <h1>Турнир по Непокеру в Циферблате<br>Сезон Охоты А-2</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Итоги Межсезонья</div>
+                <div class="tournament-phase" id="currentPhase">Рейтинг</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('day1')">День 1 - 26.02.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 5.03.2026</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 19.03.2026</button>
-            <button class="tab-button" onclick="showTab('day4')">День 4 - 26.03.2026</button>
-            <button class="tab-button active" onclick="showTab('tournamentResults')">Итоги</button>
+            <button class="tab-button" onclick="showTab('day1')">День 1 - 2.04.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">День 2 - 9.04.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 16.04.2026</button>
+            <button class="tab-button" onclick="showTab('day4')">День 4 - 23.04.2026</button>
+            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
         </div>
 
         <div class="stats" id="mainStats">
             <div class="stat-item">
-                <div class="stat-number" id="totalPlayers">30</div>
+                <div class="stat-number" id="totalPlayers">0</div>
                 <div class="stat-label">Участников</div>
             </div>
             <div class="stat-item">
@@ -38,10 +38,14 @@
                         <div class="date-label">Следующая игра</div>
                         <div class="date-value">2.04.2026</div>
                     </div>
+                    <div class="date-item">
+                        <div class="date-label">Следующий финал</div>
+                        <div class="date-value">25.04.2026</div>
+                    </div>
                 </div>
             </div>
             <div class="stat-item">
-                <div class="stat-number" id="averageStack">252</div>
+                <div class="stat-number" id="averageStack">0</div>
                 <div class="stat-label">Средний стек</div>
             </div>
         </div>
@@ -78,98 +82,53 @@
             </div>
         </div>
 
-        <!-- День 1 -->
+        <!-- День 1 - 2.04.2026 -->
         <div id="day1" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day1Table"></tbody>
-            </table>
+            <div class="empty-tab-message">
+                <h2>📊 День 1 - 2.04.2026</h2>
+                <p>Данные обновятся после завершения игры</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
+            </div>
         </div>
 
-        <!-- День 2 -->
+        <!-- День 2 - 9.04.2026 -->
         <div id="day2" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day2Table"></tbody>
-            </table>
+            <div class="empty-tab-message">
+                <h2>📊 День 2 - 9.04.2026</h2>
+                <p>Данные обновятся после завершения игры</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
+            </div>
         </div>
 
-        <!-- День 3 -->
+        <!-- День 3 - 16.04.2026 -->
         <div id="day3" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day3Table"></tbody>
-            </table>
+            <div class="empty-tab-message">
+                <h2>📊 День 3 - 16.04.2026</h2>
+                <p>Данные обновятся после завершения игры</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
+            </div>
         </div>
 
-        <!-- День 4 (НОВЫЙ) -->
+        <!-- День 4 - 23.04.2026 -->
         <div id="day4" class="tab-content">
-            <table class="tournament-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Вход</th>
-                        <th>Добор</th>
-                        <th>Выход</th>
-                        <th>Выигрыш</th>
-                    </tr>
-                </thead>
-                <tbody id="day4Table"></tbody>
-            </table>
+            <div class="empty-tab-message">
+                <h2>📊 День 4 - 23.04.2026</h2>
+                <p>Данные обновятся после завершения игры</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
+            </div>
         </div>
 
-        <!-- Итоги (с колонками по дням) -->
-        <div id="tournamentResults" class="tab-content active">
-            <div class="special-tab-content">
-                <h2>Итоги Межсезонья</h2>
-                <div class="special-date">Накопительная таблица</div>
-                <table class="tournament-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Имя</th>
-                            <th>1 день</th>
-                            <th>2 день</th>
-                            <th>3 день</th>
-                            <th>4 день</th>
-                            <th>Итог</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tournamentResultsTable"></tbody>
-                </table>
+        <!-- Итоги -->
+        <div id="tournamentResults" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>🏆 Итоги Сезона Охоты А-2</h2>
+                <p>Итоговая таблица будет доступна после завершения всех игр</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Финальный результат - 23.04.2026</p>
             </div>
         </div>
 
         <!-- Рейтинг -->
-        <div id="rating" class="tab-content">
+        <div id="rating" class="tab-content active">
             <div class="rating-header">
                 <h2>Рейтинг</h2>
             </div>

@@ -1,4 +1,4 @@
-// ========== ДАННЫЕ ПРОШЛОГО ТУРНИРА (Туз весны 2026) ==========
+// ========== ДАННЫЕ ПРОШЛОГО ТУРНИРА (Туз весны 2026) - НЕ ИЗМЕНЯЕМ ==========
 const previousTournamentResults = [
     { name: "grooveman", place: 1, status: "Победитель" },
     { name: "Богдан А", place: 2, status: "Участник" },
@@ -28,218 +28,7 @@ const previousTournamentResults = [
     { name: "Макар Аве", place: 26, status: "Участник" }
 ];
 
-// ========== ДАННЫЕ ДНЯ 1 ==========
-const day1Players = [
-    { number: 1, name: "Немощь", entry: 1100, rebuy: 0, exit: 13000, result: 11900 },
-    { number: 2, name: "Влад Владшток", entry: 1100, rebuy: 0, exit: 11630, result: 10530 },
-    { number: 3, name: "Ирина Ага", entry: 1100, rebuy: 0, exit: 9600, result: 8500 },
-    { number: 4, name: "Егор Вино", entry: 1100, rebuy: 3000, exit: 8420, result: 4320 },
-    { number: 5, name: "Владибир", entry: 1100, rebuy: 0, exit: 4975, result: 3875 },
-    { number: 6, name: "Анна К", entry: 1100, rebuy: 0, exit: 4685, result: 3585 },
-    { number: 7, name: "Макар Аве", entry: 1100, rebuy: 4000, exit: 8600, result: 3500 },
-    { number: 8, name: "Егор АА 11", entry: 1100, rebuy: 2000, exit: 6295, result: 3195 },
-    { number: 9, name: "Шурик Шилкин", entry: 1100, rebuy: 0, exit: 3960, result: 2860 },
-    { number: 10, name: "Полина Матыцына", entry: 1100, rebuy: 0, exit: 2705, result: 1605 },
-    { number: 11, name: "Надя Жб", entry: 1100, rebuy: 2000, exit: 2405, result: -695 },
-    { number: 12, name: "Катя Берг", entry: 1100, rebuy: 0, exit: 125, result: -975 },
-    { number: 13, name: "Владимир Бул", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 14, name: "Robert Юниксфактёр", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 15, name: "Антон Жму", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 16, name: "Андрей Морфиус", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 17, name: "Серж", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 18, name: "Соня Серж", entry: 1100, rebuy: 3000, exit: 980, result: -3120 },
-    { number: 19, name: "Ксения Куд", entry: 1100, rebuy: 4000, exit: 1845, result: -3255 },
-    { number: 20, name: "Михаил Наб", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 21, name: "Роман Лод", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 22, name: "Семён Ануфриев", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 23, name: "Jane 007", entry: 1100, rebuy: 5000, exit: 0, result: -6100 },
-    { number: 24, name: "Богдан А", entry: 1100, rebuy: 6000, exit: 375, result: -6725 }
-];
-
-// ========== ДАННЫЕ ДНЯ 2 ==========
-const day2Players = [
-    { number: 1, name: "Богдан А", entry: 1100, rebuy: 2000, exit: 29275, result: 26175 },
-    { number: 2, name: "Семён Ануфриев", entry: 1100, rebuy: 5000, exit: 27850, result: 21750 },
-    { number: 3, name: "Немощь", entry: 1100, rebuy: 0, exit: 9430, result: 8330 },
-    { number: 4, name: "Надя Жб", entry: 1100, rebuy: 0, exit: 7795, result: 6695 },
-    { number: 5, name: "Матвей МС", entry: 1100, rebuy: 1000, exit: 7875, result: 5775 },
-    { number: 6, name: "Влад Владшток", entry: 1100, rebuy: 0, exit: 5745, result: 4645 },
-    { number: 7, name: "Дмитрий Ник", entry: 1100, rebuy: 2000, exit: 6650, result: 3550 },
-    { number: 8, name: "Шурик Шилкин", entry: 1100, rebuy: 0, exit: 2280, result: 1180 },
-    { number: 9, name: "Настя К", entry: 1100, rebuy: 1000, exit: 3265, result: 1165 },
-    { number: 10, name: "Соня Серж", entry: 1100, rebuy: 3000, exit: 5060, result: 960 },
-    { number: 11, name: "Ирина Ага", entry: 1100, rebuy: 0, exit: 0, result: -1100 },
-    { number: 12, name: "Рома АСМР", entry: 1100, rebuy: 0, exit: 0, result: -1100 },
-    { number: 13, name: "Зеньята", entry: 1100, rebuy: 1000, exit: 865, result: -1235 },
-    { number: 14, name: "Даша Хромова", entry: 1100, rebuy: 1000, exit: 500, result: -1600 },
-    { number: 15, name: "Вова Ф", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 16, name: "Jane 007", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 17, name: "Наташа Т", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 18, name: "Эльджан", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 19, name: "Полина Матыцына", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 20, name: "Нюта-кун", entry: 1100, rebuy: 3000, exit: 1475, result: -2625 },
-    { number: 21, name: "Егор АА 11", entry: 1100, rebuy: 3000, exit: 440, result: -3660 },
-    { number: 22, name: "Анна К", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 23, name: "Андрей Морфиус", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 24, name: "Инна Шашкина", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 25, name: "Саша Коч", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 26, name: "Катя Берг", entry: 1100, rebuy: 4000, exit: 1000, result: -4100 },
-    { number: 27, name: "Роман Лод", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 28, name: "Никита Зейн", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 29, name: "Том", entry: 1100, rebuy: 6000, exit: 0, result: -7100 },
-    { number: 30, name: "Егор Вино", entry: 1100, rebuy: 8000, exit: 0, result: -9100 }
-];
-
-// ========== ДАННЫЕ ДНЯ 3 ==========
-const day3Players = [
-    { number: 1, name: "Богдан А", entry: 1100, rebuy: 1000, exit: 20385, result: 18285 },
-    { number: 2, name: "Егор АА 11", entry: 1100, rebuy: 0, exit: 11120, result: 10020 },
-    { number: 3, name: "Нюта-кун", entry: 1100, rebuy: 1000, exit: 10540, result: 8440 },
-    { number: 4, name: "Надя Жб", entry: 1100, rebuy: 0, exit: 8900, result: 7800 },
-    { number: 5, name: "Матвей МС", entry: 1100, rebuy: 0, exit: 3380, result: 2280 },
-    { number: 6, name: "Соня Серж", entry: 1100, rebuy: 3000, exit: 6335, result: 2235 },
-    { number: 7, name: "Егор Вино", entry: 1100, rebuy: 1000, exit: 3490, result: 1390 },
-    { number: 8, name: "Даша Хромова", entry: 1100, rebuy: 0, exit: 1985, result: 885 },
-    { number: 9, name: "Андрей Пот", entry: 1100, rebuy: 0, exit: 620, result: -480 },
-    { number: 10, name: "Шурик Шилкин", entry: 1100, rebuy: 2000, exit: 2315, result: -785 },
-    { number: 11, name: "Макар Аве", entry: 1100, rebuy: 0, exit: 200, result: -900 },
-    { number: 12, name: "Иван 112", entry: 1100, rebuy: 2000, exit: 1945, result: -1155 },
-    { number: 13, name: "Немощь", entry: 1100, rebuy: 2000, exit: 1300, result: -1800 },
-    { number: 14, name: "Инна М", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 15, name: "Владибир", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 16, name: "Полина Матыцына", entry: 1100, rebuy: 2000, exit: 755, result: -2345 },
-    { number: 17, name: "Никита Зейн", entry: 1100, rebuy: 2000, exit: 695, result: -2405 },
-    { number: 18, name: "Семён Ануфриев", entry: 1100, rebuy: 8000, exit: 6335, result: -2765 },
-    { number: 19, name: "Владимир Бул", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 20, name: "Андрей Фломастер", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 21, name: "Влад Владшток", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 22, name: "Максим Spy", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 23, name: "Роман Лод", entry: 1100, rebuy: 8000, exit: 200, result: -8900 }
-];
-
-// ========== ДАННЫЕ ДНЯ 4 (НОВЫЕ) ==========
-const day4Players = [
-    { number: 1, name: "Саша Коч", entry: 1100, rebuy: 1000, exit: 21265, result: 19165 },
-    { number: 2, name: "Ирина Ага", entry: 1100, rebuy: 0, exit: 17480, result: 16380 },
-    { number: 3, name: "grooveman", entry: 1100, rebuy: 0, exit: 16025, result: 14925 },
-    { number: 4, name: "Андрей Морфиус", entry: 1100, rebuy: 3000, exit: 13825, result: 9725 },
-    { number: 5, name: "Влад Владшток", entry: 1100, rebuy: 2000, exit: 11825, result: 8725 },
-    { number: 6, name: "Федор К", entry: 1100, rebuy: 0, exit: 6930, result: 5830 },
-    { number: 7, name: "Евгений Ц", entry: 1100, rebuy: 0, exit: 6460, result: 5360 },
-    { number: 8, name: "Матвей МС", entry: 1100, rebuy: 0, exit: 5215, result: 4115 },
-    { number: 9, name: "Соня Серж", entry: 1100, rebuy: 3000, exit: 5895, result: 1795 },
-    { number: 10, name: "Макар Аве", entry: 1100, rebuy: 0, exit: 2440, result: 1340 },
-    { number: 11, name: "Надя Жб", entry: 1100, rebuy: 1000, exit: 3305, result: 1205 },
-    { number: 12, name: "Егор АА 11", entry: 1100, rebuy: 4000, exit: 5675, result: 575 },
-    { number: 13, name: "Ярослав Кол", entry: 1100, rebuy: 2000, exit: 3625, result: 525 },
-    { number: 14, name: "Иван 112", entry: 1100, rebuy: 0, exit: 1535, result: 435 },
-    { number: 15, name: "Мойша", entry: 1100, rebuy: 0, exit: 1305, result: 205 },
-    { number: 16, name: "Роман Лод", entry: 1100, rebuy: 0, exit: 1075, result: -25 },
-    { number: 17, name: "Вадим Зеленин", entry: 1100, rebuy: 2000, exit: 3025, result: -75 },
-    { number: 18, name: "Даша Хромова", entry: 1100, rebuy: 0, exit: 460, result: -640 },
-    { number: 19, name: "Шурик Шилкин", entry: 1100, rebuy: 0, exit: 0, result: -1100 },
-    { number: 20, name: "Лиза Жиг", entry: 1100, rebuy: 0, exit: 0, result: -1100 },
-    { number: 21, name: "Кристина А", entry: 1100, rebuy: 0, exit: 0, result: -1100 },
-    { number: 22, name: "Влад Сам", entry: 1100, rebuy: 1000, exit: 200, result: -1900 },
-    { number: 23, name: "Зеньята", entry: 1100, rebuy: 2000, exit: 1050, result: -2050 },
-    { number: 24, name: "Егор Вино", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 25, name: "Том", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 26, name: "Максим Spy", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 27, name: "Полина Матыцына", entry: 1100, rebuy: 1000, exit: 0, result: -2100 },
-    { number: 28, name: "Инна Шашкина", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 29, name: "Денис Чир", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 30, name: "Ольга Б", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 31, name: "Роман Егоров", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 32, name: "Инна М", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 33, name: "Андрей Фломастер", entry: 1100, rebuy: 2000, exit: 0, result: -3100 },
-    { number: 34, name: "Немощь", entry: 1100, rebuy: 3000, exit: 385, result: -3715 },
-    { number: 35, name: "Настя К", entry: 1100, rebuy: 3000, exit: 0, result: -4100 },
-    { number: 36, name: "Богдан А", entry: 1100, rebuy: 4000, exit: 0, result: -5100 },
-    { number: 37, name: "Jane 007", entry: 1100, rebuy: 10000, exit: 4200, result: -6900 },
-    { number: 38, name: "Robert Юниксфактёр", entry: 1100, rebuy: 6000, exit: 0, result: -7100 },
-    { number: 39, name: "Семён Ануфриев", entry: 1100, rebuy: 7000, exit: 0, result: -8100 },
-    { number: 40, name: "Саша Бел", entry: 1100, rebuy: 7000, exit: 0, result: -8100 }
-];
-
-// ========== ИТОГОВАЯ ТАБЛИЦА (с колонками по дням) ==========
-let tournamentResults = [];
-
-// Инициализация итоговой таблицы (включая день 4)
-function initTournamentResults() {
-    const resultsMap = new Map();
-    
-    // Добавляем день 1
-    day1Players.forEach(p => {
-        resultsMap.set(p.name, {
-            name: p.name,
-            day1: p.result,
-            day2: null,
-            day3: null,
-            day4: null,
-            total: p.result
-        });
-    });
-    
-    // Добавляем/обновляем день 2
-    day2Players.forEach(p => {
-        if (resultsMap.has(p.name)) {
-            const player = resultsMap.get(p.name);
-            player.day2 = p.result;
-            player.total = (player.day1 || 0) + p.result;
-        } else {
-            resultsMap.set(p.name, {
-                name: p.name,
-                day1: null,
-                day2: p.result,
-                day3: null,
-                day4: null,
-                total: p.result
-            });
-        }
-    });
-    
-    // Добавляем/обновляем день 3
-    day3Players.forEach(p => {
-        if (resultsMap.has(p.name)) {
-            const player = resultsMap.get(p.name);
-            player.day3 = p.result;
-            player.total = (player.day1 || 0) + (player.day2 || 0) + p.result;
-        } else {
-            resultsMap.set(p.name, {
-                name: p.name,
-                day1: null,
-                day2: null,
-                day3: p.result,
-                day4: null,
-                total: p.result
-            });
-        }
-    });
-    
-    // Добавляем/обновляем день 4
-    day4Players.forEach(p => {
-        if (resultsMap.has(p.name)) {
-            const player = resultsMap.get(p.name);
-            player.day4 = p.result;
-            player.total = (player.day1 || 0) + (player.day2 || 0) + (player.day3 || 0) + p.result;
-        } else {
-            resultsMap.set(p.name, {
-                name: p.name,
-                day1: null,
-                day2: null,
-                day3: null,
-                day4: p.result,
-                total: p.result
-            });
-        }
-    });
-    
-    tournamentResults = Array.from(resultsMap.values()).sort((a, b) => b.total - a.total);
-}
-
-initTournamentResults();
-
-// ========== ДАННЫЕ РЕЙТИНГА (ОБНОВЛЕНЫ) ==========
+// ========== ДАННЫЕ РЕЙТИНГА - НЕ ИЗМЕНЯЕМ ==========
 const ratingBeforeToday = [
     { name: "Михаил Наб", rating: 765, attendance: 10 },
     { name: "Семён Ануфриев", rating: 725, attendance: 17 },
@@ -351,7 +140,7 @@ const ratingBeforeToday = [
     { name: "Вова Гриненко", rating: 14, attendance: 1 }
 ];
 
-// Добавки за турнир Туза весны 2026
+// Добавки за турнир Туза весны 2026 (оставляем для истории, но для новых игр не используются)
 const ratingAdditions = [
     { name: "grooveman", addition: 216 },
     { name: "Jane 007", addition: 44 },
@@ -408,15 +197,15 @@ function updatePhaseHeader(tabName) {
     if (!phaseElement) return;
 
     const phases = {
-        'day1': 'День 1 - 26.02.2026',
-        'day2': 'День 2 - 5.03.2026',
-        'day3': 'День 3 - 19.03.2026',
-        'day4': 'День 4 - 26.03.2026',
-        'tournamentResults': 'Итоги Межсезонья',
+        'day1': 'День 1 - 2.04.2026',
+        'day2': 'День 2 - 9.04.2026',
+        'day3': 'День 3 - 16.04.2026',
+        'day4': 'День 4 - 23.04.2026',
+        'tournamentResults': 'Итоги Сезона Охоты А-2',
         'rating': 'Рейтинг',
         'previousResults': 'Результаты Туза весны 2026'
     };
-    phaseElement.textContent = phases[tabName] || 'Межсезонье';
+    phaseElement.textContent = phases[tabName] || 'Сезон Охоты А-2';
 }
 
 function toggleTableExpand() {
@@ -450,109 +239,6 @@ function getPlaceEmoji(place) {
     return '';
 }
 
-// Заполнение таблицы Дня 1
-function fillDay1Table() {
-    const tableBody = document.getElementById('day1Table');
-    if (!tableBody) return;
-    tableBody.innerHTML = '';
-    day1Players.forEach(player => {
-        const row = document.createElement('tr');
-        const resultClass = player.result >= 0 ? "chips-positive" : "chips-negative";
-        row.innerHTML = `
-            <td class="number-column">${player.number}</td>
-            <td class="player-name">${player.name}</td>
-            <td>${formatNumber(player.entry)}</td>
-            <td>${formatNumber(player.rebuy)}</td>
-            <td class="exit-time">${formatNumber(player.exit)}</td>
-            <td class="${resultClass}">${formatNumber(player.result)}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-}
-
-// Заполнение таблицы Дня 2
-function fillDay2Table() {
-    const tableBody = document.getElementById('day2Table');
-    if (!tableBody) return;
-    tableBody.innerHTML = '';
-    day2Players.forEach(player => {
-        const row = document.createElement('tr');
-        const resultClass = player.result >= 0 ? "chips-positive" : "chips-negative";
-        row.innerHTML = `
-            <td class="number-column">${player.number}</td>
-            <td class="player-name">${player.name}</td>
-            <td>${formatNumber(player.entry)}</td>
-            <td>${formatNumber(player.rebuy)}</td>
-            <td class="exit-time">${formatNumber(player.exit)}</td>
-            <td class="${resultClass}">${formatNumber(player.result)}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-}
-
-// Заполнение таблицы Дня 3
-function fillDay3Table() {
-    const tableBody = document.getElementById('day3Table');
-    if (!tableBody) return;
-    tableBody.innerHTML = '';
-    day3Players.forEach(player => {
-        const row = document.createElement('tr');
-        const resultClass = player.result >= 0 ? "chips-positive" : "chips-negative";
-        row.innerHTML = `
-            <td class="number-column">${player.number}</td>
-            <td class="player-name">${player.name}</td>
-            <td>${formatNumber(player.entry)}</td>
-            <td>${formatNumber(player.rebuy)}</td>
-            <td class="exit-time">${formatNumber(player.exit)}</td>
-            <td class="${resultClass}">${formatNumber(player.result)}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-}
-
-// Заполнение таблицы Дня 4
-function fillDay4Table() {
-    const tableBody = document.getElementById('day4Table');
-    if (!tableBody) return;
-    tableBody.innerHTML = '';
-    day4Players.forEach(player => {
-        const row = document.createElement('tr');
-        const resultClass = player.result >= 0 ? "chips-positive" : "chips-negative";
-        row.innerHTML = `
-            <td class="number-column">${player.number}</td>
-            <td class="player-name">${player.name}</td>
-            <td>${formatNumber(player.entry)}</td>
-            <td>${formatNumber(player.rebuy)}</td>
-            <td class="exit-time">${formatNumber(player.exit)}</td>
-            <td class="${resultClass}">${formatNumber(player.result)}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-}
-
-// Заполнение итоговой таблицы
-function fillTournamentResultsTable() {
-    const tableBody = document.getElementById('tournamentResultsTable');
-    if (!tableBody) return;
-    tableBody.innerHTML = '';
-    
-    tournamentResults.forEach((player, index) => {
-        const row = document.createElement('tr');
-        const totalClass = player.total >= 0 ? "chips-positive" : "chips-negative";
-        
-        row.innerHTML = `
-            <td class="number-column">${index + 1}</td>
-            <td class="player-name">${player.name}</td>
-            <td class="${player.day1 >= 0 ? 'chips-positive' : 'chips-negative'}">${player.day1 !== null ? formatNumber(player.day1) : '-'}</td>
-            <td class="${player.day2 >= 0 ? 'chips-positive' : 'chips-negative'}">${player.day2 !== null ? formatNumber(player.day2) : '-'}</td>
-            <td class="${player.day3 >= 0 ? 'chips-positive' : 'chips-negative'}">${player.day3 !== null ? formatNumber(player.day3) : '-'}</td>
-            <td class="${player.day4 >= 0 ? 'chips-positive' : 'chips-negative'}">${player.day4 !== null ? formatNumber(player.day4) : '-'}</td>
-            <td class="${totalClass}">${formatNumber(player.total)}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-}
-
 // Заполнение таблицы результатов ПРОШЛОГО турнира (Туз весны 2026)
 function fillPreviousResultsTable() {
     const tableBody = document.getElementById('previousResultsTable');
@@ -560,8 +246,6 @@ function fillPreviousResultsTable() {
     tableBody.innerHTML = '';
     previousTournamentResults.forEach((player, index) => {
         const row = document.createElement('tr');
-        // Только для первого места - золотой цвет и медалька
-        // Для всех остальных - зеленый цвет
         let placeClass = '';
         let placeEmoji = '';
         
@@ -584,13 +268,12 @@ function fillPreviousResultsTable() {
     });
 }
 
-// ========== РЕЙТИНГ ==========
+// ========== РЕЙТИНГ (НЕ ИЗМЕНЯЕМ) ==========
 function calculateNewRating() {
     const newRating = [];
     const beforeMap = new Map(ratingBeforeToday.map(p => [p.name, { rating: p.rating, attendance: p.attendance }]));
     const additionMap = new Map(ratingAdditions.map(p => [p.name, p.addition]));
 
-    // Сначала добавляем всех игроков из старого рейтинга
     ratingBeforeToday.forEach(player => {
         const addition = additionMap.get(player.name) || 0;
         const newAttendance = player.attendance + (additionMap.has(player.name) ? 1 : 0);
@@ -603,7 +286,6 @@ function calculateNewRating() {
         });
     });
 
-    // Добавляем новичков (кого нет в старом рейтинге, но есть в добавках)
     ratingAdditions.forEach(add => {
         if (!beforeMap.has(add.name)) {
             newRating.push({
@@ -621,25 +303,16 @@ function calculateNewRating() {
 
 function calculateRatingPositionChanges() {
     const newRating = calculateNewRating();
-    
-    // Старый порядок (до игры) на основе ratingBeforeToday
     const oldRatingList = ratingBeforeToday.map(p => ({ name: p.name, rating: p.rating }));
-    
-    // Сортируем старый рейтинг
     const sortedOldRating = [...oldRatingList].sort((a, b) => b.rating - a.rating);
     const sortedNewRating = [...newRating].sort((a, b) => b.newRating - a.newRating);
-
     const positionChanges = new Map();
-    
-    // Создаем Set с именами новичков (кого не было в старом рейтинге)
     const oldNames = new Set(ratingBeforeToday.map(p => p.name));
 
     sortedNewRating.forEach((player, newIndex) => {
-        // Если игрока не было в старом рейтинге - это NEW
         if (!oldNames.has(player.name)) {
             positionChanges.set(player.name, { change: 0, type: 'new' });
         } else {
-            // Ищем позицию в старом рейтинге
             const oldIndex = sortedOldRating.findIndex(p => p.name === player.name);
             if (oldIndex !== -1) {
                 const change = oldIndex - newIndex;
@@ -676,11 +349,8 @@ function fillRatingTable() {
 
     sortedRating.forEach((player, index) => {
         const row = document.createElement('tr');
-        
-        // Определяем, играл ли игрок в этом туре
         const playedThisTour = ratingAdditions.some(a => a.name === player.name);
         
-        // Формируем знак для столбца +/-
         let changeSign = "";
         if (player.change > 0) {
             changeSign = "+";
@@ -715,33 +385,18 @@ function searchPlayers() {
     if (!activeTab) return;
 
     if (searchTerm === '') {
-        if (activeTab.id === 'day1') fillDay1Table();
-        else if (activeTab.id === 'day2') fillDay2Table();
-        else if (activeTab.id === 'day3') fillDay3Table();
-        else if (activeTab.id === 'day4') fillDay4Table();
-        else if (activeTab.id === 'previousResults') fillPreviousResultsTable();
+        if (activeTab.id === 'previousResults') fillPreviousResultsTable();
         else if (activeTab.id === 'rating') fillRatingTable();
-        else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
         document.getElementById('searchResults').style.display = 'none';
         return;
     }
 
     let foundCount = 0;
-    if (activeTab.id === 'day1') {
-        foundCount = day1Players.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
-    } else if (activeTab.id === 'day2') {
-        foundCount = day2Players.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
-    } else if (activeTab.id === 'day3') {
-        foundCount = day3Players.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
-    } else if (activeTab.id === 'day4') {
-        foundCount = day4Players.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
-    } else if (activeTab.id === 'previousResults') {
+    if (activeTab.id === 'previousResults') {
         foundCount = previousTournamentResults.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
     } else if (activeTab.id === 'rating') {
         const newRating = calculateNewRating();
         foundCount = newRating.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
-    } else if (activeTab.id === 'tournamentResults') {
-        foundCount = tournamentResults.filter(p => p.name.toLowerCase().includes(searchTerm)).length;
     }
 
     document.getElementById('resultsCount').textContent = foundCount;
@@ -755,11 +410,7 @@ function setupAutocomplete() {
 
     const allPlayers = [
         ...previousTournamentResults.map(p => ({ name: p.name })),
-        ...calculateNewRating().map(p => ({ name: p.name })),
-        ...day1Players.map(p => ({ name: p.name })),
-        ...day2Players.map(p => ({ name: p.name })),
-        ...day3Players.map(p => ({ name: p.name })),
-        ...day4Players.map(p => ({ name: p.name }))
+        ...calculateNewRating().map(p => ({ name: p.name }))
     ];
     const playerNames = [...new Set(allPlayers.map(p => p.name))];
 
@@ -806,30 +457,13 @@ function updateStats() {
     let totalPlayers = 0;
     let averageStack = 0;
 
-    if (activeTab.id === 'day1') {
-        totalPlayers = day1Players.length;
-        const total = day1Players.reduce((sum, p) => sum + p.result, 0);
-        averageStack = Math.round(total / totalPlayers);
-    } else if (activeTab.id === 'day2') {
-        totalPlayers = day2Players.length;
-        const total = day2Players.reduce((sum, p) => sum + p.result, 0);
-        averageStack = Math.round(total / totalPlayers);
-    } else if (activeTab.id === 'day3') {
-        totalPlayers = day3Players.length;
-        const total = day3Players.reduce((sum, p) => sum + p.result, 0);
-        averageStack = Math.round(total / totalPlayers);
-    } else if (activeTab.id === 'day4') {
-        totalPlayers = day4Players.length;
-        const total = day4Players.reduce((sum, p) => sum + p.result, 0);
-        averageStack = Math.round(total / totalPlayers);
-    } else if (activeTab.id === 'previousResults') {
+    if (activeTab.id === 'previousResults') {
         totalPlayers = previousTournamentResults.length;
     } else if (activeTab.id === 'rating') {
         totalPlayers = calculateNewRating().length;
-    } else if (activeTab.id === 'tournamentResults') {
-        totalPlayers = tournamentResults.length;
-        const total = tournamentResults.reduce((sum, p) => sum + p.total, 0);
-        averageStack = tournamentResults.length > 0 ? Math.round(total / tournamentResults.length) : 0;
+    } else {
+        totalPlayers = 0;
+        averageStack = 0;
     }
 
     if (totalPlayersElement) totalPlayersElement.textContent = totalPlayers;
@@ -838,16 +472,11 @@ function updateStats() {
 
 // ========== ИНИЦИАЛИЗАЦИЯ ==========
 document.addEventListener('DOMContentLoaded', function() {
-    fillDay1Table();
-    fillDay2Table();
-    fillDay3Table();
-    fillDay4Table();
     fillPreviousResultsTable();
-    fillTournamentResultsTable();
     fillRatingTable();
     setupAutocomplete();
 
-    showTab('previousResults'); // Начальная вкладка - Результаты Туза весны 2026
+    showTab('rating'); // Стартовая вкладка - Рейтинг
 
     const searchInput = document.getElementById('searchInput');
     const clearSearch = document.getElementById('clearSearch');

@@ -15,13 +15,13 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">День 1 - 2.04.2026</div>
+                <div class="tournament-phase" id="currentPhase">День 2 - 9.04.2026</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
-            <button class="tab-button active" onclick="showTab('day1')">День 1 - 2.04.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 9.04.2026</button>
+            <button class="tab-button" onclick="showTab('day1')">День 1 - 2.04.2026</button>
+            <button class="tab-button active" onclick="showTab('day2')">День 2 - 9.04.2026</button>
             <button class="tab-button" onclick="showTab('day3')">День 3 - 16.04.2026</button>
             <button class="tab-button" onclick="showTab('day4')">День 4 - 23.04.2026</button>
             <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
@@ -30,14 +30,14 @@
 
         <div class="stats" id="mainStats">
             <div class="stat-item">
-                <div class="stat-number" id="totalPlayers">24</div>
+                <div class="stat-number" id="totalPlayers">26</div>
                 <div class="stat-label">Участников</div>
             </div>
             <div class="stat-item">
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">9.04.2026</div>
+                        <div class="date-value">16.04.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="stat-item">
-                <div class="stat-number" id="averageStack">4787</div>
+                <div class="stat-number" id="averageStack">0</div>
                 <div class="stat-label">Средний стек</div>
             </div>
         </div>
@@ -64,7 +64,7 @@
 
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
-        <!-- Прошлый турнир (Туз весны 2026) -->
+        <!-- Прошлый турнир -->
         <div id="previousResults" class="tab-content">
             <div class="special-tab-content">
                 <h2>Результаты Туза весны 2026</h2>
@@ -83,8 +83,8 @@
             </div>
         </div>
 
-        <!-- День 1 - 2.04.2026 -->
-        <div id="day1" class="tab-content active">
+        <!-- День 1 -->
+        <div id="day1" class="tab-content">
             <table class="tournament-table">
                 <thead>
                     <tr>
@@ -102,16 +102,26 @@
             </table>
         </div>
 
-        <!-- День 2 - 9.04.2026 -->
-        <div id="day2" class="tab-content">
-            <div class="empty-tab-message">
-                <h2>📊 День 2 - 9.04.2026</h2>
-                <p>Данные обновятся после завершения игры</p>
-                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
-            </div>
+        <!-- День 2 -->
+        <div id="day2" class="tab-content active">
+            <table class="tournament-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Участие</th>
+                        <th>Старт</th>
+                        <th>Добор</th>
+                        <th>Цена</th>
+                        <th>Выход</th>
+                        <th>Итог</th>
+                    </tr>
+                </thead>
+                <tbody id="day2Table"></tbody>
+            </table>
         </div>
 
-        <!-- День 3 - 16.04.2026 -->
+        <!-- День 3 -->
         <div id="day3" class="tab-content">
             <div class="empty-tab-message">
                 <h2>📊 День 3 - 16.04.2026</h2>
@@ -120,7 +130,7 @@
             </div>
         </div>
 
-        <!-- День 4 - 23.04.2026 -->
+        <!-- День 4 -->
         <div id="day4" class="tab-content">
             <div class="empty-tab-message">
                 <h2>📊 День 4 - 23.04.2026</h2>
@@ -139,11 +149,13 @@
                         <tr>
                             <th>№</th>
                             <th>Имя</th>
+                            <th>▲▼</th>
                             <th>1 день</th>
                             <th>2 день</th>
                             <th>3 день</th>
                             <th>4 день</th>
                             <th>Итог</th>
+                            <th>Охота</th>
                         </tr>
                     </thead>
                     <tbody id="tournamentResultsTable"></tbody>
@@ -168,6 +180,7 @@
                             <th>Награда 5</th>
                             <th>Награда 6</th>
                             <th>Награда 7</th>
+                            <th>Награда 8</th>
                             <th>Сумма</th>
                             <th>Кол-во</th>
                             <th>Средняя</th>

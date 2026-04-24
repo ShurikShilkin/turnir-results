@@ -15,17 +15,18 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">День 3 - 16.04.2026</div>
+                <div class="tournament-phase" id="currentPhase">Итоги Сезона Охоты А-2</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
+            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('day1')">День 1 - 2.04.2026</button>
             <button class="tab-button" onclick="showTab('day2')">День 2 - 9.04.2026</button>
-            <button class="tab-button active" onclick="showTab('day3')">День 3 - 16.04.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">День 3 - 16.04.2026</button>
             <button class="tab-button" onclick="showTab('day4')">День 4 - 23.04.2026</button>
-            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охотничьи номинации</button>
+            <button class="tab-button" onclick="showTab('blinds')">Блайнды и анте</button>
         </div>
 
         <div class="stats" id="mainStats">
@@ -37,7 +38,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">23.04.2026</div>
+                        <div class="date-value">25.04.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -89,7 +90,7 @@
             </table>
         </div>
 
-        <div id="day3" class="tab-content active">
+        <div id="day3" class="tab-content">
             <table class="tournament-table">
                 <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
                 <tbody id="day3Table"></tbody>
@@ -97,19 +98,18 @@
         </div>
 
         <div id="day4" class="tab-content">
-            <div class="empty-tab-message">
-                <h2>📊 День 4 - 23.04.2026</h2>
-                <p>Данные обновятся после завершения игры</p>
-                <p style="margin-top: 10px; font-size: 0.9em;">Следите за обновлениями!</p>
-            </div>
+            <table class="tournament-table">
+                <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
+                <tbody id="day4Table"></tbody>
+            </table>
         </div>
 
-        <div id="tournamentResults" class="tab-content">
+        <div id="tournamentResults" class="tab-content active">
             <div class="special-tab-content">
                 <h2>Итоги Сезона Охоты А-2</h2>
-                <div class="special-date">Накопительная таблица</div>
+                <div class="special-date">Финальные результаты</div>
                 <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>▲▼</th><th>1 день</th><th>2 день</th><th>3 день</th><th>4 день</th><th>Итог</th><th>Охота</th></tr></thead>
+                    <thead><tr><th>№</th><th>Имя</th><th>▲▼</th><th>1 день</th><th>2 день</th><th>3 день</th><th>4 день</th><th>Отборочные</th><th>Охота</th><th>Трофеи</th><th>Участие в финале</th><th>Номинации</th><th>Итог</th></tr></thead>
                     <tbody id="tournamentResultsTable"></tbody>
                 </table>
             </div>
@@ -120,8 +120,19 @@
                 <h2>🏆 Охотничьи номинации 🏆</h2>
                 <div class="special-date">Награды за охоту</div>
                 <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>Награда 1</th><th>Награда 2</th><th>Награда 3</th><th>Награда 4</th><th>Награда 5</th><th>Награда 6</th><th>Награда 7</th><th>Награда 8</th><th>Сумма</th><th>Кол-во</th><th>Средняя</th></tr></thead>
+                    <thead><tr><th>№</th><th>Имя</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>Сумма</th><th>Кол-во</th><th>Средняя</th></tr></thead>
                     <tbody id="huntingNominationsTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="blinds" class="tab-content">
+            <div class="special-tab-content">
+                <h2>📊 Блайнды и анте</h2>
+                <div class="special-date">Расписание уровней</div>
+                <table class="tournament-table">
+                    <thead><tr><th>№</th><th>Время начала</th><th>Время конца</th><th>МБ</th><th>ББ</th><th>Анте</th></tr></thead>
+                    <tbody id="blindsTable"></tbody>
                 </table>
             </div>
         </div>

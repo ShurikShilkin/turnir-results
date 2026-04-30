@@ -28,6 +28,8 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 header h1 {
@@ -46,20 +48,11 @@ header h1 {
     border: none;
     padding: 12px 20px;
     border-radius: 25px;
-    font-size: 0.95em;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width: 250px;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.previous-tournament-button:hover {
-    background: linear-gradient(135deg, #7B1FA2, #6A1B9A);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    max-width: 280px;
 }
 
 .rating-tab-button {
@@ -71,15 +64,7 @@ header h1 {
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     width: 200px;
-}
-
-.rating-tab-button:hover {
-    background: linear-gradient(135deg, #F57C00, #E65100);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .tournament-info {
@@ -89,8 +74,7 @@ header h1 {
 .tournament-phase {
     font-size: 1.4em;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #FFFFFF;
+    color: #FFD700;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
@@ -101,7 +85,6 @@ header h1 {
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 10px;
-    backdrop-filter: blur(10px);
     flex-wrap: wrap;
 }
 
@@ -114,7 +97,6 @@ header h1 {
     border-radius: 25px;
     font-size: 0.9em;
     cursor: pointer;
-    transition: all 0.3s ease;
     min-width: 150px;
 }
 
@@ -138,14 +120,11 @@ header h1 {
 .rating-header {
     text-align: center;
     margin-bottom: 20px;
-    padding: 15px;
 }
 
 .rating-header h2 {
     font-size: 2.5em;
     color: #FFD700;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .stats {
@@ -161,7 +140,6 @@ header h1 {
     padding: 25px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .stat-number {
@@ -169,7 +147,6 @@ header h1 {
     font-weight: bold;
     margin-bottom: 10px;
     color: #4CAF50;
-    transition: all 0.3s ease;
 }
 
 .stat-label {
@@ -182,24 +159,17 @@ header h1 {
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    justify-content: center;
-}
-
-.date-item {
-    text-align: center;
 }
 
 .date-label {
     font-size: 0.9em;
     opacity: 0.8;
-    margin-bottom: 5px;
 }
 
 .date-value {
     font-size: 1.3em;
     font-weight: bold;
     color: #4CAF50;
-    line-height: 1.3;
 }
 
 .search-container {
@@ -207,7 +177,6 @@ header h1 {
     background: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
     position: relative;
 }
 
@@ -224,13 +193,7 @@ header h1 {
     border-radius: 25px;
     font-size: 1em;
     background: rgba(255,255,255,0.95);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     color: #333;
-}
-
-#searchInput:focus {
-    outline: none;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .clear-search {
@@ -246,9 +209,6 @@ header h1 {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .clear-search:hover {
@@ -262,7 +222,6 @@ header h1 {
     right: 0;
     background: white;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     max-height: 200px;
     overflow-y: auto;
     z-index: 1000;
@@ -273,16 +232,11 @@ header h1 {
     padding: 10px 15px;
     cursor: pointer;
     color: #333;
-    border-bottom: 1px solid #f0f0f0;
-    text-align: left;
+    border-bottom: 1px solid #eee;
 }
 
 .autocomplete-item:hover {
     background: #f5f5f5;
-}
-
-.autocomplete-item:last-child {
-    border-bottom: none;
 }
 
 .autocomplete-highlight {
@@ -298,7 +252,7 @@ header h1 {
 }
 
 .expand-button {
-    display: none;
+    display: block;
     background: #4CAF50;
     color: white;
     border: none;
@@ -315,44 +269,56 @@ header h1 {
     background: rgba(255,255,255,0.95);
     color: #333;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow-x: auto;
     margin-top: 20px;
     font-size: 0.9em;
+    border-collapse: collapse;
+}
+
+.tournament-table th,
+.tournament-table td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
 }
 
 .tournament-table th {
     background: #2c3e50;
     color: white;
-    padding: 12px 8px;
-    text-align: center;
-    font-size: 0.9em;
-    font-weight: bold;
-    border-right: 1px solid rgba(255,255,255,0.1);
-}
-
-.tournament-table th:last-child {
-    border-right: none;
-}
-
-.tournament-table td {
-    padding: 10px 8px;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    border-right: 1px solid #f0f0f0;
-    color: #333;
-}
-
-.tournament-table td:last-child {
-    border-right: none;
 }
 
 .tournament-table tr:hover {
     background: #f5f5f5;
 }
 
-.tournament-table tr:last-child td {
-    border-bottom: none;
+/* Выделение топ-19 */
+.rating-highlight {
+    background: #fff9c4 !important;
+}
+
+.rating-highlight:hover {
+    background: #fff59d !important;
+}
+
+/* Корона для Никиты Yellow */
+.rating-crown {
+    position: relative;
+    color: #d4af37 !important;
+    font-weight: bold !important;
+}
+
+.rating-crown::after {
+    content: "👑";
+    position: absolute;
+    margin-left: 5px;
+    top: auto;
+    right: auto;
+}
+
+/* Подсветка найденного игрока */
+.search-highlight {
+    background: #ffeb3b !important;
 }
 
 .player-name {
@@ -364,24 +330,46 @@ header h1 {
 
 .number-column {
     font-weight: bold;
-    color: #2c3e50;
-    width: 50px;
 }
 
+/* МОБИЛЬНЫЕ ПРАВИЛА */
+@media (max-width: 768px) {
+    .stats,
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-button {
+        width: 200px;
+    }
+    
+    /* Скрываем лишние колонки */
+    .tournament-table .mobile-hide {
+        display: none;
+    }
+}
+
+/* При развёрнутой таблице показываем скрытые колонки */
+.tournament-table.expanded .mobile-hide {
+    display: table-cell;
+}
+
+/* Десктоп: всегда показываем */
+@media (min-width: 769px) {
+    .tournament-table .mobile-hide {
+        display: table-cell;
+    }
+}
+
+/* Остальные стили */
 .chips-positive {
     color: #2E7D32;
     font-weight: bold;
     background: #e8f5e9;
     border-radius: 8px;
     padding: 5px 8px;
-}
-
-.chips-negative {
-    color: #C62828;
-    font-weight: bold;
-    background: #ffebee;
-    border-radius: 8px;
-    padding: 5px 8px;
+    display: inline-block;
 }
 
 .attendance-value {
@@ -390,6 +378,7 @@ header h1 {
     font-weight: bold;
     border-radius: 8px;
     padding: 5px 8px;
+    display: inline-block;
 }
 
 .rating-positive {
@@ -399,11 +388,6 @@ header h1 {
 
 .rating-negative {
     color: #C62828;
-    font-weight: bold;
-}
-
-.rating-neutral {
-    color: #666;
     font-weight: bold;
 }
 
@@ -424,165 +408,44 @@ header h1 {
     color: white;
 }
 
-.position-up { background: #4CAF50; color: white; }
-.position-down { background: #f44336; color: white; }
-.position-same { background: #ff9800; color: white; }
-.position-new { background: #2196F3; color: white; }
-
-.change-arrow { margin-right: 3px; font-size: 1.1em; }
+.position-up { background: #4CAF50; }
+.position-down { background: #f44336; }
+.position-same { background: #ff9800; }
+.position-new { background: #2196F3; }
 
 .special-tab-content {
     text-align: center;
     background: rgba(255,255,255,0.1);
     padding: 40px;
     border-radius: 15px;
-    backdrop-filter: blur(10px);
     margin-top: 20px;
-    border: 2px solid rgba(255,255,255,0.2);
 }
 
 .special-tab-content h2 {
     font-size: 2.5em;
-    margin-bottom: 15px;
     color: #FFD700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .special-date {
     font-size: 1.3em;
     color: #4CAF50;
     margin-bottom: 30px;
-    font-weight: bold;
 }
 
-/* Стили для финальных результатов */
-.final-gold {
-    background: linear-gradient(90deg, #fff9c4, #fff176) !important;
-    border-left: 4px solid #ffd600;
-}
-.final-silver {
-    background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important;
-    border-left: 4px solid #9e9e9e;
-}
-.final-bronze {
-    background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important;
-    border-left: 4px solid #ff9800;
-}
-.final-finalist {
-    background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important;
-    border-left: 4px solid #4caf50;
-}
-.final-participant {
-    background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important;
-    border-left: 4px solid #f44336;
+.final-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
+.final-silver { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
+.final-bronze { background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important; }
+.final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
+.final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
+
+.empty-tab-message {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 80px 40px;
+    border-radius: 15px;
 }
 
-.gold-place {
-    background: linear-gradient(90deg, #fff9c4, #fff176) !important;
-    border-left: 4px solid #ffd600;
-}
-
-.green-place {
-    background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important;
-    border-left: 4px solid #4caf50;
-}
-
-.place-column {
-    font-weight: bold;
-    font-size: 1.1em;
-    border-radius: 8px;
-    padding: 5px 10px;
-}
-
-.place-notes {
-    font-style: italic;
-    color: #666;
-    text-align: left !important;
-    padding-left: 15px !important;
-}
-
-.rating-highlight {
-    background: #fff9c4 !important;
-    border-left: 4px solid #ffeb3b;
-}
-
-.rating-highlight:hover {
-    background: #fff59d !important;
-}
-
-.rating-crown {
-    position: relative;
-    color: #d4af37 !important;
-    font-weight: bold !important;
-}
-
-.rating-crown::after {
-    content: "👑";
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-}
-
-.hunting-crown {
-    position: relative;
-    color: #d4af37 !important;
-    font-weight: bold !important;
-}
-
-.hunting-crown::after {
-    content: "👑";
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-}
-
-.hunting-highlight-count {
-    background: #ffd700 !important;
-    color: #2c3e50 !important;
-    font-weight: bold !important;
-}
-
-.hunting-highlight-avg {
-    background: #ffd700 !important;
-    color: #2c3e50 !important;
-    font-weight: bold !important;
-    border-radius: 8px;
-    padding: 5px 8px;
-}
-
-@media (max-width: 768px) {
-    .header-top { flex-direction: column; gap: 15px; }
-    header h1 { font-size: 1.5em; order: 1; margin: 10px 0; }
-    .previous-tournament-button { width: 90%; max-width: 300px; order: 2; }
-    .rating-tab-button { width: 90%; max-width: 200px; order: 3; }
-    .expand-button { display: block; }
-    .stats { grid-template-columns: 1fr; gap: 15px; }
-    .tournament-phase { font-size: 1.1em; }
-    .container { padding: 10px; }
-    .tournament-table { font-size: 0.7em; width: 100%; }
-    .stat-dates { flex-direction: row; justify-content: center; gap: 20px; }
-    .date-value { font-size: 1.1em; }
-    .tabs { flex-direction: column; align-items: center; }
-    .tab-button { margin: 5px 0; width: 200px; }
-    .special-tab-content { padding: 20px; }
-    .special-tab-content h2 { font-size: 2em; }
-    .rating-header { padding: 15px; margin-bottom: 15px; }
-    .rating-header h2 { font-size: 2em; }
-
-    #tournamentResults .tournament-table th:nth-child(4), #tournamentResults .tournament-table th:nth-child(5),
-    #tournamentResults .tournament-table th:nth-child(6), #tournamentResults .tournament-table th:nth-child(7),
-    #tournamentResults .tournament-table td:nth-child(4), #tournamentResults .tournament-table td:nth-child(5),
-    #tournamentResults .tournament-table td:nth-child(6), #tournamentResults .tournament-table td:nth-child(7) {
-        display: none;
-    }
-    #tournamentResults .tournament-table th:nth-child(1), #tournamentResults .tournament-table td:nth-child(1) { width: 40px; }
-    #tournamentResults .tournament-table th:nth-child(2), #tournamentResults .tournament-table td:nth-child(2) { width: calc(100% - 300px); }
-    #tournamentResults .tournament-table th:nth-child(3), #tournamentResults .tournament-table td:nth-child(3) { display: table-cell; width: 50px; }
-    #tournamentResults .tournament-table th:nth-child(12), #tournamentResults .tournament-table td:nth-child(12) { display: table-cell; width: 90px; }
-
-    .tournament-table.expanded th, .tournament-table.expanded td { display: table-cell !important; }
+.empty-tab-message h2 {
+    font-size: 2.5em;
+    color: #FFD700;
 }

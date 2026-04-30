@@ -2,36 +2,34 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Турнир по Непокеру в Циферблате Сезон Охоты А-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Турнир «ВЭЛЬЮ БЕТА 3/4» по Непокеру в Циферблате</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Туза весны 2026</button>
-                <h1>Турнир по Непокеру в Циферблате<br>Сезон Охоты А-2</h1>
+                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Сезона Охоты А-2</button>
+                <h1>Турнир «ВЭЛЬЮ БЕТА 3/4»<br>по Непокеру в Циферблате</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Результаты финала</div>
+                <div class="tournament-phase" id="currentPhase">Рейтинг</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('finalResults')">Результаты</button>
+            <button class="tab-button" onclick="showTab('day1')">1 день - 30.04.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">2 день - 7.05.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">3 день - 14.05.2026</button>
             <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
-            <button class="tab-button" onclick="showTab('day1')">День 1 - 2.04.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">День 2 - 9.04.2026</button>
-            <button class="tab-button" onclick="showTab('day3')">День 3 - 16.04.2026</button>
-            <button class="tab-button" onclick="showTab('day4')">День 4 - 23.04.2026</button>
-            <button class="tab-button" onclick="showTab('huntingNominations')">Охотничьи номинации</button>
+            <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
         </div>
 
         <div class="stats" id="mainStats">
             <div class="stat-item">
-                <div class="stat-number" id="totalPlayers">52</div>
+                <div class="stat-number" id="totalPlayers">0</div>
                 <div class="stat-label">Участников</div>
             </div>
             <div class="stat-item">
@@ -65,85 +63,57 @@
 
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
+        <!-- Результаты прошлого турнира -->
         <div id="previousResults" class="tab-content">
             <div class="special-tab-content">
-                <h2>Результаты Туза весны 2026</h2>
-                <div class="special-date">Итоговые результаты</div>
-                <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>Место</th><th>Статус</th></tr></thead>
+                <h2>🏆 Результаты Сезона Охоты А-2 🏆</h2>
+                <div class="special-date">Финальная игра - 25.04.2026</div>
+                <table class="tournament-table" id="previousResultsTableElement">
+                    <thead>
+                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-place">Место</th><th class="col-status">Статус</th></tr>
+                    </thead>
                     <tbody id="previousResultsTable"></tbody>
                 </table>
             </div>
         </div>
 
-        <div id="finalResults" class="tab-content active">
-            <div class="special-tab-content">
-                <h2>🏆 Результаты финала 🏆</h2>
-                <div class="special-date">Финальная игра - 25.04.2026</div>
-                <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>Место</th><th>Статус</th></tr></thead>
-                    <tbody id="finalResultsTable"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="day1" class="tab-content">
-            <table class="tournament-table">
-                <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
-                <tbody id="day1Table"></tbody>
+        <!-- Рейтинг -->
+        <div id="rating" class="tab-content">
+            <div class="rating-header"><h2>Рейтинг</h2></div>
+            <table class="tournament-table" id="ratingTableElement">
+                <thead>
+                    <tr>
+                        <th class="col-num">№</th>
+                        <th class="col-name">Имя</th>
+                        <th class="mobile-hide">▲▼</th>
+                        <th class="mobile-hide">Пред. рейтинг</th>
+                        <th class="mobile-hide">Посещения</th>
+                        <th class="mobile-hide">+/-</th>
+                        <th class="col-rating">Рейтинг</th>
+                    </tr>
+                </thead>
+                <tbody id="ratingTable"></tbody>
             </table>
         </div>
 
-        <div id="day2" class="tab-content">
-            <table class="tournament-table">
-                <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
-                <tbody id="day2Table"></tbody>
-            </tr>
-        </div>
-
-        <div id="day3" class="tab-content">
-            <table class="tournament-table">
-                <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
-                <tbody id="day3Table"></tbody>
-            </table>
-        </div>
-
-        <div id="day4" class="tab-content">
-            <table class="tournament-table">
-                <thead><tr><th>№</th><th>Имя</th><th>Участие</th><th>Старт</th><th>Добор</th><th>Цена</th><th>Выход</th><th>Итог</th></tr></thead>
-                <tbody id="day4Table"></tbody>
-            </table>
-        </div>
-
-        <div id="tournamentResults" class="tab-content">
-            <div class="special-tab-content">
-                <h2>Итоги Сезона Охоты А-2</h2>
-                <div class="special-date">Финальные результаты</div>
-                <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>▲▼</th><th>1 день</th><th>2 день</th><th>3 день</th><th>4 день</th><th>Отборочные</th><th>Охота</th><th>Трофеи</th><th>Участие в финале</th><th>Номинации</th><th>Итог</th></tr></thead>
-                    <tbody id="tournamentResultsTable"></tbody>
-                </table>
-            </div>
-        </div>
-
+        <!-- Охота за головами -->
         <div id="huntingNominations" class="tab-content">
             <div class="special-tab-content">
-                <h2>🏆 Охотничьи номинации 🏆</h2>
-                <div class="special-date">Награды за охоту</div>
-                <table class="tournament-table">
-                    <thead><tr><th>№</th><th>Имя</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>Сумма</th><th>Кол-во</th><th>Средняя</th></tr></thead>
+                <h2>🏆 Охота за головами 🏆</h2>
+                <div class="special-date">Стартовые номиналы</div>
+                <table class="tournament-table" id="huntingTableElement">
+                    <thead>
+                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-value">Стартовая охота</th></tr>
+                    </thead>
                     <tbody id="huntingNominationsTable"></tbody>
                 </table>
             </div>
         </div>
 
-        <div id="rating" class="tab-content">
-            <div class="rating-header"><h2>Рейтинг</h2></div>
-            <table class="tournament-table">
-                <thead><tr><th>№</th><th>Имя</th><th>▲▼</th><th>Пред. рейтинг</th><th>Посещения</th><th>+/-</th><th>Рейтинг</th></tr></thead>
-                <tbody id="ratingTable"></tbody>
-            </table>
-        </div>
+        <div id="day1" class="tab-content"><div class="empty-tab-message"><h2>📅 День 1 - 30.04.2026</h2><p>⏳ Данные появятся после игры</p></div></div>
+        <div id="day2" class="tab-content"><div class="empty-tab-message"><h2>📅 День 2 - 7.05.2026</h2><p>⏳ Данные появятся после игры</p></div></div>
+        <div id="day3" class="tab-content"><div class="empty-tab-message"><h2>📅 День 3 - 14.05.2026</h2><p>⏳ Данные появятся после игры</p></div></div>
+        <div id="tournamentResults" class="tab-content"><div class="empty-tab-message"><h2>🏆 Итоги турнира</h2><p>⏳ Данные появятся после финала</p></div></div>
     </div>
     <script src="script.js"></script>
 </body>

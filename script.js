@@ -141,7 +141,7 @@ const ratingBeforeFinal = [
     { name: "Айдын", rating: 20, attendance: 1 }, { name: "Влад Голубев", rating: 20, attendance: 1 },
     { name: "Михаил Таб", rating: 20, attendance: 1 }, { name: "Стас Мазепа", rating: 20, attendance: 1 },
     { name: "Александр Исаев", rating: 17, attendance: 1 }, { name: "Даня КДД", rating: 15, attendance: 1 },
-    { name: "Вова Гриненко", rating: 14, attendance: 1 }, { name: "Вадим Константинов", rating: 0, attendance: 0 }
+    { name: "Вова Гриненко", rating: 14, attendance: 1 }
 ];
 
 // Добавки за финал
@@ -171,7 +171,7 @@ function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Получить данные рейтинга (уже отсортированы)
+// Получить данные рейтинга
 function getRatingData() {
     const beforeMap = new Map(ratingBeforeFinal.map(p => [p.name, { rating: p.rating, attendance: p.attendance }]));
     const additionMap = new Map(ratingAdditionsFinal.map(p => [p.name, p.addition]));
@@ -224,15 +224,26 @@ function getPositionChanges() {
     return changes;
 }
 
+// Проверка на мобильное устройство по ширине экрана
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
 // ========== ОТРИСОВКА ТАБЛИЦ ==========
 
-// Рейтинг
+// Рейтинг - ГЛАВНОЕ ИСПРАВЛЕНИЕ
 function fillRatingTable() {
     const tbody = document.getElementById('ratingTable');
     if (!tbody) return;
     
     const allData = getRatingData();
     const changes = getPositionChanges();
+    const mobile = isMobile();
+    const table = document.getElementById('ratingTableElement');
+    const isExpanded = table ? table.classList.contains('expanded') : false;
+    
+    // На мобиле без развёртывания скрываем колонки
+    const hideExtraColumns = mobile && !isExpanded;
     
     // Фильтруем по поиску
     const filteredData = currentSearchTerm === '' 
@@ -252,7 +263,6 @@ function fillRatingTable() {
     tbody.innerHTML = '';
     
     filteredData.forEach((p) => {
-        // Находим реальный порядковый номер в общем рейтинге
         const realIndex = allData.findIndex(item => item.name === p.name);
         const realPosition = realIndex + 1;
         
@@ -277,30 +287,66 @@ function fillRatingTable() {
             changeClass = 'rating-negative';
         }
         
-        // Выделение топ-19 и Никиты Yellow (по реальной позиции)
         const isTop19 = realPosition <= 19;
         const isNikitaYellow = p.name === "Никита Yellow";
         let rowClass = '';
         if (isTop19 || isNikitaYellow) rowClass = 'rating-highlight';
         
-        const nameClass = isNikitaYellow ? 'player-name rating-crown' : 'player-name';
+        const displayName = isNikitaYellow ? `${p.name} 👑` : p.name;
         
-        // Подсветка поиска
         const isSearchMatch = currentSearchTerm !== '' && p.name.toLowerCase().includes(currentSearchTerm);
         if (isSearchMatch) rowClass += ' search-highlight';
         
         const row = tbody.insertRow();
         row.className = rowClass;
         
-        // ИСПРАВЛЕНО: добавлен класс mobile-hide к скрываемым колонкам
-        row.insertCell(0).innerHTML = `<td class="number-column">${realPosition}</td>`;
-        row.insertCell(1).innerHTML = `<td class="${nameClass}">${p.name}</td>`;
-        row.insertCell(2).innerHTML = `<td class="extra-col mobile-hide">${changeHtml}</td>`;
-        row.insertCell(3).innerHTML = `<td class="extra-col mobile-hide">${p.previousRating > 0 ? p.previousRating : '-'}</td>`;
-        row.insertCell(4).innerHTML = `<td class="extra-col mobile-hide attendance-value">${p.attendance}</td>`;
-        row.insertCell(5).innerHTML = `<td class="extra-col mobile-hide ${changeClass}">${changeSign}</td>`;
-        row.insertCell(6).innerHTML = `<td class="rating-number">${p.newRating}</td>`;
+        // Всегда добавляем все ячейки, но скрытые получают класс hidden-on-mobile
+        const cell0 = row.insertCell(0);
+        cell0.innerHTML = realPosition;
+        cell0.className = 'number-column';
+        
+        const cell1 = row.insertCell(1);
+        cell1.innerHTML = displayName;
+        cell1.className = 'player-name';
+        
+        const cell2 = row.insertCell(2);
+        cell2.innerHTML = changeHtml;
+        cell2.className = 'extra-col';
+        if (hideExtraColumns) cell2.style.display = 'none';
+        
+        const cell3 = row.insertCell(3);
+        cell3.innerHTML = p.previousRating > 0 ? p.previousRating : '-';
+        cell3.className = 'extra-col';
+        if (hideExtraColumns) cell3.style.display = 'none';
+        
+        const cell4 = row.insertCell(4);
+        cell4.innerHTML = p.attendance;
+        cell4.className = 'extra-col attendance-value';
+        if (hideExtraColumns) cell4.style.display = 'none';
+        
+        const cell5 = row.insertCell(5);
+        cell5.innerHTML = changeSign;
+        cell5.className = `extra-col ${changeClass}`;
+        if (hideExtraColumns) cell5.style.display = 'none';
+        
+        const cell6 = row.insertCell(6);
+        cell6.innerHTML = p.newRating;
+        cell6.className = 'rating-number';
     });
+    
+    // Также скрываем заголовки
+    const thead = document.querySelector('#ratingTableElement thead');
+    if (thead && hideExtraColumns) {
+        const headers = thead.querySelectorAll('th');
+        for (let i = 2; i <= 5; i++) {
+            if (headers[i]) headers[i].style.display = 'none';
+        }
+    } else if (thead) {
+        const headers = thead.querySelectorAll('th');
+        for (let i = 2; i <= 5; i++) {
+            if (headers[i]) headers[i].style.display = '';
+        }
+    }
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
 }
@@ -496,6 +542,11 @@ function toggleTableExpand() {
     table.classList.toggle('expanded');
     const button = document.querySelector('.expand-button');
     button.textContent = table.classList.contains('expanded') ? 'Свернуть таблицу' : 'Развернуть таблицу';
+    
+    // Перерисовываем таблицу рейтинга, чтобы применить скрытие/показ
+    if (activeTab.id === 'rating') {
+        fillRatingTable();
+    }
 }
 
 function resetTableExpand() {
@@ -515,5 +566,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSearchTerm = '';
         document.getElementById('autocompleteResults').style.display = 'none';
         performSearch();
+    });
+    
+    // При изменении размера окна перерисовываем таблицу
+    window.addEventListener('resize', () => {
+        const activeTab = document.querySelector('.tab-content.active');
+        if (activeTab && activeTab.id === 'rating') {
+            fillRatingTable();
+        }
     });
 });

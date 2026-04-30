@@ -53,6 +53,7 @@ header h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     max-width: 280px;
+    min-width: 180px;
 }
 
 .rating-tab-button {
@@ -65,6 +66,7 @@ header h1 {
     font-weight: bold;
     cursor: pointer;
     width: 200px;
+    min-width: 180px;
 }
 
 .tournament-info {
@@ -140,6 +142,7 @@ header h1 {
     padding: 25px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
+    overflow-x: auto;
 }
 
 .stat-number {
@@ -292,7 +295,6 @@ header h1 {
     background: #f5f5f5;
 }
 
-/* Выделение топ-19 */
 .rating-highlight {
     background: #fff9c4 !important;
 }
@@ -301,22 +303,6 @@ header h1 {
     background: #fff59d !important;
 }
 
-/* Корона для Никиты Yellow */
-.rating-crown {
-    position: relative;
-    color: #d4af37 !important;
-    font-weight: bold !important;
-}
-
-.rating-crown::after {
-    content: "👑";
-    position: absolute;
-    margin-left: 5px;
-    top: auto;
-    right: auto;
-}
-
-/* Подсветка найденного игрока */
 .search-highlight {
     background: #ffeb3b !important;
 }
@@ -326,6 +312,7 @@ header h1 {
     text-align: left !important;
     padding-left: 15px !important;
     color: #2c3e50;
+    font-size: 1em;
 }
 
 .number-column {
@@ -334,35 +321,93 @@ header h1 {
 
 /* МОБИЛЬНЫЕ ПРАВИЛА */
 @media (max-width: 768px) {
-    .stats,
-    .tabs {
+    body {
+        padding: 10px;
+    }
+    
+    .header-top {
         flex-direction: column;
         align-items: center;
     }
     
-    .tab-button {
-        width: 200px;
+    header h1 {
+        font-size: 1.5em;
+        order: -1;
+        margin-bottom: 10px;
     }
     
-    /* Скрываем лишние колонки */
-    .tournament-table .mobile-hide {
-        display: none;
+    .previous-tournament-button,
+    .rating-tab-button {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8em;
+    }
+    
+    .tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .tab-button {
+        min-width: 120px;
+        font-size: 0.8em;
+        padding: 8px 10px;
+    }
+    
+    .tournament-table td,
+    .tournament-table th {
+        padding: 10px 5px;
+        font-size: 0.9em;
+    }
+    
+    .player-name {
+        font-size: 0.95em;
+        padding-left: 8px !important;
+    }
+    
+    .rating-number {
+        font-weight: bold;
+        font-size: 0.95em;
     }
 }
 
-/* При развёрнутой таблице показываем скрытые колонки */
-.tournament-table.expanded .mobile-hide {
-    display: table-cell;
-}
-
-/* Десктоп: всегда показываем */
+/* Десктоп */
 @media (min-width: 769px) {
-    .tournament-table .mobile-hide {
+    .mobile-hide {
         display: table-cell;
     }
 }
 
-/* Остальные стили */
+.position-change {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    min-width: 60px;
+    color: white;
+}
+
+.position-up { background: #4CAF50; }
+.position-down { background: #f44336; }
+.position-same { background: #ff9800; }
+.position-new { background: #2196F3; }
+
 .chips-positive {
     color: #2E7D32;
     font-weight: bold;
@@ -395,23 +440,6 @@ header h1 {
     font-weight: bold;
     color: #2c3e50;
 }
-
-.position-change {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.8em;
-    min-width: 60px;
-    color: white;
-}
-
-.position-up { background: #4CAF50; }
-.position-down { background: #f44336; }
-.position-same { background: #ff9800; }
-.position-new { background: #2196F3; }
 
 .special-tab-content {
     text-align: center;
@@ -448,4 +476,17 @@ header h1 {
 .empty-tab-message h2 {
     font-size: 2.5em;
     color: #FFD700;
+}
+/* Мобильные: скрываем колонки с классом mobile-hide */
+@media (max-width: 768px) {
+    .tournament-table th.mobile-hide,
+    .tournament-table td.mobile-hide {
+        display: none;
+    }
+}
+
+/* При развернутой таблице показываем */
+.tournament-table.expanded th.mobile-hide,
+.tournament-table.expanded td.mobile-hide {
+    display: table-cell;
 }

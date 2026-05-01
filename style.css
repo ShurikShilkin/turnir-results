@@ -377,11 +377,6 @@ header h1 {
         font-size: 0.95em;
         padding-left: 8px !important;
     }
-    
-    .rating-number {
-        font-weight: bold;
-        font-size: 0.95em;
-    }
 }
 
 /* Десктоп */
@@ -389,6 +384,20 @@ header h1 {
     .mobile-hide {
         display: table-cell;
     }
+}
+
+/* Скрытие колонок на мобиле по умолчанию */
+@media (max-width: 768px) {
+    .tournament-table th.mobile-hide,
+    .tournament-table td.mobile-hide {
+        display: none;
+    }
+}
+
+/* При развернутой таблице показываем все колонки */
+.tournament-table.expanded th.mobile-hide,
+.tournament-table.expanded td.mobile-hide {
+    display: table-cell;
 }
 
 .position-change {
@@ -477,16 +486,9 @@ header h1 {
     font-size: 2.5em;
     color: #FFD700;
 }
-/* Мобильные: скрываем колонки с классом mobile-hide */
-@media (max-width: 768px) {
-    .tournament-table th.mobile-hide,
-    .tournament-table td.mobile-hide {
-        display: none;
-    }
-}
 
-/* При развернутой таблице показываем */
-.tournament-table.expanded th.mobile-hide,
-.tournament-table.expanded td.mobile-hide {
-    display: table-cell;
+.col-total {
+    font-weight: bold;
+    background: #4CAF50;
+    color: white;
 }

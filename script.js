@@ -56,109 +56,223 @@ const previousTournamentResults = [
     { name: "Андрей Пот", place: 52, status: "Участник турнира" }
 ];
 
-// Охота за головами
+// Данные 1 дня
+const day1Data = [
+    { name: "Макар Аве", participation: 3100, start: 2100, extra: 0, exit: 10650, win: 11650, finalParticipation: 1000, dealer: 400, finalChips: 6400, total: 7800 },
+    { name: "Егор Вино", participation: 3100, start: 2100, extra: 0, exit: 13975, win: 14975, finalParticipation: 1000, dealer: 0, finalChips: 6600, total: 7600 },
+    { name: "Влад Сам", participation: 3100, start: 2100, extra: 0, exit: 9785, win: 10785, finalParticipation: 1000, dealer: 300, finalChips: 6200, total: 7500 },
+    { name: "Семён Ануфриев", participation: 3100, start: 2100, extra: 3000, exit: 24995, win: 22995, finalParticipation: 1000, dealer: 300, finalChips: 6800, total: 7100 },
+    { name: "SvetLana M", participation: 3100, start: 2100, extra: 0, exit: 8495, win: 9495, finalParticipation: 1000, dealer: 0, finalChips: 6000, total: 7000 },
+    { name: "Том", participation: 3100, start: 2100, extra: 0, exit: 7630, win: 8630, finalParticipation: 1000, dealer: 0, finalChips: 5800, total: 6800 },
+    { name: "Матвей МС", participation: 3100, start: 2100, extra: 0, exit: 6205, win: 7205, finalParticipation: 1000, dealer: 0, finalChips: 5600, total: 6600 },
+    { name: "Стас ISK", participation: 3100, start: 2100, extra: 0, exit: 6040, win: 7040, finalParticipation: 1000, dealer: 0, finalChips: 5400, total: 6400 },
+    { name: "Даша Хромова", participation: 4100, start: 3100, extra: 0, exit: 4835, win: 5835, finalParticipation: 1000, dealer: 0, finalChips: 5200, total: 6200 },
+    { name: "Дмитрий Ник", participation: 3100, start: 2100, extra: 0, exit: 3755, win: 4755, finalParticipation: 1000, dealer: 0, finalChips: 5000, total: 6000 },
+    { name: "Настя К", participation: 3100, start: 2100, extra: 0, exit: 2695, win: 3695, finalParticipation: 1000, dealer: 0, finalChips: 4800, total: 5800 },
+    { name: "Михаил Наб", participation: 3100, start: 2100, extra: 0, exit: 2375, win: 3375, finalParticipation: 1000, dealer: 0, finalChips: 4600, total: 5600 },
+    { name: "Инна М", participation: 3100, start: 2100, extra: 1000, exit: 2755, win: 2755, finalParticipation: 1000, dealer: 0, finalChips: 4400, total: 5400 },
+    { name: "Наташа Алекс", participation: 3100, start: 2100, extra: 0, exit: 920, win: 1920, finalParticipation: 1000, dealer: 0, finalChips: 4200, total: 5200 },
+    { name: "Максим Spy", participation: 3100, start: 2100, extra: 0, exit: 490, win: 1490, finalParticipation: 1000, dealer: 300, finalChips: 3800, total: 5100 },
+    { name: "Михаил Козадой", participation: 3100, start: 2100, extra: 0, exit: 710, win: 1710, finalParticipation: 1000, dealer: 0, finalChips: 4000, total: 5000 },
+    { name: "Jane 007", participation: 3100, start: 2100, extra: 0, exit: 200, win: 1200, finalParticipation: 1000, dealer: 400, finalChips: 3400, total: 4800 },
+    { name: "Шурик Шилкин", participation: 3100, start: 2100, extra: 0, exit: 200, win: 1200, finalParticipation: 1000, dealer: 200, finalChips: 3200, total: 4400 },
+    { name: "Любовь Т", participation: 3100, start: 2100, extra: 0, exit: 120, win: 1120, finalParticipation: 1000, dealer: 0, finalChips: 2800, total: 3800 },
+    { name: "Даниил Ершов", participation: 3100, start: 2100, extra: 3000, exit: 3215, win: 1215, finalParticipation: 1000, dealer: 0, finalChips: 3600, total: 3600 },
+    { name: "Соня Серж", participation: 3100, start: 2100, extra: 0, exit: 0, win: 1000, finalParticipation: 1000, dealer: 0, finalChips: 2600, total: 3600 },
+    { name: "Егор АА 11", participation: 3100, start: 2100, extra: 1000, exit: 865, win: 865, finalParticipation: 1000, dealer: 0, finalChips: 2200, total: 3200 },
+    { name: "Андрей Фломастер", participation: 3100, start: 2100, extra: 3000, exit: 3185, win: 1185, finalParticipation: 1000, dealer: 0, finalChips: 3000, total: 3000 },
+    { name: "Данил Г", participation: 3100, start: 2100, extra: 3000, exit: 2955, win: 955, finalParticipation: 1000, dealer: 0, finalChips: 2400, total: 2400 },
+    { name: "Саша Коч", participation: 3100, start: 2100, extra: 2000, exit: 0, win: -1000, finalParticipation: 1000, dealer: 0, finalChips: 1800, total: 2300 },
+    { name: "Андрей Пот", participation: 3100, start: 2100, extra: 3000, exit: 1850, win: -150, finalParticipation: 1000, dealer: 0, finalChips: 2000, total: 2000 },
+    { name: "Влад Владшток", participation: 3100, start: 2100, extra: 2500, exit: 0, win: -1500, finalParticipation: 1000, dealer: 0, finalChips: 1600, total: 1850 },
+    { name: "Богдан А", participation: 3100, start: 2100, extra: 3000, exit: 200, win: -1800, finalParticipation: 1000, dealer: 400, finalChips: 1400, total: 1800 },
+    { name: "Никита Зейн", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1200, total: 1200 },
+    { name: "Леонид П", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1000, total: 1000 }
+];
+
+// Новая охота за головами
 const huntingData = [
-    { name: "Семён Ануфриев", value: 1000 },
-    { name: "Михаил Наб", value: 1000 },
-    { name: "Богдан А", value: 1000 },
-    { name: "Шурик Шилкин", value: 1000 },
-    { name: "Никита Зейн", value: 1000 },
+    { name: "Семён Ануфриев", value: 1900 },
+    { name: "Михаил Наб", value: 1900 },
+    { name: "Макар Аве", value: 1000 },
     { name: "grooveman", value: 800 },
     { name: "Robert Юниксфактёр", value: 800 },
     { name: "Михаил Козадой", value: 800 },
-    { name: "Влад Владшток", value: 800 },
-    { name: "Саша Коч", value: 800 },
-    { name: "Егор АА 11", value: 600 },
+    { name: "Богдан А", value: 700 },
+    { name: "Jane 007", value: 700 },
     { name: "Максим Spy", value: 600 },
     { name: "Полина Матыцына", value: 600 },
-    { name: "Jane 007", value: 600 },
     { name: "Сергей Ман", value: 600 },
+    { name: "Шурик Шилкин", value: 500 },
+    { name: "Никита Зейн", value: 500 },
+    { name: "Том", value: 500 },
+    { name: "SvetLana M", value: 500 },
+    { name: "Влад Владшток", value: 400 },
+    { name: "Саша Коч", value: 400 },
     { name: "Роман Лод", value: 400 },
-    { name: "Макар Аве", value: 400 },
     { name: "Кристина А", value: 400 },
     { name: "Надя Жб", value: 400 },
-    { name: "Соня Серж", value: 400 }
+    { name: "Егор АА 11", value: 300 },
+    { name: "Егор Вино", value: 300 },
+    { name: "Соня Серж", value: 200 }
 ];
 
-// Рейтинг до финала (все 120+ игроков)
+// Новый рейтинг до финала (обновленный)
 const ratingBeforeFinal = [
-    { name: "Михаил Наб", rating: 887, attendance: 13 }, { name: "Семён Ануфриев", rating: 875, attendance: 20 },
-    { name: "Богдан А", rating: 859, attendance: 22 }, { name: "grooveman", rating: 749, attendance: 13 },
-    { name: "Шурик Шилкин", rating: 719, attendance: 22 }, { name: "Robert Юниксфактёр", rating: 650, attendance: 13 },
-    { name: "Никита Зейн", rating: 627, attendance: 14 }, { name: "Jane 007", rating: 585, attendance: 20 },
-    { name: "Влад Владшток", rating: 580, attendance: 21 }, { name: "Максим Spy", rating: 578, attendance: 19 },
-    { name: "Саша Коч", rating: 569, attendance: 13 }, { name: "Егор АА 11", rating: 563, attendance: 20 },
-    { name: "Сергей Ман", rating: 556, attendance: 10 }, { name: "Михаил Козадой", rating: 535, attendance: 15 },
-    { name: "Полина Матыцына", rating: 532, attendance: 17 }, { name: "Макар Аве", rating: 486, attendance: 14 },
-    { name: "Роман Лод", rating: 477, attendance: 16 }, { name: "Надя Жб", rating: 418, attendance: 10 },
-    { name: "Настя К", rating: 413, attendance: 9 }, { name: "Леонид П", rating: 406, attendance: 6 },
-    { name: "Немощь", rating: 383, attendance: 8 }, { name: "Соня Серж", rating: 383, attendance: 15 },
-    { name: "Кристина А", rating: 382, attendance: 10 }, { name: "Дмитрий Ник", rating: 361, attendance: 9 },
-    { name: "Влад Сам", rating: 342, attendance: 5 }, { name: "Свидетель", rating: 325, attendance: 8 },
-    { name: "Ирина Ага", rating: 309, attendance: 5 }, { name: "Егор Вино", rating: 304, attendance: 8 },
-    { name: "Матвей МС", rating: 293, attendance: 7 }, { name: "Том", rating: 283, attendance: 11 },
-    { name: "Иван Антипов", rating: 267, attendance: 5 }, { name: "Даша Хромова", rating: 250, attendance: 8 },
-    { name: "Инна М", rating: 229, attendance: 10 }, { name: "Лев Р", rating: 219, attendance: 4 },
-    { name: "Федор К", rating: 216, attendance: 6 }, { name: "Серж", rating: 213, attendance: 5 },
-    { name: "Даша Yellow", rating: 206, attendance: 3 }, { name: "Роман Егоров", rating: 179, attendance: 5 },
-    { name: "Андрей Фломастер", rating: 168, attendance: 6 }, { name: "Евгений Ц", rating: 167, attendance: 5 },
-    { name: "Николай Ж", rating: 167, attendance: 5 }, { name: "Анна К", rating: 128, attendance: 4 },
-    { name: "Максим Б", rating: 126, attendance: 4 }, { name: "Саша Тяжелов", rating: 125, attendance: 1 },
-    { name: "Владимир Бул", rating: 119, attendance: 5 }, { name: "Ксения Куд", rating: 118, attendance: 5 },
-    { name: "Андрей Морфиус", rating: 117, attendance: 4 }, { name: "Никита Yellow", rating: 115, attendance: 2 },
-    { name: "Саша Бел", rating: 115, attendance: 3 }, { name: "Лиза Арц", rating: 114, attendance: 2 },
-    { name: "Даниил Ершов", rating: 105, attendance: 3 }, { name: "Даня Д", rating: 101, attendance: 3 },
-    { name: "Зеньята", rating: 101, attendance: 4 }, { name: "Владибир", rating: 94, attendance: 2 },
-    { name: "Наташа Бонд", rating: 93, attendance: 3 }, { name: "Андрей Мазепа", rating: 92, attendance: 1 },
-    { name: "Искандер", rating: 87, attendance: 3 }, { name: "Оксана Б", rating: 87, attendance: 2 },
-    { name: "Вадим Зеленин", rating: 86, attendance: 3 }, { name: "Стас ISK", rating: 84, attendance: 3 },
-    { name: "Нюта-кун", rating: 84, attendance: 2 }, { name: "Рома АСМР", rating: 81, attendance: 2 },
-    { name: "Михаил Т", rating: 79, attendance: 2 }, { name: "Иван 112", rating: 78, attendance: 2 },
-    { name: "Лера Еж", rating: 76, attendance: 1 }, { name: "Миша Скиф", rating: 70, attendance: 2 },
-    { name: "Разаман Рах", rating: 70, attendance: 1 }, { name: "Андрей Пот", rating: 69, attendance: 2 },
-    { name: "Иван Баж", rating: 64, attendance: 3 }, { name: "Артемий Мен", rating: 63, attendance: 2 },
-    { name: "Инна Шашкина", rating: 62, attendance: 3 }, { name: "Вова Баж", rating: 60, attendance: 2 },
-    { name: "Даша Гри", rating: 60, attendance: 3 }, { name: "Ксюша Лис", rating: 60, attendance: 1 },
-    { name: "Катя Берг", rating: 59, attendance: 2 }, { name: "Макс Пиво", rating: 57, attendance: 1 },
-    { name: "Иван Грозный", rating: 55, attendance: 2 }, { name: "Эльджан", rating: 53, attendance: 2 },
-    { name: "Петя Федоров", rating: 50, attendance: 1 }, { name: "Мойша", rating: 49, attendance: 1 },
-    { name: "Юка", rating: 47, attendance: 2 }, { name: "Соня Кур", rating: 46, attendance: 2 },
-    { name: "Алина Исм", rating: 45, attendance: 2 }, { name: "Саша Токарев", rating: 44, attendance: 1 },
-    { name: "Артём 007", rating: 40, attendance: 1 }, { name: "Вика Ц", rating: 35, attendance: 1 },
-    { name: "Ярослав Кол", rating: 34, attendance: 1 }, { name: "Вова Ф", rating: 32, attendance: 1 },
-    { name: "Юсиф Халафов", rating: 32, attendance: 1 }, { name: "Аня Гам", rating: 31, attendance: 1 },
-    { name: "Никита Сизов", rating: 31, attendance: 1 }, { name: "Гавриил Морозов", rating: 30, attendance: 1 },
-    { name: "Наташа Т", rating: 30, attendance: 1 }, { name: "Родион Шашурин", rating: 30, attendance: 1 },
-    { name: "Антон Жму", rating: 29, attendance: 1 }, { name: "Дима Жур", rating: 29, attendance: 1 },
-    { name: "Алексей Ершов", rating: 28, attendance: 1 }, { name: "Родион К", rating: 26, attendance: 1 },
-    { name: "Иван Тре", rating: 25, attendance: 1 }, { name: "София Например", rating: 24, attendance: 1 },
-    { name: "Вика Ч", rating: 23, attendance: 1 }, { name: "Всеволод Кузнецов", rating: 23, attendance: 1 },
-    { name: "Денис Чир", rating: 23, attendance: 1 }, { name: "Илья Без", rating: 23, attendance: 1 },
-    { name: "Мага Кинжал", rating: 23, attendance: 1 }, { name: "Эмиль", rating: 23, attendance: 1 },
-    { name: "Дарья Шев", rating: 22, attendance: 1 }, { name: "Женя К1", rating: 22, attendance: 1 },
-    { name: "Ольга Б", rating: 22, attendance: 1 }, { name: "Славяна", rating: 22, attendance: 1 },
-    { name: "Жахонгир", rating: 21, attendance: 1 }, { name: "Руфат Макиато", rating: 21, attendance: 1 },
-    { name: "Айдын", rating: 20, attendance: 1 }, { name: "Влад Голубев", rating: 20, attendance: 1 },
-    { name: "Михаил Таб", rating: 20, attendance: 1 }, { name: "Стас Мазепа", rating: 20, attendance: 1 },
-    { name: "Александр Исаев", rating: 17, attendance: 1 }, { name: "Даня КДД", rating: 15, attendance: 1 },
+    { name: "Семён Ануфриев", rating: 931, attendance: 21 },
+    { name: "Михаил Наб", rating: 926, attendance: 14 },
+    { name: "Богдан А", rating: 901, attendance: 23 },
+    { name: "Шурик Шилкин", rating: 770, attendance: 23 },
+    { name: "Никита Зейн", rating: 756, attendance: 15 },
+    { name: "grooveman", rating: 749, attendance: 13 },
+    { name: "Robert Юниксфактёр", rating: 675, attendance: 14 },
+    { name: "Михаил Козадой", rating: 613, attendance: 16 },
+    { name: "Влад Владшток", rating: 606, attendance: 22 },
+    { name: "Саша Коч", rating: 603, attendance: 14 },
+    { name: "Егор АА 11", rating: 599, attendance: 21 },
+    { name: "Максим Spy", rating: 592, attendance: 20 },
+    { name: "Полина Матыцына", rating: 591, attendance: 18 },
+    { name: "Jane 007", rating: 585, attendance: 20 },
+    { name: "Сергей Ман", rating: 556, attendance: 10 },
+    { name: "Роман Лод", rating: 528, attendance: 17 },
+    { name: "Макар Аве", rating: 524, attendance: 15 },
+    { name: "Кристина А", rating: 504, attendance: 11 },
+    { name: "Соня Серж", rating: 418, attendance: 16 },
+    { name: "Надя Жб", rating: 418, attendance: 10 },
+    { name: "Настя К", rating: 413, attendance: 9 },
+    { name: "Леонид П", rating: 406, attendance: 6 },
+    { name: "Влад Сам", rating: 385, attendance: 6 },
+    { name: "Немощь", rating: 383, attendance: 8 },
+    { name: "Егор Вино", rating: 365, attendance: 9 },
+    { name: "Дмитрий Ник", rating: 361, attendance: 9 },
+    { name: "Максим Б", rating: 338, attendance: 5 },
+    { name: "Свидетель", rating: 325, attendance: 8 },
+    { name: "Ирина Ага", rating: 309, attendance: 5 },
+    { name: "Матвей МС", rating: 293, attendance: 7 },
+    { name: "Том", rating: 283, attendance: 11 },
+    { name: "Инна М", rating: 278, attendance: 11 },
+    { name: "Иван Антипов", rating: 267, attendance: 5 },
+    { name: "Серж", rating: 260, attendance: 6 },
+    { name: "Даша Хромова", rating: 250, attendance: 8 },
+    { name: "Лев Р", rating: 219, attendance: 4 },
+    { name: "Федор К", rating: 216, attendance: 6 },
+    { name: "Андрей Фломастер", rating: 212, attendance: 7 },
+    { name: "Даша Yellow", rating: 206, attendance: 3 },
+    { name: "Роман Егоров", rating: 179, attendance: 5 },
+    { name: "Евгений Ц", rating: 167, attendance: 5 },
+    { name: "Николай Ж", rating: 167, attendance: 5 },
+    { name: "Стас ISK", rating: 130, attendance: 4 },
+    { name: "Анна К", rating: 128, attendance: 4 },
+    { name: "Саша Тяжелов", rating: 125, attendance: 1 },
+    { name: "Владимир Бул", rating: 119, attendance: 5 },
+    { name: "Ксения Куд", rating: 118, attendance: 5 },
+    { name: "Ксюша Лис", rating: 117, attendance: 2 },
+    { name: "Андрей Морфиус", rating: 117, attendance: 4 },
+    { name: "Никита Yellow", rating: 115, attendance: 2 },
+    { name: "Саша Бел", rating: 115, attendance: 3 },
+    { name: "Лиза Арц", rating: 114, attendance: 2 },
+    { name: "Даниил Ершов", rating: 105, attendance: 3 },
+    { name: "Даня Д", rating: 101, attendance: 3 },
+    { name: "Зеньята", rating: 101, attendance: 4 },
+    { name: "Владибир", rating: 94, attendance: 2 },
+    { name: "Наташа Бонд", rating: 93, attendance: 3 },
+    { name: "Андрей Мазепа", rating: 92, attendance: 1 },
+    { name: "Искандер", rating: 87, attendance: 3 },
+    { name: "Оксана Б", rating: 87, attendance: 2 },
+    { name: "Вадим Зеленин", rating: 86, attendance: 3 },
+    { name: "Нюта-кун", rating: 84, attendance: 2 },
+    { name: "Рома АСМР", rating: 81, attendance: 2 },
+    { name: "Михаил Т", rating: 79, attendance: 2 },
+    { name: "Иван 112", rating: 78, attendance: 2 },
+    { name: "Лера Еж", rating: 76, attendance: 1 },
+    { name: "Миша Скиф", rating: 70, attendance: 2 },
+    { name: "Разаман Рах", rating: 70, attendance: 1 },
+    { name: "Андрей Пот", rating: 69, attendance: 2 },
+    { name: "Иван Баж", rating: 64, attendance: 3 },
+    { name: "Артемий Мен", rating: 63, attendance: 2 },
+    { name: "Инна Шашкина", rating: 62, attendance: 3 },
+    { name: "Вова Баж", rating: 60, attendance: 2 },
+    { name: "Даша Гри", rating: 60, attendance: 3 },
+    { name: "Катя Берг", rating: 59, attendance: 2 },
+    { name: "Макс Пиво", rating: 57, attendance: 1 },
+    { name: "Иван Грозный", rating: 55, attendance: 2 },
+    { name: "Эльджан", rating: 53, attendance: 2 },
+    { name: "Вадим Константинов", rating: 51, attendance: 1 },
+    { name: "Петя Федоров", rating: 50, attendance: 1 },
+    { name: "Мойша", rating: 49, attendance: 1 },
+    { name: "Юка", rating: 47, attendance: 2 },
+    { name: "Соня Кур", rating: 46, attendance: 2 },
+    { name: "Алина Исм", rating: 45, attendance: 2 },
+    { name: "Саша Токарев", rating: 44, attendance: 1 },
+    { name: "Артём 007", rating: 40, attendance: 1 },
+    { name: "Вика Ц", rating: 35, attendance: 1 },
+    { name: "Ярослав Кол", rating: 34, attendance: 1 },
+    { name: "Вова Ф", rating: 32, attendance: 1 },
+    { name: "Юсиф Халафов", rating: 32, attendance: 1 },
+    { name: "Аня Гам", rating: 31, attendance: 1 },
+    { name: "Никита Сизов", rating: 31, attendance: 1 },
+    { name: "Гавриил Морозов", rating: 30, attendance: 1 },
+    { name: "Наташа Т", rating: 30, attendance: 1 },
+    { name: "Родион Шашурин", rating: 30, attendance: 1 },
+    { name: "Антон Жму", rating: 29, attendance: 1 },
+    { name: "Дима Жур", rating: 29, attendance: 1 },
+    { name: "Алексей Ершов", rating: 28, attendance: 1 },
+    { name: "Родион К", rating: 26, attendance: 1 },
+    { name: "Иван Тре", rating: 25, attendance: 1 },
+    { name: "София Например", rating: 24, attendance: 1 },
+    { name: "Вика Ч", rating: 23, attendance: 1 },
+    { name: "Всеволод Кузнецов", rating: 23, attendance: 1 },
+    { name: "Денис Чир", rating: 23, attendance: 1 },
+    { name: "Илья Без", rating: 23, attendance: 1 },
+    { name: "Мага Кинжал", rating: 23, attendance: 1 },
+    { name: "Эмиль", rating: 23, attendance: 1 },
+    { name: "Дарья Шев", rating: 22, attendance: 1 },
+    { name: "Женя К1", rating: 22, attendance: 1 },
+    { name: "Ольга Б", rating: 22, attendance: 1 },
+    { name: "Славяна", rating: 22, attendance: 1 },
+    { name: "Жахонгир", rating: 21, attendance: 1 },
+    { name: "Руфат Макиато", rating: 21, attendance: 1 },
+    { name: "Айдын", rating: 20, attendance: 1 },
+    { name: "Влад Голубев", rating: 20, attendance: 1 },
+    { name: "Михаил Таб", rating: 20, attendance: 1 },
+    { name: "Стас Мазепа", rating: 20, attendance: 1 },
+    { name: "Александр Исаев", rating: 17, attendance: 1 },
+    { name: "Даня КДД", rating: 15, attendance: 1 },
     { name: "Вова Гриненко", rating: 14, attendance: 1 }
 ];
 
-// Добавки за финал
-const ratingAdditionsFinal = [
-    { name: "Robert Юниксфактёр", addition: 25 }, { name: "Андрей Фломастер", addition: 44 },
-    { name: "Богдан А", addition: 42 }, { name: "Влад Владшток", addition: 26 },
-    { name: "Влад Сам", addition: 43 }, { name: "Егор АА 11", addition: 36 },
-    { name: "Егор Вино", addition: 61 }, { name: "Инна М", addition: 49 },
-    { name: "Кристина А", addition: 122 }, { name: "Ксюша Лис", addition: 57 },
-    { name: "Макар Аве", addition: 38 }, { name: "Максим Spy", addition: 14 },
-    { name: "Максим Б", addition: 212 }, { name: "Михаил Козадой", addition: 78 },
-    { name: "Михаил Наб", addition: 39 }, { name: "Никита Зейн", addition: 129 },
-    { name: "Полина Матыцына", addition: 59 }, { name: "Роман Лод", addition: 51 },
-    { name: "Саша Коч", addition: 34 }, { name: "Семён Ануфриев", addition: 56 },
-    { name: "Серж", addition: 47 }, { name: "Соня Серж", addition: 35 },
-    { name: "Стас ISK", addition: 46 }, { name: "Шурик Шилкин", addition: 51 },
-    { name: "Вадим Константинов", addition: 51 }
+// Добавки после 1 дня
+const ratingAdditionsAfterDay1 = [
+    { name: "Jane 007", addition: 0 },
+    { name: "Андрей Пот", addition: 20 },
+    { name: "Андрей Фломастер", addition: 23 },
+    { name: "Богдан А", addition: 0 },
+    { name: "Влад Владшток", addition: 0 },
+    { name: "Влад Сам", addition: 51 },
+    { name: "Даниил Ершов", addition: 25 },
+    { name: "Даша Хромова", addition: 34 },
+    { name: "Дмитрий Ник", addition: 32 },
+    { name: "Егор АА 11", addition: 0 },
+    { name: "Егор Вино", addition: 72 },
+    { name: "Инна М", addition: 28 },
+    { name: "Леонид П", addition: 19 },
+    { name: "Макар Аве", addition: 30 },
+    { name: "Максим Spy", addition: 0 },
+    { name: "Матвей МС", addition: 39 },
+    { name: "Михаил Козадой", addition: 0 },
+    { name: "Михаил Наб", addition: 9 },
+    { name: "Настя К", addition: 31 },
+    { name: "Никита Зейн", addition: 0 },
+    { name: "Саша Коч", addition: 0 },
+    { name: "Семён Ануфриев", addition: 77 },
+    { name: "Соня Серж", addition: 2 },
+    { name: "Стас ISK", addition: 36 },
+    { name: "Том", addition: 42 },
+    { name: "Шурик Шилкин", addition: 0 },
+    { name: "SvetLana M", addition: 46 },
+    { name: "Данил Г", addition: 21 },
+    { name: "Любовь Т", addition: 22 },
+    { name: "Наташа Алекс", addition: 27 }
 ];
 
 // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
@@ -171,31 +285,34 @@ function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Получить данные рейтинга
+// Получить данные рейтинга с добавками
 function getRatingData() {
     const beforeMap = new Map(ratingBeforeFinal.map(p => [p.name, { rating: p.rating, attendance: p.attendance }]));
-    const additionMap = new Map(ratingAdditionsFinal.map(p => [p.name, p.addition]));
+    const additionMap = new Map(ratingAdditionsAfterDay1.map(p => [p.name, p.addition]));
     const result = [];
     
     ratingBeforeFinal.forEach(p => {
         const add = additionMap.get(p.name) || 0;
+        const newAttendance = p.attendance + (additionMap.has(p.name) ? 1 : 0);
         result.push({
             name: p.name,
             previousRating: p.rating,
-            attendance: p.attendance + (additionMap.has(p.name) ? 1 : 0),
+            attendance: newAttendance,
             change: add,
-            newRating: p.rating + add
+            newRating: p.rating + add,
+            playedInDay1: additionMap.has(p.name)
         });
     });
     
-    ratingAdditionsFinal.forEach(add => {
+    ratingAdditionsAfterDay1.forEach(add => {
         if (!beforeMap.has(add.name)) {
             result.push({
                 name: add.name,
                 previousRating: 0,
                 attendance: 1,
                 change: add.addition,
-                newRating: add.addition
+                newRating: add.addition,
+                playedInDay1: true
             });
         }
     });
@@ -224,14 +341,13 @@ function getPositionChanges() {
     return changes;
 }
 
-// Проверка на мобильное устройство по ширине экрана
 function isMobile() {
     return window.innerWidth <= 768;
 }
 
 // ========== ОТРИСОВКА ТАБЛИЦ ==========
 
-// Рейтинг - ГЛАВНОЕ ИСПРАВЛЕНИЕ
+// Рейтинг
 function fillRatingTable() {
     const tbody = document.getElementById('ratingTable');
     if (!tbody) return;
@@ -242,15 +358,12 @@ function fillRatingTable() {
     const table = document.getElementById('ratingTableElement');
     const isExpanded = table ? table.classList.contains('expanded') : false;
     
-    // На мобиле без развёртывания скрываем колонки
     const hideExtraColumns = mobile && !isExpanded;
     
-    // Фильтруем по поиску
     const filteredData = currentSearchTerm === '' 
         ? allData 
         : allData.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
     
-    // Обновляем счетчик
     const searchResults = document.getElementById('searchResults');
     const resultsCount = document.getElementById('resultsCount');
     if (currentSearchTerm === '') {
@@ -280,8 +393,12 @@ function fillRatingTable() {
         if (p.change > 0) {
             changeSign = `+${p.change}`;
             changeClass = 'rating-positive';
+        } else if (p.change === 0 && p.playedInDay1 === true) {
+            changeSign = '+0';
+            changeClass = 'rating-neutral';
         } else if (p.change === 0) {
             changeSign = '0';
+            changeClass = 'rating-neutral';
         } else {
             changeSign = `${p.change}`;
             changeClass = 'rating-negative';
@@ -300,41 +417,21 @@ function fillRatingTable() {
         const row = tbody.insertRow();
         row.className = rowClass;
         
-        // Всегда добавляем все ячейки, но скрытые получают класс hidden-on-mobile
-        const cell0 = row.insertCell(0);
-        cell0.innerHTML = realPosition;
-        cell0.className = 'number-column';
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = displayName;
+        row.insertCell(2).innerHTML = changeHtml;
+        row.insertCell(3).innerHTML = p.previousRating > 0 ? p.previousRating : '-';
+        row.insertCell(4).innerHTML = p.attendance;
+        row.insertCell(5).innerHTML = changeSign;
+        row.insertCell(6).innerHTML = p.newRating;
         
-        const cell1 = row.insertCell(1);
-        cell1.innerHTML = displayName;
-        cell1.className = 'player-name';
-        
-        const cell2 = row.insertCell(2);
-        cell2.innerHTML = changeHtml;
-        cell2.className = 'extra-col';
-        if (hideExtraColumns) cell2.style.display = 'none';
-        
-        const cell3 = row.insertCell(3);
-        cell3.innerHTML = p.previousRating > 0 ? p.previousRating : '-';
-        cell3.className = 'extra-col';
-        if (hideExtraColumns) cell3.style.display = 'none';
-        
-        const cell4 = row.insertCell(4);
-        cell4.innerHTML = p.attendance;
-        cell4.className = 'extra-col attendance-value';
-        if (hideExtraColumns) cell4.style.display = 'none';
-        
-        const cell5 = row.insertCell(5);
-        cell5.innerHTML = changeSign;
-        cell5.className = `extra-col ${changeClass}`;
-        if (hideExtraColumns) cell5.style.display = 'none';
-        
-        const cell6 = row.insertCell(6);
-        cell6.innerHTML = p.newRating;
-        cell6.className = 'rating-number';
+        if (hideExtraColumns) {
+            for (let i = 2; i <= 5; i++) {
+                if (row.cells[i]) row.cells[i].style.display = 'none';
+            }
+        }
     });
     
-    // Также скрываем заголовки
     const thead = document.querySelector('#ratingTableElement thead');
     if (thead && hideExtraColumns) {
         const headers = thead.querySelectorAll('th');
@@ -347,6 +444,108 @@ function fillRatingTable() {
             if (headers[i]) headers[i].style.display = '';
         }
     }
+    
+    document.getElementById('totalPlayers').textContent = filteredData.length;
+}
+
+// День 1 - С СОРТИРОВКОЙ ПО ВЫИГРЫШУ
+function fillDay1Table() {
+    const tbody = document.getElementById('day1Table');
+    if (!tbody) return;
+    
+    // СОРТИРУЕМ ПО ВЫИГРЫШУ (ПО УБЫВАНИЮ)
+    const sortedDay1Data = [...day1Data].sort((a, b) => b.win - a.win);
+    
+    const filteredData = currentSearchTerm === '' 
+        ? sortedDay1Data 
+        : sortedDay1Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
+    
+    const searchResults = document.getElementById('searchResults');
+    const resultsCount = document.getElementById('resultsCount');
+    if (currentSearchTerm === '') {
+        searchResults.style.display = 'none';
+    } else {
+        searchResults.style.display = 'block';
+        resultsCount.textContent = filteredData.length;
+    }
+    
+    const mobile = isMobile();
+    const table = document.getElementById('day1TableElement');
+    const isExpanded = table ? table.classList.contains('expanded') : false;
+    const hideExtraColumns = mobile && !isExpanded;
+    
+    tbody.innerHTML = '';
+    
+    filteredData.forEach((item) => {
+        const realPosition = sortedDay1Data.findIndex(d => d.name === item.name) + 1;
+        const row = tbody.insertRow();
+        
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = item.name;
+        row.insertCell(2).innerHTML = formatNumber(item.participation);
+        row.insertCell(3).innerHTML = formatNumber(item.start);
+        row.insertCell(4).innerHTML = formatNumber(item.extra);
+        row.insertCell(5).innerHTML = formatNumber(item.exit);
+        row.insertCell(6).innerHTML = formatNumber(item.win);
+        row.insertCell(7).innerHTML = formatNumber(item.finalParticipation);
+        row.insertCell(8).innerHTML = formatNumber(item.dealer);
+        row.insertCell(9).innerHTML = formatNumber(item.finalChips);
+        row.insertCell(10).innerHTML = formatNumber(item.total);
+        
+        if (hideExtraColumns) {
+            for (let i = 2; i <= 9; i++) {
+                if (row.cells[i]) row.cells[i].style.display = 'none';
+            }
+        }
+    });
+    
+    document.getElementById('totalPlayers').textContent = filteredData.length;
+    
+    // Средний стек
+    const totalSum = day1Data.reduce((sum, p) => sum + p.total, 0);
+    const avgStack = Math.round(totalSum / day1Data.length);
+    document.getElementById('averageStack').textContent = formatNumber(avgStack);
+}
+
+// Итоги турнира
+function fillTournamentResultsTable() {
+    const tbody = document.getElementById('tournamentResultsTable');
+    if (!tbody) return;
+    
+    const results = day1Data.map(day1 => ({
+        name: day1.name,
+        day1Result: day1.total,
+        day2Result: 0,
+        day3Result: 0,
+        total: day1.total
+    })).sort((a, b) => b.total - a.total);
+    
+    const filteredData = currentSearchTerm === '' 
+        ? results 
+        : results.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
+    
+    const searchResults = document.getElementById('searchResults');
+    const resultsCount = document.getElementById('resultsCount');
+    if (currentSearchTerm === '') {
+        searchResults.style.display = 'none';
+    } else {
+        searchResults.style.display = 'block';
+        resultsCount.textContent = filteredData.length;
+    }
+    
+    tbody.innerHTML = '';
+    
+    filteredData.forEach((item, idx) => {
+        const realPosition = results.findIndex(r => r.name === item.name) + 1;
+        const row = tbody.insertRow();
+        
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = item.name;
+        row.insertCell(2).innerHTML = formatNumber(item.day1Result);
+        row.insertCell(3).innerHTML = formatNumber(item.day2Result);
+        row.insertCell(4).innerHTML = formatNumber(item.day3Result);
+        row.insertCell(5).innerHTML = formatNumber(item.total);
+    });
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
 }
@@ -388,10 +587,10 @@ function fillPreviousResultsTable() {
         const row = tbody.insertRow();
         row.className = rowClass;
         
-        row.insertCell(0).innerHTML = `<td class="number-column">${realPosition}</td>`;
-        row.insertCell(1).innerHTML = `<td class="player-name">${p.name}</td>`;
-        row.insertCell(2).innerHTML = `<td class="place-column">${p.place}</td>`;
-        row.insertCell(3).innerHTML = `<td class="place-notes">${p.status}</td>`;
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = p.name;
+        row.insertCell(2).innerHTML = p.place;
+        row.insertCell(3).innerHTML = p.status;
     });
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
@@ -427,9 +626,9 @@ function fillHuntingNominationsTable() {
         const row = tbody.insertRow();
         row.className = rowClass;
         
-        row.insertCell(0).innerHTML = `<td class="number-column">${realPosition}</td>`;
-        row.insertCell(1).innerHTML = `<td class="player-name">${item.name}</td>`;
-        row.insertCell(2).innerHTML = `<td class="chips-positive">${formatNumber(item.value)}</td>`;
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = item.name;
+        row.insertCell(2).innerHTML = formatNumber(item.value);
     });
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
@@ -444,6 +643,8 @@ function performSearch() {
     if (activeTab.id === 'previousResults') fillPreviousResultsTable();
     else if (activeTab.id === 'rating') fillRatingTable();
     else if (activeTab.id === 'huntingNominations') fillHuntingNominationsTable();
+    else if (activeTab.id === 'day1') fillDay1Table();
+    else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
 }
 
 function setupAutocomplete() {
@@ -454,7 +655,8 @@ function setupAutocomplete() {
     const allPlayers = [...new Set([
         ...previousTournamentResults.map(p => p.name),
         ...ratingData.map(p => p.name),
-        ...huntingData.map(p => p.name)
+        ...huntingData.map(p => p.name),
+        ...day1Data.map(p => p.name)
     ])];
     
     input.addEventListener('input', (e) => {
@@ -528,6 +730,8 @@ function showTab(tabName) {
     if (tabName === 'previousResults') fillPreviousResultsTable();
     else if (tabName === 'rating') fillRatingTable();
     else if (tabName === 'huntingNominations') fillHuntingNominationsTable();
+    else if (tabName === 'day1') fillDay1Table();
+    else if (tabName === 'tournamentResults') fillTournamentResultsTable();
 }
 
 // ========== РАЗВЕРТЫВАНИЕ ТАБЛИЦЫ ==========
@@ -543,10 +747,8 @@ function toggleTableExpand() {
     const button = document.querySelector('.expand-button');
     button.textContent = table.classList.contains('expanded') ? 'Свернуть таблицу' : 'Развернуть таблицу';
     
-    // Перерисовываем таблицу рейтинга, чтобы применить скрытие/показ
-    if (activeTab.id === 'rating') {
-        fillRatingTable();
-    }
+    if (activeTab.id === 'rating') fillRatingTable();
+    else if (activeTab.id === 'day1') fillDay1Table();
 }
 
 function resetTableExpand() {
@@ -559,7 +761,7 @@ function resetTableExpand() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupAutocomplete();
-    showTab('rating');
+    showTab('day1');
     
     document.getElementById('clearSearch').addEventListener('click', () => {
         document.getElementById('searchInput').value = '';
@@ -568,11 +770,11 @@ document.addEventListener('DOMContentLoaded', () => {
         performSearch();
     });
     
-    // При изменении размера окна перерисовываем таблицу
     window.addEventListener('resize', () => {
         const activeTab = document.querySelector('.tab-content.active');
-        if (activeTab && activeTab.id === 'rating') {
-            fillRatingTable();
+        if (activeTab && (activeTab.id === 'rating' || activeTab.id === 'day1')) {
+            if (activeTab.id === 'rating') fillRatingTable();
+            else if (activeTab.id === 'day1') fillDay1Table();
         }
     });
 });

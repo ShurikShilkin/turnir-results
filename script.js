@@ -901,9 +901,9 @@ function fillTournamentResultsTable() {
     }).sort((a, b) => b.total - a.total);
     
     // Средний стек по итоговому результату (столбец "Результат")
-    const totalSumResult = results.reduce((sum, p) => sum + p.result, 0);
-    const avgResult = Math.round(totalSumResult / results.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgResult);
+    const totalSumItog = results.reduce((sum, p) => sum + p.total, 0);
+const avgItog = Math.round(totalSumItog / results.length);
+document.getElementById('averageStack').textContent = formatNumber(avgItog);
     
     const positionChanges = getTournamentPositionChanges();
     

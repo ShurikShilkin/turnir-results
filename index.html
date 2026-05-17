@@ -15,7 +15,7 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Итоги</div>
+                <div class="tournament-phase" id="currentPhase">Результаты</div>
             </div>
         </header>
 
@@ -23,8 +23,9 @@
             <button class="tab-button" onclick="showTab('day1')">1 день - 30.04.2026</button>
             <button class="tab-button" onclick="showTab('day2')">2 день - 7.05.2026</button>
             <button class="tab-button" onclick="showTab('day3')">3 день - 14.05.2026</button>
-            <button class="tab-button active" onclick="showTab('tournamentResults')">Итоги</button>
+            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('blindsAntes')">Блайнды и Анте</button>
+            <button class="tab-button active" onclick="showTab('finalResults')">Результаты</button>
         </div>
 
         <div class="stats" id="mainStats">
@@ -36,11 +37,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">16.05.2026</div>
+                        <div class="date-value">21.05.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">16.05.2026</div>
+                        <div class="date-value">6.06.2026</div>
                     </div>
                 </div>
             </div>
@@ -189,7 +190,7 @@
         </div>
 
         <!-- Итоги турнира -->
-        <div id="tournamentResults" class="tab-content active">
+        <div id="tournamentResults" class="tab-content">
             <div class="special-tab-content">
                 <h2>🏆 Итоги турнира 🏆</h2>
                 <div class="special-date">Общая таблица</div>
@@ -210,6 +211,20 @@
                         </tr>
                     </thead>
                     <tbody id="tournamentResultsTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Результаты (финальные места) -->
+        <div id="finalResults" class="tab-content active">
+            <div class="special-tab-content">
+                <h2>🏆 Финальные результаты 🏆</h2>
+                <div class="special-date">Итоговое распределение мест</div>
+                <table class="tournament-table" id="finalResultsTableElement">
+                    <thead>
+                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-place">Место</th><th class="col-status">Статус</th></tr>
+                    </thead>
+                    <tbody id="finalResultsTable"></tbody>
                 </table>
             </div>
         </div>

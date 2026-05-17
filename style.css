@@ -469,6 +469,7 @@ header h1 {
     margin-bottom: 30px;
 }
 
+/* Стили для финальных результатов */
 .final-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
 .final-silver { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
 .final-bronze { background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important; }

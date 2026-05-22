@@ -1,63 +1,7 @@
 // ========== ДАННЫЕ ==========
 
-// Результаты прошлого турнира
+// Результаты ВЭЛЬЮ БЕТА 3/4 (финальные результаты)
 const previousTournamentResults = [
-    { name: "Максим Б", place: 1, status: "Победитель 🥇" },
-    { name: "Никита Зейн", place: 2, status: "Серебряный призер 🥈" },
-    { name: "Кристина А", place: 3, status: "Бронзовый призер 🥉" },
-    { name: "Михаил Козадой", place: 4, status: "Участник финала" },
-    { name: "Шурик Шилкин", place: 5, status: "Участник финала" },
-    { name: "Полина Матыцына", place: 6, status: "Участник финала" },
-    { name: "Семён Ануфриев", place: 7, status: "Участник финала" },
-    { name: "Богдан А", place: 8, status: "Участник финала" },
-    { name: "Роман Лод", place: 9, status: "Участник финала" },
-    { name: "Макар Аве", place: 10, status: "Участник финала" },
-    { name: "Егор АА 11", place: 11, status: "Участник финала" },
-    { name: "Егор Вино", place: 12, status: "Участник финала" },
-    { name: "Михаил Наб", place: 13, status: "Участник финала" },
-    { name: "Ксюша Лис", place: 14, status: "Участник финала" },
-    { name: "Соня Серж", place: 15, status: "Участник финала" },
-    { name: "Саша Коч", place: 16, status: "Участник финала" },
-    { name: "Вадим Константинов", place: 17, status: "Участник финала" },
-    { name: "Влад Владшток", place: 18, status: "Участник финала" },
-    { name: "Инна М", place: 19, status: "Участник финала" },
-    { name: "Серж", place: 20, status: "Участник финала" },
-    { name: "Стас ISK", place: 21, status: "Участник финала" },
-    { name: "Robert Юниксфактёр", place: 22, status: "Участник финала" },
-    { name: "Андрей Фломастер", place: 23, status: "Участник финала" },
-    { name: "Влад Сам", place: 24, status: "Участник финала" },
-    { name: "Максим Spy", place: 25, status: "Участник финала" },
-    { name: "Леонид П", place: 26, status: "Участник турнира" },
-    { name: "Андрей Мазепа", place: 27, status: "Участник турнира" },
-    { name: "Надя Жб", place: 28, status: "Участник турнира" },
-    { name: "Том", place: 29, status: "Участник турнира" },
-    { name: "Федор К", place: 30, status: "Участник турнира" },
-    { name: "Евгений Ц", place: 31, status: "Участник турнира" },
-    { name: "Дмитрий Ник", place: 32, status: "Участник турнира" },
-    { name: "Jane 007", place: 33, status: "Участник турнира" },
-    { name: "Настя К", place: 34, status: "Участник турнира" },
-    { name: "grooveman", place: 35, status: "Участник турнира" },
-    { name: "Даша Хромова", place: 36, status: "Участник турнира" },
-    { name: "Иван Грозный", place: 37, status: "Участник турнира" },
-    { name: "Вадим Зеленин", place: 38, status: "Участник турнира" },
-    { name: "Юка", place: 39, status: "Участник турнира" },
-    { name: "Алексей Ершов", place: 40, status: "Участник турнира" },
-    { name: "Немощь", place: 41, status: "Участник турнира" },
-    { name: "София Например", place: 42, status: "Участник турнира" },
-    { name: "Матвей МС", place: 43, status: "Участник турнира" },
-    { name: "Владимир Бул", place: 44, status: "Участник турнира" },
-    { name: "Свидетель", place: 45, status: "Участник турнира" },
-    { name: "Николай Ж", place: 46, status: "Участник турнира" },
-    { name: "Стас Мазепа", place: 47, status: "Участник турнира" },
-    { name: "Инна Шашкина", place: 48, status: "Участник турнира" },
-    { name: "Ирина Ага", place: 49, status: "Участник турнира" },
-    { name: "Анна К", place: 50, status: "Участник турнира" },
-    { name: "Андрей Морфиус", place: 51, status: "Участник турнира" },
-    { name: "Андрей Пот", place: 52, status: "Участник турнира" }
-];
-
-// Финальные результаты (новые)
-const finalResultsData = [
     "Jane 007", "Егор АА 11", "Шурик Шилкин", "Егор Вино", "Богдан А",
     "Михаил Козадой", "Макар Аве", "Даша Хромова", "Полина Матыцына", "Семён Ануфриев",
     "Илья Ерёмин", "Максим Spy", "Саша Коч", "Влад Владшток", "Любовь Т",
@@ -72,233 +16,110 @@ const finalResultsData = [
 
 // Данные 1 дня
 const day1Data = [
-    { name: "Макар Аве", participation: 3100, start: 2100, extra: 0, exit: 10650, win: 11650, finalParticipation: 1000, dealer: 400, finalChips: 6400, total: 7800 },
-    { name: "Егор Вино", participation: 3100, start: 2100, extra: 0, exit: 13975, win: 14975, finalParticipation: 1000, dealer: 0, finalChips: 6600, total: 7600 },
-    { name: "Влад Сам", participation: 3100, start: 2100, extra: 0, exit: 9785, win: 10785, finalParticipation: 1000, dealer: 300, finalChips: 6200, total: 7500 },
-    { name: "Семён Ануфриев", participation: 3100, start: 2100, extra: 3000, exit: 24995, win: 22995, finalParticipation: 1000, dealer: 300, finalChips: 6800, total: 7100 },
-    { name: "SvetLana M", participation: 3100, start: 2100, extra: 0, exit: 8495, win: 9495, finalParticipation: 1000, dealer: 0, finalChips: 6000, total: 7000 },
-    { name: "Том", participation: 3100, start: 2100, extra: 0, exit: 7630, win: 8630, finalParticipation: 1000, dealer: 0, finalChips: 5800, total: 6800 },
-    { name: "Матвей МС", participation: 3100, start: 2100, extra: 0, exit: 6205, win: 7205, finalParticipation: 1000, dealer: 0, finalChips: 5600, total: 6600 },
-    { name: "Стас ISK", participation: 3100, start: 2100, extra: 0, exit: 6040, win: 7040, finalParticipation: 1000, dealer: 0, finalChips: 5400, total: 6400 },
-    { name: "Даша Хромова", participation: 4100, start: 3100, extra: 0, exit: 4835, win: 5835, finalParticipation: 1000, dealer: 0, finalChips: 5200, total: 6200 },
-    { name: "Дмитрий Ник", participation: 3100, start: 2100, extra: 0, exit: 3755, win: 4755, finalParticipation: 1000, dealer: 0, finalChips: 5000, total: 6000 },
-    { name: "Настя К", participation: 3100, start: 2100, extra: 0, exit: 2695, win: 3695, finalParticipation: 1000, dealer: 0, finalChips: 4800, total: 5800 },
-    { name: "Михаил Наб", participation: 3100, start: 2100, extra: 0, exit: 2375, win: 3375, finalParticipation: 1000, dealer: 0, finalChips: 4600, total: 5600 },
-    { name: "Инна М", participation: 3100, start: 2100, extra: 1000, exit: 2755, win: 2755, finalParticipation: 1000, dealer: 0, finalChips: 4400, total: 5400 },
-    { name: "Наташа Алекс", participation: 3100, start: 2100, extra: 0, exit: 920, win: 1920, finalParticipation: 1000, dealer: 0, finalChips: 4200, total: 5200 },
-    { name: "Максим Spy", participation: 3100, start: 2100, extra: 0, exit: 490, win: 1490, finalParticipation: 1000, dealer: 300, finalChips: 3800, total: 5100 },
-    { name: "Михаил Козадой", participation: 3100, start: 2100, extra: 0, exit: 710, win: 1710, finalParticipation: 1000, dealer: 0, finalChips: 4000, total: 5000 },
-    { name: "Jane 007", participation: 3100, start: 2100, extra: 0, exit: 200, win: 1200, finalParticipation: 1000, dealer: 400, finalChips: 3400, total: 4800 },
-    { name: "Шурик Шилкин", participation: 3100, start: 2100, extra: 0, exit: 200, win: 1200, finalParticipation: 1000, dealer: 200, finalChips: 3200, total: 4400 },
-    { name: "Любовь Т", participation: 3100, start: 2100, extra: 0, exit: 120, win: 1120, finalParticipation: 1000, dealer: 0, finalChips: 2800, total: 3800 },
-    { name: "Даниил Ершов", participation: 3100, start: 2100, extra: 3000, exit: 3215, win: 1215, finalParticipation: 1000, dealer: 0, finalChips: 3600, total: 3600 },
-    { name: "Соня Серж", participation: 3100, start: 2100, extra: 0, exit: 0, win: 1000, finalParticipation: 1000, dealer: 0, finalChips: 2600, total: 3600 },
-    { name: "Егор АА 11", participation: 3100, start: 2100, extra: 1000, exit: 865, win: 865, finalParticipation: 1000, dealer: 0, finalChips: 2200, total: 3200 },
-    { name: "Андрей Фломастер", participation: 3100, start: 2100, extra: 3000, exit: 3185, win: 1185, finalParticipation: 1000, dealer: 0, finalChips: 3000, total: 3000 },
-    { name: "Данил Г", participation: 3100, start: 2100, extra: 3000, exit: 2955, win: 955, finalParticipation: 1000, dealer: 0, finalChips: 2400, total: 2400 },
-    { name: "Саша Коч", participation: 3100, start: 2100, extra: 2000, exit: 0, win: -1000, finalParticipation: 1000, dealer: 0, finalChips: 1800, total: 2300 },
-    { name: "Андрей Пот", participation: 3100, start: 2100, extra: 3000, exit: 1850, win: -150, finalParticipation: 1000, dealer: 0, finalChips: 2000, total: 2000 },
-    { name: "Влад Владшток", participation: 3100, start: 2100, extra: 2500, exit: 0, win: -1500, finalParticipation: 1000, dealer: 0, finalChips: 1600, total: 1850 },
-    { name: "Богдан А", participation: 3100, start: 2100, extra: 3000, exit: 200, win: -1800, finalParticipation: 1000, dealer: 400, finalChips: 1400, total: 1800 },
-    { name: "Никита Зейн", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1200, total: 1200 },
-    { name: "Леонид П", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1000, total: 1000 }
+    { name: "Никита Зейн", entry: 1100, extra: 2000, exit: 23945, win: 20845 },
+    { name: "Андрей М", entry: 1100, extra: 0, exit: 13205, win: 12105 },
+    { name: "Лиза Арц", entry: 1100, extra: 2000, exit: 8675, win: 5575 },
+    { name: "Евгений Ц", entry: 1100, extra: 0, exit: 6425, win: 5325 },
+    { name: "Илья Midas", entry: 1100, extra: 0, exit: 6125, win: 5025 },
+    { name: "Богдан А", entry: 1100, extra: 0, exit: 5970, win: 4870 },
+    { name: "Jane 007", entry: 1100, extra: 2000, exit: 7850, win: 4750 },
+    { name: "Анна К", entry: 1100, extra: 2000, exit: 5895, win: 2795 },
+    { name: "Ся Ся", entry: 1100, extra: 0, exit: 3495, win: 2395 },
+    { name: "Артём Акулов", entry: 1100, extra: 2000, exit: 5120, win: 2020 },
+    { name: "Макар Аве", entry: 1100, extra: 0, exit: 1515, win: 415 },
+    { name: "Иван 112", entry: 1100, extra: 1000, exit: 2465, win: 365 },
+    { name: "Влад Сам", entry: 1100, extra: 3000, exit: 3700, win: -400 },
+    { name: "Катя М", entry: 1100, extra: 0, exit: 275, win: -825 },
+    { name: "Шурик Шилкин", entry: 1100, extra: 0, exit: 0, win: -1100 },
+    { name: "Роман Лод", entry: 1100, extra: 5000, exit: 5005, win: -1095 },
+    { name: "Николя", entry: 1100, extra: 0, exit: 0, win: -1100 },
+    { name: "Артём SUB", entry: 1100, extra: 2000, exit: 1445, win: -1655 },
+    { name: "Даша Хромова", entry: 1100, extra: 4000, exit: 3240, win: -1860 },
+    { name: "Соня Серж", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Влад Владшток", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Максим Spy", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Михаил Наб", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Том", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Немощь", entry: 1100, extra: 2000, exit: 755, win: -2345 },
+    { name: "Лина S", entry: 1100, extra: 3000, exit: 460, win: -3640 },
+    { name: "Арт", entry: 1100, extra: 3000, exit: 0, win: -4100 },
+    { name: "Надя Жб", entry: 1100, extra: 3000, exit: 0, win: -4100 },
+    { name: "Стас ISK", entry: 1100, extra: 6000, exit: 0, win: -7100 },
+    { name: "Александр Гиг", entry: 1100, extra: 7000, exit: 0, win: -8100 },
+    { name: "Егор Вино", entry: 1100, extra: 12000, exit: 935, win: -12165 }
 ];
 
-// Данные 2 дня
-const day2Data = [
-    { name: "Jane 007", participation: 3100, start: 2100, extra: 0, exit: 31320, win: 32320, finalParticipation: 1000, dealer: 200, finalChips: 6200, total: 7400 },
-    { name: "Немощь", participation: 3100, start: 2100, extra: 3000, exit: 22765, win: 20765, finalParticipation: 1000, dealer: 0, finalChips: 6000, total: 6000 },
-    { name: "Влад Владшток", participation: 3100, start: 2100, extra: 0, exit: 13040, win: 14040, finalParticipation: 1000, dealer: 0, finalChips: 5800, total: 6800 },
-    { name: "Матвей МС", participation: 3100, start: 2100, extra: 1000, exit: 6710, win: 6710, finalParticipation: 1000, dealer: 0, finalChips: 5600, total: 6600 },
-    { name: "Максим Spy", participation: 3100, start: 2100, extra: 0, exit: 5270, win: 6270, finalParticipation: 1000, dealer: 400, finalChips: 5400, total: 6800 },
-    { name: "Семён Ануфриев", participation: 3100, start: 2100, extra: 3200, exit: 8445, win: 6245, finalParticipation: 1000, dealer: 400, finalChips: 5200, total: 5500 },
-    { name: "Любовь Т", participation: 3100, start: 2100, extra: 1000, exit: 5900, win: 5900, finalParticipation: 1000, dealer: 0, finalChips: 5000, total: 6000 },
-    { name: "Полина Матыцына", participation: 3100, start: 2100, extra: 0, exit: 4505, win: 5505, finalParticipation: 1000, dealer: 0, finalChips: 4800, total: 5800 },
-    { name: "Стас ISK", participation: 3100, start: 2100, extra: 3000, exit: 7175, win: 5175, finalParticipation: 1000, dealer: 0, finalChips: 4600, total: 4600 },
-    { name: "Миша Нестер", participation: 3100, start: 2100, extra: 3000, exit: 6335, win: 4335, finalParticipation: 1000, dealer: 0, finalChips: 4400, total: 4400 },
-    { name: "Шурик Шилкин", participation: 3100, start: 2100, extra: 0, exit: 2980, win: 3980, finalParticipation: 1000, dealer: 200, finalChips: 4200, total: 5400 },
-    { name: "Макар Аве", participation: 3100, start: 2100, extra: 0, exit: 2830, win: 3830, finalParticipation: 1000, dealer: 0, finalChips: 4000, total: 5000 },
-    { name: "Евгений Ц", participation: 3100, start: 2100, extra: 1000, exit: 3545, win: 3545, finalParticipation: 1000, dealer: 0, finalChips: 3800, total: 4800 },
-    { name: "Федор К", participation: 3100, start: 2100, extra: 0, exit: 545, win: 1545, finalParticipation: 1000, dealer: 0, finalChips: 3600, total: 4600 },
-    { name: "Михаил Наб", participation: 3100, start: 2100, extra: 0, exit: 315, win: 1315, finalParticipation: 1000, dealer: 0, finalChips: 3400, total: 4400 },
-    { name: "Богдан А", participation: 3100, start: 2100, extra: 0, exit: 275, win: 1275, finalParticipation: 1000, dealer: 400, finalChips: 3200, total: 4600 },
-    { name: "Егор АА 11", participation: 3100, start: 2100, extra: 0, exit: 0, win: 1000, finalParticipation: 1000, dealer: 0, finalChips: 3000, total: 4000 },
-    { name: "Влад Сам", participation: 3100, start: 2100, extra: 0, exit: 0, win: 1000, finalParticipation: 1000, dealer: 200, finalChips: 2800, total: 4000 },
-    { name: "Михаил Козадой", participation: 3100, start: 2100, extra: 3000, exit: 2610, win: 610, finalParticipation: 1000, dealer: 0, finalChips: 2600, total: 2600 },
-    { name: "Всеволод Кузнецов", participation: 3100, start: 2100, extra: 1000, exit: 0, win: 0, finalParticipation: 1000, dealer: 0, finalChips: 2400, total: 3400 },
-    { name: "Даша Хромова", participation: 3100, start: 2100, extra: 1000, exit: 0, win: 0, finalParticipation: 1000, dealer: 0, finalChips: 2200, total: 3200 },
-    { name: "Егор Вино", participation: 3100, start: 2100, extra: 3000, exit: 1915, win: -85, finalParticipation: 1000, dealer: 0, finalChips: 2000, total: 2000 },
-    { name: "Настя К", participation: 3100, start: 2100, extra: 3000, exit: 1220, win: -780, finalParticipation: 1000, dealer: 0, finalChips: 1800, total: 1800 },
-    { name: "Саша Коч", participation: 3100, start: 2100, extra: 2000, exit: 0, win: -1000, finalParticipation: 1000, dealer: 0, finalChips: 1600, total: 2100 },
-    { name: "Никита Зейн", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1400, total: 1400 },
-    { name: "Артём SUB", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 1200, total: 1200 },
-    { name: "Том", participation: 3100, start: 2100, extra: 16600, exit: 0, win: -15600, finalParticipation: 1000, dealer: 0, finalChips: 1000, total: -5800 }
+// Охота за головами
+const huntingData = [
+    { name: "Семён Ануфриев", value: 1500 },
+    { name: "Богдан А", value: 1400 },
+    { name: "Михаил Наб", value: 1300 },
+    { name: "Никита Зейн", value: 1200 },
+    { name: "Jane 007", value: 1100 },
+    { name: "Шурик Шилкин", value: 1000 },
+    { name: "grooveman", value: 800 },
+    { name: "Егор АА 11", value: 800 },
+    { name: "Влад Владшток", value: 800 },
+    { name: "Robert Юниксфактёр", value: 800 },
+    { name: "Михаил Козадой", value: 600 },
+    { name: "Максим Spy", value: 600 },
+    { name: "Саша Коч", value: 600 },
+    { name: "Полина Матыцына", value: 600 },
+    { name: "Макар Аве", value: 600 },
+    { name: "Егор Вино", value: 400 },
+    { name: "Роман Лод", value: 400 },
+    { name: "Сергей Ман", value: 400 },
+    { name: "Немощь", value: 400 },
+    { name: "Кристина А", value: 400 }
 ];
 
-// Данные 3 дня
-const day3Data = [
-    { name: "Любовь Т", participation: 3100, start: 2100, extra: 0, exit: 15630, win: 16630, finalParticipation: 1000, dealer: 0, finalChips: 7400, total: 8400 },
-    { name: "Иван Сидоров", participation: 3100, start: 2100, extra: 0, exit: 15270, win: 16270, finalParticipation: 1000, dealer: 0, finalChips: 7200, total: 8200 },
-    { name: "Вова Баж", participation: 3100, start: 2100, extra: 0, exit: 14060, win: 15060, finalParticipation: 1000, dealer: 0, finalChips: 7000, total: 8000 },
-    { name: "Максим Spy", participation: 3100, start: 2100, extra: 0, exit: 12955, win: 13955, finalParticipation: 1000, dealer: 200, finalChips: 6800, total: 8000 },
-    { name: "Влад Владшток", participation: 3100, start: 2100, extra: 0, exit: 11550, win: 12550, finalParticipation: 1000, dealer: 0, finalChips: 6600, total: 7600 },
-    { name: "Шурик Шилкин", participation: 3100, start: 2100, extra: 0, exit: 10980, win: 11980, finalParticipation: 1000, dealer: 100, finalChips: 6400, total: 7500 },
-    { name: "Jane 007", participation: 3100, start: 2100, extra: 1000, exit: 11135, win: 11135, finalParticipation: 1000, dealer: 200, finalChips: 6200, total: 7400 },
-    { name: "Дмитрий Ник", participation: 3100, start: 2100, extra: 0, exit: 9300, win: 10300, finalParticipation: 1000, dealer: 100, finalChips: 6000, total: 7100 },
-    { name: "Даша Хромова", participation: 3100, start: 2100, extra: 0, exit: 8250, win: 9250, finalParticipation: 1000, dealer: 0, finalChips: 5800, total: 6800 },
-    { name: "Полина Матыцына", participation: 3100, start: 2100, extra: 0, exit: 6385, win: 7385, finalParticipation: 1000, dealer: 0, finalChips: 5600, total: 6600 },
-    { name: "Роман Лод", participation: 3100, start: 2100, extra: 3000, exit: 7945, win: 5945, finalParticipation: 1000, dealer: 0, finalChips: 5400, total: 5400 },
-    { name: "Лика Ясева", participation: 3100, start: 2100, extra: 3000, exit: 7400, win: 5400, finalParticipation: 1000, dealer: 0, finalChips: 5200, total: 5200 },
-    { name: "Семён Ануфриев", participation: 3100, start: 2100, extra: 5000, exit: 9325, win: 5325, finalParticipation: 1000, dealer: 300, finalChips: 5000, total: 4300 },
-    { name: "Макар Аве", participation: 3100, start: 2100, extra: 0, exit: 3070, win: 4070, finalParticipation: 1000, dealer: 400, finalChips: 4800, total: 6200 },
-    { name: "Саша Тяжелов", participation: 3100, start: 2100, extra: 0, exit: 3035, win: 4035, finalParticipation: 1000, dealer: 0, finalChips: 4600, total: 5600 },
-    { name: "Артём SUB", participation: 3100, start: 2100, extra: 0, exit: 2880, win: 3880, finalParticipation: 1000, dealer: 0, finalChips: 4400, total: 5400 },
-    { name: "Анастасия Ильина", participation: 3100, start: 2100, extra: 0, exit: 1560, win: 2560, finalParticipation: 1000, dealer: 0, finalChips: 4200, total: 5200 },
-    { name: "Никита Башкин", participation: 3100, start: 2100, extra: 1000, exit: 2480, win: 2480, finalParticipation: 1000, dealer: 100, finalChips: 4000, total: 5100 },
-    { name: "Егор АА 11", participation: 3100, start: 2100, extra: 9000, exit: 10425, win: 2425, finalParticipation: 1000, dealer: 0, finalChips: 3800, total: 800 },
-    { name: "Немощь", participation: 3100, start: 2100, extra: 5000, exit: 4500, win: 500, finalParticipation: 1000, dealer: 0, finalChips: 3600, total: 2600 },
-    { name: "Мария Павлова", participation: 3100, start: 2100, extra: 1000, exit: 335, win: 335, finalParticipation: 1000, dealer: 100, finalChips: 3400, total: 4500 },
-    { name: "Богдан А", participation: 3100, start: 2100, extra: 1000, exit: 305, win: 305, finalParticipation: 1000, dealer: 0, finalChips: 3200, total: 4200 },
-    { name: "Егор Вино", participation: 3100, start: 2100, extra: 1000, exit: 0, win: 0, finalParticipation: 1000, dealer: 0, finalChips: 3000, total: 4000 },
-    { name: "Андрей Морфиус", participation: 3100, start: 2100, extra: 1000, exit: 0, win: 0, finalParticipation: 1000, dealer: 0, finalChips: 2800, total: 3800 },
-    { name: "Стас ISK", participation: 3100, start: 2100, extra: 2500, exit: 1370, win: -130, finalParticipation: 1000, dealer: 0, finalChips: 2600, total: 2850 },
-    { name: "Даниил Глухов", participation: 3100, start: 2100, extra: 3000, exit: 1420, win: -580, finalParticipation: 1000, dealer: 0, finalChips: 2400, total: 2400 },
-    { name: "Иван Жуйков", participation: 3100, start: 2100, extra: 3000, exit: 0, win: -2000, finalParticipation: 1000, dealer: 0, finalChips: 2200, total: 2200 },
-    { name: "Михаил Козадой", participation: 3100, start: 2100, extra: 5000, exit: 1725, win: -2275, finalParticipation: 1000, dealer: 0, finalChips: 2000, total: 1000 },
-    { name: "Андрей Фломастер", participation: 3100, start: 2100, extra: 4500, exit: 0, win: -3500, finalParticipation: 1000, dealer: 0, finalChips: 1800, total: 1050 },
-    { name: "Соня Серж", participation: 3100, start: 2100, extra: 10200, exit: 5380, win: -3820, finalParticipation: 1000, dealer: 0, finalChips: 1600, total: -2000 },
-    { name: "Том", participation: 3100, start: 2100, extra: 5000, exit: 0, win: -4000, finalParticipation: 1000, dealer: 0, finalChips: 1400, total: 400 },
-    { name: "Михаил Наб", participation: 3100, start: 2100, extra: 7000, exit: 0, win: -6000, finalParticipation: 1000, dealer: 0, finalChips: 1200, total: -800 },
-    { name: "Матвей МС", participation: 3100, start: 2100, extra: 29400, exit: 15680, win: -12720, finalParticipation: 1000, dealer: 0, finalChips: 1000, total: -12200 }
-];
-
-// Данные для итоговой таблицы (Ожидаемое Вэлью, Участие в финале, Дистанция решает)
-const tournamentExtras = {
-    "Максим Spy": { expectedValue: 1750, finalParticipation: 3000, distanceDecides: 2000 },
-    "Jane 007": { expectedValue: 750, finalParticipation: 3000, distanceDecides: 2000 },
-    "Макар Аве": { expectedValue: 1000, finalParticipation: 3000, distanceDecides: 2000 },
-    "Любовь Т": { expectedValue: 1200, finalParticipation: 3000, distanceDecides: 2000 },
-    "Шурик Шилкин": { expectedValue: 500, finalParticipation: 3000, distanceDecides: 2000 },
-    "Семён Ануфриев": { expectedValue: 550, finalParticipation: 3000, distanceDecides: 2000 },
-    "Влад Владшток": { expectedValue: 400, finalParticipation: 3000, distanceDecides: 2000 },
-    "Даша Хромова": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 2000 },
-    "Стас ISK": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 2000 },
-    "Егор Вино": { expectedValue: 75, finalParticipation: 3000, distanceDecides: 2000 },
-    "Дмитрий Ник": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Богдан А": { expectedValue: 450, finalParticipation: 3000, distanceDecides: 2000 },
-    "Полина Матыцына": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Михаил Наб": { expectedValue: 950, finalParticipation: 3000, distanceDecides: 2000 },
-    "Влад Сам": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Егор АА 11": { expectedValue: 1175, finalParticipation: 3000, distanceDecides: 2000 },
-    "Михаил Козадой": { expectedValue: 400, finalParticipation: 3000, distanceDecides: 2000 },
-    "Немощь": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Иван Сидоров": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Вова Баж": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Настя К": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "SvetLana M": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Артём SUB": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Саша Тяжелов": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Инна М": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Роман Лод": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Наташа Алекс": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Анастасия Ильина": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Лика Ясева": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Никита Башкин": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Евгений Ц": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Федор К": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Мария Павлова": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Саша Коч": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Миша Нестер": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Том": { expectedValue: 925, finalParticipation: 3000, distanceDecides: 2000 },
-    "Андрей Фломастер": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Андрей Морфиус": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Даниил Ершов": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Матвей МС": { expectedValue: 500, finalParticipation: 3000, distanceDecides: 2000 },
-    "Всеволод Кузнецов": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Никита Зейн": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Данил Г": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Даниил Глухов": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Иван Жуйков": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Андрей Пот": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Соня Серж": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 },
-    "Леонид П": { expectedValue: 0, finalParticipation: 3000, distanceDecides: 0 }
-};
-
-// Данные для вкладки Блайнды и Анте
-const blindsData = [
-    { level: 1, timeStart: "17-00", timeEnd: "17-25", sb: 5, bb: 10, ante: 10 },
-    { level: 2, timeStart: "17-25", timeEnd: "17-50", sb: 10, bb: 20, ante: 20 },
-    { level: 3, timeStart: "18-00", timeEnd: "18-15", sb: 15, bb: 30, ante: 30 },
-    { level: 4, timeStart: "18-15", timeEnd: "18-30", sb: 20, bb: 40, ante: 40 },
-    { level: 5, timeStart: "18-30", timeEnd: "18-50", sb: 35, bb: 70, ante: 70 },
-    { level: 6, timeStart: "19-00", timeEnd: "19-15", sb: 50, bb: 100, ante: 100 },
-    { level: 7, timeStart: "19-15", timeEnd: "19-30", sb: 75, bb: 150, ante: 150 },
-    { level: 8, timeStart: "19-30", timeEnd: "19-50", sb: 100, bb: 200, ante: 200 },
-    { level: 9, timeStart: "20-00", timeEnd: "20-15", sb: 150, bb: 300, ante: 300 },
-    { level: 10, timeStart: "20-15", timeEnd: "20-30", sb: 200, bb: 400, ante: 400 },
-    { level: 11, timeStart: "20-30", timeEnd: "20-50", sb: 300, bb: 600, ante: 600 },
-    { level: 12, timeStart: "21-00", timeEnd: "21-15", sb: 400, bb: 800, ante: 800 },
-    { level: 13, timeStart: "21-15", timeEnd: "21-30", sb: 500, bb: 1000, ante: 1000 },
-    { level: 14, timeStart: "21-30", timeEnd: "21-50", sb: 700, bb: 1400, ante: 1400 },
-    { level: 15, timeStart: "22-00", timeEnd: "22-15", sb: 1000, bb: 2000, ante: 2000 },
-    { level: 16, timeStart: "22-15", timeEnd: "22-30", sb: 1500, bb: 3000, ante: 3000 },
-    { level: 17, timeStart: "22-30", timeEnd: "22-50", sb: 2000, bb: 4000, ante: 4000 },
-    { level: 18, timeStart: "23-00", timeEnd: "23-15", sb: 2500, bb: 5000, ante: 5000 },
-    { level: 19, timeStart: "23-15", timeEnd: "23-30", sb: 3000, bb: 6000, ante: 6000 },
-    { level: 20, timeStart: "23-30", timeEnd: "23-45", sb: 3500, bb: 7000, ante: 7000 },
-    { level: 21, timeStart: "23-45", timeEnd: "0-00", sb: 4000, bb: 8000, ante: 8000 },
-    { level: 22, timeStart: "0-00", timeEnd: "0-10", sb: 5000, bb: 10000, ante: 10000 },
-    { level: 23, timeStart: "0-10", timeEnd: "0-20", sb: 6000, bb: 12000, ante: 12000 },
-    { level: 24, timeStart: "0-20", timeEnd: "0-30", sb: 7500, bb: 15000, ante: 15000 }
-];
-
-// Рейтинг до финала
+// Рейтинг до 1 дня межсезонки
 const ratingBeforeFinal = [
-    { name: "Семён Ануфриев", rating: 1008, attendance: 24 },
+    { name: "Семён Ануфриев", rating: 1032, attendance: 25 },
+    { name: "Богдан А", rating: 961, attendance: 27 },
     { name: "Михаил Наб", rating: 937, attendance: 17 },
-    { name: "Богдан А", rating: 901, attendance: 26 },
-    { name: "Шурик Шилкин", rating: 770, attendance: 26 },
-    { name: "Никита Зейн", rating: 756, attendance: 17 },
+    { name: "Шурик Шилкин", rating: 849, attendance: 27 },
+    { name: "Jane 007", rating: 847, attendance: 24 },
+    { name: "Никита Зейн", rating: 777, attendance: 18 },
     { name: "grooveman", rating: 749, attendance: 13 },
+    { name: "Егор АА 11", rating: 724, attendance: 25 },
+    { name: "Влад Владшток", rating: 683, attendance: 26 },
     { name: "Robert Юниксфактёр", rating: 675, attendance: 14 },
-    { name: "Jane 007", rating: 667, attendance: 23 },
-    { name: "Влад Владшток", rating: 655, attendance: 25 },
-    { name: "Максим Spy", rating: 629, attendance: 23 },
-    { name: "Михаил Козадой", rating: 613, attendance: 19 },
-    { name: "Саша Коч", rating: 603, attendance: 16 },
-    { name: "Полина Матыцына", rating: 601, attendance: 20 },
-    { name: "Егор АА 11", rating: 599, attendance: 24 },
+    { name: "Михаил Козадой", rating: 672, attendance: 20 },
+    { name: "Максим Spy", rating: 660, attendance: 24 },
+    { name: "Саша Коч", rating: 643, attendance: 17 },
+    { name: "Полина Матыцына", rating: 639, attendance: 21 },
+    { name: "Макар Аве", rating: 607, attendance: 19 },
+    { name: "Егор Вино", rating: 575, attendance: 13 },
+    { name: "Роман Лод", rating: 564, attendance: 19 },
     { name: "Сергей Ман", rating: 556, attendance: 10 },
-    { name: "Макар Аве", rating: 554, attendance: 18 },
-    { name: "Роман Лод", rating: 539, attendance: 18 },
+    { name: "Немощь", rating: 527, attendance: 11 },
     { name: "Кристина А", rating: 504, attendance: 11 },
-    { name: "Егор Вино", rating: 480, attendance: 12 },
-    { name: "Немощь", rating: 476, attendance: 10 },
     { name: "Настя К", rating: 464, attendance: 11 },
     { name: "Влад Сам", rating: 459, attendance: 8 },
     { name: "Дмитрий Ник", rating: 431, attendance: 11 },
     { name: "Леонид П", rating: 425, attendance: 7 },
     { name: "Соня Серж", rating: 420, attendance: 18 },
     { name: "Надя Жб", rating: 418, attendance: 10 },
+    { name: "Даша Хромова", rating: 417, attendance: 12 },
     { name: "Матвей МС", rating: 400, attendance: 10 },
-    { name: "Даша Хромова", rating: 341, attendance: 11 },
+    { name: "Том", rating: 368, attendance: 15 },
     { name: "Максим Б", rating: 338, attendance: 5 },
-    { name: "Том", rating: 337, attendance: 14 },
     { name: "Свидетель", rating: 325, attendance: 8 },
     { name: "Ирина Ага", rating: 309, attendance: 5 },
     { name: "Инна М", rating: 306, attendance: 12 },
+    { name: "Андрей Фломастер", rating: 303, attendance: 10 },
     { name: "Иван Антипов", rating: 267, attendance: 5 },
+    { name: "Стас ISK", rating: 265, attendance: 8 },
     { name: "Серж", rating: 260, attendance: 6 },
-    { name: "Андрей Фломастер", rating: 255, attendance: 9 },
     { name: "Федор К", rating: 242, attendance: 7 },
-    { name: "Стас ISK", rating: 219, attendance: 7 },
+    { name: "Любовь Т", rating: 222, attendance: 4 },
     { name: "Лев Р", rating: 219, attendance: 4 },
     { name: "Даша Yellow", rating: 206, attendance: 3 },
+    { name: "Саша Тяжелов", rating: 197, attendance: 3 },
     { name: "Евгений Ц", rating: 194, attendance: 6 },
     { name: "Роман Егоров", rating: 179, attendance: 5 },
     { name: "Николай Ж", rating: 167, attendance: 5 },
-    { name: "Любовь Т", rating: 166, attendance: 3 },
-    { name: "Саша Тяжелов", rating: 153, attendance: 2 },
     { name: "Андрей Морфиус", rating: 139, attendance: 5 },
     { name: "Даниил Ершов", rating: 130, attendance: 4 },
     { name: "Анна К", rating: 128, attendance: 4 },
@@ -306,26 +127,31 @@ const ratingBeforeFinal = [
     { name: "Владимир Бул", rating: 119, attendance: 5 },
     { name: "Ксения Куд", rating: 118, attendance: 5 },
     { name: "Ксюша Лис", rating: 117, attendance: 2 },
-    { name: "Саша Бел", rating: 115, attendance: 3 },
     { name: "Никита Yellow", rating: 115, attendance: 2 },
+    { name: "Саша Бел", rating: 115, attendance: 3 },
     { name: "Лиза Арц", rating: 114, attendance: 2 },
-    { name: "Зеньята", rating: 101, attendance: 4 },
     { name: "Даня Д", rating: 101, attendance: 3 },
+    { name: "Зеньята", rating: 101, attendance: 4 },
     { name: "Владибир", rating: 94, attendance: 2 },
+    { name: "Вадим Константинов", rating: 93, attendance: 2 },
     { name: "Наташа Бонд", rating: 93, attendance: 3 },
     { name: "Андрей Мазепа", rating: 92, attendance: 1 },
+    { name: "Артём SUB", rating: 91, attendance: 3 },
     { name: "Андрей Пот", rating: 89, attendance: 3 },
     { name: "Искандер", rating: 87, attendance: 3 },
     { name: "Оксана Б", rating: 87, attendance: 2 },
     { name: "Вадим Зеленин", rating: 86, attendance: 3 },
     { name: "Нюта-кун", rating: 84, attendance: 2 },
+    { name: "Миша Нестер", rating: 83, attendance: 2 },
     { name: "Рома АСМР", rating: 81, attendance: 2 },
     { name: "Михаил Т", rating: 79, attendance: 2 },
     { name: "Иван 112", rating: 78, attendance: 2 },
+    { name: "Мария Павлова", rating: 77, attendance: 2 },
     { name: "Иван Сидоров", rating: 76, attendance: 1 },
     { name: "Лера Еж", rating: 76, attendance: 1 },
     { name: "Миша Скиф", rating: 70, attendance: 2 },
     { name: "Разаман Рах", rating: 70, attendance: 1 },
+    { name: "Илья Ерёмин", rating: 65, attendance: 1 },
     { name: "Иван Баж", rating: 64, attendance: 3 },
     { name: "Артемий Мен", rating: 63, attendance: 2 },
     { name: "Инна Шашкина", rating: 62, attendance: 3 },
@@ -334,13 +160,11 @@ const ratingBeforeFinal = [
     { name: "Макс Пиво", rating: 57, attendance: 1 },
     { name: "Иван Грозный", rating: 55, attendance: 2 },
     { name: "Эльджан", rating: 53, attendance: 2 },
-    { name: "Вадим Константинов", rating: 51, attendance: 1 },
     { name: "Петя Федоров", rating: 50, attendance: 1 },
     { name: "Мойша", rating: 49, attendance: 1 },
     { name: "Юка", rating: 47, attendance: 2 },
-    { name: "Артём SUB", rating: 46, attendance: 2 },
-    { name: "Соня Кур", rating: 46, attendance: 2 },
     { name: "SvetLana M", rating: 46, attendance: 1 },
+    { name: "Соня Кур", rating: 46, attendance: 2 },
     { name: "Алина Исм", rating: 45, attendance: 2 },
     { name: "Всеволод Кузнецов", rating: 45, attendance: 2 },
     { name: "Саша Токарев", rating: 44, attendance: 1 },
@@ -349,9 +173,8 @@ const ratingBeforeFinal = [
     { name: "Ярослав Кол", rating: 34, attendance: 1 },
     { name: "Вова Ф", rating: 32, attendance: 1 },
     { name: "Юсиф Халафов", rating: 32, attendance: 1 },
-    { name: "Лика Ясева", rating: 31, attendance: 1 },
     { name: "Аня Гам", rating: 31, attendance: 1 },
-    { name: "Миша Нестер", rating: 31, attendance: 1 },
+    { name: "Лика Ясева", rating: 31, attendance: 1 },
     { name: "Никита Сизов", rating: 31, attendance: 1 },
     { name: "Гавриил Морозов", rating: 30, attendance: 1 },
     { name: "Наташа Т", rating: 30, attendance: 1 },
@@ -362,10 +185,9 @@ const ratingBeforeFinal = [
     { name: "Наташа Алекс", rating: 27, attendance: 1 },
     { name: "Анастасия Ильина", rating: 26, attendance: 1 },
     { name: "Родион К", rating: 26, attendance: 1 },
-    { name: "Никита Башкин", rating: 25, attendance: 1 },
     { name: "Иван Тре", rating: 25, attendance: 1 },
+    { name: "Никита Башкин", rating: 25, attendance: 1 },
     { name: "София Например", rating: 24, attendance: 1 },
-    { name: "Мария Павлова", rating: 23, attendance: 1 },
     { name: "Вика Ч", rating: 23, attendance: 1 },
     { name: "Денис Чир", rating: 23, attendance: 1 },
     { name: "Илья Без", rating: 23, attendance: 1 },
@@ -376,9 +198,9 @@ const ratingBeforeFinal = [
     { name: "Ольга Б", rating: 22, attendance: 1 },
     { name: "Славяна", rating: 22, attendance: 1 },
     { name: "Даниил Глухов", rating: 21, attendance: 1 },
-    { name: "Иван Жуйков", rating: 21, attendance: 1 },
     { name: "Данил Г", rating: 21, attendance: 1 },
     { name: "Жахонгир", rating: 21, attendance: 1 },
+    { name: "Иван Жуйков", rating: 21, attendance: 1 },
     { name: "Руфат Макиато", rating: 21, attendance: 1 },
     { name: "Айдын", rating: 20, attendance: 1 },
     { name: "Влад Голубев", rating: 20, attendance: 1 },
@@ -389,38 +211,43 @@ const ratingBeforeFinal = [
     { name: "Вова Гриненко", rating: 14, attendance: 1 }
 ];
 
-// Добавки после финала
-const ratingAdditionsAfterFinal = [
-    { name: "Jane 007", addition: 180 },
-    { name: "Андрей Фломастер", addition: 48 },
-    { name: "Артём SUB", addition: 45 },
-    { name: "Богдан А", addition: 60 },
-    { name: "Вадим Константинов", addition: 42 },
-    { name: "Влад Владшток", addition: 28 },
-    { name: "Даша Хромова", addition: 76 },
-    { name: "Егор АА 11", addition: 125 },
-    { name: "Егор Вино", addition: 95 },
-    { name: "Илья Ерёмин", addition: 65 },
-    { name: "Любовь Т", addition: 56 },
-    { name: "Макар Аве", addition: 53 },
-    { name: "Максим Spy", addition: 31 },
-    { name: "Мария Павлова", addition: 54 },
-    { name: "Михаил Козадой", addition: 59 },
-    { name: "Миша Нестер", addition: 52 },
-    { name: "Немощь", addition: 51 },
-    { name: "Никита Зейн", addition: 21 },
-    { name: "Полина Матыцына", addition: 38 },
-    { name: "Роман Лод", addition: 25 },
-    { name: "Саша Коч", addition: 40 },
-    { name: "Саша Тяжелов", addition: 44 },
-    { name: "Семён Ануфриев", addition: 24 },
-    { name: "Стас ISK", addition: 46 },
-    { name: "Том", addition: 31 },
-    { name: "Шурик Шилкин", addition: 79 }
+// Добавки после 1 дня
+const ratingAdditionsAfterDay1 = [
+    { name: "Jane 007", addition: 4 },
+    { name: "Александр Гиг", addition: 13 },
+    { name: "Андрей М", addition: 118 },
+    { name: "Анна К", addition: 38 },
+    { name: "Арт", addition: 18 },
+    { name: "Артём SUB", addition: 25 },
+    { name: "Артём Акулов", addition: 34 },
+    { name: "Богдан А", addition: 26 },
+    { name: "Влад Владшток", addition: 0 },
+    { name: "Влад Сам", addition: 27 },
+    { name: "Даша Хромова", addition: 2 },
+    { name: "Евгений Ц", addition: 84 },
+    { name: "Егор Вино", addition: 0 },
+    { name: "Иван 112", addition: 37 },
+    { name: "Илья Midas", addition: 75 },
+    { name: "Катя М", addition: 45 },
+    { name: "Лиза Арц", addition: 62 },
+    { name: "Лина S", addition: 19 },
+    { name: "Макар Аве", addition: 20 },
+    { name: "Максим Spy", addition: 0 },
+    { name: "Михаил Наб", addition: 4 },
+    { name: "Надя Жб", addition: 18 },
+    { name: "Немощь", addition: 22 },
+    { name: "Никита Зейн", addition: 86 },
+    { name: "Николя", addition: 41 },
+    { name: "Роман Лод", addition: 0 },
+    { name: "Соня Серж", addition: 7 },
+    { name: "Стас ISK", addition: 14 },
+    { name: "Ся Ся", addition: 56 },
+    { name: "Том", addition: 7 },
+    { name: "Шурик Шилкин", addition: 0 }
 ];
 
-// Множество игроков, которые участвовали в финале
-const finalPlayersSet = new Set(ratingAdditionsAfterFinal.map(p => p.name));
+// Множество игроков, которые участвовали в 1 дне
+const day1PlayersSet = new Set(ratingAdditionsAfterDay1.map(p => p.name));
 
 // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
 let currentSearchTerm = '';
@@ -435,7 +262,7 @@ function formatNumber(num) {
 // Получить данные рейтинга с добавками
 function getRatingData() {
     const beforeMap = new Map(ratingBeforeFinal.map(p => [p.name, { rating: p.rating, attendance: p.attendance }]));
-    const additionMap = new Map(ratingAdditionsAfterFinal.map(p => [p.name, p.addition]));
+    const additionMap = new Map(ratingAdditionsAfterDay1.map(p => [p.name, p.addition]));
     const result = [];
     
     ratingBeforeFinal.forEach(p => {
@@ -447,11 +274,11 @@ function getRatingData() {
             attendance: newAttendance,
             change: add,
             newRating: p.rating + add,
-            playedInFinal: additionMap.has(p.name)
+            playedInDay1: additionMap.has(p.name)
         });
     });
     
-    ratingAdditionsAfterFinal.forEach(add => {
+    ratingAdditionsAfterDay1.forEach(add => {
         if (!beforeMap.has(add.name)) {
             result.push({
                 name: add.name,
@@ -459,7 +286,7 @@ function getRatingData() {
                 attendance: 1,
                 change: add.addition,
                 newRating: add.addition,
-                playedInFinal: true
+                playedInDay1: true
             });
         }
     });
@@ -540,7 +367,7 @@ function fillRatingTable() {
         if (p.change > 0) {
             changeSign = `+${p.change}`;
             changeClass = 'rating-positive';
-        } else if (p.change === 0 && p.playedInFinal === true) {
+        } else if (p.change === 0 && p.playedInDay1 === true) {
             changeSign = '+0';
             changeClass = 'rating-neutral';
         } else if (p.change === 0) {
@@ -595,14 +422,14 @@ function fillRatingTable() {
     document.getElementById('totalPlayers').textContent = filteredData.length;
 }
 
-// Финальные результаты (новая вкладка)
-function fillFinalResultsTable() {
-    const tbody = document.getElementById('finalResultsTable');
+// Результаты ВЭЛЬЮ БЕТА 3/4
+function fillPreviousResultsTable() {
+    const tbody = document.getElementById('previousResultsTable');
     if (!tbody) return;
     
     const filteredData = currentSearchTerm === '' 
-        ? finalResultsData 
-        : finalResultsData.filter(name => name.toLowerCase().includes(currentSearchTerm));
+        ? previousTournamentResults 
+        : previousTournamentResults.filter(name => name.toLowerCase().includes(currentSearchTerm));
     
     const searchResults = document.getElementById('searchResults');
     const resultsCount = document.getElementById('resultsCount');
@@ -616,7 +443,7 @@ function fillFinalResultsTable() {
     tbody.innerHTML = '';
     
     filteredData.forEach((name, idx) => {
-        const realPosition = finalResultsData.findIndex(n => n === name) + 1;
+        const realPosition = previousTournamentResults.findIndex(n => n === name) + 1;
         let status = '';
         let rowClass = '';
         
@@ -647,6 +474,44 @@ function fillFinalResultsTable() {
         row.insertCell(1).innerHTML = name;
         row.insertCell(2).innerHTML = realPosition;
         row.insertCell(3).innerHTML = status;
+    });
+    
+    document.getElementById('totalPlayers').textContent = filteredData.length;
+}
+
+// Охота за головами
+function fillHuntingNominationsTable() {
+    const tbody = document.getElementById('huntingNominationsTable');
+    if (!tbody) return;
+    
+    const filteredData = currentSearchTerm === '' 
+        ? huntingData 
+        : huntingData.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
+    
+    const searchResults = document.getElementById('searchResults');
+    const resultsCount = document.getElementById('resultsCount');
+    if (currentSearchTerm === '') {
+        searchResults.style.display = 'none';
+    } else {
+        searchResults.style.display = 'block';
+        resultsCount.textContent = filteredData.length;
+    }
+    
+    tbody.innerHTML = '';
+    
+    filteredData.forEach((item, idx) => {
+        const realIndex = huntingData.findIndex(h => h.name === item.name);
+        const realPosition = realIndex + 1;
+        
+        const isSearchMatch = currentSearchTerm !== '' && item.name.toLowerCase().includes(currentSearchTerm);
+        const rowClass = isSearchMatch ? 'search-highlight' : '';
+        
+        const row = tbody.insertRow();
+        row.className = rowClass;
+        
+        row.insertCell(0).innerHTML = realPosition;
+        row.insertCell(1).innerHTML = item.name;
+        row.insertCell(2).innerHTML = formatNumber(item.value);
     });
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
@@ -685,18 +550,13 @@ function fillDay1Table() {
         
         row.insertCell(0).innerHTML = realPosition;
         row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.participation);
-        row.insertCell(3).innerHTML = formatNumber(item.start);
-        row.insertCell(4).innerHTML = formatNumber(item.extra);
-        row.insertCell(5).innerHTML = formatNumber(item.exit);
-        row.insertCell(6).innerHTML = formatNumber(item.win);
-        row.insertCell(7).innerHTML = formatNumber(item.finalParticipation);
-        row.insertCell(8).innerHTML = formatNumber(item.dealer);
-        row.insertCell(9).innerHTML = formatNumber(item.finalChips);
-        row.insertCell(10).innerHTML = formatNumber(item.total);
+        row.insertCell(2).innerHTML = formatNumber(item.entry);
+        row.insertCell(3).innerHTML = formatNumber(item.extra);
+        row.insertCell(4).innerHTML = formatNumber(item.exit);
+        row.insertCell(5).innerHTML = formatNumber(item.win);
         
         if (hideExtraColumns) {
-            for (let i = 2; i <= 9; i++) {
+            for (let i = 2; i <= 4; i++) {
                 if (row.cells[i]) row.cells[i].style.display = 'none';
             }
         }
@@ -704,157 +564,9 @@ function fillDay1Table() {
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
     
-    const totalSum = day1Data.reduce((sum, p) => sum + p.total, 0);
+    const totalSum = day1Data.reduce((sum, p) => sum + p.win, 0);
     const avgStack = Math.round(totalSum / day1Data.length);
     document.getElementById('averageStack').textContent = formatNumber(avgStack);
-}
-
-// День 2
-function fillDay2Table() {
-    const tbody = document.getElementById('day2Table');
-    if (!tbody) return;
-    
-    const sortedDay2Data = [...day2Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay2Data 
-        : sortedDay2Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day2TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay2Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.participation);
-        row.insertCell(3).innerHTML = formatNumber(item.start);
-        row.insertCell(4).innerHTML = formatNumber(item.extra);
-        row.insertCell(5).innerHTML = formatNumber(item.exit);
-        row.insertCell(6).innerHTML = formatNumber(item.win);
-        row.insertCell(7).innerHTML = formatNumber(item.finalParticipation);
-        row.insertCell(8).innerHTML = formatNumber(item.dealer);
-        row.insertCell(9).innerHTML = formatNumber(item.finalChips);
-        row.insertCell(10).innerHTML = formatNumber(item.total);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 9; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day2Data.reduce((sum, p) => sum + p.total, 0);
-    const avgStack = Math.round(totalSum / day2Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
-}
-
-// День 3
-function fillDay3Table() {
-    const tbody = document.getElementById('day3Table');
-    if (!tbody) return;
-    
-    const sortedDay3Data = [...day3Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay3Data 
-        : sortedDay3Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day3TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay3Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.participation);
-        row.insertCell(3).innerHTML = formatNumber(item.start);
-        row.insertCell(4).innerHTML = formatNumber(item.extra);
-        row.insertCell(5).innerHTML = formatNumber(item.exit);
-        row.insertCell(6).innerHTML = formatNumber(item.win);
-        row.insertCell(7).innerHTML = formatNumber(item.finalParticipation);
-        row.insertCell(8).innerHTML = formatNumber(item.dealer);
-        row.insertCell(9).innerHTML = formatNumber(item.finalChips);
-        row.insertCell(10).innerHTML = formatNumber(item.total);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 9; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day3Data.reduce((sum, p) => sum + p.total, 0);
-    const avgStack = Math.round(totalSum / day3Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
-}
-
-// Блайнды и Анте
-function fillBlindsTable() {
-    const tbody = document.getElementById('blindsTable');
-    if (!tbody) return;
-    
-    const filteredData = currentSearchTerm === '' 
-        ? blindsData 
-        : blindsData.filter(p => p.level.toString().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = item.level;
-        row.insertCell(1).innerHTML = item.timeStart;
-        row.insertCell(2).innerHTML = item.timeEnd;
-        row.insertCell(3).innerHTML = item.sb;
-        row.insertCell(4).innerHTML = item.bb;
-        row.insertCell(5).innerHTML = item.ante;
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
 }
 
 // Итоги турнира
@@ -862,65 +574,28 @@ function fillTournamentResultsTable() {
     const tbody = document.getElementById('tournamentResultsTable');
     if (!tbody) return;
     
+    // Собираем всех игроков из 1 дня
     const allPlayersMap = new Map();
     
     day1Data.forEach(player => {
         allPlayersMap.set(player.name, {
             name: player.name,
-            day1Result: player.total,
+            day1Result: player.win,
             day2Result: 0,
-            day3Result: 0
+            day3Result: 0,
+            day4Result: 0
         });
     });
     
-    day2Data.forEach(player => {
-        if (allPlayersMap.has(player.name)) {
-            allPlayersMap.get(player.name).day2Result = player.total;
-        } else {
-            allPlayersMap.set(player.name, {
-                name: player.name,
-                day1Result: 0,
-                day2Result: player.total,
-                day3Result: 0
-            });
-        }
-    });
+    const results = Array.from(allPlayersMap.values()).map(p => ({
+        ...p,
+        total: p.day1Result + p.day2Result + p.day3Result + p.day4Result
+    })).sort((a, b) => b.total - a.total);
     
-    day3Data.forEach(player => {
-        if (allPlayersMap.has(player.name)) {
-            allPlayersMap.get(player.name).day3Result = player.total;
-        } else {
-            allPlayersMap.set(player.name, {
-                name: player.name,
-                day1Result: 0,
-                day2Result: 0,
-                day3Result: player.total
-            });
-        }
-    });
-    
-    const results = Array.from(allPlayersMap.values()).map(p => {
-        const sumResult = p.day1Result + p.day2Result + p.day3Result;
-        const extras = tournamentExtras[p.name] || { expectedValue: 0, finalParticipation: 0, distanceDecides: 0 };
-        const totalItog = sumResult + extras.expectedValue + extras.finalParticipation + extras.distanceDecides;
-        
-        return {
-            name: p.name,
-            day1Result: p.day1Result,
-            day2Result: p.day2Result,
-            day3Result: p.day3Result,
-            result: sumResult,
-            expectedValue: extras.expectedValue,
-            finalParticipation: extras.finalParticipation,
-            distanceDecides: extras.distanceDecides,
-            total: totalItog
-        };
-    }).sort((a, b) => b.total - a.total);
-    
-    // Средний стек по столбцу "Итог"
-    const totalSumItog = results.reduce((sum, p) => sum + p.total, 0);
-    const avgItog = Math.round(totalSumItog / results.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgItog);
+    // Средний стек по столбцу "Результат"
+    const totalSumResult = results.reduce((sum, p) => sum + p.total, 0);
+    const avgResult = Math.round(totalSumResult / results.length);
+    document.getElementById('averageStack').textContent = formatNumber(avgResult);
     
     const filteredData = currentSearchTerm === '' 
         ? results 
@@ -953,14 +628,11 @@ function fillTournamentResultsTable() {
         row.insertCell(3).innerHTML = formatNumber(item.day1Result);
         row.insertCell(4).innerHTML = formatNumber(item.day2Result);
         row.insertCell(5).innerHTML = formatNumber(item.day3Result);
-        row.insertCell(6).innerHTML = formatNumber(item.result);
-        row.insertCell(7).innerHTML = formatNumber(item.expectedValue);
-        row.insertCell(8).innerHTML = formatNumber(item.finalParticipation);
-        row.insertCell(9).innerHTML = formatNumber(item.distanceDecides);
-        row.insertCell(10).innerHTML = formatNumber(item.total);
+        row.insertCell(6).innerHTML = formatNumber(item.day4Result);
+        row.insertCell(7).innerHTML = formatNumber(item.total);
         
         if (hideExtraColumns) {
-            for (let i = 2; i <= 9; i++) {
+            for (let i = 2; i <= 6; i++) {
                 if (row.cells[i]) row.cells[i].style.display = 'none';
             }
         }
@@ -968,60 +640,14 @@ function fillTournamentResultsTable() {
     
     const headers = document.querySelectorAll('#resultsTableElement th');
     if (hideExtraColumns) {
-        for (let i = 2; i <= 8; i++) {
+        for (let i = 2; i <= 6; i++) {
             if (headers[i]) headers[i].style.display = 'none';
         }
     } else {
-        for (let i = 2; i <= 8; i++) {
+        for (let i = 2; i <= 6; i++) {
             if (headers[i]) headers[i].style.display = '';
         }
     }
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-}
-
-// Прошлый турнир
-function fillPreviousResultsTable() {
-    const tbody = document.getElementById('previousResultsTable');
-    if (!tbody) return;
-    
-    const filteredData = currentSearchTerm === '' 
-        ? previousTournamentResults 
-        : previousTournamentResults.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((p) => {
-        const realIndex = previousTournamentResults.findIndex(item => item.name === p.name);
-        const realPosition = realIndex + 1;
-        
-        let rowClass = '';
-        if (p.place === 1) rowClass = 'final-gold';
-        else if (p.place === 2) rowClass = 'final-silver';
-        else if (p.place === 3) rowClass = 'final-bronze';
-        else if (p.place >= 4 && p.place <= 25) rowClass = 'final-finalist';
-        else rowClass = 'final-participant';
-        
-        const isSearchMatch = currentSearchTerm !== '' && p.name.toLowerCase().includes(currentSearchTerm);
-        if (isSearchMatch) rowClass += ' search-highlight';
-        
-        const row = tbody.insertRow();
-        row.className = rowClass;
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = p.name;
-        row.insertCell(2).innerHTML = p.place;
-        row.insertCell(3).innerHTML = p.status;
-    });
     
     document.getElementById('totalPlayers').textContent = filteredData.length;
 }
@@ -1034,12 +660,9 @@ function performSearch() {
     
     if (activeTab.id === 'previousResults') fillPreviousResultsTable();
     else if (activeTab.id === 'rating') fillRatingTable();
-    else if (activeTab.id === 'blindsAntes') fillBlindsTable();
+    else if (activeTab.id === 'huntingNominations') fillHuntingNominationsTable();
     else if (activeTab.id === 'day1') fillDay1Table();
-    else if (activeTab.id === 'day2') fillDay2Table();
-    else if (activeTab.id === 'day3') fillDay3Table();
     else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
-    else if (activeTab.id === 'finalResults') fillFinalResultsTable();
 }
 
 function setupAutocomplete() {
@@ -1048,13 +671,10 @@ function setupAutocomplete() {
     
     const ratingData = getRatingData();
     const allPlayers = [...new Set([
-        ...previousTournamentResults.map(p => p.name),
+        ...previousTournamentResults,
         ...ratingData.map(p => p.name),
-        ...day1Data.map(p => p.name),
-        ...day2Data.map(p => p.name),
-        ...day3Data.map(p => p.name),
-        ...finalResultsData,
-        ...Object.keys(tournamentExtras)
+        ...huntingData.map(p => p.name),
+        ...day1Data.map(p => p.name)
     ])];
     
     input.addEventListener('input', (e) => {
@@ -1110,13 +730,13 @@ function showTab(tabName) {
     
     const phases = {
         'rating': 'Рейтинг',
-        'previousResults': 'Результаты Сезона Охоты А-2',
-        'blindsAntes': 'Блайнды и Анте',
-        'day1': '1 день - 30.04.2026',
-        'day2': '2 день - 7.05.2026',
-        'day3': '3 день - 14.05.2026',
-        'tournamentResults': 'Итоги',
-        'finalResults': 'Результаты'
+        'previousResults': 'Результаты ВЭЛЬЮ БЕТА 3/4',
+        'huntingNominations': 'Охота за головами',
+        'day1': '1 день - 21.05.2026',
+        'day2': '2 день - 28.05.2026',
+        'day3': '3 день - 4.06.2026',
+        'day4': '4 день - 11.06.2026',
+        'tournamentResults': 'Итоги'
     };
     document.getElementById('currentPhase').textContent = phases[tabName] || 'Турнир';
     
@@ -1128,12 +748,9 @@ function showTab(tabName) {
     
     if (tabName === 'previousResults') fillPreviousResultsTable();
     else if (tabName === 'rating') fillRatingTable();
-    else if (tabName === 'blindsAntes') fillBlindsTable();
+    else if (tabName === 'huntingNominations') fillHuntingNominationsTable();
     else if (tabName === 'day1') fillDay1Table();
-    else if (tabName === 'day2') fillDay2Table();
-    else if (tabName === 'day3') fillDay3Table();
     else if (tabName === 'tournamentResults') fillTournamentResultsTable();
-    else if (tabName === 'finalResults') fillFinalResultsTable();
 }
 
 // ========== РАЗВЕРТЫВАНИЕ ТАБЛИЦЫ ==========
@@ -1151,10 +768,7 @@ function toggleTableExpand() {
     
     if (activeTab.id === 'rating') fillRatingTable();
     else if (activeTab.id === 'day1') fillDay1Table();
-    else if (activeTab.id === 'day2') fillDay2Table();
-    else if (activeTab.id === 'day3') fillDay3Table();
     else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
-    else if (activeTab.id === 'finalResults') fillFinalResultsTable();
 }
 
 function resetTableExpand() {
@@ -1167,7 +781,7 @@ function resetTableExpand() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupAutocomplete();
-    showTab('finalResults');
+    showTab('day1');
     
     document.getElementById('clearSearch').addEventListener('click', () => {
         document.getElementById('searchInput').value = '';
@@ -1178,13 +792,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', () => {
         const activeTab = document.querySelector('.tab-content.active');
-        if (activeTab && (activeTab.id === 'rating' || activeTab.id === 'day1' || activeTab.id === 'day2' || activeTab.id === 'day3' || activeTab.id === 'tournamentResults' || activeTab.id === 'finalResults')) {
+        if (activeTab && (activeTab.id === 'rating' || activeTab.id === 'day1' || activeTab.id === 'tournamentResults')) {
             if (activeTab.id === 'rating') fillRatingTable();
             else if (activeTab.id === 'day1') fillDay1Table();
-            else if (activeTab.id === 'day2') fillDay2Table();
-            else if (activeTab.id === 'day3') fillDay3Table();
             else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
-            else if (activeTab.id === 'finalResults') fillFinalResultsTable();
         }
     });
 });

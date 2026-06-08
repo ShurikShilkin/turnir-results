@@ -10,19 +10,19 @@
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты ВЭЛЬЮ БЕТА 3/4</button>
+                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Туза Лета 2026</button>
                 <h1>Межсезонка по Непокеру<br>Май-Июнь</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">3 день - 4.06.2026</div>
+                <div class="tournament-phase" id="currentPhase">Результаты Туза Лета 2026</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
             <button class="tab-button" onclick="showTab('day1')">1 день - 21.05.2026</button>
             <button class="tab-button" onclick="showTab('day2')">2 день - 28.05.2026</button>
-            <button class="tab-button active" onclick="showTab('day3')">3 день - 4.06.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">3 день - 4.06.2026</button>
             <button class="tab-button" onclick="showTab('day4')">4 день - 11.06.2026</button>
             <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
@@ -37,11 +37,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">6.06.2026</div>
+                        <div class="date-value">11.06.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">6.06.2026</div>
+                        <div class="date-value">Не определён</div>
                     </div>
                 </div>
             </div>
@@ -64,10 +64,10 @@
 
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
-        <!-- Результаты прошлого турнира (ВЭЛЬЮ БЕТА 3/4) -->
-        <div id="previousResults" class="tab-content">
+        <!-- Результаты Туза Лета 2026 -->
+        <div id="previousResults" class="tab-content active">
             <div class="special-tab-content">
-                <h2>🏆 Результаты ВЭЛЬЮ БЕТА 3/4 🏆</h2>
+                <h2>🏆 Результаты Туза Лета 2026 🏆</h2>
                 <div class="special-date">Финальное распределение мест</div>
                 <table class="tournament-table" id="previousResultsTableElement">
                     <thead>
@@ -154,7 +154,7 @@
         </div>
 
         <!-- День 3 -->
-        <div id="day3" class="tab-content active">
+        <div id="day3" class="tab-content">
             <div class="special-tab-content">
                 <h2>📅 День 3 - 4.06.2026</h2>
                 <div class="special-date">Результаты игры</div>

@@ -471,10 +471,7 @@ header h1 {
 
 /* Стили для финальных результатов */
 .final-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
-.final-silver { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
-.final-bronze { background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important; }
-.final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
+.final-participant { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
 
 .empty-tab-message {
     text-align: center;

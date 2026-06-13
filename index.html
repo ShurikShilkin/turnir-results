@@ -15,7 +15,7 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Результаты Туза Лета 2026</div>
+                <div class="tournament-phase" id="currentPhase">Итоги</div>
             </div>
         </header>
 
@@ -24,7 +24,7 @@
             <button class="tab-button" onclick="showTab('day2')">2 день - 28.05.2026</button>
             <button class="tab-button" onclick="showTab('day3')">3 день - 4.06.2026</button>
             <button class="tab-button" onclick="showTab('day4')">4 день - 11.06.2026</button>
-            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
+            <button class="tab-button active" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
         </div>
 
@@ -37,11 +37,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">11.06.2026</div>
+                        <div class="date-value">25.06.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">Не определён</div>
+                        <div class="date-value">4.07.2026</div>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
         <!-- Результаты Туза Лета 2026 -->
-        <div id="previousResults" class="tab-content active">
+        <div id="previousResults" class="tab-content">
             <div class="special-tab-content">
                 <h2>🏆 Результаты Туза Лета 2026 🏆</h2>
                 <div class="special-date">Финальное распределение мест</div>
@@ -176,14 +176,27 @@
 
         <!-- День 4 -->
         <div id="day4" class="tab-content">
-            <div class="empty-tab-message">
+            <div class="special-tab-content">
                 <h2>📅 День 4 - 11.06.2026</h2>
-                <p>⏳ Результаты появятся после игры 11.06.2026</p>
+                <div class="special-date">Результаты игры</div>
+                <table class="tournament-table" id="day4TableElement">
+                    <thead>
+                        <tr>
+                            <th class="col-num">№</th>
+                            <th class="col-name">Имя</th>
+                            <th class="mobile-hide">Вход</th>
+                            <th class="mobile-hide">Добор</th>
+                            <th class="mobile-hide">Выход</th>
+                            <th class="col-total">Выигрыш</th>
+                        </tr>
+                    </thead>
+                    <tbody id="day4Table"></tbody>
+                </table>
             </div>
         </div>
 
         <!-- Итоги турнира -->
-        <div id="tournamentResults" class="tab-content">
+        <div id="tournamentResults" class="tab-content active">
             <div class="special-tab-content">
                 <h2>🏆 Итоги турнира 🏆</h2>
                 <div class="special-date">Общая таблица</div>

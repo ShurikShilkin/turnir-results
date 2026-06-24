@@ -472,7 +472,6 @@ header h1 {
 /* Стили для финальных результатов */
 .final-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
 .final-participant { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.tournament-winner { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
 
 .empty-tab-message {
     text-align: center;

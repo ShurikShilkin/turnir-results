@@ -11,169 +11,12 @@ const previousTournamentResults = [
     "Никита Зейн"
 ];
 
-// Данные 1 дня
-const day1Data = [
-    { name: "Никита Зейн", entry: 1100, extra: 2000, exit: 23945, win: 20845 },
-    { name: "Андрей М", entry: 1100, extra: 0, exit: 13205, win: 12105 },
-    { name: "Лиза Арц", entry: 1100, extra: 2000, exit: 8675, win: 5575 },
-    { name: "Евгений Ц", entry: 1100, extra: 0, exit: 6425, win: 5325 },
-    { name: "Илья Midas", entry: 1100, extra: 0, exit: 6125, win: 5025 },
-    { name: "Богдан А", entry: 1100, extra: 0, exit: 5970, win: 4870 },
-    { name: "Jane 007", entry: 1100, extra: 2000, exit: 7850, win: 4750 },
-    { name: "Анна К", entry: 1100, extra: 2000, exit: 5895, win: 2795 },
-    { name: "Ся Ся", entry: 1100, extra: 0, exit: 3495, win: 2395 },
-    { name: "Артём Акулов", entry: 1100, extra: 2000, exit: 5120, win: 2020 },
-    { name: "Макар Аве", entry: 1100, extra: 0, exit: 1515, win: 415 },
-    { name: "Иван 112", entry: 1100, extra: 1000, exit: 2465, win: 365 },
-    { name: "Влад Сам", entry: 1100, extra: 3000, exit: 3700, win: -400 },
-    { name: "Катя М", entry: 1100, extra: 0, exit: 275, win: -825 },
-    { name: "Шурик Шилкин", entry: 1100, extra: 0, exit: 0, win: -1100 },
-    { name: "Роман Лод", entry: 1100, extra: 5000, exit: 5005, win: -1095 },
-    { name: "Николя", entry: 1100, extra: 0, exit: 0, win: -1100 },
-    { name: "Артём SUB", entry: 1100, extra: 2000, exit: 1445, win: -1655 },
-    { name: "Даша Хромова", entry: 1100, extra: 4000, exit: 3240, win: -1860 },
-    { name: "Соня Серж", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Влад Владшток", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Максим Spy", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Михаил Наб", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Том", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Немощь", entry: 1100, extra: 2000, exit: 755, win: -2345 },
-    { name: "Лина S", entry: 1100, extra: 3000, exit: 460, win: -3640 },
-    { name: "Арт", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Надя Жб", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Стас ISK", entry: 1100, extra: 6000, exit: 0, win: -7100 },
-    { name: "Александр Гиг", entry: 1100, extra: 7000, exit: 0, win: -8100 },
-    { name: "Егор Вино", entry: 1100, extra: 12000, exit: 935, win: -12165 }
-];
-
-// Данные 2 дня
-const day2Data = [
-    { name: "Артём SUB", entry: 1100, extra: 0, exit: 16680, win: 15580 },
-    { name: "Иван Баж", entry: 1100, extra: 2000, exit: 11925, win: 8825 },
-    { name: "Богдан А", entry: 1100, extra: 0, exit: 9655, win: 8555 },
-    { name: "Рафаэль", entry: 1100, extra: 0, exit: 8310, win: 7210 },
-    { name: "Роман Лод", entry: 1100, extra: 1000, exit: 8575, win: 6475 },
-    { name: "Соня Серж", entry: 1100, extra: 1000, exit: 8240, win: 6140 },
-    { name: "Андрей М", entry: 1100, extra: 0, exit: 7205, win: 6105 },
-    { name: "Никита Зейн", entry: 1100, extra: 0, exit: 6490, win: 5390 },
-    { name: "Максим Spy", entry: 1100, extra: 2000, exit: 7410, win: 4310 },
-    { name: "Лиза Арц", entry: 1100, extra: 0, exit: 4595, win: 3495 },
-    { name: "Артур Король", entry: 1100, extra: 0, exit: 4555, win: 3455 },
-    { name: "Кристина А", entry: 1100, extra: 1000, exit: 5340, win: 3240 },
-    { name: "Николай Ж", entry: 1100, extra: 1000, exit: 4245, win: 2145 },
-    { name: "Вова Баж", entry: 1100, extra: 0, exit: 2755, win: 1655 },
-    { name: "Егор АА 11", entry: 1100, extra: 3000, exit: 5750, win: 1650 },
-    { name: "Семён Ануфриев", entry: 1100, extra: 4000, exit: 5990, win: 890 },
-    { name: "Влад Сам", entry: 1100, extra: 1000, exit: 2705, win: 605 },
-    { name: "Шурик Шилкин", entry: 1100, extra: 0, exit: 1675, win: 575 },
-    { name: "Надя Жб", entry: 1100, extra: 1000, exit: 2175, win: 75 },
-    { name: "Даня Гол", entry: 1100, extra: 0, exit: 1050, win: -50 },
-    { name: "Макар Аве", entry: 1100, extra: 2000, exit: 2480, win: -620 },
-    { name: "Jane 007", entry: 1100, extra: 0, exit: 0, win: -1100 },
-    { name: "Даша Хромова", entry: 1100, extra: 3000, exit: 2365, win: -1735 },
-    { name: "Саша Коч", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Яна Кат", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Паша Н", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Андрей Фломастер", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Влад Владшток", entry: 1100, extra: 3000, exit: 1185, win: -2915 },
-    { name: "Немощь", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Света Туся", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Полина Матыцына", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Катя М", entry: 1100, extra: 4000, exit: 1485, win: -3615 },
-    { name: "Ксюша Пок", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Рита Мак", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Александр Будда", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Маша Сот", entry: 1100, extra: 4000, exit: 740, win: -4360 },
-    { name: "Егор Вино", entry: 1100, extra: 8000, exit: 4710, win: -4390 },
-    { name: "Матвей МС", entry: 1100, extra: 4000, exit: 500, win: -4600 },
-    { name: "Михаил Наб", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Даниил Ершов", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Искандер", entry: 1100, extra: 5000, exit: 910, win: -5190 },
-    { name: "Стас ISK", entry: 1100, extra: 7000, exit: 0, win: -8100 }
-];
-
-// Данные 3 дня
-const day3Data = [
-    { name: "Jane 007", entry: 1100, extra: 0, exit: 27485, win: 26385 },
-    { name: "Искандер", entry: 1100, extra: 0, exit: 16190, win: 15090 },
-    { name: "Всеволод Кузнецов", entry: 1100, extra: 0, exit: 10040, win: 8940 },
-    { name: "Артём SUB", entry: 1100, extra: 3000, exit: 12255, win: 8155 },
-    { name: "Дмитрий Ник", entry: 1100, extra: 1000, exit: 9305, win: 7205 },
-    { name: "Мария Павлова", entry: 1100, extra: 0, exit: 7055, win: 5955 },
-    { name: "Ирина Ага", entry: 1100, extra: 0, exit: 6290, win: 5190 },
-    { name: "Роман Лод", entry: 1100, extra: 0, exit: 5175, win: 4075 },
-    { name: "Саша Бел", entry: 1100, extra: 0, exit: 4780, win: 3680 },
-    { name: "Богдан А", entry: 1100, extra: 3000, exit: 7435, win: 3335 },
-    { name: "Шурик Шилкин", entry: 1100, extra: 0, exit: 4105, win: 3005 },
-    { name: "Вова Баж", entry: 1100, extra: 0, exit: 3970, win: 2870 },
-    { name: "Егор Вино", entry: 1100, extra: 4000, exit: 7255, win: 2155 },
-    { name: "Макар Аве", entry: 1100, extra: 4000, exit: 7075, win: 1975 },
-    { name: "Надя Жб", entry: 1100, extra: 2000, exit: 4660, win: 1560 },
-    { name: "Саша Коч", entry: 1100, extra: 1000, exit: 3025, win: 925 },
-    { name: "Даша Хромова", entry: 1100, extra: 1000, exit: 2630, win: 530 },
-    { name: "Неопознанный утконос", entry: 1100, extra: 0, exit: 405, win: -695 },
-    { name: "Илья Сус", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Немощь", entry: 1100, extra: 2000, exit: 960, win: -2140 },
-    { name: "Егор АА 11", entry: 1100, extra: 2000, exit: 480, win: -2620 },
-    { name: "Аня Жук", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Аня Бью", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Никита Караксик", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "grooveman", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Влад Владшток", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Кристина А", entry: 1100, extra: 8000, exit: 4930, win: -4170 },
-    { name: "Соня Серж", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Надя Котик", entry: 1100, extra: 7000, exit: 2795, win: -5305 },
-    { name: "Слава П", entry: 1100, extra: 5000, exit: 0, win: -6100 },
-    { name: "Андрей М", entry: 1100, extra: 5000, exit: 0, win: -6100 },
-    { name: "Александр Будда", entry: 1100, extra: 5000, exit: 0, win: -6100 },
-    { name: "Том", entry: 1100, extra: 7000, exit: 0, win: -8100 },
-    { name: "Игорь Петр", entry: 1100, extra: 7000, exit: 0, win: -8100 },
-    { name: "Стас ISK", entry: 1100, extra: 8000, exit: 0, win: -9100 },
-    { name: "Семён Ануфриев", entry: 1100, extra: 10000, exit: 0, win: -11100 }
-];
-
-// Данные 4 дня
-const day4Data = [
-    { name: "Неопознанный утконос", entry: 1100, extra: 1000, exit: 15360, win: 13260 },
-    { name: "Егор АА 11", entry: 1100, extra: 0, exit: 12740, win: 11640 },
-    { name: "Нарек Сель", entry: 1100, extra: 0, exit: 12130, win: 11030 },
-    { name: "Никита Зейн", entry: 1100, extra: 0, exit: 9100, win: 8000 },
-    { name: "Аня Бью", entry: 1100, extra: 1000, exit: 7025, win: 4925 },
-    { name: "Немощь", entry: 1100, extra: 0, exit: 5885, win: 4785 },
-    { name: "Надя Жб", entry: 1100, extra: 1000, exit: 6380, win: 4280 },
-    { name: "Максим Spy", entry: 1100, extra: 0, exit: 4180, win: 3080 },
-    { name: "Георгий С", entry: 1100, extra: 3000, exit: 7160, win: 3060 },
-    { name: "Даша Хромова", entry: 1100, extra: 0, exit: 3560, win: 2460 },
-    { name: "Андрей М", entry: 1100, extra: 4000, exit: 7280, win: 2180 },
-    { name: "Егор Вино", entry: 1100, extra: 0, exit: 2365, win: 1265 },
-    { name: "ая?", entry: 1100, extra: 2000, exit: 3980, win: 880 },
-    { name: "Влад Владшток", entry: 1100, extra: 1000, exit: 2500, win: 400 },
-    { name: "Шурик Шилкин", entry: 1100, extra: 0, exit: 980, win: -120 },
-    { name: "Александр Будда", entry: 1100, extra: 2000, exit: 2975, win: -125 },
-    { name: "Всеволод Кузнецов", entry: 1100, extra: 0, exit: 970, win: -130 },
-    { name: "Матвей МС", entry: 1100, extra: 0, exit: 860, win: -240 },
-    { name: "Андрей Фломастер", entry: 1100, extra: 1000, exit: 650, win: -1450 },
-    { name: "Многолапый", entry: 1100, extra: 1000, exit: 40, win: -2060 },
-    { name: "Дмитрий Ник", entry: 1100, extra: 1000, exit: 0, win: -2100 },
-    { name: "Аня Жук", entry: 1100, extra: 4000, exit: 2375, win: -2725 },
-    { name: "Артём Акулов", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Полина Матыцына", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Иван О", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Анастасия Ан", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Ирина Ага", entry: 1100, extra: 4000, exit: 405, win: -4695 },
-    { name: "Евгений Ц", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Роман Лод", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Артём SUB", entry: 1100, extra: 8000, exit: 0, win: -9100 },
-    { name: "Рашад", entry: 1100, extra: 8000, exit: 0, win: -9100 },
-    { name: "Богдан А", entry: 1100, extra: 11000, exit: 0, win: -12100 }
-];
-
 // Охота за головами
 const huntingData = [
     { name: "Богдан А", value: 1500 },
     { name: "Семён Ануфриев", value: 1400 },
     { name: "Jane 007", value: 1300 },
-    { name: "Егор АА 11", value: 1200 },
+    { name: "Егор АА11", value: 1200 },
     { name: "Шурик Шилкин", value: 1100 },
     { name: "Михаил Наб", value: 1000 },
     { name: "Никита Зейн", value: 800 },
@@ -192,7 +35,7 @@ const huntingData = [
     { name: "Кристина А", value: 400 }
 ];
 
-// Рейтинг до 4 дня
+// Рейтинг до нового турнира
 const ratingBeforeFinal = [
     { name: "Богдан А", rating: 1166, attendance: 31 },
     { name: "Семён Ануфриев", rating: 1060, attendance: 28 },
@@ -362,7 +205,7 @@ const ratingBeforeFinal = [
 ];
 
 // Добавки после 4 дня
-const ratingAdditionsAfterDay4 = [
+const ratingAdditionsAfterFinal = [
     { name: "Александр Будда", addition: 33 },
     { name: "Анастасия Ан", addition: 23 },
     { name: "Андрей М", addition: 32 },
@@ -398,7 +241,7 @@ const ratingAdditionsAfterDay4 = [
 ];
 
 // Множество игроков, которые участвовали в 4 дне
-const day4PlayersSet = new Set(ratingAdditionsAfterDay4.map(p => p.name));
+const finalPlayersSet = new Set(ratingAdditionsAfterFinal.map(p => p.name));
 
 // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
 let currentSearchTerm = '';
@@ -413,7 +256,7 @@ function formatNumber(num) {
 // Получить данные рейтинга с добавками
 function getRatingData() {
     const beforeMap = new Map(ratingBeforeFinal.map(p => [p.name, { rating: p.rating, attendance: p.attendance }]));
-    const additionMap = new Map(ratingAdditionsAfterDay4.map(p => [p.name, p.addition]));
+    const additionMap = new Map(ratingAdditionsAfterFinal.map(p => [p.name, p.addition]));
     const result = [];
     
     ratingBeforeFinal.forEach(p => {
@@ -425,11 +268,11 @@ function getRatingData() {
             attendance: newAttendance,
             change: add,
             newRating: p.rating + add,
-            playedInDay4: additionMap.has(p.name)
+            playedInFinal: additionMap.has(p.name)
         });
     });
     
-    ratingAdditionsAfterDay4.forEach(add => {
+    ratingAdditionsAfterFinal.forEach(add => {
         if (!beforeMap.has(add.name)) {
             result.push({
                 name: add.name,
@@ -437,7 +280,7 @@ function getRatingData() {
                 attendance: 1,
                 change: add.addition,
                 newRating: add.addition,
-                playedInDay4: true
+                playedInFinal: true
             });
         }
     });
@@ -463,68 +306,6 @@ function getPositionChanges() {
             else changes.set(player.name, { type: 'same', change: 0 });
         }
     });
-    return changes;
-}
-
-// Получить изменения позиций для итоговой таблицы (между после 3 дня и после 4 дня)
-function getTournamentPositionChanges() {
-    // Результаты после 3 дня (сумма 1 + 2 + 3 дня)
-    const afterDay3Map = new Map();
-    
-    day1Data.forEach(p => { afterDay3Map.set(p.name, p.win); });
-    day2Data.forEach(p => {
-        if (afterDay3Map.has(p.name)) afterDay3Map.set(p.name, afterDay3Map.get(p.name) + p.win);
-        else afterDay3Map.set(p.name, p.win);
-    });
-    day3Data.forEach(p => {
-        if (afterDay3Map.has(p.name)) afterDay3Map.set(p.name, afterDay3Map.get(p.name) + p.win);
-        else afterDay3Map.set(p.name, p.win);
-    });
-    
-    const afterDay3 = Array.from(afterDay3Map.entries()).map(([name, total]) => ({ name, total }))
-        .sort((a, b) => b.total - a.total)
-        .map((p, idx) => ({ name: p.name, position: idx + 1, total: p.total }));
-    
-    // Результаты после 4 дня (сумма 1 + 2 + 3 + 4 дня)
-    const afterDay4Map = new Map();
-    
-    day1Data.forEach(p => { afterDay4Map.set(p.name, p.win); });
-    day2Data.forEach(p => {
-        if (afterDay4Map.has(p.name)) afterDay4Map.set(p.name, afterDay4Map.get(p.name) + p.win);
-        else afterDay4Map.set(p.name, p.win);
-    });
-    day3Data.forEach(p => {
-        if (afterDay4Map.has(p.name)) afterDay4Map.set(p.name, afterDay4Map.get(p.name) + p.win);
-        else afterDay4Map.set(p.name, p.win);
-    });
-    day4Data.forEach(p => {
-        if (afterDay4Map.has(p.name)) afterDay4Map.set(p.name, afterDay4Map.get(p.name) + p.win);
-        else afterDay4Map.set(p.name, p.win);
-    });
-    
-    const afterDay4 = Array.from(afterDay4Map.entries()).map(([name, total]) => ({ name, total }))
-        .sort((a, b) => b.total - a.total)
-        .map((p, idx) => ({ name: p.name, position: idx + 1, total: p.total }));
-    
-    const changes = new Map();
-    const allPlayers = new Set([...afterDay3.map(p => p.name), ...afterDay4.map(p => p.name)]);
-    
-    allPlayers.forEach(playerName => {
-        const day3Player = afterDay3.find(p => p.name === playerName);
-        const day4Player = afterDay4.find(p => p.name === playerName);
-        
-        if (!day3Player && day4Player) {
-            changes.set(playerName, { type: 'new', change: 0 });
-        } else if (day3Player && !day4Player) {
-            changes.set(playerName, { type: 'down', change: 999 });
-        } else if (day3Player && day4Player) {
-            const diff = day3Player.position - day4Player.position;
-            if (diff > 0) changes.set(playerName, { type: 'up', change: diff });
-            else if (diff < 0) changes.set(playerName, { type: 'down', change: Math.abs(diff) });
-            else changes.set(playerName, { type: 'same', change: 0 });
-        }
-    });
-    
     return changes;
 }
 
@@ -580,7 +361,7 @@ function fillRatingTable() {
         if (p.change > 0) {
             changeSign = `+${p.change}`;
             changeClass = 'rating-positive';
-        } else if (p.change === 0 && p.playedInDay4 === true) {
+        } else if (p.change === 0 && p.playedInFinal === true) {
             changeSign = '+0';
             changeClass = 'rating-neutral';
         } else if (p.change === 0) {
@@ -721,361 +502,19 @@ function fillHuntingNominationsTable() {
     document.getElementById('totalPlayers').textContent = filteredData.length;
 }
 
-// День 1
+// День 1 - пустое сообщение
 function fillDay1Table() {
-    const tbody = document.getElementById('day1Table');
-    if (!tbody) return;
-    
-    const sortedDay1Data = [...day1Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay1Data 
-        : sortedDay1Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day1TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay1Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.entry);
-        row.insertCell(3).innerHTML = formatNumber(item.extra);
-        row.insertCell(4).innerHTML = formatNumber(item.exit);
-        row.insertCell(5).innerHTML = formatNumber(item.win);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 4; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day1Data.reduce((sum, p) => sum + p.win, 0);
-    const avgStack = Math.round(totalSum / day1Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
+    document.getElementById('totalPlayers').textContent = 0;
 }
 
-// День 2
+// День 2 - пустое сообщение
 function fillDay2Table() {
-    const tbody = document.getElementById('day2Table');
-    if (!tbody) return;
-    
-    const sortedDay2Data = [...day2Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay2Data 
-        : sortedDay2Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day2TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay2Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.entry);
-        row.insertCell(3).innerHTML = formatNumber(item.extra);
-        row.insertCell(4).innerHTML = formatNumber(item.exit);
-        row.insertCell(5).innerHTML = formatNumber(item.win);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 4; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day2Data.reduce((sum, p) => sum + p.win, 0);
-    const avgStack = Math.round(totalSum / day2Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
+    document.getElementById('totalPlayers').textContent = 0;
 }
 
-// День 3
-function fillDay3Table() {
-    const tbody = document.getElementById('day3Table');
-    if (!tbody) return;
-    
-    const sortedDay3Data = [...day3Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay3Data 
-        : sortedDay3Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day3TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay3Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.entry);
-        row.insertCell(3).innerHTML = formatNumber(item.extra);
-        row.insertCell(4).innerHTML = formatNumber(item.exit);
-        row.insertCell(5).innerHTML = formatNumber(item.win);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 4; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day3Data.reduce((sum, p) => sum + p.win, 0);
-    const avgStack = Math.round(totalSum / day3Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
-}
-
-// День 4
-function fillDay4Table() {
-    const tbody = document.getElementById('day4Table');
-    if (!tbody) return;
-    
-    const sortedDay4Data = [...day4Data].sort((a, b) => b.win - a.win);
-    
-    const filteredData = currentSearchTerm === '' 
-        ? sortedDay4Data 
-        : sortedDay4Data.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    const mobile = isMobile();
-    const table = document.getElementById('day4TableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    tbody.innerHTML = '';
-    
-    filteredData.forEach((item) => {
-        const realPosition = sortedDay4Data.findIndex(d => d.name === item.name) + 1;
-        const row = tbody.insertRow();
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = item.name;
-        row.insertCell(2).innerHTML = formatNumber(item.entry);
-        row.insertCell(3).innerHTML = formatNumber(item.extra);
-        row.insertCell(4).innerHTML = formatNumber(item.exit);
-        row.insertCell(5).innerHTML = formatNumber(item.win);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 4; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
-    
-    const totalSum = day4Data.reduce((sum, p) => sum + p.win, 0);
-    const avgStack = Math.round(totalSum / day4Data.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgStack);
-}
-
-// Итоги турнира (с 4 днями)
-function fillTournamentResultsTable() {
-    const tbody = document.getElementById('tournamentResultsTable');
-    if (!tbody) return;
-    
-    // Собираем всех игроков из всех дней
-    const allPlayersMap = new Map();
-    
-    day1Data.forEach(player => {
-        allPlayersMap.set(player.name, {
-            name: player.name,
-            day1Result: player.win,
-            day2Result: 0,
-            day3Result: 0,
-            day4Result: 0
-        });
-    });
-    
-    day2Data.forEach(player => {
-        if (allPlayersMap.has(player.name)) {
-            allPlayersMap.get(player.name).day2Result = player.win;
-        } else {
-            allPlayersMap.set(player.name, {
-                name: player.name,
-                day1Result: 0,
-                day2Result: player.win,
-                day3Result: 0,
-                day4Result: 0
-            });
-        }
-    });
-    
-    day3Data.forEach(player => {
-        if (allPlayersMap.has(player.name)) {
-            allPlayersMap.get(player.name).day3Result = player.win;
-        } else {
-            allPlayersMap.set(player.name, {
-                name: player.name,
-                day1Result: 0,
-                day2Result: 0,
-                day3Result: player.win,
-                day4Result: 0
-            });
-        }
-    });
-    
-    day4Data.forEach(player => {
-        if (allPlayersMap.has(player.name)) {
-            allPlayersMap.get(player.name).day4Result = player.win;
-        } else {
-            allPlayersMap.set(player.name, {
-                name: player.name,
-                day1Result: 0,
-                day2Result: 0,
-                day3Result: 0,
-                day4Result: player.win
-            });
-        }
-    });
-    
-    const results = Array.from(allPlayersMap.values()).map(p => ({
-        ...p,
-        total: p.day1Result + p.day2Result + p.day3Result + p.day4Result
-    })).sort((a, b) => b.total - a.total);
-    
-    // Средний стек по столбцу "Результат"
-    const totalSumResult = results.reduce((sum, p) => sum + p.total, 0);
-    const avgResult = Math.round(totalSumResult / results.length);
-    document.getElementById('averageStack').textContent = formatNumber(avgResult);
-    
-    const positionChanges = getTournamentPositionChanges();
-    
-    const filteredData = currentSearchTerm === '' 
-        ? results 
-        : results.filter(p => p.name.toLowerCase().includes(currentSearchTerm));
-    
-    const searchResults = document.getElementById('searchResults');
-    const resultsCount = document.getElementById('resultsCount');
-    if (currentSearchTerm === '') {
-        searchResults.style.display = 'none';
-    } else {
-        searchResults.style.display = 'block';
-        resultsCount.textContent = filteredData.length;
-    }
-    
-    tbody.innerHTML = '';
-    
-    const mobile = isMobile();
-    const table = document.getElementById('resultsTableElement');
-    const isExpanded = table ? table.classList.contains('expanded') : false;
-    const hideExtraColumns = mobile && !isExpanded;
-    
-    filteredData.forEach((item, idx) => {
-        const realPosition = results.findIndex(r => r.name === item.name) + 1;
-        const change = positionChanges.get(item.name);
-        
-        let changeHtml = '';
-        if (change) {
-            if (change.type === 'new') changeHtml = '<div class="position-change position-new">NEW</div>';
-            else if (change.type === 'up') changeHtml = `<div class="position-change position-up"><span class="change-arrow">▲</span>${change.change}</div>`;
-            else if (change.type === 'down' && change.change === 999) changeHtml = '<div class="position-change position-down"><span class="change-arrow">▼</span>?</div>';
-            else if (change.type === 'down') changeHtml = `<div class="position-change position-down"><span class="change-arrow">▼</span>${change.change}</div>`;
-            else changeHtml = '<div class="position-change position-same"><span class="change-arrow">→</span>0</div>';
-        } else {
-            changeHtml = '<div class="position-change position-same"><span class="change-arrow">→</span>0</div>';
-        }
-        
-        // Выделяем первое место золотым цветом
-        let rowClass = '';
-        if (realPosition === 1) {
-            rowClass = 'tournament-winner';
-        }
-        
-        const row = tbody.insertRow();
-        row.className = rowClass;
-        
-        // Для первого места добавляем медальку к имени
-        const displayName = realPosition === 1 ? `🥇 ${item.name}` : item.name;
-        
-        row.insertCell(0).innerHTML = realPosition;
-        row.insertCell(1).innerHTML = displayName;
-        row.insertCell(2).innerHTML = changeHtml;
-        row.insertCell(3).innerHTML = formatNumber(item.day1Result);
-        row.insertCell(4).innerHTML = formatNumber(item.day2Result);
-        row.insertCell(5).innerHTML = formatNumber(item.day3Result);
-        row.insertCell(6).innerHTML = formatNumber(item.day4Result);
-        row.insertCell(7).innerHTML = formatNumber(item.total);
-        
-        if (hideExtraColumns) {
-            for (let i = 2; i <= 6; i++) {
-                if (row.cells[i]) row.cells[i].style.display = 'none';
-            }
-        }
-    });
-    
-    const headers = document.querySelectorAll('#resultsTableElement th');
-    if (hideExtraColumns) {
-        for (let i = 2; i <= 6; i++) {
-            if (headers[i]) headers[i].style.display = 'none';
-        }
-    } else {
-        for (let i = 2; i <= 6; i++) {
-            if (headers[i]) headers[i].style.display = '';
-        }
-    }
-    
-    document.getElementById('totalPlayers').textContent = filteredData.length;
+// Финал - пустое сообщение
+function fillFinalTable() {
+    document.getElementById('totalPlayers').textContent = 0;
 }
 
 // ========== ПОИСК ==========
@@ -1089,9 +528,7 @@ function performSearch() {
     else if (activeTab.id === 'huntingNominations') fillHuntingNominationsTable();
     else if (activeTab.id === 'day1') fillDay1Table();
     else if (activeTab.id === 'day2') fillDay2Table();
-    else if (activeTab.id === 'day3') fillDay3Table();
-    else if (activeTab.id === 'day4') fillDay4Table();
-    else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
+    else if (activeTab.id === 'final') fillFinalTable();
 }
 
 function setupAutocomplete() {
@@ -1102,11 +539,7 @@ function setupAutocomplete() {
     const allPlayers = [...new Set([
         ...previousTournamentResults,
         ...ratingData.map(p => p.name),
-        ...huntingData.map(p => p.name),
-        ...day1Data.map(p => p.name),
-        ...day2Data.map(p => p.name),
-        ...day3Data.map(p => p.name),
-        ...day4Data.map(p => p.name)
+        ...huntingData.map(p => p.name)
     ])];
     
     input.addEventListener('input', (e) => {
@@ -1164,11 +597,9 @@ function showTab(tabName) {
         'rating': 'Рейтинг',
         'previousResults': 'Результаты Туза Лета 2026',
         'huntingNominations': 'Охота за головами',
-        'day1': '1 день - 21.05.2026',
-        'day2': '2 день - 28.05.2026',
-        'day3': '3 день - 4.06.2026',
-        'day4': '4 день - 11.06.2026',
-        'tournamentResults': 'Итоги'
+        'day1': '1 день - 25.06.2026',
+        'day2': '2 день - 02.07.2026',
+        'final': 'Финал - 04.07.2026'
     };
     document.getElementById('currentPhase').textContent = phases[tabName] || 'Турнир';
     
@@ -1183,61 +614,29 @@ function showTab(tabName) {
     else if (tabName === 'huntingNominations') fillHuntingNominationsTable();
     else if (tabName === 'day1') fillDay1Table();
     else if (tabName === 'day2') fillDay2Table();
-    else if (tabName === 'day3') fillDay3Table();
-    else if (tabName === 'day4') fillDay4Table();
-    else if (tabName === 'tournamentResults') fillTournamentResultsTable();
+    else if (tabName === 'final') fillFinalTable();
 }
 
 // ========== РАЗВЕРТЫВАНИЕ ТАБЛИЦЫ ==========
 
 function toggleTableExpand() {
-    const activeTab = document.querySelector('.tab-content.active');
-    if (!activeTab) return;
-    
-    const table = activeTab.querySelector('.tournament-table');
-    if (!table) return;
-    
-    table.classList.toggle('expanded');
-    const button = document.querySelector('.expand-button');
-    button.textContent = table.classList.contains('expanded') ? 'Свернуть таблицу' : 'Развернуть таблицу';
-    
-    if (activeTab.id === 'rating') fillRatingTable();
-    else if (activeTab.id === 'day1') fillDay1Table();
-    else if (activeTab.id === 'day2') fillDay2Table();
-    else if (activeTab.id === 'day3') fillDay3Table();
-    else if (activeTab.id === 'day4') fillDay4Table();
-    else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
+    // Функция не делает ничего, так как таблиц с данными нет
 }
 
 function resetTableExpand() {
-    document.querySelectorAll('.tournament-table').forEach(t => t.classList.remove('expanded'));
-    const button = document.querySelector('.expand-button');
-    if (button) button.textContent = 'Развернуть таблицу';
+    // Функция не делает ничего
 }
 
 // ========== ИНИЦИАЛИЗАЦИЯ ==========
 
 document.addEventListener('DOMContentLoaded', () => {
     setupAutocomplete();
-    showTab('tournamentResults');
+    showTab('day1');
     
     document.getElementById('clearSearch').addEventListener('click', () => {
         document.getElementById('searchInput').value = '';
         currentSearchTerm = '';
         document.getElementById('autocompleteResults').style.display = 'none';
         performSearch();
-    });
-    
-    window.addEventListener('resize', () => {
-        const activeTab = document.querySelector('.tab-content.active');
-        if (activeTab && (activeTab.id === 'rating' || activeTab.id === 'day1' || activeTab.id === 'day2' || activeTab.id === 'day3' || activeTab.id === 'day4' || activeTab.id === 'tournamentResults' || activeTab.id === 'previousResults')) {
-            if (activeTab.id === 'rating') fillRatingTable();
-            else if (activeTab.id === 'day1') fillDay1Table();
-            else if (activeTab.id === 'day2') fillDay2Table();
-            else if (activeTab.id === 'day3') fillDay3Table();
-            else if (activeTab.id === 'day4') fillDay4Table();
-            else if (activeTab.id === 'tournamentResults') fillTournamentResultsTable();
-            else if (activeTab.id === 'previousResults') fillPreviousResultsTable();
-        }
     });
 });

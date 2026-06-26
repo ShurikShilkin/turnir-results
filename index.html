@@ -23,6 +23,7 @@
             <button class="tab-button active" onclick="showTab('day1')">1 день - 25.06.2026</button>
             <button class="tab-button" onclick="showTab('day2')">2 день - 02.07.2026</button>
             <button class="tab-button" onclick="showTab('final')">Финал - 04.07.2026</button>
+            <button class="tab-button" onclick="showTab('tournamentResults')">Итоги</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
         </div>
 
@@ -35,7 +36,7 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">25.06.2026</div>
+                        <div class="date-value">02.07.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
@@ -111,9 +112,22 @@
 
         <!-- День 1 - 25.06.2026 -->
         <div id="day1" class="tab-content active">
-            <div class="empty-tab-message">
+            <div class="special-tab-content">
                 <h2>📅 День 1 - 25.06.2026</h2>
-                <p>⏳ Данные появятся после игры 25.06.2026</p>
+                <div class="special-date">Результаты игры</div>
+                <table class="tournament-table" id="day1TableElement">
+                    <thead>
+                        <tr>
+                            <th class="col-num">№</th>
+                            <th class="col-name">Имя</th>
+                            <th class="mobile-hide">Участие</th>
+                            <th class="mobile-hide">Добор</th>
+                            <th class="mobile-hide">Выход</th>
+                            <th class="col-total">Итог</th>
+                        </tr>
+                    </thead>
+                    <tbody id="day1Table"></tbody>
+                </table>
             </div>
         </div>
 
@@ -130,6 +144,27 @@
             <div class="empty-tab-message">
                 <h2>🏆 Финал - 04.07.2026</h2>
                 <p>⏳ Данные появятся после игры 25.06.2026</p>
+            </div>
+        </div>
+
+        <!-- Итоги турнира -->
+        <div id="tournamentResults" class="tab-content">
+            <div class="special-tab-content">
+                <h2>🏆 Итоги турнира 🏆</h2>
+                <div class="special-date">Общая таблица</div>
+                <table class="tournament-table" id="resultsTableElement">
+                    <thead>
+                        <tr>
+                            <th class="col-num">№</th>
+                            <th class="col-name">Имя</th>
+                            <th class="mobile-hide">1 день</th>
+                            <th class="mobile-hide">2 день</th>
+                            <th class="mobile-hide">Добор</th>
+                            <th class="col-total">Итог</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tournamentResultsTable"></tbody>
+                </table>
             </div>
         </div>
     </div>

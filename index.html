@@ -15,15 +15,15 @@
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Финал - 04.07.2026</div>
+                <div class="tournament-phase" id="currentPhase">Результаты</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
             <button class="tab-button" onclick="showTab('day1')">1 день - 25.06.2026</button>
             <button class="tab-button" onclick="showTab('day2')">2 день - 02.07.2026</button>
-            <button class="tab-button active" onclick="showTab('final')">Финал - 04.07.2026</button>
-            <button class="tab-button" onclick="showTab('blindsAntes')">Блайнды и Анте</button>
+            <button class="tab-button" onclick="showTab('final')">Финал - 04.07.2026</button>
+            <button class="tab-button active" onclick="showTab('tournamentResults')">Результаты</button>
         </div>
 
         <div class="stats" id="mainStats">
@@ -35,11 +35,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">04.07.2026</div>
+                        <div class="date-value">09.07.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">4.07.2026</div>
+                        <div class="date-value">01.08.2026</div>
                     </div>
                 </div>
             </div>
@@ -95,20 +95,6 @@
             </table>
         </div>
 
-        <!-- Блайнды и Анте -->
-        <div id="blindsAntes" class="tab-content">
-            <div class="special-tab-content">
-                <h2>🎰 Блайнды и Анте 🎰</h2>
-                <div class="special-date">Структура турнира</div>
-                <table class="tournament-table" id="blindsTableElement">
-                    <thead>
-                        <tr><th class="col-num">№</th><th>Время начала</th><th>Время конца</th><th>МБ</th><th>ББ</th><th>Анте</th></tr>
-                    </thead>
-                    <tbody id="blindsTable"></tbody>
-                </table>
-            </div>
-        </div>
-
         <!-- День 1 - 25.06.2026 -->
         <div id="day1" class="tab-content">
             <div class="special-tab-content">
@@ -152,7 +138,7 @@
         </div>
 
         <!-- Финал - 04.07.2026 -->
-        <div id="final" class="tab-content active">
+        <div id="final" class="tab-content">
             <div class="special-tab-content">
                 <h2>🏆 Финал - 04.07.2026</h2>
                 <div class="special-date">Результаты финала</div>
@@ -168,6 +154,20 @@
                         </tr>
                     </thead>
                     <tbody id="finalTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Результаты -->
+        <div id="tournamentResults" class="tab-content active">
+            <div class="special-tab-content">
+                <h2>🏆 Результаты турнира 🏆</h2>
+                <div class="special-date">Финальное распределение мест</div>
+                <table class="tournament-table" id="resultsTableElement">
+                    <thead>
+                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-place">Место</th><th class="col-status">Статус</th></tr>
+                    </thead>
+                    <tbody id="tournamentResultsTable"></tbody>
                 </table>
             </div>
         </div>

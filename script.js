@@ -242,14 +242,14 @@ const blindsData = [
     { level: 15, timeStart: "21-30", timeEnd: "21-50", sb: 1500, bb: 3000, ante: 3000 },
     { level: 16, timeStart: "22-00", timeEnd: "22-15", sb: 2000, bb: 4000, ante: 4000 },
     { level: 17, timeStart: "22-15", timeEnd: "22-30", sb: 2000, bb: 5000, ante: 5000 },
-    { level: 18, timeStart: "22-30", timeEnd: "22-50", sb: 3000, bb: 7000, ante: 7000 },
-    { level: 19, timeStart: "23-00", timeEnd: "23-15", sb: 4000, bb: 9000, ante: 9000 },
-    { level: 20, timeStart: "23-15", timeEnd: "23-30", sb: 6000, bb: 12000, ante: 12000 },
-    { level: 21, timeStart: "23-30", timeEnd: "23-45", sb: 7000, bb: 16000, ante: 16000 },
-    { level: 22, timeStart: "23-45", timeEnd: "0-00", sb: 10000, bb: 20000, ante: 20000 },
-    { level: 23, timeStart: "0-00", timeEnd: "0-10", sb: 12000, bb: 24000, ante: 24000 },
-    { level: 24, timeStart: "0-10", timeEnd: "0-20", sb: 15000, bb: 30000, ante: 30000 },
-    { level: 25, timeStart: "0-20", timeEnd: "0-30", sb: 19000, bb: 38000, ante: 38000 }
+    { level: 18, timeStart: "22-30", timeEnd: "22-50", sb: 3000, bb: 6000, ante: 6000 },
+    { level: 19, timeStart: "23-00", timeEnd: "23-15", sb: 3000, bb: 7000, ante: 7000 },
+    { level: 20, timeStart: "23-15", timeEnd: "23-30", sb: 4000, bb: 8000, ante: 8000 },
+    { level: 21, timeStart: "23-30", timeEnd: "23-45", sb: 5000, bb: 10000, ante: 10000 },
+    { level: 22, timeStart: "23-45", timeEnd: "0-00", sb: 6000, bb: 12000, ante: 12000 },
+    { level: 23, timeStart: "0-00", timeEnd: "0-10", sb: 8000, bb: 16000, ante: 16000 },
+    { level: 24, timeStart: "0-10", timeEnd: "0-20", sb: 10000, bb: 20000, ante: 20000 },
+    { level: 25, timeStart: "0-20", timeEnd: "0-30", sb: 13000, bb: 26000, ante: 26000 }
 ];
 
 // Рейтинг до финала

@@ -492,6 +492,15 @@ header h1 {
 .day2-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
 .day2-gold:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
 
+.day3-green { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
+.day3-green:hover { background: linear-gradient(90deg, #a5d6a7, #81c784) !important; }
+
+.day3-yellow { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
+.day3-yellow:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
+
+.day3-gray { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
+.day3-gray:hover { background: linear-gradient(90deg, #bdbdbd, #9e9e9e) !important; }
+
 .final-yellow { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
 .final-yellow:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
 

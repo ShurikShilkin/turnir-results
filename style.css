@@ -463,12 +463,6 @@ header h1 {
     color: #FFD700;
 }
 
-.special-tab-content h3 {
-    font-size: 1.8em;
-    color: #FFD700;
-    margin-top: 30px;
-}
-
 .special-date {
     font-size: 1.3em;
     color: #4CAF50;
@@ -481,28 +475,6 @@ header h1 {
 .final-bronze { background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important; }
 .final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
 .final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
-
-/* Стили для выделения мест в днях */
-.day1-top8 { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.day1-top8:hover { background: linear-gradient(90deg, #a5d6a7, #81c784) !important; }
-
-.day2-top8 { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.day2-top8:hover { background: linear-gradient(90deg, #a5d6a7, #81c784) !important; }
-
-.day2-gold { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
-.day2-gold:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
-
-.day3-green { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.day3-green:hover { background: linear-gradient(90deg, #a5d6a7, #81c784) !important; }
-
-.day3-yellow { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
-.day3-yellow:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
-
-.day3-gray { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
-.day3-gray:hover { background: linear-gradient(90deg, #bdbdbd, #9e9e9e) !important; }
-
-.final-yellow { background: linear-gradient(90deg, #fff9c4, #fff176) !important; }
-.final-yellow:hover { background: linear-gradient(90deg, #fff176, #ffeb3b) !important; }
 
 .empty-tab-message {
     text-align: center;

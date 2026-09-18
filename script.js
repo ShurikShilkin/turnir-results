@@ -89,13 +89,12 @@ const day1Data = [
     { name: "Арзу", entry: 3800, start: 2100, extra: 1700, price: 800, exit: 0, total: 0 }
 ];
 
-// Данные для финала (из 1 дня)
+// Данные для финала (из 1 дня, без 4 дня)
 const finalData = day1Data.map(p => ({
     name: p.name,
     day1Result: p.total,
     day2Result: 0,
     day3Result: 0,
-    day4Result: 0,
     total: p.total
 }));
 
@@ -720,7 +719,6 @@ function fillSpecialNominationsTable() {
         }
     });
     
-    // Скрываем заголовки на мобиле
     const thead = document.querySelector('#specialTableElement thead');
     if (thead && hideExtraColumns) {
         const headers = thead.querySelectorAll('th');
@@ -814,12 +812,7 @@ function fillDay3Table() {
     document.getElementById('totalPlayers').textContent = 0;
 }
 
-// День 4 - пустое сообщение
-function fillDay4Table() {
-    document.getElementById('totalPlayers').textContent = 0;
-}
-
-// Финал
+// Финал (без 4 дня)
 function fillFinalTable() {
     const tbody = document.getElementById('finalTable');
     if (!tbody) return;
@@ -855,11 +848,10 @@ function fillFinalTable() {
         row.insertCell(2).innerHTML = formatNumber(item.day1Result);
         row.insertCell(3).innerHTML = formatNumber(item.day2Result);
         row.insertCell(4).innerHTML = formatNumber(item.day3Result);
-        row.insertCell(5).innerHTML = formatNumber(item.day4Result);
-        row.insertCell(6).innerHTML = formatNumber(item.total);
+        row.insertCell(5).innerHTML = formatNumber(item.total);
         
         if (hideExtraColumns) {
-            for (let i = 2; i <= 5; i++) {
+            for (let i = 2; i <= 4; i++) {
                 if (row.cells[i]) row.cells[i].style.display = 'none';
             }
         }
@@ -869,12 +861,12 @@ function fillFinalTable() {
     const thead = document.querySelector('#finalTableElement thead');
     if (thead && hideExtraColumns) {
         const headers = thead.querySelectorAll('th');
-        for (let i = 2; i <= 5; i++) {
+        for (let i = 2; i <= 4; i++) {
             if (headers[i]) headers[i].style.display = 'none';
         }
     } else if (thead) {
         const headers = thead.querySelectorAll('th');
-        for (let i = 2; i <= 5; i++) {
+        for (let i = 2; i <= 4; i++) {
             if (headers[i]) headers[i].style.display = '';
         }
     }
@@ -899,7 +891,6 @@ function performSearch() {
     else if (activeTab.id === 'day1') fillDay1Table();
     else if (activeTab.id === 'day2') fillDay2Table();
     else if (activeTab.id === 'day3') fillDay3Table();
-    else if (activeTab.id === 'day4') fillDay4Table();
     else if (activeTab.id === 'final') fillFinalTable();
 }
 
@@ -975,8 +966,7 @@ function showTab(tabName) {
         'day1': '1 день - 17.09.2026',
         'day2': '2 день - 24.09.2026',
         'day3': '3 день - 01.10.2026',
-        'day4': '4 день - 08.10.2026',
-        'final': 'Финал - 10.10.2026'
+        'final': 'Финал - 03.10.2026'
     };
     document.getElementById('currentPhase').textContent = phases[tabName] || 'Турнир';
     
@@ -993,7 +983,6 @@ function showTab(tabName) {
     else if (tabName === 'day1') fillDay1Table();
     else if (tabName === 'day2') fillDay2Table();
     else if (tabName === 'day3') fillDay3Table();
-    else if (tabName === 'day4') fillDay4Table();
     else if (tabName === 'final') fillFinalTable();
 }
 

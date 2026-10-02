@@ -476,6 +476,14 @@ header h1 {
 .final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
 .final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
 
+/* Стиль для выделенных игроков в особых номинациях */
+.special-highlight {
+    background: linear-gradient(90deg, #fff9c4, #fff176) !important;
+}
+.special-highlight:hover {
+    background: linear-gradient(90deg, #fff176, #ffeb3b) !important;
+}
+
 .empty-tab-message {
     text-align: center;
     background: rgba(255,255,255,0.1);
@@ -492,4 +500,18 @@ header h1 {
     font-weight: bold;
     background: #4CAF50;
     color: white;
+}
+
+/* Колонки, которые остаются видимыми на мобиле в особых номинациях */
+@media (max-width: 768px) {
+    .tournament-table th.col-sum,
+    .tournament-table td.col-sum,
+    .tournament-table th.col-count,
+    .tournament-table td.col-count,
+    .tournament-table th.col-avg,
+    .tournament-table td.col-avg,
+    .tournament-table th.col-comment,
+    .tournament-table td.col-comment {
+        display: table-cell;
+    }
 }

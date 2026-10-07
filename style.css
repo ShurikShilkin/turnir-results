@@ -52,7 +52,7 @@ header h1 {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    max-width: 280px;
+    max-width: 320px;
     min-width: 180px;
 }
 
@@ -173,6 +173,7 @@ header h1 {
     font-size: 1.3em;
     font-weight: bold;
     color: #4CAF50;
+    min-height: 1.3em;
 }
 
 .search-container {
@@ -307,18 +308,6 @@ header h1 {
     background: #ffeb3b !important;
 }
 
-.player-name {
-    font-weight: bold;
-    text-align: left !important;
-    padding-left: 15px !important;
-    color: #2c3e50;
-    font-size: 1em;
-}
-
-.number-column {
-    font-weight: bold;
-}
-
 /* МОБИЛЬНЫЕ ПРАВИЛА */
 @media (max-width: 768px) {
     body {
@@ -339,7 +328,7 @@ header h1 {
     .previous-tournament-button,
     .rating-tab-button {
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
     }
     
     .stats {
@@ -371,11 +360,6 @@ header h1 {
     .tournament-table th {
         padding: 10px 5px;
         font-size: 0.9em;
-    }
-    
-    .player-name {
-        font-size: 0.95em;
-        padding-left: 8px !important;
     }
 }
 
@@ -416,24 +400,6 @@ header h1 {
 .position-down { background: #f44336; }
 .position-same { background: #ff9800; }
 .position-new { background: #2196F3; }
-
-.chips-positive {
-    color: #2E7D32;
-    font-weight: bold;
-    background: #e8f5e9;
-    border-radius: 8px;
-    padding: 5px 8px;
-    display: inline-block;
-}
-
-.attendance-value {
-    background: #e3f2fd;
-    color: #1976D2;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 5px 8px;
-    display: inline-block;
-}
 
 .rating-positive {
     color: #2E7D32;
@@ -476,14 +442,6 @@ header h1 {
 .final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
 .final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
 
-/* Стиль для выделенных игроков в особых номинациях */
-.special-highlight {
-    background: linear-gradient(90deg, #fff9c4, #fff176) !important;
-}
-.special-highlight:hover {
-    background: linear-gradient(90deg, #fff176, #ffeb3b) !important;
-}
-
 .empty-tab-message {
     text-align: center;
     background: rgba(255,255,255,0.1);
@@ -496,22 +454,14 @@ header h1 {
     color: #FFD700;
 }
 
+.empty-tab-message p {
+    font-size: 1.3em;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
 .col-total {
     font-weight: bold;
     background: #4CAF50;
     color: white;
-}
-
-/* Колонки, которые остаются видимыми на мобиле в особых номинациях */
-@media (max-width: 768px) {
-    .tournament-table th.col-sum,
-    .tournament-table td.col-sum,
-    .tournament-table th.col-count,
-    .tournament-table td.col-count,
-    .tournament-table th.col-avg,
-    .tournament-table td.col-avg,
-    .tournament-table th.col-comment,
-    .tournament-table td.col-comment {
-        display: table-cell;
-    }
 }

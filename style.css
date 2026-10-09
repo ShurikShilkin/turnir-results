@@ -308,6 +308,16 @@ header h1 {
     background: #ffeb3b !important;
 }
 
+.positive-result {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.negative-result {
+    color: #C62828;
+    font-weight: bold;
+}
+
 /* МОБИЛЬНЫЕ ПРАВИЛА */
 @media (max-width: 768px) {
     body {

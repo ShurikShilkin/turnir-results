@@ -103,7 +103,7 @@ const day1Data = [
     { name: "Семён Ануфриев", entry: 1100, extra: 7000, exit: 0, win: -8100 }
 ];
 
-// Данные 2 дня
+// Данные 2 дня (исправленные)
 const day2Data = [
     { name: "Михаил Наб", entry: 1100, extra: 3000, exit: 30655, win: 26555 },
     { name: "Том", entry: 1100, extra: 0, exit: 22565, win: 21465 },
@@ -119,24 +119,24 @@ const day2Data = [
     { name: "Шурик Шилкин", entry: 1100, extra: 1000, exit: 2495, win: 395 },
     { name: "Сергей Ш", entry: 1100, extra: 0, exit: 1275, win: 175 },
     { name: "Глеб Макеев", entry: 1100, extra: 0, exit: 0, win: -1100 },
+    { name: "Аня Жук", entry: 1100, extra: 2000, exit: 1825, win: -1275 },
     { name: "Полина Матыцына", entry: 1100, extra: 1000, exit: 815, win: -1285 },
     { name: "Макар Аве", entry: 1100, extra: 1000, exit: 200, win: -1900 },
-    { name: "Денис Дон", entry: 1100, extra: 1000, exit: 0, win: -2100 },
     { name: "Настя Кудрявая", entry: 1100, extra: 1000, exit: 0, win: -2100 },
+    { name: "Денис Дон", entry: 1100, extra: 1000, exit: 0, win: -2100 },
     { name: "Петя Пётр", entry: 1100, extra: 1000, exit: 0, win: -2100 },
     { name: "Бенси", entry: 1100, extra: 2000, exit: 640, win: -2460 },
-    { name: "Аня Жук", entry: 1100, extra: 2000, exit: 0, win: -3100 },
-    { name: "Никита Караксик", entry: 1100, extra: 2000, exit: 0, win: -3100 },
     { name: "Марсель", entry: 1100, extra: 2000, exit: 0, win: -3100 },
     { name: "Соня Серж", entry: 1100, extra: 2000, exit: 0, win: -3100 },
+    { name: "Никита Караксик", entry: 1100, extra: 2000, exit: 0, win: -3100 },
     { name: "Ирина Ага", entry: 1100, extra: 3000, exit: 200, win: -3900 },
-    { name: "Никита Никарагуа", entry: 1100, extra: 3000, exit: 0, win: -4100 },
-    { name: "Настя Pas", entry: 1100, extra: 3000, exit: 0, win: -4100 },
+    { name: "Федор К", entry: 1100, extra: 4000, exit: 1110, win: -3990 },
     { name: "Глеб Витязь", entry: 1100, extra: 3000, exit: 0, win: -4100 },
+    { name: "Настя Pas", entry: 1100, extra: 3000, exit: 0, win: -4100 },
+    { name: "Никита Никарагуа", entry: 1100, extra: 3000, exit: 0, win: -4100 },
     { name: "Немощь", entry: 1100, extra: 4000, exit: 885, win: -4215 },
-    { name: "Федор К", entry: 1100, extra: 4000, exit: 0, win: -5100 },
-    { name: "Матвей Пригожий", entry: 1100, extra: 4000, exit: 0, win: -5100 },
     { name: "Стас ISK", entry: 1100, extra: 4000, exit: 0, win: -5100 },
+    { name: "Матвей Пригожий", entry: 1100, extra: 4000, exit: 0, win: -5100 },
     { name: "Артём SUB", entry: 1100, extra: 5000, exit: 0, win: -6100 },
     { name: "Саша Коч", entry: 1100, extra: 6000, exit: 200, win: -6900 },
     { name: "Кирилл Лед", entry: 1100, extra: 6000, exit: 0, win: -7100 },
@@ -394,17 +394,17 @@ const ratingBeforeFinal = [
     { name: "Александр Гиг", rating: 13, attendance: 1 }
 ];
 
-// Добавки после 2 дня
+// Добавки после 2 дня (исправленные)
 const ratingAdditionsAfterDay2 = [
     { name: "grooveman", addition: 63 },
-    { name: "Аня Жук", addition: 10 },
+    { name: "Аня Жук", addition: 16 },
     { name: "Артём SUB", addition: 0 },
-    { name: "Бенси", addition: 33 },
+    { name: "Бенси", addition: 39 },
     { name: "Богдан А", addition: 0 },
     { name: "Вадим Константинов", addition: 104 },
     { name: "Глеб Витязь", addition: 25 },
     { name: "Глеб Макеев", addition: 62 },
-    { name: "Денис Дон", addition: 43 },
+    { name: "Денис Дон", addition: 42 },
     { name: "Евгений Ц", addition: 109 },
     { name: "Ирина Ага", addition: 0 },
     { name: "Кирилл Лед", addition: 0 },
@@ -415,13 +415,13 @@ const ratingAdditionsAfterDay2 = [
     { name: "Михаил Козадой", addition: 64 },
     { name: "Михаил Наб", addition: 59 },
     { name: "Надя Котик", addition: 47 },
-    { name: "Настя Pas", addition: 26 },
+    { name: "Настя Pas", addition: 25 },
     { name: "Настя Буд", addition: 72 },
-    { name: "Настя Кудрявая", addition: 42 },
+    { name: "Настя Кудрявая", addition: 41 },
     { name: "Немощь", addition: 0 },
     { name: "Никита Караксик", addition: 32 },
-    { name: "Никита Никарагуа", addition: 26 },
-    { name: "Петя Пётр", addition: 41 },
+    { name: "Никита Никарагуа", addition: 23 },
+    { name: "Петя Пётр", addition: 40 },
     { name: "Полина Матыцына", addition: 0 },
     { name: "Саша Коч", addition: 0 },
     { name: "Семён Ануфриев", addition: 0 },
@@ -429,7 +429,7 @@ const ratingAdditionsAfterDay2 = [
     { name: "Соня Серж", addition: 0 },
     { name: "Стас ISK", addition: 0 },
     { name: "Том", addition: 139 },
-    { name: "Федор К", addition: 3 },
+    { name: "Федор К", addition: 5 },
     { name: "Шурик Шилкин", addition: 0 },
     { name: "Юрий Белый", addition: 56 }
 ];
@@ -833,7 +833,6 @@ function fillResultsTable() {
     const tbody = document.getElementById('resultsTable');
     if (!tbody) return;
     
-    // Собираем все имена
     const nameSet = new Set();
     day1Data.forEach(p => nameSet.add(p.name));
     day2Data.forEach(p => nameSet.add(p.name));

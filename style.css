@@ -52,8 +52,8 @@ header h1 {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    max-width: 320px;
-    min-width: 180px;
+    max-width: 340px;
+    min-width: 200px;
 }
 
 .rating-tab-button {
@@ -338,7 +338,7 @@ header h1 {
     .previous-tournament-button,
     .rating-tab-button {
         width: 100%;
-        max-width: 320px;
+        max-width: 340px;
     }
     
     .stats {
@@ -450,7 +450,7 @@ header h1 {
 .final-silver { background: linear-gradient(90deg, #e0e0e0, #bdbdbd) !important; }
 .final-bronze { background: linear-gradient(90deg, #ffe0b2, #ffcc80) !important; }
 .final-finalist { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; }
-.final-participant { background: linear-gradient(90deg, #ffcdd2, #ef9a9a) !important; }
+.final-participant { background: linear-gradient(90deg, #c8e6c9, #a5d6a7) !important; } /* зеленый для всех участников */
 
 .empty-tab-message {
     text-align: center;

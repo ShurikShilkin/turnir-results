@@ -10,21 +10,21 @@
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Турнира "ДЖОНАТАНА ТОМАЙО 3-8"</button>
+                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты турнира ТУЗА ОСЕНИ 2026</button>
                 <h1>Межсезонка</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">3 день - 22.10.2026</div>
+                <div class="tournament-phase" id="currentPhase">Результаты турнира ТУЗА ОСЕНИ 2026</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
             <button class="tab-button" onclick="showTab('day1')">1 день - 08.10.2026</button>
             <button class="tab-button" onclick="showTab('day2')">2 день - 15.10.2026</button>
-            <button class="tab-button active" onclick="showTab('day3')">3 день - 22.10.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">3 день - 22.10.2026</button>
             <button class="tab-button" onclick="showTab('day4')">4 день - 29.10.2026</button>
-            <button class="tab-button" onclick="showTab('results')">Результаты</button>
+            <button class="tab-button active" onclick="showTab('results')">Результаты</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
         </div>
 
@@ -37,11 +37,11 @@
                 <div class="stat-dates">
                     <div class="date-item">
                         <div class="date-label">Следующая игра</div>
-                        <div class="date-value">24.10.2026</div>
+                        <div class="date-value">29.10.2026</div>
                     </div>
                     <div class="date-item">
                         <div class="date-label">Следующий финал</div>
-                        <div class="date-value">24.10.2026</div>
+                        <div class="date-value">—</div>
                     </div>
                 </div>
             </div>
@@ -64,14 +64,14 @@
 
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
-        <!-- Результаты Турнира "ДЖОНАТАНА ТОМАЙО 3-8" -->
-        <div id="previousResults" class="tab-content">
+        <!-- Результаты турнира ТУЗА ОСЕНИ 2026 -->
+        <div id="previousResults" class="tab-content active">
             <div class="special-tab-content">
-                <h2>🏆 Результаты Турнира "ДЖОНАТАНА ТОМАЙО 3-8" 🏆</h2>
+                <h2>🏆 Результаты турнира ТУЗА ОСЕНИ 2026 🏆</h2>
                 <div class="special-date">Финальное распределение мест</div>
                 <table class="tournament-table" id="previousResultsTableElement">
                     <thead>
-                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-place">Место</th><th class="col-status">Статус</th></tr>
+                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-status">Статус</th></tr>
                     </thead>
                     <tbody id="previousResultsTable"></tbody>
                 </table>
@@ -140,7 +140,7 @@
         </div>
 
         <!-- День 3 -->
-        <div id="day3" class="tab-content active">
+        <div id="day3" class="tab-content">
             <div class="special-tab-content">
                 <h2>📅 3 день - 22.10.2026</h2>
                 <div class="special-date">Результаты игры</div>
@@ -168,7 +168,7 @@
             </div>
         </div>
 
-        <!-- Результаты -->
+        <!-- Результаты (общая таблица) -->
         <div id="results" class="tab-content">
             <div class="special-tab-content">
                 <h2>🏆 Результаты 🏆</h2>

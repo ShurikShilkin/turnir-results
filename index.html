@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Межсезонка</title>
+    <title>Турнир Сэнди Данлоп 3-9</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-top">
-                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты турнира ТУЗА ОСЕНИ 2026</button>
-                <h1>Межсезонка</h1>
+                <button class="previous-tournament-button" onclick="showTab('previousResults')">Результаты Межсезонки</button>
+                <h1>Турнир Сэнди Данлоп 3-9</h1>
                 <button class="rating-tab-button" onclick="showTab('rating')">Рейтинг</button>
             </div>
             <div class="tournament-info">
-                <div class="tournament-phase" id="currentPhase">Результаты</div>
+                <div class="tournament-phase" id="currentPhase">Рейтинг</div>
             </div>
         </header>
 
         <div class="tabs" id="mainTabs">
-            <button class="tab-button" onclick="showTab('day1')">1 день - 08.10.2026</button>
-            <button class="tab-button" onclick="showTab('day2')">2 день - 15.10.2026</button>
-            <button class="tab-button" onclick="showTab('day3')">3 день - 22.10.2026</button>
-            <button class="tab-button" onclick="showTab('day4')">4 день - 29.10.2026</button>
-            <button class="tab-button active" onclick="showTab('results')">Результаты</button>
+            <button class="tab-button" onclick="showTab('day1')">1 день - 05.11.2026</button>
+            <button class="tab-button" onclick="showTab('day2')">2 день - 12.11.2026</button>
+            <button class="tab-button" onclick="showTab('day3')">3 день - 19.11.2026</button>
+            <button class="tab-button" onclick="showTab('day4')">4 день - 26.11.2026</button>
+            <button class="tab-button" onclick="showTab('final')">Финал - 28.11.2026</button>
             <button class="tab-button" onclick="showTab('huntingNominations')">Охота за головами</button>
         </div>
 
@@ -68,14 +68,22 @@
 
         <button class="expand-button" onclick="toggleTableExpand()">Развернуть таблицу</button>
 
-        <!-- Результаты турнира ТУЗА ОСЕНИ 2026 -->
+        <!-- Результаты Межсезонки (Архив) -->
         <div id="previousResults" class="tab-content">
             <div class="special-tab-content">
-                <h2>🏆 Результаты турнира ТУЗА ОСЕНИ 2026 🏆</h2>
+                <h2>🏆 Результаты Межсезонки 🏆</h2>
                 <div class="special-date">Финальное распределение мест</div>
                 <table class="tournament-table" id="previousResultsTableElement">
                     <thead>
-                        <tr><th class="col-num">№</th><th class="col-name">Имя</th><th class="col-status">Статус</th></tr>
+                        <tr>
+                            <th class="col-num">№</th>
+                            <th class="col-name">Имя</th>
+                            <th class="mobile-hide">1 день</th>
+                            <th class="mobile-hide">2 день</th>
+                            <th class="mobile-hide">3 день</th>
+                            <th class="mobile-hide">4 день</th>
+                            <th class="col-total">Результаты</th>
+                        </tr>
                     </thead>
                     <tbody id="previousResultsTable"></tbody>
                 </table>
@@ -83,7 +91,7 @@
         </div>
 
         <!-- Рейтинг -->
-        <div id="rating" class="tab-content">
+        <div id="rating" class="tab-content active">
             <div class="rating-header"><h2>Рейтинг</h2></div>
             <table class="tournament-table" id="ratingTableElement">
                 <thead>
@@ -103,108 +111,41 @@
 
         <!-- День 1 -->
         <div id="day1" class="tab-content">
-            <div class="special-tab-content">
-                <h2>📅 1 день - 08.10.2026</h2>
-                <div class="special-date">Результаты игры</div>
-                <table class="tournament-table" id="day1TableElement">
-                    <thead>
-                        <tr>
-                            <th class="col-num">№</th>
-                            <th class="col-name">Имя</th>
-                            <th class="mobile-hide">Вход</th>
-                            <th class="mobile-hide">Добор</th>
-                            <th class="mobile-hide">Выход</th>
-                            <th class="col-total">Выигрыш</th>
-                        </tr>
-                    </thead>
-                    <tbody id="day1Table"></tbody>
-                </table>
+            <div class="empty-tab-message">
+                <h2>📅 1 день - 05.11.2026</h2>
+                <p>⏳ Данные появятся после игры 05.11.2026</p>
             </div>
         </div>
 
         <!-- День 2 -->
         <div id="day2" class="tab-content">
-            <div class="special-tab-content">
-                <h2>📅 2 день - 15.10.2026</h2>
-                <div class="special-date">Результаты игры</div>
-                <table class="tournament-table" id="day2TableElement">
-                    <thead>
-                        <tr>
-                            <th class="col-num">№</th>
-                            <th class="col-name">Имя</th>
-                            <th class="mobile-hide">Вход</th>
-                            <th class="mobile-hide">Добор</th>
-                            <th class="mobile-hide">Выход</th>
-                            <th class="col-total">Выигрыш</th>
-                        </tr>
-                    </thead>
-                    <tbody id="day2Table"></tbody>
-                </table>
+            <div class="empty-tab-message">
+                <h2>📅 2 день - 12.11.2026</h2>
+                <p>⏳ Данные появятся после игры 12.11.2026</p>
             </div>
         </div>
 
         <!-- День 3 -->
         <div id="day3" class="tab-content">
-            <div class="special-tab-content">
-                <h2>📅 3 день - 22.10.2026</h2>
-                <div class="special-date">Результаты игры</div>
-                <table class="tournament-table" id="day3TableElement">
-                    <thead>
-                        <tr>
-                            <th class="col-num">№</th>
-                            <th class="col-name">Имя</th>
-                            <th class="mobile-hide">Вход</th>
-                            <th class="mobile-hide">Добор</th>
-                            <th class="mobile-hide">Выход</th>
-                            <th class="col-total">Выигрыш</th>
-                        </tr>
-                    </thead>
-                    <tbody id="day3Table"></tbody>
-                </table>
+            <div class="empty-tab-message">
+                <h2>📅 3 день - 19.11.2026</h2>
+                <p>⏳ Данные появятся после игры 19.11.2026</p>
             </div>
         </div>
 
         <!-- День 4 -->
         <div id="day4" class="tab-content">
-            <div class="special-tab-content">
-                <h2>📅 4 день - 29.10.2026</h2>
-                <div class="special-date">Результаты игры</div>
-                <table class="tournament-table" id="day4TableElement">
-                    <thead>
-                        <tr>
-                            <th class="col-num">№</th>
-                            <th class="col-name">Имя</th>
-                            <th class="mobile-hide">Вход</th>
-                            <th class="mobile-hide">Добор</th>
-                            <th class="mobile-hide">Выход</th>
-                            <th class="col-total">Выигрыш</th>
-                        </tr>
-                    </thead>
-                    <tbody id="day4Table"></tbody>
-                </table>
+            <div class="empty-tab-message">
+                <h2>📅 4 день - 26.11.2026</h2>
+                <p>⏳ Данные появятся после игры 26.11.2026</p>
             </div>
         </div>
 
-        <!-- Результаты (общая таблица) -->
-        <div id="results" class="tab-content active">
-            <div class="special-tab-content">
-                <h2>🏆 Результаты 🏆</h2>
-                <div class="special-date">Общая таблица</div>
-                <table class="tournament-table" id="resultsTableElement">
-                    <thead>
-                        <tr>
-                            <th class="col-num">№</th>
-                            <th class="col-name">Имя</th>
-                            <th class="mobile-hide">▲▼</th>
-                            <th class="mobile-hide">1 день</th>
-                            <th class="mobile-hide">2 день</th>
-                            <th class="mobile-hide">3 день</th>
-                            <th class="mobile-hide">4 день</th>
-                            <th class="col-total">Результаты</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultsTable"></tbody>
-                </table>
+        <!-- Финал -->
+        <div id="final" class="tab-content">
+            <div class="empty-tab-message">
+                <h2>🏆 Финал - 28.11.2026 🏆</h2>
+                <p>⏳ Данные появятся после игры 05.11.2026</p>
             </div>
         </div>
 
